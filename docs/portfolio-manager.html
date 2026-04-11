@@ -1431,7 +1431,9 @@ const INSTRUMENT_QUERY_ALIASES = {
   UNICREDIT: ['UCG.MI']
 };
 const SUPPORTED_YAHOO_LIVE_CURRENCIES = new Set(['EUR', 'USD']);
-const SHARED_STORE_BASE = 'https://jsonblob.com/api/jsonBlob';
+const SHARED_STORE_BASE = 'https://awesomekv.dev';
+const SHARED_KEY_PREFIX = 'portfolio-share';
+const SHARED_CHUNK_SIZE = 14000;
 const SHARED_LINK_PARAM = 'shared';
 const SHARED_STORE_LOCAL_KEY = 'pd_shared_store_id';
 const KNOWN_ISIN_OVERRIDES = {
@@ -1473,19 +1475,31 @@ function normalizeSharedStoreId(value) {
   if (!raw) return '';
   try {
     const url = new URL(raw, window.location.href);
-    const match = url.pathname.match(/\/api\/jsonBlob\/(.+)$/);
-    return match ? match[1].replace(/^\/+|\/+$/g, '') : raw.replace(/^\/+|\/+$/g, '');
+    const candidate = url.searchParams.get(SHARED_LINK_PARAM)
+      || url.pathname.split('/').filter(Boolean).pop()
+      || raw;
+    return candidate.replace(/[^a-zA-Z0-9_-]/g, '').slice(0, 96);
   } catch (error) {
-    return raw
-      .replace(/^https?:\/\/jsonblob\.com\/api\/jsonBlob\//i, '')
-      .replace(/^\/api\/jsonBlob\//i, '')
-      .replace(/^\/+|\/+$/g, '');
+    return raw.replace(/[^a-zA-Z0-9_-]/g, '').slice(0, 96);
   }
 }
 
-function buildSharedStoreUrl(sharedId = sharedState.id) {
+function createRandomSharedId() {
+  if (window.crypto?.randomUUID) return normalizeSharedStoreId(window.crypto.randomUUID());
+  return normalizeSharedStoreId(`${Date.now()}_${Math.random().toString(36).slice(2, 12)}`);
+}
+
+function buildSharedStorageKey(sharedId = sharedState.id, suffix = 'meta') {
   const normalized = normalizeSharedStoreId(sharedId);
-  return normalized ? `${SHARED_STORE_BASE}/${normalized}` : SHARED_STORE_BASE;
+  return normalized ? `${SHARED_KEY_PREFIX}-${normalized}-${suffix}` : '';
+}
+
+function buildSharedStoreUrl(sharedId = sharedState.id, suffix = 'meta') {
+  const normalized = normalizeSharedStoreId(sharedId);
+  const key = buildSharedStorageKey(sharedId, suffix);
+  return normalized && key
+    ? `${SHARED_STORE_BASE}/${encodeURIComponent(normalized)}/${encodeURIComponent(key)}`
+    : SHARED_STORE_BASE;
 }
 
 function buildSharedLinkUrl(sharedId = sharedState.id) {
@@ -1493,6 +1507,32 @@ function buildSharedLinkUrl(sharedId = sharedState.id) {
   const url = new URL(window.location.href);
   if (normalized) url.searchParams.set(SHARED_LINK_PARAM, normalized);
   return url.toString();
+}
+
+function splitSharedPayloadText(text, chunkSize = SHARED_CHUNK_SIZE) {
+  const source = String(text || '');
+  if (!source) return [''];
+  const chunks = [];
+  for (let index = 0; index < source.length; index += chunkSize) {
+    chunks.push(source.slice(index, index + chunkSize));
+  }
+  return chunks.length ? chunks : [''];
+}
+
+async function postSharedText(sharedId, suffix, value) {
+  const response = await fetch(buildSharedStoreUrl(sharedId, suffix), {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+    body: String(value ?? '')
+  });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  return response;
+}
+
+async function fetchSharedText(sharedId, suffix) {
+  const response = await fetch(`${buildSharedStoreUrl(sharedId, suffix)}?ts=${Date.now()}`, { cache: 'no-store' });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  return await response.text();
 }
 
 function setSharedStoreId(sharedId, { persist = true, updateUrl = true } = {}) {
@@ -1630,7 +1670,7 @@ function describeSharedLinkError(error) {
     return 'Apri la piattaforma da un vero URL http/https, non come file locale. Il link live condiviso richiede una pagina servita via web.';
   }
   if (normalized.includes('failed to fetch') || normalized.includes('load failed')) {
-    return 'Il browser ha bloccato la connessione verso il servizio di sync del link live. Serve aprire la pagina da un URL web reale oppure usare un hosting statico.';
+    return 'Il browser o una sua estensione ha bloccato la connessione verso lo storage condiviso. Riprova da una scheda normale oppure disattiva eventuali blocchi privacy per questa pagina.';
   }
   return raw || 'errore di rete';
 }
@@ -1678,9 +1718,11 @@ function renderSharedStatus() {
 }
 
 async function fetchSharedPayload(sharedId = sharedState.id) {
-  const response = await fetch(buildSharedStoreUrl(sharedId), { cache: 'no-store' });
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  return await response.json();
+  const metaText = await fetchSharedText(sharedId, 'meta');
+  const meta = JSON.parse(metaText || '{}');
+  const parts = Math.max(1, parseInt(meta?.parts, 10) || 1);
+  const chunks = await Promise.all(Array.from({ length: parts }, (_, index) => fetchSharedText(sharedId, `part-${index}`)));
+  return JSON.parse(chunks.join(''));
 }
 
 function applySharedPayload(payload) {
@@ -1699,24 +1741,24 @@ function applySharedPayload(payload) {
   hydrateKnownInstrumentCacheFromClients();
 }
 
+async function writeSharedPayload(sharedId, payload) {
+  const payloadText = JSON.stringify(payload);
+  const chunks = splitSharedPayloadText(payloadText);
+  for (let index = 0; index < chunks.length; index += 1) {
+    await postSharedText(sharedId, `part-${index}`, chunks[index]);
+  }
+  await postSharedText(sharedId, 'meta', JSON.stringify({
+    version: 1,
+    updatedAt: payload?.updatedAt || new Date().toISOString(),
+    parts: chunks.length
+  }));
+}
+
 async function createSharedStore() {
-  const response = await fetch(buildSharedStoreUrl(''), {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify(buildSharedPayload())
-  });
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  const payload = await response.json().catch(() => ({}));
-  const sharedId = normalizeSharedStoreId(
-    response.headers.get('X-jsonblob-id')
-    || response.headers.get('Location')
-    || payload?.id
-    || payload?.uri
-    || payload?.url
-    || ''
-  );
-  if (!sharedId) throw new Error('Il servizio non ha restituito un identificativo condiviso');
+  const sharedId = createRandomSharedId();
+  if (!sharedId) throw new Error('Non sono riuscito a generare un identificativo condiviso');
   setSharedStoreId(sharedId, { persist: true, updateUrl: true });
+  await writeSharedPayload(sharedId, buildSharedPayload());
   sharedState.lastSavedAt = new Date().toISOString();
   return sharedId;
 }
@@ -1728,17 +1770,17 @@ async function publishSharedState({ createIfMissing = false } = {}) {
   renderSharedStatus();
 
   try {
-    if (!sharedState.id) await createSharedStore();
-    const response = await fetch(buildSharedStoreUrl(), {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(buildSharedPayload())
-    });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    let activeSharedId = sharedState.id;
+    if (!activeSharedId) {
+      activeSharedId = createRandomSharedId();
+      setSharedStoreId(activeSharedId, { persist: true, updateUrl: true });
+    }
+
+    await writeSharedPayload(activeSharedId, buildSharedPayload());
     sharedState.lastSavedAt = new Date().toISOString();
     sharedState.message = `✅ Link live aggiornato. Chi riapre questo URL vede <strong style="color:var(--text)">${clients.length}</strong> clienti sincronizzati.`;
     sharedState.messageType = 'ok';
-    return sharedState.id;
+    return activeSharedId;
   } catch (error) {
     sharedState.message = `❌ Sync del link live non riuscito: ${escapeHtml(describeSharedLinkError(error))}.`;
     sharedState.messageType = 'err';
