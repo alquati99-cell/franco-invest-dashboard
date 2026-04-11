@@ -8,6 +8,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="./portfolio-shared-config.js"></script>
+<script src="./portfolio-static-data.js"></script>
 <style>
   :root {
     --bg: #f3f7ff;
@@ -684,7 +685,7 @@
     <div class="topbar-actions">
       <button class="btn btn-outline" onclick="copyClientsBackup()">📋 Copia Clienti</button>
       <button class="btn btn-outline" onclick="importClientsBackup()">📥 Importa Clienti</button>
-      <button class="btn btn-outline" id="btn-share-live" onclick="copySharedLink()">🔗 Attiva Link Live</button>
+      <button class="btn btn-outline" id="btn-share-live" onclick="copySharedLink()">🔗 Copia Link</button>
       <button class="btn btn-outline" onclick="refreshAllPrices()">⟳ Aggiorna Prezzi</button>
       <button class="btn btn-gold" onclick="openNewClientModal()">+ Nuovo Cliente</button>
     </div>
@@ -1373,7 +1374,12 @@ function safeStorageRemove(key) {
   }
 }
 
-let clients = readStoredJSON('pd_clients', '[]');
+const STATIC_DATA = window.PORTFOLIO_DESK_STATIC_DATA || {};
+const STATIC_CLIENTS_FALLBACK = Array.isArray(STATIC_DATA.clients) ? STATIC_DATA.clients : [];
+const STATIC_INSTRUMENT_CACHE_FALLBACK = STATIC_DATA.knownInstrumentCache && typeof STATIC_DATA.knownInstrumentCache === 'object'
+  ? STATIC_DATA.knownInstrumentCache
+  : {};
+let clients = readStoredJSON('pd_clients', JSON.stringify(STATIC_CLIENTS_FALLBACK));
 let currentClientId = null;
 let perfChartInst = null;
 let allocChartInst = null;
@@ -1391,7 +1397,7 @@ let instrumentProfileCache = {};
 let instrumentSearchCache = {};
 let pendingInstrumentSearches = {};
 let instrumentResolveCache = {};
-let knownInstrumentCache = readStoredJSON('pd_known_instruments', '{}');
+let knownInstrumentCache = readStoredJSON('pd_known_instruments', JSON.stringify(STATIC_INSTRUMENT_CACHE_FALLBACK));
 let screenerData = [];
 let lookedUpData = null;
 let currentAnalyticsToken = 0;
@@ -1412,6 +1418,19 @@ let sharedState = {
   lastLoadedAt: '',
   lastSavedAt: ''
 };
+
+function ensurePublishedSnapshotAvailability() {
+  if ((!Array.isArray(clients) || !clients.length) && STATIC_CLIENTS_FALLBACK.length) {
+    clients = JSON.parse(JSON.stringify(STATIC_CLIENTS_FALLBACK));
+    safeStorageSet('pd_clients', JSON.stringify(clients));
+  }
+  if ((!knownInstrumentCache || !Object.keys(knownInstrumentCache).length) && Object.keys(STATIC_INSTRUMENT_CACHE_FALLBACK).length) {
+    knownInstrumentCache = { ...STATIC_INSTRUMENT_CACHE_FALLBACK };
+    safeStorageSet('pd_known_instruments', JSON.stringify(knownInstrumentCache));
+  }
+}
+
+ensurePublishedSnapshotAvailability();
 
 const INSTRUMENT_QUERY_ALIASES = {
   GOOGLE: ['GOOGL', 'GOOG', 'ALPHABET'],
@@ -1679,31 +1698,13 @@ function renderSharedStatus() {
   const button = document.getElementById('btn-share-live');
   const status = document.getElementById('shared-live-status');
   if (button) {
-    button.disabled = sharedState.loading || sharedState.saving;
-    button.textContent = sharedState.loading
-      ? 'Sync Link…'
-      : sharedState.saving
-        ? 'Aggiorno Link…'
-        : sharedState.id
-          ? '🔗 Copia Link Live'
-          : '🔗 Attiva Link Live';
+    button.disabled = false;
+    button.textContent = '🔗 Copia Link';
   }
   if (!status) return;
 
-  let type = sharedState.messageType || 'info';
-  let message = sharedState.message || '';
-
-  if (sharedState.loading) {
-    type = 'info';
-    message = 'Sto caricando i dati condivisi del link…';
-  } else if (sharedState.saving) {
-    type = 'info';
-    message = 'Sto sincronizzando i dati sul link condiviso…';
-  } else if (!message && sharedState.id) {
-    type = 'ok';
-    const lastSync = sharedState.lastSavedAt || sharedState.lastLoadedAt;
-    message = `🔗 Link live attivo. Chi apre questo link vede i clienti condivisi. Ultimo sync: <strong style="color:var(--text)">${escapeHtml(formatSharedTimestamp(lastSync))}</strong>.`;
-  }
+  const type = sharedState.messageType || 'info';
+  const message = sharedState.message || '';
 
   if (!message) {
     status.style.display = 'none';
@@ -1802,27 +1803,20 @@ function queueSharedSync() {
 
 async function copySharedLink() {
   try {
-    if (!sharedState.id) {
-      sharedState.message = 'Sto creando un link live condivisibile…';
-      sharedState.messageType = 'info';
-      renderSharedStatus();
-      await createSharedStore();
-    } else {
-      await publishSharedState();
-    }
-
-    const link = buildSharedLinkUrl();
+    const url = new URL(window.location.href);
+    url.searchParams.delete(SHARED_LINK_PARAM);
+    const link = url.toString();
     if (navigator.clipboard?.writeText) {
       await navigator.clipboard.writeText(link);
-      sharedState.message = '✅ Link live copiato. Invia questo URL: chi lo apre vede i clienti correnti e, riaprendolo, vede anche gli aggiornamenti successivi.';
+      sharedState.message = `✅ Link copiato. Questo URL mostra in modo permanente lo snapshot pubblicato di <strong style="color:var(--text)">${clients.length}</strong> clienti.`;
       sharedState.messageType = 'ok';
     } else {
-      window.prompt('Copia questo link condiviso', link);
-      sharedState.message = '✅ Link live pronto. Copialo dalla finestra e condividilo.';
+      window.prompt('Copia questo link pubblico', link);
+      sharedState.message = '✅ Link pubblico pronto. Copialo dalla finestra e condividilo.';
       sharedState.messageType = 'ok';
     }
   } catch (error) {
-    sharedState.message = `❌ Creazione link live fallita: ${escapeHtml(describeSharedLinkError(error))}.`;
+    sharedState.message = `❌ Non sono riuscito a copiare il link: ${escapeHtml(String(error?.message || error || 'errore sconosciuto'))}.`;
     sharedState.messageType = 'err';
   } finally {
     renderSharedStatus();
@@ -1830,34 +1824,15 @@ async function copySharedLink() {
 }
 
 async function initializeSharedWorkspace() {
-  const urlSharedId = new URL(window.location.href).searchParams.get(SHARED_LINK_PARAM);
-  const storedSharedId = safeStorageGet(SHARED_STORE_LOCAL_KEY);
-  const sharedId = normalizeSharedStoreId(urlSharedId || storedSharedId || '');
-  if (!sharedId) {
-    if (window.location.protocol === 'file:') {
-      sharedState.message = 'ℹ️ Il link live condiviso funziona solo se questa pagina viene aperta da un URL web reale (http/https), non direttamente come file locale.';
-      sharedState.messageType = 'info';
-    }
-    renderSharedStatus();
-    return;
+  const url = new URL(window.location.href);
+  if (url.searchParams.has(SHARED_LINK_PARAM)) {
+    url.searchParams.delete(SHARED_LINK_PARAM);
+    history.replaceState({}, '', url.toString());
   }
-
-  setSharedStoreId(sharedId, { persist: true, updateUrl: true });
-  sharedState.loading = true;
+  sharedState.id = '';
+  sharedState.loading = false;
+  sharedState.saving = false;
   renderSharedStatus();
-  try {
-    const payload = await fetchSharedPayload(sharedId);
-    applySharedPayload(payload);
-    sharedState.lastLoadedAt = payload?.updatedAt || new Date().toISOString();
-    sharedState.message = '✅ Dati condivisi caricati dal link live.';
-    sharedState.messageType = 'ok';
-  } catch (error) {
-    sharedState.message = `❌ Non sono riuscito a caricare i dati del link condiviso: ${escapeHtml(describeSharedLinkError(error))}.`;
-    sharedState.messageType = 'err';
-  } finally {
-    sharedState.loading = false;
-    renderSharedStatus();
-  }
 }
 
 function safeStorageGet(key) {
