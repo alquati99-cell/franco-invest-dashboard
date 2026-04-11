@@ -682,6 +682,8 @@
       <div class="topbar-subtitle" id="topbarSub">PANORAMICA PORTAFOGLI</div>
     </div>
     <div class="topbar-actions">
+      <button class="btn btn-outline" onclick="copyClientsBackup()">📋 Copia Clienti</button>
+      <button class="btn btn-outline" onclick="importClientsBackup()">📥 Importa Clienti</button>
       <button class="btn btn-outline" id="btn-share-live" onclick="copySharedLink()">🔗 Attiva Link Live</button>
       <button class="btn btn-outline" onclick="refreshAllPrices()">⟳ Aggiorna Prezzi</button>
       <button class="btn btn-gold" onclick="openNewClientModal()">+ Nuovo Cliente</button>
@@ -1514,6 +1516,100 @@ function buildSharedPayload() {
     updatedAt: new Date().toISOString(),
     clients
   };
+}
+
+function buildClientsBackupPayload() {
+  return {
+    version: 1,
+    exportedAt: new Date().toISOString(),
+    clients,
+    knownInstrumentCache
+  };
+}
+
+function parseClientsBackupPayload(payload) {
+  if (Array.isArray(payload)) return { clients: payload, knownInstrumentCache: {} };
+  if (!payload || typeof payload !== 'object') throw new Error('Formato backup non valido');
+
+  const importedClients = Array.isArray(payload.clients) ? payload.clients : null;
+  if (!importedClients) throw new Error('Nel backup non ci sono clienti validi');
+
+  return {
+    clients: importedClients,
+    knownInstrumentCache: payload.knownInstrumentCache && typeof payload.knownInstrumentCache === 'object'
+      ? payload.knownInstrumentCache
+      : {}
+  };
+}
+
+async function copyClientsBackup() {
+  if (!clients.length) {
+    setSharedMessage('⚠️ Nessun cliente da copiare: apri prima la vecchia app dove hai i dati caricati.', 'err');
+    return;
+  }
+
+  const payload = JSON.stringify(buildClientsBackupPayload());
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(payload);
+      setSharedMessage('✅ Backup clienti copiato negli appunti. Ora apri il sito online e clicca <strong style="color:var(--text)">📥 Importa Clienti</strong>.', 'ok');
+    } else {
+      window.prompt('Copia questo backup JSON e poi importalo nel sito online', payload);
+      setSharedMessage('✅ Backup clienti pronto. Copia il JSON dalla finestra e importalo nel sito online.', 'ok');
+    }
+  } catch (error) {
+    setSharedMessage('❌ Non sono riuscito a copiare il backup negli appunti. Prova a usare il prompt di copia manuale del browser.', 'err');
+    window.prompt('Copia questo backup JSON e poi importalo nel sito online', payload);
+  }
+}
+
+async function importClientsBackup() {
+  let raw = '';
+
+  try {
+    if (navigator.clipboard?.readText) {
+      raw = String(await navigator.clipboard.readText() || '').trim();
+    }
+  } catch (error) {}
+
+  if (!raw) {
+    raw = String(window.prompt('Incolla qui il backup JSON copiato dalla vecchia app', '') || '').trim();
+  }
+
+  if (!raw) {
+    setSharedMessage('⚠️ Backup non trovato. Apri la vecchia app, clicca <strong style="color:var(--text)">📋 Copia Clienti</strong> e poi riprova qui.', 'err');
+    return;
+  }
+
+  try {
+    const parsed = JSON.parse(raw);
+    const imported = parseClientsBackupPayload(parsed);
+    if (!imported.clients.length) throw new Error('Il backup non contiene clienti');
+
+    if (clients.length && !confirm(`Sostituire gli attuali ${clients.length} clienti con i ${imported.clients.length} del backup?`)) {
+      setSharedMessage('ℹ️ Import annullato. I clienti attuali sono rimasti invariati.', 'info');
+      return;
+    }
+
+    clients = imported.clients;
+    knownInstrumentCache = { ...knownInstrumentCache, ...imported.knownInstrumentCache };
+    analyticsCache = {};
+    instrumentResolveCache = {};
+    currentClientId = getClient(currentClientId) ? currentClientId : null;
+    safeStorageSet('pd_clients', JSON.stringify(clients));
+    safeStorageSet('pd_known_instruments', JSON.stringify(knownInstrumentCache));
+    hydrateKnownInstrumentCacheFromClients();
+    renderDashboard();
+    if (currentClientId) renderClientDetail(currentClientId);
+
+    if (sharedState.id && !sharedState.loading) {
+      publishSharedState().catch(() => {});
+    }
+
+    setSharedMessage(`✅ Importati <strong style="color:var(--text)">${clients.length}</strong> clienti dal backup.`, 'ok');
+  } catch (error) {
+    setSharedMessage(`❌ Backup non valido o non leggibile: ${escapeHtml(String(error?.message || error || 'errore sconosciuto'))}.`, 'err');
+  }
 }
 
 function formatSharedTimestamp(value) {
