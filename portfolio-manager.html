@@ -686,6 +686,7 @@
     <div class="topbar-actions">
       <button class="btn btn-outline" onclick="copyClientsBackup()">📋 Copia Clienti</button>
       <button class="btn btn-outline" onclick="importClientsBackup()">📥 Importa Clienti</button>
+      <button class="btn btn-outline" id="btn-publish-snapshot" onclick="publishSnapshotLink()">📦 Pubblica Snapshot</button>
       <button class="btn btn-outline" id="btn-share-live" onclick="copySharedLink()">🔗 Copia Link</button>
       <button class="btn btn-outline" onclick="refreshAllPrices()">⟳ Aggiorna Prezzi</button>
       <button class="btn btn-gold" onclick="openNewClientModal()">+ Nuovo Cliente</button>
@@ -1413,6 +1414,7 @@ let sharedState = {
   id: '',
   loading: false,
   saving: false,
+  readOnly: false,
   debounceTimer: null,
   message: '',
   messageType: 'info',
@@ -1487,7 +1489,6 @@ screenerData = [...screenerDefault];
 
 function save() {
   safeStorageSet('pd_clients', JSON.stringify(clients));
-  if (sharedState.id && !sharedState.loading) queueSharedSync();
 }
 
 function normalizeSharedStoreId(value) {
@@ -1574,7 +1575,8 @@ function buildSharedPayload() {
   return {
     version: 1,
     updatedAt: new Date().toISOString(),
-    clients
+    clients,
+    knownInstrumentCache
   };
 }
 
@@ -1662,10 +1664,6 @@ async function importClientsBackup() {
     renderDashboard();
     if (currentClientId) renderClientDetail(currentClientId);
 
-    if (sharedState.id && !sharedState.loading) {
-      publishSharedState().catch(() => {});
-    }
-
     setSharedMessage(`✅ Importati <strong style="color:var(--text)">${clients.length}</strong> clienti dal backup.`, 'ok');
   } catch (error) {
     setSharedMessage(`❌ Backup non valido o non leggibile: ${escapeHtml(String(error?.message || error || 'errore sconosciuto'))}.`, 'err');
@@ -1687,20 +1685,31 @@ function describeSharedLinkError(error) {
   const raw = String(error?.message || error || '').trim();
   const normalized = raw.toLowerCase();
   if (window.location.protocol === 'file:' && (!raw || normalized.includes('failed to fetch') || normalized.includes('load failed'))) {
-    return 'Apri la piattaforma da un vero URL http/https, non come file locale. Il link live condiviso richiede una pagina servita via web.';
+    return 'Apri la piattaforma da un vero URL http/https, non come file locale. La pubblicazione dello snapshot richiede una pagina servita via web.';
   }
   if (normalized.includes('failed to fetch') || normalized.includes('load failed')) {
-    return 'Il browser o una sua estensione ha bloccato la connessione verso lo storage condiviso. Riprova da una scheda normale oppure disattiva eventuali blocchi privacy per questa pagina.';
+    return 'Il browser o una sua estensione ha bloccato la connessione verso il servizio di pubblicazione dello snapshot. Riprova da una scheda normale oppure disattiva eventuali blocchi privacy per questa pagina.';
   }
   return raw || 'errore di rete';
 }
 
 function renderSharedStatus() {
-  const button = document.getElementById('btn-share-live');
+  const publishButton = document.getElementById('btn-publish-snapshot');
+  const copyButton = document.getElementById('btn-share-live');
   const status = document.getElementById('shared-live-status');
-  if (button) {
-    button.disabled = false;
-    button.textContent = '🔗 Copia Link';
+  if (publishButton) {
+    publishButton.disabled = sharedState.readOnly || sharedState.loading || sharedState.saving;
+    publishButton.textContent = sharedState.readOnly
+      ? 'Snapshot protetto'
+      : sharedState.saving
+        ? 'Pubblico...'
+        : sharedState.loading
+          ? 'Carico...'
+          : '📦 Pubblica Snapshot';
+  }
+  if (copyButton) {
+    copyButton.disabled = false;
+    copyButton.textContent = '🔗 Copia Link';
   }
   if (!status) return;
 
@@ -1733,13 +1742,18 @@ function applySharedPayload(payload) {
     : Array.isArray(payload)
       ? payload
       : null;
+  const remoteKnownInstrumentCache = payload?.knownInstrumentCache && typeof payload.knownInstrumentCache === 'object'
+    ? payload.knownInstrumentCache
+    : {};
   if (!remoteClients) throw new Error('Formato dati condivisi non valido');
 
   clients = remoteClients;
+  knownInstrumentCache = { ...remoteKnownInstrumentCache };
   analyticsCache = {};
   instrumentResolveCache = {};
   currentClientId = getClient(currentClientId) ? currentClientId : null;
   safeStorageSet('pd_clients', JSON.stringify(clients));
+  safeStorageSet('pd_known_instruments', JSON.stringify(knownInstrumentCache));
   hydrateKnownInstrumentCacheFromClients();
 }
 
@@ -1766,25 +1780,28 @@ async function createSharedStore() {
 }
 
 async function publishSharedState({ createIfMissing = false } = {}) {
+  if (sharedState.readOnly) throw new Error('Questo link condiviso e in sola lettura. Apri la tua dashboard base per aggiornare lo snapshot.');
   if (!sharedState.id && !createIfMissing) return null;
   sharedState.error = '';
   sharedState.saving = true;
+  sharedState.message = 'Sto pubblicando lo snapshot condivisibile...';
+  sharedState.messageType = 'info';
   renderSharedStatus();
 
   try {
     let activeSharedId = sharedState.id;
     if (!activeSharedId) {
       activeSharedId = createRandomSharedId();
-      setSharedStoreId(activeSharedId, { persist: true, updateUrl: true });
+      setSharedStoreId(activeSharedId, { persist: true, updateUrl: false });
     }
 
     await writeSharedPayload(activeSharedId, buildSharedPayload());
     sharedState.lastSavedAt = new Date().toISOString();
-    sharedState.message = `✅ Link live aggiornato. Chi riapre questo URL vede <strong style="color:var(--text)">${clients.length}</strong> clienti sincronizzati.`;
+    sharedState.message = `✅ Snapshot pubblicato. Ultimo aggiornamento: <strong style="color:var(--text)">${escapeHtml(formatSharedTimestamp(sharedState.lastSavedAt))}</strong>.`;
     sharedState.messageType = 'ok';
     return activeSharedId;
   } catch (error) {
-    sharedState.message = `❌ Sync del link live non riuscito: ${escapeHtml(describeSharedLinkError(error))}.`;
+    sharedState.message = `❌ Pubblicazione snapshot non riuscita: ${escapeHtml(describeSharedLinkError(error))}.`;
     sharedState.messageType = 'err';
     throw error;
   } finally {
@@ -1802,18 +1819,49 @@ function queueSharedSync() {
   }, 900);
 }
 
-async function copySharedLink() {
+async function publishSnapshotLink() {
   try {
-    const url = new URL(window.location.href);
-    url.searchParams.delete(SHARED_LINK_PARAM);
-    const link = url.toString();
+    const activeSharedId = await publishSharedState({ createIfMissing: true });
+    const link = buildSharedLinkUrl(activeSharedId);
     if (navigator.clipboard?.writeText) {
       await navigator.clipboard.writeText(link);
-      sharedState.message = `✅ Link copiato. Questo URL mostra in modo permanente lo snapshot pubblicato di <strong style="color:var(--text)">${clients.length}</strong> clienti.`;
+      sharedState.message = `✅ Snapshot pubblicato e link copiato. Chi apre questo URL vede <strong style="color:var(--text)">${clients.length}</strong> clienti e, quando lo ripubblichi, ritrova i dati aggiornati.`;
+      sharedState.messageType = 'ok';
+    } else {
+      window.prompt('Copia questo link snapshot', link);
+      sharedState.message = '✅ Snapshot pubblicato. Copia il link dalla finestra e condividilo.';
+      sharedState.messageType = 'ok';
+    }
+  } catch (error) {
+    if (!sharedState.message) {
+      sharedState.message = `❌ Pubblicazione snapshot non riuscita: ${escapeHtml(describeSharedLinkError(error))}.`;
+      sharedState.messageType = 'err';
+    }
+  } finally {
+    renderSharedStatus();
+  }
+}
+
+async function copySharedLink() {
+  try {
+    const link = sharedState.id
+      ? buildSharedLinkUrl(sharedState.id)
+      : (() => {
+          const url = new URL(window.location.href);
+          url.searchParams.delete(SHARED_LINK_PARAM);
+          return url.toString();
+        })();
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(link);
+      sharedState.message = sharedState.id
+        ? "✅ Link snapshot copiato. Questo URL punta all'ultima pubblicazione disponibile del portafoglio condiviso."
+        : '✅ Link copiato. Questo URL mostra lo snapshot pubblico incorporato nel sito.';
       sharedState.messageType = 'ok';
     } else {
       window.prompt('Copia questo link pubblico', link);
-      sharedState.message = '✅ Link pubblico pronto. Copialo dalla finestra e condividilo.';
+      sharedState.message = sharedState.id
+        ? '✅ Link snapshot pronto. Copialo dalla finestra e condividilo.'
+        : '✅ Link pubblico pronto. Copialo dalla finestra e condividilo.';
       sharedState.messageType = 'ok';
     }
   } catch (error) {
@@ -1826,14 +1874,44 @@ async function copySharedLink() {
 
 async function initializeSharedWorkspace() {
   const url = new URL(window.location.href);
-  if (url.searchParams.has(SHARED_LINK_PARAM)) {
-    url.searchParams.delete(SHARED_LINK_PARAM);
-    history.replaceState({}, '', url.toString());
-  }
-  sharedState.id = '';
+  const urlSharedId = normalizeSharedStoreId(url.searchParams.get(SHARED_LINK_PARAM));
+  const storedSharedId = normalizeSharedStoreId(safeStorageGet(SHARED_STORE_LOCAL_KEY));
+
+  sharedState.id = storedSharedId;
   sharedState.loading = false;
   sharedState.saving = false;
+  sharedState.readOnly = Boolean(urlSharedId && (!storedSharedId || storedSharedId !== urlSharedId));
+
+  if (!urlSharedId) {
+    if (sharedState.id) {
+      sharedState.message = 'ℹ️ Snapshot pronto. Clicca "Pubblica Snapshot" per aggiornare lo stesso link condivisibile oppure "Copia Link" per ricopiarlo.';
+      sharedState.messageType = 'info';
+    }
+    renderSharedStatus();
+    return;
+  }
+
+  sharedState.loading = true;
+  sharedState.message = 'Sto caricando lo snapshot condiviso dal link...';
+  sharedState.messageType = 'info';
   renderSharedStatus();
+
+  try {
+    const payload = await fetchSharedPayload(urlSharedId);
+    sharedState.id = urlSharedId;
+    applySharedPayload(payload);
+    sharedState.lastLoadedAt = payload?.updatedAt || new Date().toISOString();
+    sharedState.message = sharedState.readOnly
+      ? `✅ Snapshot caricato dal link condiviso in sola lettura. Ultimo aggiornamento: <strong style="color:var(--text)">${escapeHtml(formatSharedTimestamp(sharedState.lastLoadedAt))}</strong>.`
+      : `✅ Snapshot caricato dal link condiviso. Ultimo aggiornamento: <strong style="color:var(--text)">${escapeHtml(formatSharedTimestamp(sharedState.lastLoadedAt))}</strong>.`;
+    sharedState.messageType = 'ok';
+  } catch (error) {
+    sharedState.message = `❌ Non sono riuscito a caricare lo snapshot condiviso: ${escapeHtml(describeSharedLinkError(error))}.`;
+    sharedState.messageType = 'err';
+  } finally {
+    sharedState.loading = false;
+    renderSharedStatus();
+  }
 }
 
 function safeStorageGet(key) {
