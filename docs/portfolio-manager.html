@@ -1686,6 +1686,9 @@ function describeSharedLinkError(error) {
   if (window.location.protocol === 'file:' && (!raw || normalized.includes('failed to fetch') || normalized.includes('load failed'))) {
     return 'Apri la piattaforma da un vero URL http/https, non come file locale. La pubblicazione dello snapshot richiede una pagina servita via web.';
   }
+  if (normalized.includes('http 404') || normalized.includes('404')) {
+    return 'Lo snapshot non e ancora disponibile oppure il link punta a un id non valido. Se hai appena pubblicato, attendi qualche secondo e riprova; altrimenti ripubblica lo snapshot e condividi il nuovo link.';
+  }
   if (normalized.includes('failed to fetch') || normalized.includes('load failed')) {
     return 'Il browser o una sua estensione ha bloccato la connessione verso il servizio di pubblicazione dello snapshot. Riprova da una scheda normale oppure disattiva eventuali blocchi privacy per questa pagina.';
   }
@@ -1733,6 +1736,25 @@ async function fetchSharedPayload(sharedId = sharedState.id) {
   const parts = Math.max(1, parseInt(meta?.parts, 10) || 1);
   const chunks = await Promise.all(Array.from({ length: parts }, (_, index) => fetchSharedText(sharedId, `part-${index}`)));
   return JSON.parse(chunks.join(''));
+}
+
+function isRetriableSharedReadError(error) {
+  const message = String(error?.message || error || '').toLowerCase();
+  return message.includes('http 404');
+}
+
+async function waitForSharedPayload(sharedId, { attempts = 8, delayMs = 900 } = {}) {
+  let lastError = null;
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      return await fetchSharedPayload(sharedId);
+    } catch (error) {
+      lastError = error;
+      if (!isRetriableSharedReadError(error) || attempt >= attempts) throw error;
+      await new Promise(resolve => setTimeout(resolve, delayMs));
+    }
+  }
+  throw lastError || new Error('Snapshot non disponibile');
 }
 
 function applySharedPayload(payload) {
@@ -1787,18 +1809,29 @@ async function publishSharedState({ createIfMissing = false } = {}) {
   sharedState.messageType = 'info';
   renderSharedStatus();
 
-  try {
-    let activeSharedId = sharedState.id;
-    if (!activeSharedId) {
-      activeSharedId = createRandomSharedId();
-      setSharedStoreId(activeSharedId, { persist: true, updateUrl: false });
-    }
+  const candidateIds = [];
+  if (sharedState.id) candidateIds.push(sharedState.id);
+  if (!sharedState.id || createIfMissing) candidateIds.push(createRandomSharedId());
 
-    await writeSharedPayload(activeSharedId, buildSharedPayload());
-    sharedState.lastSavedAt = new Date().toISOString();
-    sharedState.message = `✅ Snapshot pubblicato. Ultimo aggiornamento: <strong style="color:var(--text)">${escapeHtml(formatSharedTimestamp(sharedState.lastSavedAt))}</strong>.`;
-    sharedState.messageType = 'ok';
-    return activeSharedId;
+  let lastError = null;
+
+  try {
+    for (const candidateId of candidateIds) {
+      const activeSharedId = normalizeSharedStoreId(candidateId);
+      if (!activeSharedId) continue;
+      setSharedStoreId(activeSharedId, { persist: true, updateUrl: false });
+      try {
+        await writeSharedPayload(activeSharedId, buildSharedPayload());
+        await waitForSharedPayload(activeSharedId, { attempts: 10, delayMs: 900 });
+        sharedState.lastSavedAt = new Date().toISOString();
+        sharedState.message = `✅ Snapshot pubblicato e verificato. Ultimo aggiornamento: <strong style="color:var(--text)">${escapeHtml(formatSharedTimestamp(sharedState.lastSavedAt))}</strong>.`;
+        sharedState.messageType = 'ok';
+        return activeSharedId;
+      } catch (error) {
+        lastError = error;
+      }
+    }
+    throw lastError || new Error('Pubblicazione snapshot non riuscita');
   } catch (error) {
     sharedState.message = `❌ Pubblicazione snapshot non riuscita: ${escapeHtml(describeSharedLinkError(error))}.`;
     sharedState.messageType = 'err';
@@ -1843,6 +1876,9 @@ async function publishSnapshotLink() {
 
 async function copySharedLink() {
   try {
+    if (sharedState.id) {
+      await waitForSharedPayload(sharedState.id, { attempts: 6, delayMs: 700 });
+    }
     const link = sharedState.id
       ? buildSharedLinkUrl(sharedState.id)
       : (() => {
@@ -1891,12 +1927,12 @@ async function initializeSharedWorkspace() {
   }
 
   sharedState.loading = true;
-  sharedState.message = 'Sto caricando lo snapshot condiviso dal link...';
+  sharedState.message = 'Sto caricando lo snapshot condiviso dal link. Se e appena stato pubblicato attendo qualche secondo in automatico...';
   sharedState.messageType = 'info';
   renderSharedStatus();
 
   try {
-    const payload = await fetchSharedPayload(urlSharedId);
+    const payload = await waitForSharedPayload(urlSharedId, { attempts: 10, delayMs: 900 });
     sharedState.id = urlSharedId;
     applySharedPayload(payload);
     sharedState.lastLoadedAt = payload?.updatedAt || new Date().toISOString();
