@@ -1792,6 +1792,50 @@ function buildCurrentShareableUrl() {
   return buildPublicBaseUrl().toString();
 }
 
+function openManualCopyPrompt(label, text) {
+  try {
+    window.prompt(label, text);
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
+
+function isClipboardPermissionError(error) {
+  const combined = `${String(error?.name || '').toLowerCase()} ${String(error?.message || error || '').toLowerCase()}`.trim();
+  return combined.includes('clipboard')
+    || combined.includes('notallowederror')
+    || combined.includes('not allowed')
+    || combined.includes('denied permission')
+    || combined.includes('user agent')
+    || combined.includes('platform in the current context')
+    || combined.includes('secure context');
+}
+
+async function tryCopyTextWithFallback(text, promptLabel = 'Copia questo contenuto') {
+  const normalizedText = String(text || '');
+  if (!normalizedText) return { copied: false, prompted: false, error: new Error('Contenuto vuoto') };
+
+  if (navigator.clipboard?.writeText) {
+    try {
+      await navigator.clipboard.writeText(normalizedText);
+      return { copied: true, prompted: false, error: null };
+    } catch (error) {
+      return {
+        copied: false,
+        prompted: openManualCopyPrompt(promptLabel, normalizedText),
+        error
+      };
+    }
+  }
+
+  return {
+    copied: false,
+    prompted: openManualCopyPrompt(promptLabel, normalizedText),
+    error: null
+  };
+}
+
 function splitSharedPayloadText(text, chunkSize = LIVE_CHUNK_SIZE) {
   const source = String(text || '');
   if (!source) return [''];
@@ -2215,12 +2259,16 @@ async function publishSnapshotLink() {
     history.replaceState({}, '', link);
 
     if (!alreadyLive) {
-      if (navigator.clipboard?.writeText) {
-        await navigator.clipboard.writeText(link);
+      const copyResult = await tryCopyTextWithFallback(link, 'Copia questo link live');
+      if (copyResult.copied) {
         sharedState.message = `✅ Live attivato e link copiato. Chi apre questo URL vede i tuoi <strong style="color:var(--text)">${clients.length}</strong> clienti e le modifiche si aggiornano automaticamente ogni pochi secondi.`;
+      } else if (copyResult.prompted) {
+        sharedState.message = '✅ Live attivato. Il browser ha bloccato la copia automatica, quindi ti ho aperto la finestra di copia manuale.';
       } else {
-        window.prompt('Copia questo link live', link);
-        sharedState.message = '✅ Live attivato. Copia il link dalla finestra e condividilo con il cliente.';
+        const copyProblem = copyResult.error && !isClipboardPermissionError(copyResult.error)
+          ? ` Dettaglio: ${escapeHtml(String(copyResult.error.message || copyResult.error))}.`
+          : '';
+        sharedState.message = `✅ Live attivato. Se il browser non ti lascia copiare in automatico, prendi il link dalla barra indirizzi e condividilo.${copyProblem}`;
       }
     } else {
       sharedState.message = `✅ Live sincronizzato. Ultimo aggiornamento: <strong style="color:var(--text)">${escapeHtml(formatSharedTimestamp(sharedState.lastSavedAt))}</strong>. Il cliente vede le modifiche senza ricevere un nuovo link.`;
@@ -2243,15 +2291,19 @@ async function copySharedLink() {
     else await ensureLiveWorkspace();
     const link = buildLiveWorkspaceLink();
     history.replaceState({}, '', link);
-    if (navigator.clipboard?.writeText) {
-      await navigator.clipboard.writeText(link);
+
+    const copyResult = await tryCopyTextWithFallback(link, 'Copia questo link live');
+    if (copyResult.copied) {
       sharedState.message = '✅ Link live copiato. Chi lo apre vede i tuoi aggiornamenti automatici e puo lavorare sullo stesso workspace.';
-      sharedState.messageType = 'ok';
+    } else if (copyResult.prompted) {
+      sharedState.message = '✅ Link live pronto. Il browser ha bloccato la copia automatica, quindi ti ho aperto la finestra di copia manuale.';
     } else {
-      window.prompt('Copia questo link live', link);
-      sharedState.message = '✅ Link live pronto. Copialo dalla finestra e condividilo.';
-      sharedState.messageType = 'ok';
+      const copyProblem = copyResult.error && !isClipboardPermissionError(copyResult.error)
+        ? ` Dettaglio: ${escapeHtml(String(copyResult.error.message || copyResult.error))}.`
+        : '';
+      sharedState.message = `✅ Link live pronto. Se il browser non copia in automatico, usa il link nella barra indirizzi.${copyProblem}`;
     }
+    sharedState.messageType = 'ok';
   } catch (error) {
     sharedState.message = `❌ Non sono riuscito a preparare il link live: ${escapeHtml(describeSharedLinkError(error))}.`;
     sharedState.messageType = 'err';
