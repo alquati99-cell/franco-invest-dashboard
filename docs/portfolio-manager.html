@@ -1511,6 +1511,7 @@ const STATIC_CLIENTS_FALLBACK = Array.isArray(STATIC_DATA.clients) ? STATIC_DATA
 const STATIC_INSTRUMENT_CACHE_FALLBACK = STATIC_DATA.knownInstrumentCache && typeof STATIC_DATA.knownInstrumentCache === 'object'
   ? STATIC_DATA.knownInstrumentCache
   : {};
+const STATIC_SNAPSHOT_MARKER_KEY = 'pd_static_snapshot_marker';
 let clients = readStoredJSON('pd_clients', JSON.stringify(STATIC_CLIENTS_FALLBACK));
 let currentClientId = null;
 let perfChartInst = null;
@@ -1562,12 +1563,38 @@ let sharedState = {
   lastSavedAt: ''
 };
 
+function countPortfolioPositions(clientList) {
+  return (Array.isArray(clientList) ? clientList : []).reduce((total, client) => total + ((client?.positions || []).length), 0);
+}
+
+function buildStaticSnapshotMarker() {
+  return JSON.stringify({
+    updatedAt: STATIC_DATA?.updatedAt || '',
+    clients: STATIC_CLIENTS_FALLBACK.length,
+    positions: countPortfolioPositions(STATIC_CLIENTS_FALLBACK)
+  });
+}
+
 function ensurePublishedSnapshotAvailability() {
-  if ((!Array.isArray(clients) || !clients.length) && STATIC_CLIENTS_FALLBACK.length) {
+  const staticPositions = countPortfolioPositions(STATIC_CLIENTS_FALLBACK);
+  const currentPositions = countPortfolioPositions(clients);
+  const staticMarker = buildStaticSnapshotMarker();
+  const storedMarker = safeStorageGet(STATIC_SNAPSHOT_MARKER_KEY);
+  const shouldPromoteStaticSnapshot = STATIC_CLIENTS_FALLBACK.length && (
+    !Array.isArray(clients)
+    || !clients.length
+    || (staticPositions > currentPositions && storedMarker !== staticMarker)
+  );
+
+  if (shouldPromoteStaticSnapshot) {
     clients = JSON.parse(JSON.stringify(STATIC_CLIENTS_FALLBACK));
+    safeStorageSet('pd_clients', JSON.stringify(clients));
+    safeStorageSet(STATIC_SNAPSHOT_MARKER_KEY, staticMarker);
   }
-  if ((!knownInstrumentCache || !Object.keys(knownInstrumentCache).length) && Object.keys(STATIC_INSTRUMENT_CACHE_FALLBACK).length) {
+
+  if ((shouldPromoteStaticSnapshot || !knownInstrumentCache || !Object.keys(knownInstrumentCache).length) && Object.keys(STATIC_INSTRUMENT_CACHE_FALLBACK).length) {
     knownInstrumentCache = { ...STATIC_INSTRUMENT_CACHE_FALLBACK };
+    safeStorageSet('pd_known_instruments', JSON.stringify(knownInstrumentCache));
   }
 }
 
