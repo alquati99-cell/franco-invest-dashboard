@@ -1594,6 +1594,8 @@ const INSTRUMENT_QUERY_ALIASES = {
 };
 const SUPPORTED_YAHOO_LIVE_CURRENCIES = new Set(['EUR', 'USD']);
 const SHARED_LINK_PARAM = 'shared';
+const LEGACY_SHARED_STORE_BASE = 'https://awesomekv.dev';
+const LEGACY_SHARED_KEY_PREFIX = 'portfolio-share';
 const EMBEDDED_SNAPSHOT_HASH_PREFIX = 'snapshot=';
 const EMBEDDED_SNAPSHOT_RAW_PREFIX = 'raw.';
 const EMBEDDED_SNAPSHOT_GZIP_PREFIX = 'gz.';
@@ -1790,6 +1792,33 @@ function buildCurrentShareableUrl() {
   const embeddedToken = readEmbeddedSnapshotToken();
   if (embeddedToken) return window.location.href;
   return buildPublicBaseUrl().toString();
+}
+
+function buildLegacySharedStorageKey(sharedId, suffix = 'meta') {
+  const normalized = normalizeSharedStoreId(sharedId);
+  return normalized ? `${LEGACY_SHARED_KEY_PREFIX}-${normalized}-${suffix}` : '';
+}
+
+function buildLegacySharedStoreUrl(sharedId, suffix = 'meta') {
+  const normalized = normalizeSharedStoreId(sharedId);
+  const key = buildLegacySharedStorageKey(sharedId, suffix);
+  return normalized && key
+    ? `${LEGACY_SHARED_STORE_BASE}/${encodeURIComponent(normalized)}/${encodeURIComponent(key)}`
+    : LEGACY_SHARED_STORE_BASE;
+}
+
+async function fetchLegacySharedText(sharedId, suffix) {
+  const response = await fetch(`${buildLegacySharedStoreUrl(sharedId, suffix)}?ts=${Date.now()}`, { cache: 'no-store' });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  return await response.text();
+}
+
+async function fetchLegacySharedPayload(sharedId) {
+  const metaText = await fetchLegacySharedText(sharedId, 'meta');
+  const meta = JSON.parse(metaText || '{}');
+  const parts = Math.max(1, parseInt(meta?.parts, 10) || 1);
+  const chunks = await Promise.all(Array.from({ length: parts }, (_, index) => fetchLegacySharedText(sharedId, `part-${index}`)));
+  return JSON.parse(chunks.join(''));
 }
 
 function openManualCopyPrompt(label, text) {
@@ -2393,9 +2422,26 @@ async function initializeSharedWorkspace() {
   }
 
   if (legacySharedId) {
-    sharedState.message = 'ℹ️ Questo e un vecchio link condiviso. Apri la dashboard principale e genera un nuovo Link Live per avere aggiornamenti automatici.';
+    sharedState.loading = true;
+    sharedState.message = 'Sto recuperando i dati dal vecchio link condiviso...';
     sharedState.messageType = 'info';
     renderSharedStatus();
+
+    try {
+      const payload = await fetchLegacySharedPayload(legacySharedId);
+      applySharedPayload(payload);
+      sharedState.lastLoadedAt = payload?.updatedAt || new Date().toISOString();
+      const workingUrl = buildPublicBaseUrl().toString();
+      history.replaceState({}, '', workingUrl);
+      sharedState.message = '✅ Dati recuperati dal vecchio link condiviso e importati nella tua copia di lavoro. Ora puoi modificarli liberamente; poi clicca <strong style="color:var(--text)">Attiva Live</strong> per passare al nuovo sistema live.';
+      sharedState.messageType = 'ok';
+    } catch (error) {
+      sharedState.message = `❌ Non sono riuscito a recuperare il vecchio link condiviso: ${escapeHtml(describeSharedLinkError(error))}.`;
+      sharedState.messageType = 'err';
+    } finally {
+      sharedState.loading = false;
+      renderSharedStatus();
+    }
     return;
   }
 
