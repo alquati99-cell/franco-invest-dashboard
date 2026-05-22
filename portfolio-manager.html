@@ -2031,7 +2031,9 @@ async function initializeSharedWorkspace() {
       const payload = await parseEmbeddedSnapshotToken(embeddedSnapshotToken);
       applySharedPayload(payload);
       sharedState.lastLoadedAt = payload?.updatedAt || new Date().toISOString();
-      sharedState.message = `✅ Snapshot caricato dal link. Se modifichi i dati e vuoi ricondividerli, clicca <strong style="color:var(--text)">Pubblica Snapshot</strong> per generare un nuovo link aggiornato.`;
+      const workingUrl = buildPublicBaseUrl().toString();
+      history.replaceState({}, '', workingUrl);
+      sharedState.message = `✅ Snapshot importato nella tua copia di lavoro. Ora puoi modificare il portafoglio senza perdere i dati al refresh; quando vuoi ricondividerlo clicca <strong style="color:var(--text)">Pubblica Snapshot</strong> per generare un nuovo link aggiornato.`;
       sharedState.messageType = 'ok';
     } catch (error) {
       sharedState.message = `❌ Non sono riuscito a leggere il link snapshot: ${escapeHtml(describeSharedLinkError(error))}.`;
