@@ -9,6 +9,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="./portfolio-shared-config.js"></script>
 <script src="./portfolio-static-data.js"></script>
+<script src="./portfolio-local-config.js"></script>
 <style>
   :root {
     --bg: #f3f7ff;
@@ -685,8 +686,8 @@
     <div class="topbar-actions">
       <button class="btn btn-outline" onclick="copyClientsBackup()">📋 Copia Clienti</button>
       <button class="btn btn-outline" onclick="importClientsBackup()">📥 Importa Clienti</button>
-      <button class="btn btn-outline" id="btn-publish-snapshot" onclick="publishSnapshotLink()">📦 Pubblica Snapshot</button>
-      <button class="btn btn-outline" id="btn-share-live" onclick="copySharedLink()">🔗 Copia Link</button>
+      <button class="btn btn-outline" id="btn-publish-snapshot" onclick="publishSnapshotLink()">🟢 Attiva Live</button>
+      <button class="btn btn-outline" id="btn-share-live" onclick="copySharedLink()">🔗 Copia Link Live</button>
       <button class="btn btn-outline" onclick="refreshAllPrices()">⟳ Aggiorna Prezzi</button>
       <button class="btn btn-gold" onclick="openNewClientModal()">+ Nuovo Cliente</button>
     </div>
@@ -1411,10 +1412,17 @@ let instrumentModalState = { clientId: null, positionIndex: null, range: '5y', i
 let newsState = normalizeNewsState(readStoredJSON('pd_news_state', '{}'));
 let sharedState = {
   id: '',
+  liveKey: '',
   loading: false,
   saving: false,
+  connected: false,
   readOnly: false,
   debounceTimer: null,
+  pollTimer: null,
+  pollInFlight: false,
+  applyingRemote: false,
+  workspaceRevision: '',
+  clientInstanceId: window.crypto?.randomUUID ? window.crypto.randomUUID() : `client-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`,
   message: '',
   messageType: 'info',
   lastLoadedAt: '',
@@ -1452,14 +1460,16 @@ const INSTRUMENT_QUERY_ALIASES = {
   UNICREDIT: ['UCG.MI']
 };
 const SUPPORTED_YAHOO_LIVE_CURRENCIES = new Set(['EUR', 'USD']);
-const SHARED_STORE_BASE = 'https://awesomekv.dev';
-const SHARED_KEY_PREFIX = 'portfolio-share';
-const SHARED_CHUNK_SIZE = 14000;
 const SHARED_LINK_PARAM = 'shared';
-const SHARED_STORE_LOCAL_KEY = 'pd_shared_store_id';
 const EMBEDDED_SNAPSHOT_HASH_PREFIX = 'snapshot=';
 const EMBEDDED_SNAPSHOT_RAW_PREFIX = 'raw.';
 const EMBEDDED_SNAPSHOT_GZIP_PREFIX = 'gz.';
+const LIVE_STORE_BASE = 'https://mantledb.sh/v2';
+const LIVE_LINK_PARAM = 'live';
+const LIVE_LINK_KEY_HASH_PREFIX = 'livekey=';
+const LIVE_WORKSPACE_LOCAL_KEY = 'pd_live_workspace';
+const LIVE_CHUNK_SIZE = 12000;
+const LIVE_POLL_INTERVAL_MS = 2500;
 const KNOWN_ISIN_OVERRIDES = {
   US02079K3059: { symbol: 'GOOG', name: 'Alphabet Inc. Class C', type: 'Azione', currency: 'USD', exchange: 'NASDAQ' },
   US02079K1079: { symbol: 'GOOGL', name: 'Alphabet Inc. Class A', type: 'Azione', currency: 'USD', exchange: 'NASDAQ' },
@@ -1491,6 +1501,8 @@ screenerData = [...screenerDefault];
 
 function save() {
   safeStorageSet('pd_clients', JSON.stringify(clients));
+  safeStorageSet('pd_known_instruments', JSON.stringify(knownInstrumentCache));
+  queueSharedSync();
 }
 
 function normalizeSharedStoreId(value) {
@@ -1498,7 +1510,8 @@ function normalizeSharedStoreId(value) {
   if (!raw) return '';
   try {
     const url = new URL(raw, window.location.href);
-    const candidate = url.searchParams.get(SHARED_LINK_PARAM)
+    const candidate = url.searchParams.get(LIVE_LINK_PARAM)
+      || url.searchParams.get(SHARED_LINK_PARAM)
       || url.pathname.split('/').filter(Boolean).pop()
       || raw;
     return candidate.replace(/[^a-zA-Z0-9_-]/g, '').slice(0, 96);
@@ -1507,70 +1520,13 @@ function normalizeSharedStoreId(value) {
   }
 }
 
+function normalizeLiveWorkspaceKey(value) {
+  return String(value || '').trim().replace(/[^a-fA-F0-9]/g, '').slice(0, 128).toLowerCase();
+}
+
 function createRandomSharedId() {
-  if (window.crypto?.randomUUID) return normalizeSharedStoreId(window.crypto.randomUUID());
-  return normalizeSharedStoreId(`${Date.now()}_${Math.random().toString(36).slice(2, 12)}`);
-}
-
-function buildSharedStorageKey(sharedId = sharedState.id, suffix = 'meta') {
-  const normalized = normalizeSharedStoreId(sharedId);
-  return normalized ? `${SHARED_KEY_PREFIX}-${normalized}-${suffix}` : '';
-}
-
-function buildSharedStoreUrl(sharedId = sharedState.id, suffix = 'meta') {
-  const normalized = normalizeSharedStoreId(sharedId);
-  const key = buildSharedStorageKey(sharedId, suffix);
-  return normalized && key
-    ? `${SHARED_STORE_BASE}/${encodeURIComponent(normalized)}/${encodeURIComponent(key)}`
-    : SHARED_STORE_BASE;
-}
-
-function buildSharedLinkUrl(sharedId = sharedState.id) {
-  const normalized = normalizeSharedStoreId(sharedId);
-  const url = new URL(window.location.href);
-  if (normalized) url.searchParams.set(SHARED_LINK_PARAM, normalized);
-  return url.toString();
-}
-
-function splitSharedPayloadText(text, chunkSize = SHARED_CHUNK_SIZE) {
-  const source = String(text || '');
-  if (!source) return [''];
-  const chunks = [];
-  for (let index = 0; index < source.length; index += chunkSize) {
-    chunks.push(source.slice(index, index + chunkSize));
-  }
-  return chunks.length ? chunks : [''];
-}
-
-async function postSharedText(sharedId, suffix, value) {
-  const response = await fetch(buildSharedStoreUrl(sharedId, suffix), {
-    method: 'POST',
-    headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
-    body: String(value ?? '')
-  });
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  return response;
-}
-
-async function fetchSharedText(sharedId, suffix) {
-  const response = await fetch(`${buildSharedStoreUrl(sharedId, suffix)}?ts=${Date.now()}`, { cache: 'no-store' });
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  return await response.text();
-}
-
-function setSharedStoreId(sharedId, { persist = true, updateUrl = true } = {}) {
-  const normalized = normalizeSharedStoreId(sharedId);
-  sharedState.id = normalized;
-  if (persist) {
-    if (normalized) safeStorageSet(SHARED_STORE_LOCAL_KEY, normalized);
-    else safeStorageRemove(SHARED_STORE_LOCAL_KEY);
-  }
-  if (updateUrl) {
-    const url = new URL(window.location.href);
-    if (normalized) url.searchParams.set(SHARED_LINK_PARAM, normalized);
-    else url.searchParams.delete(SHARED_LINK_PARAM);
-    history.replaceState({}, '', url.toString());
-  }
+  if (window.crypto?.randomUUID) return normalizeSharedStoreId(`pdlive-${window.crypto.randomUUID()}`);
+  return normalizeSharedStoreId(`pdlive-${Date.now()}-${Math.random().toString(36).slice(2, 12)}`);
 }
 
 function buildSharedPayload() {
@@ -1585,6 +1541,7 @@ function buildSharedPayload() {
 function buildPublicBaseUrl() {
   const url = new URL(window.location.href);
   url.searchParams.delete(SHARED_LINK_PARAM);
+  url.searchParams.delete(LIVE_LINK_PARAM);
   url.hash = '';
   return url;
 }
@@ -1594,6 +1551,14 @@ function readEmbeddedSnapshotToken(urlLike = window.location.href) {
   const hash = String(url.hash || '').replace(/^#/, '');
   return hash.startsWith(EMBEDDED_SNAPSHOT_HASH_PREFIX)
     ? hash.slice(EMBEDDED_SNAPSHOT_HASH_PREFIX.length)
+    : '';
+}
+
+function readLiveWorkspaceKey(urlLike = window.location.href) {
+  const url = urlLike instanceof URL ? urlLike : new URL(urlLike, window.location.href);
+  const hash = String(url.hash || '').replace(/^#/, '');
+  return hash.startsWith(LIVE_LINK_KEY_HASH_PREFIX)
+    ? normalizeLiveWorkspaceKey(hash.slice(LIVE_LINK_KEY_HASH_PREFIX.length))
     : '';
 }
 
@@ -1676,14 +1641,30 @@ async function buildEmbeddedSnapshotLink(payload = buildSharedPayload()) {
   return url.toString();
 }
 
+function buildLiveWorkspaceLink(namespace = sharedState.id, accessKey = sharedState.liveKey) {
+  const normalizedNamespace = normalizeSharedStoreId(namespace);
+  const normalizedKey = normalizeLiveWorkspaceKey(accessKey);
+  const url = buildPublicBaseUrl();
+  if (normalizedNamespace) url.searchParams.set(LIVE_LINK_PARAM, normalizedNamespace);
+  if (normalizedKey) url.hash = `${LIVE_LINK_KEY_HASH_PREFIX}${normalizedKey}`;
+  return url.toString();
+}
+
 function buildCurrentShareableUrl() {
+  if (isLiveWorkspaceReady()) return buildLiveWorkspaceLink();
   const embeddedToken = readEmbeddedSnapshotToken();
   if (embeddedToken) return window.location.href;
-
-  const currentUrl = new URL(window.location.href);
-  if (currentUrl.searchParams.has(SHARED_LINK_PARAM)) return currentUrl.toString();
-
   return buildPublicBaseUrl().toString();
+}
+
+function splitSharedPayloadText(text, chunkSize = LIVE_CHUNK_SIZE) {
+  const source = String(text || '');
+  if (!source) return [''];
+  const chunks = [];
+  for (let index = 0; index < source.length; index += chunkSize) {
+    chunks.push(source.slice(index, index + chunkSize));
+  }
+  return chunks.length ? chunks : [''];
 }
 
 function buildClientsBackupPayload() {
@@ -1769,6 +1750,7 @@ async function importClientsBackup() {
     hydrateKnownInstrumentCacheFromClients();
     renderDashboard();
     if (currentClientId) renderClientDetail(currentClientId);
+    queueSharedSync();
 
     setSharedMessage(`✅ Importati <strong style="color:var(--text)">${clients.length}</strong> clienti dal backup.`, 'ok');
   } catch (error) {
@@ -1793,14 +1775,20 @@ function describeSharedLinkError(error) {
   if (normalized.includes('snapshot') || normalized.includes('base64') || normalized.includes('decode')) {
     return raw || 'Il link snapshot non e leggibile oppure e stato troncato.';
   }
-  if (window.location.protocol === 'file:' && (!raw || normalized.includes('failed to fetch') || normalized.includes('load failed'))) {
-    return 'Apri la piattaforma da un vero URL http/https, non come file locale. La pubblicazione dello snapshot richiede una pagina servita via web.';
+  if (normalized.includes('http 401') || normalized.includes('http 403')) {
+    return 'Il link live non contiene una chiave valida oppure il workspace non autorizza questa operazione.';
   }
   if (normalized.includes('http 404') || normalized.includes('404')) {
-    return 'Questo vecchio link condiviso non e piu disponibile. Apri la dashboard principale e genera un nuovo link con Pubblica Snapshot.';
+    return 'Il workspace live non esiste oppure non e ancora stato inizializzato correttamente.';
+  }
+  if (normalized.includes('http 413') || normalized.includes('413')) {
+    return 'Il workspace live e troppo grande per il piano attuale. Riduci i dati oppure passa a un backend dedicato.';
   }
   if (normalized.includes('failed to fetch') || normalized.includes('load failed')) {
-    return 'Non sono riuscito a leggere il vecchio link remoto. Per evitare altri blocchi, genera un nuovo link con Pubblica Snapshot.';
+    return 'Connessione live non raggiungibile dal browser in questo momento. Riprova fra qualche secondo.';
+  }
+  if (window.location.protocol === 'file:') {
+    return 'Apri la piattaforma da un vero URL http/https, non come file locale.';
   }
   return raw || 'errore di rete';
 }
@@ -1812,14 +1800,16 @@ function renderSharedStatus() {
   if (publishButton) {
     publishButton.disabled = sharedState.loading || sharedState.saving;
     publishButton.textContent = sharedState.saving
-      ? 'Genero Link...'
+      ? (sharedState.connected ? 'Sincronizzo Live...' : 'Attivo Live...')
       : sharedState.loading
-        ? 'Carico...'
-        : '📦 Pubblica Snapshot';
+        ? 'Collego Live...'
+        : sharedState.connected
+          ? '💾 Sincronizza Live'
+          : '🟢 Attiva Live';
   }
   if (copyButton) {
-    copyButton.disabled = false;
-    copyButton.textContent = '🔗 Copia Link';
+    copyButton.disabled = sharedState.loading && !sharedState.connected;
+    copyButton.textContent = '🔗 Copia Link Live';
   }
   if (!status) return;
 
@@ -1838,31 +1828,206 @@ function renderSharedStatus() {
   status.innerHTML = message;
 }
 
-async function fetchSharedPayload(sharedId = sharedState.id) {
-  const metaText = await fetchSharedText(sharedId, 'meta');
-  const meta = JSON.parse(metaText || '{}');
+function readStoredLiveWorkspace() {
+  try {
+    const raw = safeStorageGet(LIVE_WORKSPACE_LOCAL_KEY);
+    if (!raw) return { namespace: '', key: '' };
+    const parsed = JSON.parse(raw);
+    return {
+      namespace: normalizeSharedStoreId(parsed?.namespace),
+      key: normalizeLiveWorkspaceKey(parsed?.key)
+    };
+  } catch (error) {
+    return { namespace: '', key: '' };
+  }
+}
+
+function persistLiveWorkspace(namespace, accessKey) {
+  const normalizedNamespace = normalizeSharedStoreId(namespace);
+  const normalizedKey = normalizeLiveWorkspaceKey(accessKey);
+  if (!normalizedNamespace || !normalizedKey) {
+    safeStorageRemove(LIVE_WORKSPACE_LOCAL_KEY);
+    return;
+  }
+  safeStorageSet(LIVE_WORKSPACE_LOCAL_KEY, JSON.stringify({ namespace: normalizedNamespace, key: normalizedKey }));
+}
+
+function isLiveWorkspaceReady() {
+  return Boolean(sharedState.id && sharedState.liveKey);
+}
+
+function setLiveWorkspaceCredentials(namespace, accessKey, { persist = true, updateUrl = true } = {}) {
+  sharedState.id = normalizeSharedStoreId(namespace);
+  sharedState.liveKey = normalizeLiveWorkspaceKey(accessKey);
+  sharedState.connected = Boolean(sharedState.id && sharedState.liveKey);
+
+  if (persist) persistLiveWorkspace(sharedState.id, sharedState.liveKey);
+
+  if (updateUrl) {
+    const nextUrl = sharedState.connected
+      ? buildLiveWorkspaceLink(sharedState.id, sharedState.liveKey)
+      : buildPublicBaseUrl().toString();
+    history.replaceState({}, '', nextUrl);
+  }
+}
+
+function stopLiveWorkspacePolling() {
+  if (sharedState.pollTimer) {
+    clearTimeout(sharedState.pollTimer);
+    sharedState.pollTimer = null;
+  }
+}
+
+function scheduleLiveWorkspacePoll(delayMs = LIVE_POLL_INTERVAL_MS) {
+  stopLiveWorkspacePolling();
+  if (!isLiveWorkspaceReady()) return;
+  sharedState.pollTimer = setTimeout(() => {
+    sharedState.pollTimer = null;
+    pollLiveWorkspace().catch(() => {});
+  }, delayMs);
+}
+
+async function claimLiveWorkspace(namespace) {
+  const response = await fetch(`${LIVE_STORE_BASE}/claim/${encodeURIComponent(namespace)}`);
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  const payload = await response.json();
+  if (!payload?.key || !payload?.namespace) throw new Error('Chiave live non ricevuta dal servizio di sync');
+  return payload;
+}
+
+async function postLiveJson(namespace, path, data, accessKey) {
+  const headers = { 'Content-Type': 'application/json' };
+  if (accessKey) headers['X-Mantle-Key'] = accessKey;
+  const response = await fetch(`${LIVE_STORE_BASE}/${encodeURIComponent(namespace)}/${path}`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify(data ?? {})
+  });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  return response.json().catch(() => ({}));
+}
+
+async function fetchLiveJson(namespace, path, accessKey) {
+  const headers = {};
+  if (accessKey) headers['X-Mantle-Key'] = accessKey;
+  const response = await fetch(`${LIVE_STORE_BASE}/${encodeURIComponent(namespace)}/${path}?ts=${Date.now()}`, {
+    method: 'GET',
+    headers,
+    cache: 'no-store'
+  });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  return response.json();
+}
+
+async function writeLiveWorkspacePayload(namespace, accessKey, payload) {
+  const payloadText = JSON.stringify(payload);
+  const chunks = splitSharedPayloadText(payloadText, LIVE_CHUNK_SIZE);
+  for (let index = 0; index < chunks.length; index += 1) {
+    await postLiveJson(namespace, `state/part-${index}`, { text: chunks[index] }, accessKey);
+  }
+  const meta = {
+    version: 1,
+    updatedAt: payload?.updatedAt || new Date().toISOString(),
+    updatedBy: sharedState.clientInstanceId,
+    revision: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+    parts: chunks.length
+  };
+  await postLiveJson(namespace, 'state/meta', meta, accessKey);
+  return meta;
+}
+
+async function fetchLiveWorkspacePayload(namespace, accessKey) {
+  const meta = await fetchLiveJson(namespace, 'state/meta', accessKey);
   const parts = Math.max(1, parseInt(meta?.parts, 10) || 1);
-  const chunks = await Promise.all(Array.from({ length: parts }, (_, index) => fetchSharedText(sharedId, `part-${index}`)));
-  return JSON.parse(chunks.join(''));
+  const chunks = await Promise.all(
+    Array.from({ length: parts }, (_, index) => fetchLiveJson(namespace, `state/part-${index}`, accessKey))
+  );
+  const payloadText = chunks.map(entry => String(entry?.text || '')).join('');
+  return {
+    meta,
+    payload: JSON.parse(payloadText)
+  };
 }
 
-function isRetriableSharedReadError(error) {
-  const message = String(error?.message || error || '').toLowerCase();
-  return message.includes('http 404');
-}
+async function ensureLiveWorkspace() {
+  if (isLiveWorkspaceReady()) {
+    return { created: false, namespace: sharedState.id, key: sharedState.liveKey, link: buildLiveWorkspaceLink() };
+  }
 
-async function waitForSharedPayload(sharedId, { attempts = 8, delayMs = 900 } = {}) {
   let lastError = null;
-  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+  for (let attempt = 0; attempt < 5; attempt += 1) {
     try {
-      return await fetchSharedPayload(sharedId);
+      const claimed = await claimLiveWorkspace(createRandomSharedId());
+      setLiveWorkspaceCredentials(claimed.namespace, claimed.key, { persist: false, updateUrl: false });
+      const meta = await writeLiveWorkspacePayload(sharedState.id, sharedState.liveKey, buildSharedPayload());
+      sharedState.workspaceRevision = String(meta?.revision || '');
+      sharedState.lastSavedAt = meta?.updatedAt || new Date().toISOString();
+      sharedState.connected = true;
+      persistLiveWorkspace(sharedState.id, sharedState.liveKey);
+      history.replaceState({}, '', buildLiveWorkspaceLink());
+      scheduleLiveWorkspacePoll();
+      return { created: true, namespace: sharedState.id, key: sharedState.liveKey, link: buildLiveWorkspaceLink() };
     } catch (error) {
+      setLiveWorkspaceCredentials('', '', { persist: false, updateUrl: false });
+      sharedState.connected = false;
       lastError = error;
-      if (!isRetriableSharedReadError(error) || attempt >= attempts) throw error;
-      await new Promise(resolve => setTimeout(resolve, delayMs));
     }
   }
-  throw lastError || new Error('Snapshot non disponibile');
+
+  throw lastError || new Error('Non sono riuscito ad attivare il workspace live');
+}
+
+async function pushLiveWorkspaceState() {
+  if (!isLiveWorkspaceReady()) throw new Error('Workspace live non attivo');
+  const meta = await writeLiveWorkspacePayload(sharedState.id, sharedState.liveKey, buildSharedPayload());
+  sharedState.workspaceRevision = String(meta?.revision || '');
+  sharedState.lastSavedAt = meta?.updatedAt || new Date().toISOString();
+  sharedState.connected = true;
+  scheduleLiveWorkspacePoll();
+  return meta;
+}
+
+function refreshWorkspaceViewsAfterSync() {
+  renderDashboard();
+  const clientView = document.getElementById('view-client');
+  const exportView = document.getElementById('view-export');
+  if (clientView?.classList.contains('active')) {
+    if (currentClientId && getClient(currentClientId)) renderClientDetail(currentClientId);
+    else showView('dashboard');
+  } else if (exportView?.classList.contains('active')) {
+    renderExportGrid();
+  }
+}
+
+async function pollLiveWorkspace() {
+  if (!isLiveWorkspaceReady() || sharedState.pollInFlight) return;
+  sharedState.pollInFlight = true;
+  try {
+    const meta = await fetchLiveJson(sharedState.id, 'state/meta', sharedState.liveKey);
+    const remoteRevision = String(meta?.revision || '');
+    if (!remoteRevision || remoteRevision === sharedState.workspaceRevision) {
+      scheduleLiveWorkspacePoll();
+      return;
+    }
+
+    const remote = await fetchLiveWorkspacePayload(sharedState.id, sharedState.liveKey);
+    sharedState.applyingRemote = true;
+    applySharedPayload(remote.payload);
+    sharedState.applyingRemote = false;
+    sharedState.workspaceRevision = String(remote.meta?.revision || '');
+    sharedState.lastLoadedAt = remote.meta?.updatedAt || new Date().toISOString();
+    sharedState.connected = true;
+    refreshWorkspaceViewsAfterSync();
+    sharedState.message = `🟢 Aggiornamento live ricevuto. Ultimo sync: <strong style="color:var(--text)">${escapeHtml(formatSharedTimestamp(sharedState.lastLoadedAt))}</strong>.`;
+    sharedState.messageType = 'ok';
+  } catch (error) {
+    sharedState.message = `⚠️ Connessione live in retry: ${escapeHtml(describeSharedLinkError(error))}.`;
+    sharedState.messageType = 'info';
+  } finally {
+    sharedState.pollInFlight = false;
+    renderSharedStatus();
+    scheduleLiveWorkspacePoll();
+  }
 }
 
 function applySharedPayload(payload) {
@@ -1886,99 +2051,48 @@ function applySharedPayload(payload) {
   hydrateKnownInstrumentCacheFromClients();
 }
 
-async function writeSharedPayload(sharedId, payload) {
-  const payloadText = JSON.stringify(payload);
-  const chunks = splitSharedPayloadText(payloadText);
-  for (let index = 0; index < chunks.length; index += 1) {
-    await postSharedText(sharedId, `part-${index}`, chunks[index]);
-  }
-  await postSharedText(sharedId, 'meta', JSON.stringify({
-    version: 1,
-    updatedAt: payload?.updatedAt || new Date().toISOString(),
-    parts: chunks.length
-  }));
-}
-
-async function createSharedStore() {
-  const sharedId = createRandomSharedId();
-  if (!sharedId) throw new Error('Non sono riuscito a generare un identificativo condiviso');
-  setSharedStoreId(sharedId, { persist: true, updateUrl: true });
-  await writeSharedPayload(sharedId, buildSharedPayload());
-  sharedState.lastSavedAt = new Date().toISOString();
-  return sharedId;
-}
-
-async function publishSharedState({ createIfMissing = false } = {}) {
-  if (sharedState.readOnly) throw new Error('Questo link condiviso e in sola lettura. Apri la tua dashboard base per aggiornare lo snapshot.');
-  if (!sharedState.id && !createIfMissing) return null;
-  sharedState.error = '';
-  sharedState.saving = true;
-  sharedState.message = 'Sto pubblicando lo snapshot condivisibile...';
-  sharedState.messageType = 'info';
-  renderSharedStatus();
-
-  const candidateIds = [];
-  if (sharedState.id) candidateIds.push(sharedState.id);
-  if (!sharedState.id || createIfMissing) candidateIds.push(createRandomSharedId());
-
-  let lastError = null;
-
-  try {
-    for (const candidateId of candidateIds) {
-      const activeSharedId = normalizeSharedStoreId(candidateId);
-      if (!activeSharedId) continue;
-      setSharedStoreId(activeSharedId, { persist: true, updateUrl: false });
-      try {
-        await writeSharedPayload(activeSharedId, buildSharedPayload());
-        await waitForSharedPayload(activeSharedId, { attempts: 10, delayMs: 900 });
-        sharedState.lastSavedAt = new Date().toISOString();
-        sharedState.message = `✅ Snapshot pubblicato e verificato. Ultimo aggiornamento: <strong style="color:var(--text)">${escapeHtml(formatSharedTimestamp(sharedState.lastSavedAt))}</strong>.`;
-        sharedState.messageType = 'ok';
-        return activeSharedId;
-      } catch (error) {
-        lastError = error;
-      }
-    }
-    throw lastError || new Error('Pubblicazione snapshot non riuscita');
-  } catch (error) {
-    sharedState.message = `❌ Pubblicazione snapshot non riuscita: ${escapeHtml(describeSharedLinkError(error))}.`;
-    sharedState.messageType = 'err';
-    throw error;
-  } finally {
-    sharedState.saving = false;
-    renderSharedStatus();
-  }
-}
-
 function queueSharedSync() {
-  if (!sharedState.id) return;
+  if (!isLiveWorkspaceReady() || sharedState.applyingRemote) return;
   if (sharedState.debounceTimer) clearTimeout(sharedState.debounceTimer);
   sharedState.debounceTimer = setTimeout(() => {
     sharedState.debounceTimer = null;
-    publishSharedState().catch(() => {});
+    pushLiveWorkspaceState().catch(error => {
+      sharedState.message = `⚠️ Non sono riuscito a sincronizzare il live in automatico: ${escapeHtml(describeSharedLinkError(error))}.`;
+      sharedState.messageType = 'info';
+      renderSharedStatus();
+    });
   }, 900);
 }
 
 async function publishSnapshotLink() {
+  const alreadyLive = isLiveWorkspaceReady();
   sharedState.saving = true;
-  sharedState.message = 'Sto creando un link snapshot autosufficiente...';
+  sharedState.message = alreadyLive
+    ? 'Sto sincronizzando il workspace live...'
+    : 'Sto attivando il workspace live condiviso...';
   sharedState.messageType = 'info';
   renderSharedStatus();
 
   try {
-    const link = await buildEmbeddedSnapshotLink(buildSharedPayload());
+    const workspace = await ensureLiveWorkspace();
+    if (alreadyLive) await pushLiveWorkspaceState();
+    const link = workspace.link || buildLiveWorkspaceLink();
     history.replaceState({}, '', link);
-    if (navigator.clipboard?.writeText) {
-      await navigator.clipboard.writeText(link);
-      sharedState.message = `✅ Link snapshot creato e copiato. Chi lo apre vede subito <strong style="color:var(--text)">${clients.length}</strong> clienti senza servizi esterni. Se modifichi i dati, clicca di nuovo Pubblica Snapshot e invia il nuovo link.`;
-      sharedState.messageType = 'ok';
+
+    if (!alreadyLive) {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(link);
+        sharedState.message = `✅ Live attivato e link copiato. Chi apre questo URL vede i tuoi <strong style="color:var(--text)">${clients.length}</strong> clienti e le modifiche si aggiornano automaticamente ogni pochi secondi.`;
+      } else {
+        window.prompt('Copia questo link live', link);
+        sharedState.message = '✅ Live attivato. Copia il link dalla finestra e condividilo con il cliente.';
+      }
     } else {
-      window.prompt('Copia questo link snapshot', link);
-      sharedState.message = '✅ Link snapshot creato. Copialo dalla finestra e condividilo.';
-      sharedState.messageType = 'ok';
+      sharedState.message = `✅ Live sincronizzato. Ultimo aggiornamento: <strong style="color:var(--text)">${escapeHtml(formatSharedTimestamp(sharedState.lastSavedAt))}</strong>. Il cliente vede le modifiche senza ricevere un nuovo link.`;
     }
+    sharedState.messageType = 'ok';
   } catch (error) {
-    sharedState.message = `❌ Pubblicazione snapshot non riuscita: ${escapeHtml(describeSharedLinkError(error))}.`;
+    sharedState.message = `❌ Attivazione live non riuscita: ${escapeHtml(describeSharedLinkError(error))}.`;
     sharedState.messageType = 'err';
   } finally {
     sharedState.saving = false;
@@ -1987,25 +2101,27 @@ async function publishSnapshotLink() {
 }
 
 async function copySharedLink() {
+  sharedState.loading = true;
+  renderSharedStatus();
   try {
-    const link = buildCurrentShareableUrl();
+    if (isLiveWorkspaceReady()) await pushLiveWorkspaceState();
+    else await ensureLiveWorkspace();
+    const link = buildLiveWorkspaceLink();
+    history.replaceState({}, '', link);
     if (navigator.clipboard?.writeText) {
       await navigator.clipboard.writeText(link);
-      sharedState.message = readEmbeddedSnapshotToken()
-        ? '✅ Link snapshot copiato. Questo URL contiene gia lo snapshot condivisibile.'
-        : '✅ Link base copiato. Per condividere i clienti correnti usa prima Pubblica Snapshot.';
+      sharedState.message = '✅ Link live copiato. Chi lo apre vede i tuoi aggiornamenti automatici e puo lavorare sullo stesso workspace.';
       sharedState.messageType = 'ok';
     } else {
-      window.prompt('Copia questo link pubblico', link);
-      sharedState.message = readEmbeddedSnapshotToken()
-        ? '✅ Link snapshot pronto. Copialo dalla finestra e condividilo.'
-        : '✅ Link base pronto. Per condividere i clienti correnti usa prima Pubblica Snapshot.';
+      window.prompt('Copia questo link live', link);
+      sharedState.message = '✅ Link live pronto. Copialo dalla finestra e condividilo.';
       sharedState.messageType = 'ok';
     }
   } catch (error) {
-    sharedState.message = `❌ Non sono riuscito a copiare il link: ${escapeHtml(String(error?.message || error || 'errore sconosciuto'))}.`;
+    sharedState.message = `❌ Non sono riuscito a preparare il link live: ${escapeHtml(describeSharedLinkError(error))}.`;
     sharedState.messageType = 'err';
   } finally {
+    sharedState.loading = false;
     renderSharedStatus();
   }
 }
@@ -2013,12 +2129,18 @@ async function copySharedLink() {
 async function initializeSharedWorkspace() {
   const url = new URL(window.location.href);
   const embeddedSnapshotToken = readEmbeddedSnapshotToken(url);
-  const urlSharedId = normalizeSharedStoreId(url.searchParams.get(SHARED_LINK_PARAM));
+  const explicitLiveNamespace = normalizeSharedStoreId(url.searchParams.get(LIVE_LINK_PARAM));
+  const explicitLiveKey = readLiveWorkspaceKey(url);
+  const legacySharedId = normalizeSharedStoreId(url.searchParams.get(SHARED_LINK_PARAM));
+  const storedLive = readStoredLiveWorkspace();
 
-  sharedState.id = '';
   sharedState.loading = false;
   sharedState.saving = false;
-  sharedState.readOnly = false;
+  sharedState.connected = false;
+  sharedState.workspaceRevision = '';
+  sharedState.lastLoadedAt = '';
+  sharedState.lastSavedAt = '';
+  stopLiveWorkspacePolling();
 
   if (embeddedSnapshotToken) {
     sharedState.loading = true;
@@ -2032,7 +2154,7 @@ async function initializeSharedWorkspace() {
       sharedState.lastLoadedAt = payload?.updatedAt || new Date().toISOString();
       const workingUrl = buildPublicBaseUrl().toString();
       history.replaceState({}, '', workingUrl);
-      sharedState.message = `✅ Snapshot importato nella tua copia di lavoro. Ora puoi modificare il portafoglio senza perdere i dati al refresh; quando vuoi ricondividerlo clicca <strong style="color:var(--text)">Pubblica Snapshot</strong> per generare un nuovo link aggiornato.`;
+      sharedState.message = '✅ Snapshot importato nella tua copia di lavoro. Ora puoi modificarlo liberamente; se vuoi che cliente e consulente restino sincronizzati clicca <strong style="color:var(--text)">Attiva Live</strong>.';
       sharedState.messageType = 'ok';
     } catch (error) {
       sharedState.message = `❌ Non sono riuscito a leggere il link snapshot: ${escapeHtml(describeSharedLinkError(error))}.`;
@@ -2044,32 +2166,53 @@ async function initializeSharedWorkspace() {
     return;
   }
 
-  safeStorageRemove(SHARED_STORE_LOCAL_KEY);
+  const liveNamespace = explicitLiveNamespace || storedLive.namespace;
+  const liveKey = explicitLiveKey || (liveNamespace && storedLive.namespace === liveNamespace ? storedLive.key : (!explicitLiveNamespace ? storedLive.key : ''));
 
-  if (!urlSharedId) {
+  if (liveNamespace && !liveKey) {
+    sharedState.message = '⚠️ Questo link live non contiene la chiave completa. Rigenera e condividi il nuovo Link Live dalla dashboard principale.';
+    sharedState.messageType = 'err';
     renderSharedStatus();
     return;
   }
 
-  sharedState.loading = true;
-  sharedState.message = 'Sto caricando un vecchio link condiviso...';
-  sharedState.messageType = 'info';
-  renderSharedStatus();
-
-  try {
-    const payload = await waitForSharedPayload(urlSharedId, { attempts: 10, delayMs: 900 });
-    sharedState.id = urlSharedId;
-    applySharedPayload(payload);
-    sharedState.lastLoadedAt = payload?.updatedAt || new Date().toISOString();
-    sharedState.message = `✅ Vecchio link condiviso caricato. Per evitare altri problemi, clicca <strong style="color:var(--text)">Pubblica Snapshot</strong> e condividi il nuovo link autosufficiente.`;
-    sharedState.messageType = 'ok';
-  } catch (error) {
-    sharedState.message = `❌ Non sono riuscito a caricare il vecchio link condiviso: ${escapeHtml(describeSharedLinkError(error))}.`;
-    sharedState.messageType = 'err';
-  } finally {
-    sharedState.loading = false;
+  if (liveNamespace && liveKey) {
+    sharedState.loading = true;
+    sharedState.message = 'Sto collegando il workspace live condiviso...';
+    sharedState.messageType = 'info';
     renderSharedStatus();
+
+    try {
+      setLiveWorkspaceCredentials(liveNamespace, liveKey, { persist: true, updateUrl: true });
+      const remote = await fetchLiveWorkspacePayload(sharedState.id, sharedState.liveKey);
+      sharedState.applyingRemote = true;
+      applySharedPayload(remote.payload);
+      sharedState.applyingRemote = false;
+      sharedState.workspaceRevision = String(remote.meta?.revision || '');
+      sharedState.lastLoadedAt = remote.meta?.updatedAt || new Date().toISOString();
+      sharedState.connected = true;
+      sharedState.message = '🟢 Workspace live collegato. Le modifiche tue e del cliente si sincronizzano automaticamente su questo stesso link.';
+      sharedState.messageType = 'ok';
+      scheduleLiveWorkspacePoll(1200);
+    } catch (error) {
+      setLiveWorkspaceCredentials('', '', { persist: true, updateUrl: false });
+      sharedState.message = `❌ Non sono riuscito a collegare il workspace live: ${escapeHtml(describeSharedLinkError(error))}.`;
+      sharedState.messageType = 'err';
+    } finally {
+      sharedState.loading = false;
+      renderSharedStatus();
+    }
+    return;
   }
+
+  if (legacySharedId) {
+    sharedState.message = 'ℹ️ Questo e un vecchio link condiviso. Apri la dashboard principale e genera un nuovo Link Live per avere aggiornamenti automatici.';
+    sharedState.messageType = 'info';
+    renderSharedStatus();
+    return;
+  }
+
+  renderSharedStatus();
 }
 
 function safeStorageGet(key) {
