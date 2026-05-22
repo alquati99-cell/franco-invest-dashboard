@@ -1511,6 +1511,15 @@ const STATIC_CLIENTS_FALLBACK = Array.isArray(STATIC_DATA.clients) ? STATIC_DATA
 const STATIC_INSTRUMENT_CACHE_FALLBACK = STATIC_DATA.knownInstrumentCache && typeof STATIC_DATA.knownInstrumentCache === 'object'
   ? STATIC_DATA.knownInstrumentCache
   : {};
+const STATIC_PUBLIC_SHARE_URL = String(
+  STATIC_DATA.publicShareUrl || 'https://alquati99-cell.github.io/franco-invest-dashboard/portfolio-manager.html'
+).trim();
+const STATIC_PUBLIC_LIVE_WORKSPACE = STATIC_DATA.liveWorkspace && typeof STATIC_DATA.liveWorkspace === 'object'
+  ? STATIC_DATA.liveWorkspace
+  : {
+      namespace: 'pdlive-4cbb4abe-8c91-442f-a1c2-41fe85768bf9',
+      key: '9f5e0d8346e3970bf80f8e5702b16322616e85f02b86832dba3c76cf3bcbf292'
+    };
 const STATIC_SNAPSHOT_MARKER_KEY = 'pd_static_snapshot_marker';
 let clients = readStoredJSON('pd_clients', JSON.stringify(STATIC_CLIENTS_FALLBACK));
 let currentClientId = null;
@@ -1700,12 +1709,28 @@ function buildSharedPayload() {
   };
 }
 
-function buildPublicBaseUrl() {
-  const url = new URL(window.location.href);
+function buildBaseUrlFromCandidate(candidate = window.location.href) {
+  const url = candidate instanceof URL
+    ? new URL(candidate.toString())
+    : new URL(String(candidate || window.location.href), window.location.href);
   url.searchParams.delete(SHARED_LINK_PARAM);
   url.searchParams.delete(LIVE_LINK_PARAM);
   url.hash = '';
   return url;
+}
+
+function buildWorkingBaseUrl() {
+  return buildBaseUrlFromCandidate(window.location.href);
+}
+
+function buildPublicBaseUrl() {
+  try {
+    return STATIC_PUBLIC_SHARE_URL
+      ? buildBaseUrlFromCandidate(STATIC_PUBLIC_SHARE_URL)
+      : buildWorkingBaseUrl();
+  } catch (error) {
+    return buildWorkingBaseUrl();
+  }
 }
 
 function readEmbeddedSnapshotToken(urlLike = window.location.href) {
@@ -1803,19 +1828,50 @@ async function buildEmbeddedSnapshotLink(payload = buildSharedPayload()) {
   return url.toString();
 }
 
-function buildLiveWorkspaceLink(namespace = sharedState.id, accessKey = sharedState.liveKey) {
+function getConfiguredPublicLiveWorkspace() {
+  return {
+    namespace: normalizeSharedStoreId(STATIC_PUBLIC_LIVE_WORKSPACE?.namespace),
+    key: normalizeLiveWorkspaceKey(STATIC_PUBLIC_LIVE_WORKSPACE?.key)
+  };
+}
+
+function isConfiguredPublicLiveWorkspace(namespace = sharedState.id, accessKey = sharedState.liveKey) {
+  const configured = getConfiguredPublicLiveWorkspace();
+  return Boolean(
+    configured.namespace
+    && configured.key
+    && normalizeSharedStoreId(namespace) === configured.namespace
+    && normalizeLiveWorkspaceKey(accessKey) === configured.key
+  );
+}
+
+function buildWorkspaceUrlFromBase(baseUrl, namespace = sharedState.id, accessKey = sharedState.liveKey) {
   const normalizedNamespace = normalizeSharedStoreId(namespace);
   const normalizedKey = normalizeLiveWorkspaceKey(accessKey);
-  const url = buildPublicBaseUrl();
+  const url = buildBaseUrlFromCandidate(baseUrl);
   if (normalizedNamespace) url.searchParams.set(LIVE_LINK_PARAM, normalizedNamespace);
   if (normalizedKey) url.hash = `${LIVE_LINK_KEY_HASH_PREFIX}${normalizedKey}`;
   return url.toString();
 }
 
+function buildLiveWorkspaceLink(namespace = sharedState.id, accessKey = sharedState.liveKey) {
+  if (isConfiguredPublicLiveWorkspace(namespace, accessKey)) return buildPublicBaseUrl().toString();
+  return buildWorkspaceUrlFromBase(buildPublicBaseUrl(), namespace, accessKey);
+}
+
+function buildWorkingLiveWorkspaceUrl(namespace = sharedState.id, accessKey = sharedState.liveKey) {
+  if (isConfiguredPublicLiveWorkspace(namespace, accessKey)) return buildWorkingBaseUrl().toString();
+  return buildWorkspaceUrlFromBase(buildWorkingBaseUrl(), namespace, accessKey);
+}
+
 function buildCurrentShareableUrl() {
   if (isLiveWorkspaceReady()) return buildLiveWorkspaceLink();
   const embeddedToken = readEmbeddedSnapshotToken();
-  if (embeddedToken) return window.location.href;
+  if (embeddedToken) {
+    const url = buildPublicBaseUrl();
+    url.hash = `${EMBEDDED_SNAPSHOT_HASH_PREFIX}${embeddedToken}`;
+    return url.toString();
+  }
   return buildPublicBaseUrl().toString();
 }
 
@@ -2098,8 +2154,8 @@ function setLiveWorkspaceCredentials(namespace, accessKey, { persist = true, upd
 
   if (updateUrl) {
     const nextUrl = sharedState.connected
-      ? buildLiveWorkspaceLink(sharedState.id, sharedState.liveKey)
-      : buildPublicBaseUrl().toString();
+      ? buildWorkingLiveWorkspaceUrl(sharedState.id, sharedState.liveKey)
+      : buildWorkingBaseUrl().toString();
     history.replaceState({}, '', nextUrl);
   }
 }
@@ -2184,7 +2240,7 @@ async function fetchLiveWorkspacePayload(namespace, accessKey) {
 
 async function ensureLiveWorkspace() {
   if (isLiveWorkspaceReady()) {
-    return { created: false, namespace: sharedState.id, key: sharedState.liveKey, link: buildLiveWorkspaceLink() };
+    return { created: false, namespace: sharedState.id, key: sharedState.liveKey, link: buildCurrentShareableUrl() };
   }
 
   let lastError = null;
@@ -2197,9 +2253,9 @@ async function ensureLiveWorkspace() {
       sharedState.lastSavedAt = meta?.updatedAt || new Date().toISOString();
       sharedState.connected = true;
       persistLiveWorkspace(sharedState.id, sharedState.liveKey);
-      history.replaceState({}, '', buildLiveWorkspaceLink());
+      history.replaceState({}, '', buildWorkingLiveWorkspaceUrl());
       scheduleLiveWorkspacePoll();
-      return { created: true, namespace: sharedState.id, key: sharedState.liveKey, link: buildLiveWorkspaceLink() };
+      return { created: true, namespace: sharedState.id, key: sharedState.liveKey, link: buildCurrentShareableUrl() };
     } catch (error) {
       setLiveWorkspaceCredentials('', '', { persist: false, updateUrl: false });
       sharedState.connected = false;
@@ -2309,8 +2365,8 @@ async function publishSnapshotLink() {
   try {
     const workspace = await ensureLiveWorkspace();
     if (alreadyLive) await pushLiveWorkspaceState();
-    const link = workspace.link || buildLiveWorkspaceLink();
-    history.replaceState({}, '', link);
+    const link = workspace.link || buildCurrentShareableUrl();
+    history.replaceState({}, '', buildWorkingLiveWorkspaceUrl());
 
     if (!alreadyLive) {
       const copyResult = await tryCopyTextWithFallback(link, 'Copia questo link live');
@@ -2343,8 +2399,8 @@ async function copySharedLink() {
   try {
     if (isLiveWorkspaceReady()) await pushLiveWorkspaceState();
     else await ensureLiveWorkspace();
-    const link = buildLiveWorkspaceLink();
-    history.replaceState({}, '', link);
+    const link = buildCurrentShareableUrl();
+    history.replaceState({}, '', buildWorkingLiveWorkspaceUrl());
 
     const copyResult = await tryCopyTextWithFallback(link, 'Copia questo link live');
     if (copyResult.copied) {
@@ -2374,6 +2430,15 @@ async function initializeSharedWorkspace() {
   const explicitLiveKey = readLiveWorkspaceKey(url);
   const legacySharedId = normalizeSharedStoreId(url.searchParams.get(SHARED_LINK_PARAM));
   const storedLive = readStoredLiveWorkspace();
+  const configuredPublicLive = getConfiguredPublicLiveWorkspace();
+  const shouldAutoAttachConfiguredPublicLive = Boolean(
+    !embeddedSnapshotToken
+    && !legacySharedId
+    && !explicitLiveNamespace
+    && !explicitLiveKey
+    && configuredPublicLive.namespace
+    && configuredPublicLive.key
+  );
 
   sharedState.loading = false;
   sharedState.saving = false;
@@ -2393,7 +2458,7 @@ async function initializeSharedWorkspace() {
       const payload = await parseEmbeddedSnapshotToken(embeddedSnapshotToken);
       applySharedPayload(payload);
       sharedState.lastLoadedAt = payload?.updatedAt || new Date().toISOString();
-      const workingUrl = buildPublicBaseUrl().toString();
+      const workingUrl = buildWorkingBaseUrl().toString();
       history.replaceState({}, '', workingUrl);
       sharedState.message = '✅ Snapshot importato nella tua copia di lavoro. Ora puoi modificarlo liberamente; se vuoi che cliente e consulente restino sincronizzati clicca <strong style="color:var(--text)">Attiva Live</strong>.';
       sharedState.messageType = 'ok';
@@ -2407,8 +2472,10 @@ async function initializeSharedWorkspace() {
     return;
   }
 
-  const liveNamespace = explicitLiveNamespace || storedLive.namespace;
-  const liveKey = explicitLiveKey || (liveNamespace && storedLive.namespace === liveNamespace ? storedLive.key : (!explicitLiveNamespace ? storedLive.key : ''));
+  const liveNamespace = explicitLiveNamespace || (shouldAutoAttachConfiguredPublicLive ? configuredPublicLive.namespace : storedLive.namespace);
+  const liveKey = explicitLiveKey
+    || (liveNamespace && configuredPublicLive.namespace === liveNamespace ? configuredPublicLive.key : '')
+    || (liveNamespace && storedLive.namespace === liveNamespace ? storedLive.key : (!explicitLiveNamespace ? storedLive.key : ''));
 
   if (liveNamespace && !liveKey) {
     sharedState.message = '⚠️ Questo link live non contiene la chiave completa. Rigenera e condividi il nuovo Link Live dalla dashboard principale.';
@@ -2432,7 +2499,9 @@ async function initializeSharedWorkspace() {
       sharedState.workspaceRevision = String(remote.meta?.revision || '');
       sharedState.lastLoadedAt = remote.meta?.updatedAt || new Date().toISOString();
       sharedState.connected = true;
-      sharedState.message = '🟢 Workspace live collegato. Le modifiche tue e del cliente si sincronizzano automaticamente su questo stesso link.';
+      sharedState.message = isConfiguredPublicLiveWorkspace(sharedState.id, sharedState.liveKey)
+        ? '🟢 Workspace live collegato. Da ora basta condividere il link GitHub principale: consulente e cliente vedono gli stessi dati aggiornati.'
+        : '🟢 Workspace live collegato. Le modifiche tue e del cliente si sincronizzano automaticamente su questo stesso link.';
       sharedState.messageType = 'ok';
       scheduleLiveWorkspacePoll(1200);
     } catch (error) {
@@ -2456,7 +2525,7 @@ async function initializeSharedWorkspace() {
       const payload = await fetchLegacySharedPayload(legacySharedId);
       applySharedPayload(payload);
       sharedState.lastLoadedAt = payload?.updatedAt || new Date().toISOString();
-      const workingUrl = buildPublicBaseUrl().toString();
+      const workingUrl = buildWorkingBaseUrl().toString();
       history.replaceState({}, '', workingUrl);
       sharedState.message = '✅ Dati recuperati dal vecchio link condiviso e importati nella tua copia di lavoro. Ora puoi modificarli liberamente; poi clicca <strong style="color:var(--text)">Attiva Live</strong> per passare al nuovo sistema live.';
       sharedState.messageType = 'ok';
