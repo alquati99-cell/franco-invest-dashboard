@@ -1460,6 +1460,7 @@ const SHARED_LINK_PARAM = 'shared';
 const SHARED_STORE_LOCAL_KEY = 'pd_shared_store_id';
 const EMBEDDED_SNAPSHOT_HASH_PREFIX = 'snapshot=';
 const EMBEDDED_SNAPSHOT_RAW_PREFIX = 'raw.';
+const EMBEDDED_SNAPSHOT_GZIP_PREFIX = 'gz.';
 const KNOWN_ISIN_OVERRIDES = {
   US02079K3059: { symbol: 'GOOG', name: 'Alphabet Inc. Class C', type: 'Azione', currency: 'USD', exchange: 'NASDAQ' },
   US02079K1079: { symbol: 'GOOGL', name: 'Alphabet Inc. Class A', type: 'Azione', currency: 'USD', exchange: 'NASDAQ' },
@@ -1617,26 +1618,62 @@ function base64UrlToBytes(value) {
   return bytes;
 }
 
-function buildEmbeddedSnapshotToken(payload = buildSharedPayload()) {
-  const rawJson = JSON.stringify(payload);
-  const bytes = new TextEncoder().encode(rawJson);
-  return `${EMBEDDED_SNAPSHOT_RAW_PREFIX}${bytesToBase64Url(bytes)}`;
+async function transformBytesWithStream(bytes, streamFactory) {
+  const stream = new Blob([bytes]).stream().pipeThrough(streamFactory());
+  return new Uint8Array(await new Response(stream).arrayBuffer());
 }
 
-function parseEmbeddedSnapshotToken(token) {
+async function gzipSnapshotBytes(bytes) {
+  if (!window.CompressionStream) return null;
+  return await transformBytesWithStream(bytes, () => new CompressionStream('gzip'));
+}
+
+async function gunzipSnapshotBytes(bytes) {
+  if (!window.DecompressionStream) {
+    throw new Error("Questo browser non supporta l'apertura dei link snapshot compressi.");
+  }
+  return await transformBytesWithStream(bytes, () => new DecompressionStream('gzip'));
+}
+
+async function buildEmbeddedSnapshotToken(payload = buildSharedPayload()) {
+  const rawJson = JSON.stringify(payload);
+  const rawBytes = new TextEncoder().encode(rawJson);
+  const rawToken = `${EMBEDDED_SNAPSHOT_RAW_PREFIX}${bytesToBase64Url(rawBytes)}`;
+
+  try {
+    const gzipBytes = await gzipSnapshotBytes(rawBytes);
+    if (gzipBytes) {
+      const gzipToken = `${EMBEDDED_SNAPSHOT_GZIP_PREFIX}${bytesToBase64Url(gzipBytes)}`;
+      if (gzipToken.length < rawToken.length) return gzipToken;
+    }
+  } catch (error) {}
+
+  return rawToken;
+}
+
+async function parseEmbeddedSnapshotToken(token) {
   const rawToken = String(token || '').trim();
   if (!rawToken) throw new Error('Link snapshot vuoto');
-  if (!rawToken.startsWith(EMBEDDED_SNAPSHOT_RAW_PREFIX)) {
-    throw new Error('Formato link snapshot non supportato');
+
+  if (rawToken.startsWith(EMBEDDED_SNAPSHOT_RAW_PREFIX)) {
+    const bytes = base64UrlToBytes(rawToken.slice(EMBEDDED_SNAPSHOT_RAW_PREFIX.length));
+    const jsonText = new TextDecoder().decode(bytes);
+    return JSON.parse(jsonText);
   }
-  const bytes = base64UrlToBytes(rawToken.slice(EMBEDDED_SNAPSHOT_RAW_PREFIX.length));
-  const jsonText = new TextDecoder().decode(bytes);
-  return JSON.parse(jsonText);
+
+  if (rawToken.startsWith(EMBEDDED_SNAPSHOT_GZIP_PREFIX)) {
+    const bytes = base64UrlToBytes(rawToken.slice(EMBEDDED_SNAPSHOT_GZIP_PREFIX.length));
+    const jsonBytes = await gunzipSnapshotBytes(bytes);
+    const jsonText = new TextDecoder().decode(jsonBytes);
+    return JSON.parse(jsonText);
+  }
+
+  throw new Error('Formato link snapshot non supportato');
 }
 
-function buildEmbeddedSnapshotLink(payload = buildSharedPayload()) {
+async function buildEmbeddedSnapshotLink(payload = buildSharedPayload()) {
   const url = buildPublicBaseUrl();
-  url.hash = `${EMBEDDED_SNAPSHOT_HASH_PREFIX}${buildEmbeddedSnapshotToken(payload)}`;
+  url.hash = `${EMBEDDED_SNAPSHOT_HASH_PREFIX}${await buildEmbeddedSnapshotToken(payload)}`;
   return url.toString();
 }
 
@@ -1930,7 +1967,7 @@ async function publishSnapshotLink() {
   renderSharedStatus();
 
   try {
-    const link = buildEmbeddedSnapshotLink(buildSharedPayload());
+    const link = await buildEmbeddedSnapshotLink(buildSharedPayload());
     history.replaceState({}, '', link);
     if (navigator.clipboard?.writeText) {
       await navigator.clipboard.writeText(link);
@@ -1991,7 +2028,7 @@ async function initializeSharedWorkspace() {
     renderSharedStatus();
 
     try {
-      const payload = parseEmbeddedSnapshotToken(embeddedSnapshotToken);
+      const payload = await parseEmbeddedSnapshotToken(embeddedSnapshotToken);
       applySharedPayload(payload);
       sharedState.lastLoadedAt = payload?.updatedAt || new Date().toISOString();
       sharedState.message = `✅ Snapshot caricato dal link. Se modifichi i dati e vuoi ricondividerli, clicca <strong style="color:var(--text)">Pubblica Snapshot</strong> per generare un nuovo link aggiornato.`;
