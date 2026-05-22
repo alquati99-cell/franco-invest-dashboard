@@ -662,6 +662,12 @@
     <div class="nav-item" onclick="showView('screener')">
       <span class="nav-icon">◈</span><span>Screener</span>
     </div>
+    <div class="nav-item" onclick="showView('holdings')">
+      <span class="nav-icon">▣</span><span>Titoli Clienti</span>
+    </div>
+    <div class="nav-item" onclick="showView('dividends')">
+      <span class="nav-icon">◌</span><span>Dividendi</span>
+    </div>
     <div class="nav-item" onclick="showView('news')">
       <span class="nav-icon">✦</span><span>Notizie</span>
     </div>
@@ -958,6 +964,130 @@
           <th>Var. Giorno</th><th>52W High</th><th>52W Low</th><th>Settore</th><th></th>
         </tr></thead>
         <tbody id="screenerTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- ===== HOLDINGS VIEW ===== -->
+  <div class="view content" id="view-holdings">
+    <div style="margin-bottom:24px">
+      <div style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:4px">Titoli nei Portafogli</div>
+      <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text3);letter-spacing:2px">CHI DETIENE COSA TRA I CLIENTI</div>
+    </div>
+
+    <div class="stats-row" style="margin-bottom:18px">
+      <div class="stat-card">
+        <div class="stat-label">Titoli Unici</div>
+        <div class="stat-value" id="holdings-unique-count">0</div>
+        <div class="stat-delta" style="color:var(--text3)">azioni, ETF e altro</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Clienti Coinvolti</div>
+        <div class="stat-value" id="holdings-client-count">0</div>
+        <div class="stat-delta" style="color:var(--text3)">con il titolo selezionato</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Esposizione Totale</div>
+        <div class="stat-value" id="holdings-total-value">€0</div>
+        <div class="stat-delta" style="color:var(--text3)">controvalore del titolo</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Titolo Selezionato</div>
+        <div class="stat-value" id="holdings-selected-symbol">—</div>
+        <div class="stat-delta" id="holdings-selected-note" style="color:var(--text3)">seleziona un titolo</div>
+      </div>
+    </div>
+
+    <div class="chart-panel" style="margin-bottom:18px">
+      <div class="chart-title">Copertura Cross-Client</div>
+      <div class="chart-sub">VISTA AGGREGATA DEI TITOLI PRESENTI NEI PORTAFOGLI</div>
+      <div class="filter-row" style="margin-top:16px">
+        <input class="form-input filter-input" id="holdingsSearch" placeholder="🔍 Cerca titolo, ticker o ISIN" oninput="renderHoldingsView()">
+        <select class="form-input form-select" id="holdingsSelect" onchange="holdingsViewState.selectedKey=this.value; renderHoldingsView()" style="min-width:320px"></select>
+      </div>
+      <div class="helper-line">
+        In questa sezione escludo <strong style="color:var(--text)">fondi</strong>, <strong style="color:var(--text)">obbligazioni</strong>, <strong style="color:var(--text)">ETP obbligazionari</strong> e <strong style="color:var(--text)">liquidità</strong>.
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Cliente</th>
+            <th>Profilo</th>
+            <th>Qtà</th>
+            <th>P. Medio</th>
+            <th>Prezzo Attuale</th>
+            <th>Controvalore</th>
+            <th>Peso nel PTF</th>
+            <th>Apri</th>
+          </tr>
+        </thead>
+        <tbody id="holdingsTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ===== DIVIDENDS VIEW ===== -->
+  <div class="view content" id="view-dividends">
+    <div style="margin-bottom:24px">
+      <div style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:4px">Calendario Dividendi</div>
+      <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text3);letter-spacing:2px">DATE DI STACCO SUI TITOLI GIA PRESENTI</div>
+    </div>
+
+    <div class="stats-row" style="margin-bottom:18px">
+      <div class="stat-card">
+        <div class="stat-label">Titoli Monitorati</div>
+        <div class="stat-value" id="dividend-title-count">0</div>
+        <div class="stat-delta" style="color:var(--text3)">con feed live</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Stacchi Disponibili</div>
+        <div class="stat-value" id="dividend-date-count">0</div>
+        <div class="stat-delta" style="color:var(--text3)">prossimi o storici</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Yield Medio</div>
+        <div class="stat-value" id="dividend-yield-avg">—</div>
+        <div class="stat-delta" style="color:var(--text3)">solo dove Yahoo lo espone</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Esposizione Totale</div>
+        <div class="stat-value" id="dividend-total-value">€0</div>
+        <div class="stat-delta" style="color:var(--text3)">sui titoli con dividendi</div>
+      </div>
+    </div>
+
+    <div class="chart-panel" style="margin-bottom:18px">
+      <div class="chart-title">Stacchi Dividendo</div>
+      <div class="chart-sub">YAHOO FINANCE + FALLBACK STORICO DIVIDENDI</div>
+      <div class="filter-row" style="margin-top:16px">
+        <input class="form-input filter-input" id="dividendSearch" placeholder="🔍 Cerca titolo o ticker per dividendi" oninput="renderDividendCalendarView()">
+        <button class="btn btn-outline" onclick="renderDividendCalendarView(true)">⟳ Aggiorna Dividendi</button>
+      </div>
+      <div class="helper-line">
+        Mostro la <strong style="color:var(--text)">data di stacco</strong> dove Yahoo la espone. Se la prossima data non e disponibile, provo a mostrare almeno l'<strong style="color:var(--text)">ultimo stacco storico</strong> rilevato.
+      </div>
+      <div id="dividendStatus" class="import-status info" style="display:none;margin-top:12px"></div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Titolo</th>
+            <th>Clienti</th>
+            <th>Data Stacco</th>
+            <th>Pagamento</th>
+            <th>Dividendo</th>
+            <th>Yield</th>
+            <th>Controvalore</th>
+            <th>Apri</th>
+          </tr>
+        </thead>
+        <tbody id="dividendsTable"></tbody>
       </table>
     </div>
   </div>
@@ -1399,12 +1529,15 @@ let instrumentProfileCache = {};
 let instrumentSearchCache = {};
 let pendingInstrumentSearches = {};
 let instrumentResolveCache = {};
+let dividendInfoCache = {};
+let holdingsViewState = { selectedKey: '' };
 let knownInstrumentCache = readStoredJSON('pd_known_instruments', JSON.stringify(STATIC_INSTRUMENT_CACHE_FALLBACK));
 let screenerData = [];
 let lookedUpData = null;
 let currentAnalyticsToken = 0;
 let currentSectorToken = 0;
 let currentInstrumentToken = 0;
+let currentDividendToken = 0;
 let currentImportToken = 0;
 let entryPreviewBound = false;
 let manualEditState = { clientId: null, index: null };
@@ -1503,6 +1636,8 @@ function save() {
   safeStorageSet('pd_clients', JSON.stringify(clients));
   safeStorageSet('pd_known_instruments', JSON.stringify(knownInstrumentCache));
   queueSharedSync();
+  if (document.getElementById('view-holdings')?.classList.contains('active')) renderHoldingsView();
+  if (document.getElementById('view-dividends')?.classList.contains('active')) renderDividendCalendarView().catch(() => {});
 }
 
 function normalizeSharedStoreId(value) {
@@ -2239,7 +2374,7 @@ function showView(v, clientId) {
   document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
   document.getElementById('view-' + (v === 'client' ? 'client' : v)).classList.add('active');
 
-  const navMap = { dashboard: 0, screener: 1, news: 2, export: 3 };
+  const navMap = { dashboard: 0, screener: 1, holdings: 2, dividends: 3, news: 4, export: 5 };
   if (navMap[v] !== undefined) {
     document.querySelectorAll('.nav-item')[navMap[v]].classList.add('active');
   }
@@ -2248,6 +2383,8 @@ function showView(v, clientId) {
     dashboard: ['Dashboard Clienti', 'PANORAMICA PORTAFOGLI'],
     client: ['Dettaglio Cliente', 'PORTAFOGLIO'],
     screener: ['Screener Titoli', 'RICERCA MERCATI'],
+    holdings: ['Titoli Clienti', 'CHI DETIENE COSA'],
+    dividends: ['Calendario Dividendi', 'DATE DI STACCO E YIELD'],
     news: ['News Radar', 'AGGIORNAMENTI LIVE E CONTESTO MACRO'],
     export: ['Esporta Dati', 'EXCEL EXPORT']
   };
@@ -2261,6 +2398,8 @@ function showView(v, clientId) {
     renderClientDetail(clientId);
   }
   if (v === 'screener') renderScreenerDefault();
+  if (v === 'holdings') renderHoldingsView();
+  if (v === 'dividends') renderDividendCalendarView().catch(() => {});
   if (v === 'news') renderNewsDefault();
   if (v === 'export') renderExportGrid();
 }
@@ -2312,6 +2451,362 @@ function renderDashboard() {
   }).join('');
 }
 
+
+function clientFullName(client) {
+  return `${client?.nome || ''} ${client?.cognome || ''}`.trim() || 'Cliente';
+}
+
+function isClientSecurityPosition(position) {
+  return !!position && !isCashPosition(position) && !['Fondo', 'Obbligazione', 'ETP Obbligazionario', 'Liquidità'].includes(position.type);
+}
+
+function isDividendEligiblePosition(position) {
+  return isClientSecurityPosition(position) && supportsLivePricing(position);
+}
+
+function buildCrossClientHoldingKey(position) {
+  return normalizeInstrumentLookupKey(position?.symbol || position?.isin || position?.name || '');
+}
+
+function buildCrossClientHoldingsCatalog() {
+  const catalog = new Map();
+
+  clients.forEach(client => {
+    const snapshot = buildPortfolioSnapshot(client.positions || []);
+    const portfolioTotal = snapshot.totalValue || 0;
+
+    snapshot.rows
+      .filter(row => isClientSecurityPosition(row))
+      .forEach(row => {
+        const key = buildCrossClientHoldingKey(row);
+        if (!key) return;
+
+        let entry = catalog.get(key);
+        if (!entry) {
+          entry = {
+            key,
+            symbol: row.symbol,
+            name: row.name,
+            isin: row.isin || '',
+            type: row.type,
+            currency: row.currency || BASE_CURRENCY,
+            totalQty: 0,
+            totalValue: 0,
+            holderMap: new Map(),
+            samplePosition: row
+          };
+          catalog.set(key, entry);
+        }
+
+        if (!entry.isin && row.isin) entry.isin = row.isin;
+        if (supportsLivePricing(row)) entry.samplePosition = row;
+
+        let holder = entry.holderMap.get(client.id);
+        if (!holder) {
+          holder = {
+            clientId: client.id,
+            clientName: clientFullName(client),
+            risk: client.risk,
+            qty: 0,
+            avgCostAmount: 0,
+            currency: row.currency || BASE_CURRENCY,
+            livePrice: getLivePrice(row),
+            valueBase: 0,
+            portfolioWeightPct: 0
+          };
+          entry.holderMap.set(client.id, holder);
+        }
+
+        holder.qty += row.qty;
+        holder.avgCostAmount += row.qty * row.avgCost;
+        holder.currency = row.currency || BASE_CURRENCY;
+        holder.livePrice = getLivePrice(row);
+        holder.valueBase += row.valueBase;
+        holder.portfolioWeightPct += portfolioTotal > 0 ? (row.valueBase / portfolioTotal) * 100 : 0;
+
+        entry.totalQty += row.qty;
+        entry.totalValue += row.valueBase;
+      });
+  });
+
+  return [...catalog.values()]
+    .map(entry => ({
+      ...entry,
+      clientCount: entry.holderMap.size,
+      holders: [...entry.holderMap.values()]
+        .map(holder => ({
+          ...holder,
+          avgCost: holder.qty > 0 ? holder.avgCostAmount / holder.qty : 0
+        }))
+        .sort((a, b) => b.valueBase - a.valueBase)
+    }))
+    .sort((a, b) => b.clientCount - a.clientCount || b.totalValue - a.totalValue || a.name.localeCompare(b.name, 'it', { sensitivity: 'base' }));
+}
+
+function renderHoldingsView() {
+  const select = document.getElementById('holdingsSelect');
+  const table = document.getElementById('holdingsTable');
+  const searchInput = document.getElementById('holdingsSearch');
+  if (!select || !table || !searchInput) return;
+
+  const search = normalizeImportKey(searchInput.value || '');
+  const catalog = buildCrossClientHoldingsCatalog();
+  const filtered = search
+    ? catalog.filter(entry => normalizeImportKey(`${entry.name} ${entry.symbol} ${entry.isin}`).includes(search))
+    : catalog;
+
+  if (!holdingsViewState.selectedKey || !filtered.some(entry => entry.key === holdingsViewState.selectedKey)) {
+    holdingsViewState.selectedKey = filtered[0]?.key || '';
+  }
+
+  select.innerHTML = filtered.length
+    ? filtered.map(entry => `<option value="${escapeHtml(entry.key)}" ${entry.key === holdingsViewState.selectedKey ? 'selected' : ''}>${escapeHtml(entry.name)} · ${escapeHtml(entry.symbol)} · ${entry.clientCount} clienti</option>`).join('')
+    : '<option value="">Nessun titolo trovato</option>';
+
+  const selected = filtered.find(entry => entry.key === holdingsViewState.selectedKey) || null;
+  document.getElementById('holdings-unique-count').textContent = filtered.length;
+  document.getElementById('holdings-client-count').textContent = selected?.clientCount || 0;
+  document.getElementById('holdings-total-value').textContent = selected ? fmtEur(selected.totalValue) : '€0';
+  document.getElementById('holdings-selected-symbol').textContent = selected?.symbol || '—';
+  document.getElementById('holdings-selected-note').textContent = selected
+    ? `${selected.name}${selected.isin ? ` · ${selected.isin}` : ''}`
+    : 'seleziona un titolo';
+
+  if (!filtered.length || !selected) {
+    table.innerHTML = `<tr><td colspan="8"><div class="empty-state"><div class="empty-icon">◇</div>Nessun titolo azionario / ETF / altro trovato con il filtro attuale.</div></td></tr>`;
+    return;
+  }
+
+  table.innerHTML = selected.holders.map(holder => {
+    const encodedClientId = encodeURIComponent(holder.clientId);
+    return `<tr>
+      <td><strong>${escapeHtml(holder.clientName)}</strong></td>
+      <td class="mono">${escapeHtml(String(holder.risk || 'medio').toUpperCase())}</td>
+      <td class="mono">${fmtNum(holder.qty)}</td>
+      <td class="mono">${fmtPrice(holder.avgCost)} ${escapeHtml(holder.currency)}</td>
+      <td class="mono">${Number.isFinite(holder.livePrice) ? fmtCurrency(holder.livePrice, holder.currency) : '<span class="muted-nd">manuale</span>'}</td>
+      <td class="mono">${fmtEur(holder.valueBase)}</td>
+      <td class="mono">${fmtPct(holder.portfolioWeightPct)}</td>
+      <td><button class="btn btn-outline btn-sm" onclick="showView('client',decodeURIComponent('${encodedClientId}'))">Apri Cliente</button></td>
+    </tr>`;
+  }).join('');
+}
+
+function openHoldingCoverage(holdingKey) {
+  holdingsViewState.selectedKey = holdingKey;
+  showView('holdings');
+}
+
+async function mapWithConcurrency(items, limit, mapper) {
+  const results = new Array(items.length);
+  let cursor = 0;
+
+  async function worker() {
+    while (cursor < items.length) {
+      const index = cursor;
+      cursor += 1;
+      results[index] = await mapper(items[index], index);
+    }
+  }
+
+  const workers = Array.from({ length: Math.min(limit, items.length) }, () => worker());
+  await Promise.all(workers);
+  return results;
+}
+
+function financeRawValue(value) {
+  if (value && typeof value === 'object') {
+    if (Number.isFinite(value.raw)) return value.raw;
+    const fromFmt = extractNumericValue(value.fmt ?? value.longFmt);
+    if (Number.isFinite(fromFmt)) return fromFmt;
+  }
+  return Number.isFinite(value) ? value : extractNumericValue(value);
+}
+
+function financeTimestamp(value) {
+  const raw = financeRawValue(value);
+  if (!Number.isFinite(raw)) return null;
+  return raw > 1e12 ? raw : raw * 1000;
+}
+
+function formatDateIt(timestamp) {
+  if (!Number.isFinite(timestamp)) return '—';
+  return new Date(timestamp).toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
+}
+
+function describeDividendDate(info) {
+  const now = Date.now();
+  const oneDay = 24 * 60 * 60 * 1000;
+
+  if (Number.isFinite(info?.exDividendTs)) {
+    const label = info.exDividendTs >= (now - oneDay) ? 'Stacco Yahoo' : 'Ultimo stacco Yahoo';
+    return { label, value: formatDateIt(info.exDividendTs), sortTs: info.exDividendTs };
+  }
+  if (Number.isFinite(info?.lastDividendTs)) {
+    return { label: 'Ultimo stacco storico', value: formatDateIt(info.lastDividendTs), sortTs: info.lastDividendTs };
+  }
+  return { label: 'n.d.', value: '—', sortTs: 0 };
+}
+
+function compareDividendRows(a, b) {
+  const now = Date.now();
+  const aFuture = Number.isFinite(a.info?.exDividendTs) && a.info.exDividendTs >= now;
+  const bFuture = Number.isFinite(b.info?.exDividendTs) && b.info.exDividendTs >= now;
+  if (aFuture !== bFuture) return aFuture ? -1 : 1;
+  const aTs = describeDividendDate(a.info).sortTs;
+  const bTs = describeDividendDate(b.info).sortTs;
+  if (aTs !== bTs) {
+    if (aFuture && bFuture) return aTs - bTs;
+    return bTs - aTs;
+  }
+  return b.entry.totalValue - a.entry.totalValue;
+}
+
+async function fetchDividendInfo(symbol, forceRefresh = false) {
+  const cacheEntry = dividendInfoCache[symbol];
+  if (!forceRefresh && cacheEntry && (Date.now() - cacheEntry.ts) < 12 * 60 * 60 * 1000) return cacheEntry.data;
+
+  const info = {
+    symbol,
+    currency: guessCurrency(symbol),
+    exDividendTs: null,
+    dividendTs: null,
+    annualRate: null,
+    yieldPct: null,
+    lastDividendTs: null,
+    lastDividendAmount: null
+  };
+
+  const summaryUrls = [
+    `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(symbol)}?modules=summaryDetail,calendarEvents,price`,
+    `https://query2.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(symbol)}?modules=summaryDetail,calendarEvents,price`
+  ];
+
+  for (const url of summaryUrls) {
+    try {
+      const data = await fetchJSON(url);
+      const result = data?.quoteSummary?.result?.[0];
+      if (!result) continue;
+      const summaryDetail = result.summaryDetail || {};
+      const calendarEvents = result.calendarEvents || {};
+      const price = result.price || {};
+
+      info.currency = sanitizeProfileText(price.currency || summaryDetail.currency || info.currency) || info.currency;
+      const annualRate = financeRawValue(summaryDetail.dividendRate);
+      const yieldRaw = financeRawValue(summaryDetail.dividendYield);
+      const exDividendTs = financeTimestamp(summaryDetail.exDividendDate || calendarEvents.exDividendDate);
+      const dividendTs = financeTimestamp(summaryDetail.dividendDate || calendarEvents.dividendDate);
+
+      if (Number.isFinite(annualRate)) info.annualRate = annualRate;
+      if (Number.isFinite(yieldRaw)) info.yieldPct = yieldRaw <= 1 ? yieldRaw * 100 : yieldRaw;
+      if (Number.isFinite(exDividendTs)) info.exDividendTs = exDividendTs;
+      if (Number.isFinite(dividendTs)) info.dividendTs = dividendTs;
+
+      if (info.exDividendTs || Number.isFinite(info.annualRate) || Number.isFinite(info.yieldPct)) break;
+    } catch (error) {}
+  }
+
+  try {
+    const data = await fetchJSON(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=2y&events=div`);
+    const result = data?.chart?.result?.[0];
+    const dividends = Object.values(result?.events?.dividends || {})
+      .map(item => ({
+        ts: financeTimestamp(item?.date),
+        amount: financeRawValue(item?.amount)
+      }))
+      .filter(item => Number.isFinite(item.ts))
+      .sort((a, b) => b.ts - a.ts);
+
+    if (dividends.length) {
+      info.lastDividendTs = dividends[0].ts;
+      info.lastDividendAmount = Number.isFinite(dividends[0].amount) ? dividends[0].amount : null;
+      if (!Number.isFinite(info.annualRate)) {
+        const yearAgo = Date.now() - (365 * 24 * 60 * 60 * 1000);
+        const annualized = dividends
+          .filter(item => item.ts >= yearAgo && Number.isFinite(item.amount))
+          .reduce((sum, item) => sum + item.amount, 0);
+        if (annualized > 0) info.annualRate = annualized;
+      }
+    }
+  } catch (error) {}
+
+  dividendInfoCache[symbol] = { ts: Date.now(), data: info };
+  return info;
+}
+
+async function renderDividendCalendarView(forceRefresh = false) {
+  const table = document.getElementById('dividendsTable');
+  const status = document.getElementById('dividendStatus');
+  const searchInput = document.getElementById('dividendSearch');
+  if (!table || !status || !searchInput) return;
+
+  const search = normalizeImportKey(searchInput.value || '');
+  const catalog = buildCrossClientHoldingsCatalog().filter(entry => isDividendEligiblePosition(entry.samplePosition));
+  const filtered = search
+    ? catalog.filter(entry => normalizeImportKey(`${entry.name} ${entry.symbol} ${entry.isin}`).includes(search))
+    : catalog;
+
+  document.getElementById('dividend-title-count').textContent = filtered.length;
+  document.getElementById('dividend-total-value').textContent = fmtEur(filtered.reduce((sum, entry) => sum + entry.totalValue, 0));
+
+  if (!filtered.length) {
+    document.getElementById('dividend-date-count').textContent = '0';
+    document.getElementById('dividend-yield-avg').textContent = '—';
+    status.style.display = 'none';
+    table.innerHTML = `<tr><td colspan="8"><div class="empty-state"><div class="empty-icon">◌</div>Nessun titolo live idoneo ai dividendi con il filtro attuale.</div></td></tr>`;
+    return;
+  }
+
+  const token = ++currentDividendToken;
+  status.className = 'import-status info';
+  status.style.display = 'block';
+  status.innerHTML = `Carico il calendario dividendi per <strong style="color:var(--text)">${filtered.length}</strong> titoli...`;
+  table.innerHTML = `<tr><td colspan="8"><div class="empty-state"><div class="empty-icon"><span class="spinner"></span></div>Recupero date di stacco e yield da Yahoo Finance…</div></td></tr>`;
+
+  const rows = await mapWithConcurrency(filtered, 4, async entry => ({
+    entry,
+    info: await fetchDividendInfo(entry.symbol, forceRefresh)
+  }));
+
+  if (token != currentDividendToken) return;
+
+  rows.sort(compareDividendRows);
+  const rowsWithDate = rows.filter(row => Number.isFinite(describeDividendDate(row.info).sortTs));
+  const yieldValues = rows.map(row => row.info?.yieldPct).filter(Number.isFinite);
+
+  document.getElementById('dividend-date-count').textContent = rowsWithDate.length;
+  document.getElementById('dividend-yield-avg').textContent = yieldValues.length
+    ? fmtPct(yieldValues.reduce((sum, value) => sum + value, 0) / yieldValues.length)
+    : '—';
+
+  table.innerHTML = rows.map(({ entry, info }) => {
+    const dateInfo = describeDividendDate(info);
+    const paymentText = Number.isFinite(info?.dividendTs) ? formatDateIt(info.dividendTs) : '<span class="muted-nd">—</span>';
+    const dividendText = Number.isFinite(info?.annualRate)
+      ? fmtCurrency(info.annualRate, info.currency || entry.currency || BASE_CURRENCY)
+      : Number.isFinite(info?.lastDividendAmount)
+        ? `${fmtPrice(info.lastDividendAmount)} ${escapeHtml(info.currency || entry.currency || BASE_CURRENCY)}`
+        : '<span class="muted-nd">—</span>';
+    const yieldText = Number.isFinite(info?.yieldPct) ? fmtPct(info.yieldPct) : '<span class="muted-nd">—</span>';
+    return `<tr>
+      <td>
+        <strong>${escapeHtml(entry.name)}</strong>
+        <div class="instrument-symbol">${escapeHtml(entry.symbol)}${entry.isin ? ` · ${escapeHtml(entry.isin)}` : ''}</div>
+      </td>
+      <td class="mono">${entry.clientCount}</td>
+      <td><strong>${escapeHtml(dateInfo.value)}</strong><div class="instrument-symbol">${escapeHtml(dateInfo.label)}</div></td>
+      <td class="mono">${paymentText}</td>
+      <td class="mono">${dividendText}</td>
+      <td class="mono">${yieldText}</td>
+      <td class="mono">${fmtEur(entry.totalValue)}</td>
+      <td><button class="btn btn-outline btn-sm" onclick="openHoldingCoverage('${escapeHtml(entry.key)}')">Vedi Clienti</button></td>
+    </tr>`;
+  }).join('');
+
+  status.className = 'import-status ok';
+  status.innerHTML = `✅ Calendario dividendi aggiornato su <strong style="color:var(--text)">${rows.length}</strong> titoli monitorati.`;
+}
+
 function renderClientDetail(id) {
   const client = getClient(id);
   if (!client) return;
@@ -2359,32 +2854,68 @@ function renderPositionsTable(client) {
     const value = estimatePositionValueBase(position, livePrice);
     const cost = estimatePositionCostBase(position);
     const manualStatic = isManualStaticPosition(position);
+    const cashPosition = isCashPosition(position);
     const pnl = manualStatic ? null : value - cost;
     const pnlPct = manualStatic || cost <= 0 ? null : (pnl / cost) * 100;
     const badge = { Azione:'badge-eq', ETF:'badge-etf', Obbligazione:'badge-bond', Liquidità:'badge-cash' }[position.type] || 'badge-other';
     const liveLoading = supportsLivePricing(position) && !Object.prototype.hasOwnProperty.call(liveCache, position.symbol);
     const encodedClientId = encodeURIComponent(client.id);
-
-    return `<tr id="row-${index}">
-      <td><button class="instrument-link" onclick="openInstrumentModal(decodeURIComponent('${encodedClientId}'),${index})" title="Apri storico titolo">
+    const titleCell = cashPosition
+      ? `<div><strong>${escapeHtml(position.name)}</strong><span class="instrument-symbol">${escapeHtml(position.symbol)}</span></div>`
+      : `<button class="instrument-link" onclick="openInstrumentModal(decodeURIComponent('${encodedClientId}'),${index})" title="Apri storico titolo">
         <strong>${escapeHtml(position.name)}</strong>
         <span class="instrument-symbol">${escapeHtml(position.symbol)}</span>
         ${manualStatic ? `<span class="manual-chip">Manuale statico</span>` : ''}
-      </button></td>
+      </button>`;
+    const qtyCell = cashPosition
+      ? `<input class="form-input" id="cash-qty-${index}" type="number" min="0" step="0.01" value="${String(position.qty ?? '').replace(/"/g, '&quot;')}" style="min-width:108px;padding:6px 8px;height:36px" onkeydown="if(event.key==='Enter') saveInlineCashPosition(decodeURIComponent('${encodedClientId}'),${index})">`
+      : fmtNum(position.qty);
+    const liveCell = cashPosition
+      ? fmtPrice(1)
+      : liveLoading
+        ? '<span class="spinner"></span>'
+        : manualStatic
+          ? '<span class="muted-nd">manuale</span>'
+          : fmtPrice(livePrice);
+    const actionButtons = cashPosition
+      ? `<button class="btn btn-outline btn-sm" onclick="saveInlineCashPosition(decodeURIComponent('${encodedClientId}'),${index})">SALVA</button>`
+      : `${manualStatic ? `<button class="btn btn-outline btn-sm" onclick="openEditManualPositionModal(decodeURIComponent('${encodedClientId}'),${index})" title="Modifica posizione manuale">MODIFICA</button>` : ''}`;
+
+    return `<tr id="row-${index}">
+      <td>${titleCell}</td>
       <td class="mono isin">${escapeHtml(position.isin || '—')}</td>
       <td><span class="badge ${badge}">${escapeHtml(position.type)}</span></td>
-      <td class="mono">${fmtNum(position.qty)}</td>
+      <td class="mono">${qtyCell}</td>
       <td class="mono">${fmtPrice(position.avgCost)} ${escapeHtml(position.currency || BASE_CURRENCY)}</td>
-      <td class="mono" id="live-${index}" style="color:var(--gold)">${liveLoading ? '<span class="spinner"></span>' : manualStatic ? '<span class="muted-nd">manuale</span>' : fmtPrice(livePrice)}</td>
+      <td class="mono" id="live-${index}" style="color:var(--gold)">${liveCell}</td>
       <td class="mono">${fmtEur(value)}</td>
       <td class="mono ${Number.isFinite(pnl) ? (pnl >= 0 ? 'pos' : 'neg') : ''}">${Number.isFinite(pnl) ? fmtSignedMoney(pnl) : '<span class="muted-nd">n.d.</span>'}</td>
       <td class="mono ${Number.isFinite(pnlPct) ? (pnlPct >= 0 ? 'pos' : 'neg') : ''}">${Number.isFinite(pnlPct) ? fmtPct(pnlPct) : '<span class="muted-nd">n.d.</span>'}</td>
       <td><div style="display:flex;gap:8px;flex-wrap:wrap">
-        ${manualStatic ? `<button class="btn btn-outline btn-sm" onclick="openEditManualPositionModal(decodeURIComponent('${encodedClientId}'),${index})" title="Modifica posizione manuale">MODIFICA</button>` : ''}
+        ${actionButtons}
         <button class="action-btn" onclick="removePosition(decodeURIComponent('${encodedClientId}'),${index})" title="Elimina">ELIMINA</button>
       </div></td>
     </tr>`;
   }).join('');
+}
+
+function saveInlineCashPosition(clientId, idx) {
+  const client = getClient(clientId);
+  const position = client?.positions?.[idx];
+  if (!client || !position || !isCashPosition(position)) return;
+
+  const input = document.getElementById(`cash-qty-${idx}`);
+  const qty = parseFloat(input?.value);
+  if (!Number.isFinite(qty) || qty <= 0) {
+    alert('Inserisci un importo di liquidità valido');
+    return;
+  }
+
+  position.qty = qty;
+  delete analyticsCache[clientId];
+  save();
+  if (currentClientId === clientId) renderClientDetail(clientId);
+  renderDashboard();
 }
 
 function removePosition(clientId, idx) {
@@ -2826,6 +3357,8 @@ async function refreshAllPrices() {
       refreshClientAnalytics(currentClientId);
     }
   }
+  if (document.getElementById('view-holdings').classList.contains('active')) renderHoldingsView();
+  if (document.getElementById('view-dividends').classList.contains('active')) renderDividendCalendarView().catch(() => {});
   if (document.getElementById('view-export').classList.contains('active')) renderExportGrid();
 }
 
