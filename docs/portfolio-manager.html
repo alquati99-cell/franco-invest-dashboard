@@ -1565,11 +1565,9 @@ let sharedState = {
 function ensurePublishedSnapshotAvailability() {
   if ((!Array.isArray(clients) || !clients.length) && STATIC_CLIENTS_FALLBACK.length) {
     clients = JSON.parse(JSON.stringify(STATIC_CLIENTS_FALLBACK));
-    safeStorageSet('pd_clients', JSON.stringify(clients));
   }
   if ((!knownInstrumentCache || !Object.keys(knownInstrumentCache).length) && Object.keys(STATIC_INSTRUMENT_CACHE_FALLBACK).length) {
     knownInstrumentCache = { ...STATIC_INSTRUMENT_CACHE_FALLBACK };
-    safeStorageSet('pd_known_instruments', JSON.stringify(knownInstrumentCache));
   }
 }
 
@@ -5111,10 +5109,21 @@ function normalizeImportedType(value) {
   return 'Altro';
 }
 
+function adjustImportedAvgCost(row) {
+  const avgCost = Number(row?.avgCost);
+  if (!Number.isFinite(avgCost)) return row?.avgCost;
+  const hintText = [row?.isin, row?.symbol, row?.name, row?.type].filter(Boolean).join(' ');
+  const likelyBond = row?.type === 'Obbligazione' || looksLikeGovBondText(hintText) || looksLikeLikelyItalianGovIsin(row?.isin || row?.symbol || '');
+  if (likelyBond && avgCost > 0 && avgCost <= 2) {
+    return avgCost * 100;
+  }
+  return avgCost;
+}
+
 function parseImportRows(rows) {
   return (rows || []).map((row, index) => {
     const normalized = buildNormalizedImportRow(row);
-    return {
+    const parsedRow = {
       rowNumber: index + 2,
       isin: String(getImportValue(normalized, IMPORT_COLUMN_ALIASES.isin) || '').trim().toUpperCase(),
       symbol: String(getImportValue(normalized, IMPORT_COLUMN_ALIASES.symbol) || '').trim().toUpperCase(),
@@ -5124,9 +5133,60 @@ function parseImportRows(rows) {
       qty: parseFlexibleNumber(getImportValue(normalized, IMPORT_COLUMN_ALIASES.qty)),
       avgCost: parseFlexibleNumber(getImportValue(normalized, IMPORT_COLUMN_ALIASES.avgCost))
     };
+    parsedRow.avgCost = adjustImportedAvgCost(parsedRow);
+    return parsedRow;
   }).filter(row =>
     row.isin || row.symbol || row.name || Number.isFinite(row.qty) || Number.isFinite(row.avgCost)
   );
+}
+
+function parseWorkbookSupplementRows(workbook, primarySheetName) {
+  const supplemental = [];
+  (workbook?.SheetNames || []).forEach(sheetName => {
+    if (!sheetName || sheetName === primarySheetName) return;
+    const normalizedSheetName = normalizeImportKey(sheetName);
+    if (normalizedSheetName.includes('istruzioni')) return;
+    const matrix = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName], { header: 1, defval: '', raw: true });
+    const nonEmptyRows = (matrix || []).filter(row => Array.isArray(row) && row.some(cell => String(cell ?? '').trim() !== ''));
+    if (!nonEmptyRows.length) return;
+
+    const firstRowText = nonEmptyRows[0].map(cell => String(cell ?? '').trim()).join(' ');
+    if (/(^|\s)isin(\s|$)/i.test(firstRowText)) return;
+
+    nonEmptyRows.forEach((row, index) => {
+      const label = String(row?.[0] ?? '').trim();
+      const rawValue = row?.[1];
+      const amount = parseFlexibleNumber(rawValue);
+      if (!label || !Number.isFinite(amount) || amount <= 0) return;
+      if (/^(isin|tipo|quantita|quantità|data|prezzo|valuta|ticker)$/i.test(label)) return;
+
+      if (normalizeImportKey(label).includes('liquidita')) {
+        supplemental.push({
+          rowNumber: `${sheetName}:${index + 1}`,
+          isin: '',
+          symbol: cashSymbol(BASE_CURRENCY),
+          name: cashName(BASE_CURRENCY),
+          type: 'Liquidità',
+          currency: BASE_CURRENCY,
+          qty: amount,
+          avgCost: 1
+        });
+        return;
+      }
+
+      supplemental.push({
+        rowNumber: `${sheetName}:${index + 1}`,
+        isin: '',
+        symbol: sanitizeManualSymbol(label),
+        name: label,
+        type: inferTypeFromIdentifierText(label, 'Altro'),
+        currency: BASE_CURRENCY,
+        qty: 1,
+        avgCost: amount
+      });
+    });
+  });
+  return supplemental;
 }
 
 async function readWorkbookFromFile(file) {
@@ -5263,8 +5323,10 @@ async function importClientExcel() {
 
     const rawRows = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheet], { defval: '', raw: true });
     const parsedRows = parseImportRows(rawRows);
-    if (!parsedRows.length) {
-      setImportStatus('❌ Non ho trovato righe importabili. Controlla che la prima riga contenga intestazioni come ISIN, Quantità e Prezzo.', 'err');
+    const supplementalRows = parseWorkbookSupplementRows(workbook, firstSheet);
+    const allParsedRows = [...parsedRows, ...supplementalRows];
+    if (!allParsedRows.length) {
+      setImportStatus('❌ Non ho trovato righe importabili. Controlla che il file contenga intestazioni come ISIN, Quantità e Prezzo oppure fogli accessori con liquidità/valori.', 'err');
       return;
     }
 
@@ -5272,12 +5334,12 @@ async function importClientExcel() {
   const skipped = [];
   const warnings = [];
 
-    for (let i = 0; i < parsedRows.length; i += 1) {
+    for (let i = 0; i < allParsedRows.length; i += 1) {
       ensureImportStillActive();
-      const row = parsedRows[i];
+      const row = allParsedRows[i];
       const identifier = row.isin || row.symbol || row.name;
       setImportStatus(
-        `<span class="spinner"></span> Elaboro riga <strong style="color:var(--text)">${i + 1}</strong> di <strong style="color:var(--text)">${parsedRows.length}</strong>...` +
+        `<span class="spinner"></span> Elaboro riga <strong style="color:var(--text)">${i + 1}</strong> di <strong style="color:var(--text)">${allParsedRows.length}</strong>...` +
         `<div class="helper-line">Ricerca strumento: <strong style="color:var(--text)">${escapeHtml(identifier || 'n/d')}</strong></div>`,
         'info'
       );
@@ -5325,7 +5387,7 @@ async function importClientExcel() {
     refreshClientPrices(importClientId);
 
     const summaryLines = [
-      `✅ Import completato: <strong style="color:var(--text)">${mergedPositions.length}</strong> posizioni aggiunte da <strong style="color:var(--text)">${file.name}</strong>.`,
+      `✅ Import completato: <strong style="color:var(--text)">${mergedPositions.length}</strong> posizioni aggiunte da <strong style="color:var(--text)">${file.name}</strong>${supplementalRows.length ? `, incluse <strong style=\"color:var(--text)\">${supplementalRows.length}</strong> righe da fogli accessori` : ''}.`,
       `<div class="helper-line">L’import aggiunge nuove linee al portafoglio attuale e non sostituisce quelle già presenti.</div>`
     ];
 
