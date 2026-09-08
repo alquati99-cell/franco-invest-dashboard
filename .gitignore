@@ -4,3 +4,6 @@ Franco-Invest-netlify-site.zip
 site/
 portfolio-clienti-backup-*.json
 portfolio-clienti-backup-*.xlsx
+
+# wrangler
+worker/.wrangler/

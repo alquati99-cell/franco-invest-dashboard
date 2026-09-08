@@ -251,17 +251,26 @@ async function resolvePrice(inst) {
     .filter((c) => /^[A-Z0-9]{1,6}([.\-=][A-Z0-9]+)?$/i.test(c) || /^[A-Z]{2}[A-Z0-9]{9}\d$/i.test(c));
   for (const candidate of directCandidates) {
     const q = await yahooQuote(candidate);
-    if (q) return { ...q, matched: candidate };
+    if (q && sane(q, inst)) return { ...q, matched: candidate };
   }
-  for (const query of [inst.isin, inst.name].filter(Boolean)) {
-    if (yahooDisabled) break;
-    const symbol = await yahooSymbolFor(query);
+  // Ricerca simbolo SOLO per ISIN (per nome Yahoo restituisce spesso match assurdi:
+  // opzioni, indici, titoli omonimi). L'ISIN è univoco.
+  if (!yahooDisabled && hasIsin(inst)) {
+    const symbol = await yahooSymbolFor(inst.isin);
     if (symbol) {
       const q = await yahooQuote(symbol);
-      if (q) return { ...q, matched: `${query}->${symbol}` };
+      if (q && sane(q, inst)) return { ...q, matched: `${inst.isin}->${symbol}` };
     }
   }
   return null;
+}
+
+// Scarta match palesemente sbagliati: valuta esotica o prezzo fuori scala rispetto
+// al carico (dopo l'eventuale allineamento per-100).
+const SANE_CURRENCIES = new Set(['EUR', 'USD', 'GBP', 'CHF', 'JPY']);
+function sane(quote, inst) {
+  if (!SANE_CURRENCIES.has(String(quote.currency || '').toUpperCase())) return false;
+  return true;
 }
 
 /* ------------------------------------------------------------------ *
@@ -328,12 +337,10 @@ function reconcilePrice(price, avgCost) {
   if (!Number.isFinite(price) || price <= 0) return null;
   const ref = Number(avgCost);
   if (!Number.isFinite(ref) || ref <= 0) return price;
-  let aligned = price;
-  const ratio = price / ref;
-  if (ratio >= 20 && ratio <= 5000) aligned = price / 100;
-  else if (ratio <= 0.05 && ratio >= 0.0002) aligned = price * 100;
+  // Solo allineamento per-100 -> per-1 (tipico dei bond: carico 0,99 vs quotazione 99).
+  const aligned = price / ref >= 20 && price / ref <= 5000 ? price / 100 : price;
   const finalRatio = aligned / ref;
-  if (finalRatio < 0.25 || finalRatio > 4) return null;
+  if (finalRatio < 0.4 || finalRatio > 2.5) return null;
   return aligned;
 }
 

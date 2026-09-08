@@ -1,6 +1,6 @@
 window.PORTFOLIO_DESK_SECRETS = window.PORTFOLIO_DESK_SECRETS || {};
 
-// Proxy dedicato opzionale (Cloudflare Worker) — vedi worker/README.md.
-// Quando è impostato: quotazioni live e Groq passano di qui, niente proxy pubblici,
-// chiave Groq lato server. Lascia commentato finché il worker non è deployato.
-// window.PORTFOLIO_DESK_SECRETS.proxyBase = 'https://franco-invest-proxy.<subdominio>.workers.dev';
+// Proxy dedicato (Cloudflare Worker, worker/). Le quotazioni live e le ricerche
+// strumento passano di qui: niente proxy pubblici, e Yahoo risponde anche quando
+// bloccherebbe la chiamata diretta. Vedi worker/README.md.
+window.PORTFOLIO_DESK_SECRETS.proxyBase = 'https://franco-invest-proxy.alquati99.workers.dev';
