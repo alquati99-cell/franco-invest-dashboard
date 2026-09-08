@@ -1,0 +1,78 @@
+{
+  "generatedAt": "2026-09-08T09:28:09.822Z",
+  "base": "EUR",
+  "fx": {
+    "EUR": 1
+  },
+  "counts": {
+    "total": 78,
+    "resolved": 6,
+    "manual": 72
+  },
+  "prices": {
+    "IT0005421703": {
+      "price": 71.85,
+      "currency": "EUR",
+      "changePct": 0,
+      "name": "Btp Tf 1,8%",
+      "asOf": "2026-09-08",
+      "source": "borsaitaliana:btp"
+    },
+    "IT0005680753": {
+      "price": 100.1968,
+      "currency": "EUR",
+      "changePct": 0,
+      "name": "Cct-Eu Fr Eur6m+0,8% APR. 2035",
+      "asOf": "2026-09-08",
+      "source": "borsaitaliana:btp"
+    },
+    "IT0005491250": {
+      "price": 101.65,
+      "currency": "EUR",
+      "changePct": 0,
+      "name": "Cct-Eu Tv Eur6m+0,75% ot30",
+      "asOf": "2026-09-08",
+      "source": "borsaitaliana:btp"
+    },
+    "IT0005554982": {
+      "price": 103.32,
+      "currency": "EUR",
+      "changePct": 0,
+      "name": "CCT-EU-TVEU6M-15-OT-31",
+      "asOf": "2026-09-08",
+      "source": "borsaitaliana:btp"
+    },
+    "CCT-EU-TVEU6M-15-OT-31": {
+      "price": 103.32,
+      "currency": "EUR",
+      "changePct": 0,
+      "name": "CCT-EU-TVEU6M-15-OT-31",
+      "asOf": "2026-09-08",
+      "source": "borsaitaliana:btp"
+    },
+    "IT0005365165": {
+      "price": 99.31,
+      "currency": "EUR",
+      "changePct": 0,
+      "name": "Btp Tf 3,00% Ag29 Eur",
+      "asOf": "2026-09-08",
+      "source": "borsaitaliana:btp"
+    },
+    "BTP-TF-3-00-AG29-EUR": {
+      "price": 99.31,
+      "currency": "EUR",
+      "changePct": 0,
+      "name": "Btp Tf 3,00% Ag29 Eur",
+      "asOf": "2026-09-08",
+      "source": "borsaitaliana:btp"
+    },
+    "IT0005707689": {
+      "price": 99.59,
+      "currency": "EUR",
+      "changePct": 0,
+      "name": "CCT 15 APRILE 2036",
+      "asOf": "2026-09-08",
+      "source": "borsaitaliana:btp"
+    }
+  }
+}

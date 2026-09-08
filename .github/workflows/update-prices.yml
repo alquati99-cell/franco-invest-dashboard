@@ -1,0 +1,43 @@
+name: Aggiorna prezzi strumenti
+
+on:
+  schedule:
+    # Orari UTC. Giorni feriali: ~09:10 e ~18:40 ora italiana (mercati aperti + chiusura).
+    - cron: '10 7 * * 1-5'
+    - cron: '40 16 * * 1-5'
+  workflow_dispatch: {}
+
+# Evita run sovrapposti
+concurrency:
+  group: update-prices
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Aggiorna prezzi
+        run: node scripts/update-prices.mjs
+
+      - name: Commit prezzi aggiornati
+        run: |
+          git config user.name  "franco-invest-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add prices.json docs/prices.json portfolio-history.json docs/portfolio-history.json
+          if git diff --staged --quiet; then
+            echo "Nessun cambiamento nei prezzi."
+          else
+            git commit -m "chore: aggiorna prezzi strumenti [skip ci]"
+            git push
+          fi
