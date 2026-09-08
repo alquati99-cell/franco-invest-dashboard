@@ -29,6 +29,11 @@ jobs:
 
       - name: Aggiorna prezzi
         run: node scripts/update-prices.mjs
+        env:
+          # Opzionale: URL del Cloudflare Worker (worker/). Se impostato come
+          # variabile del repo (Settings > Secrets and variables > Actions > Variables),
+          # le quotazioni Yahoo passano dal worker e si sbloccano fondi e titoli esteri.
+          PROXY_BASE: ${{ vars.PROXY_BASE }}
 
       - name: Commit prezzi aggiornati
         run: |

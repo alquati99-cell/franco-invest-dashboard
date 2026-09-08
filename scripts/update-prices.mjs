@@ -2,16 +2,20 @@
 /**
  * Aggiorna i prezzi degli strumenti in portafoglio lato server (niente CORS).
  *
- * - Legge gli strumenti da portfolio-static-data.js (+ scripts/watchlist.json opzionale)
- * - Risolve un prezzo per ogni ISIN / ticker via Yahoo Finance, con fallback su
- *   Borsa Italiana (MOT) per i titoli di Stato italiani e su alcuni proxy pubblici
- * - Recupera i cambi valuta -> EUR
- * - Scrive prices.json (root + docs/) usato dalla piattaforma come prezzo base
- * - Aggiorna portfolio-history.json (root + docs/) con il valore giornaliero
- *   di ogni cliente, così la dashboard ha uno storico reale del portafoglio
+ * Sorgenti (in ordine), scelte perché rispondono anche dagli IP dei runner GitHub:
+ *   1. Borsa Italiana  — BTP/CCT (MOT), azioni quotate a Milano, ETF (ETFplus).
+ *                        Fonte principale (schede pubbliche, scraping del prezzo).
+ *   2. Yahoo Finance   — solo bonus, con "circuit breaker": se i primi tentativi
+ *                        falliscono (IP bloccato) smette di provarci. Con PROXY_BASE
+ *                        passa dal Cloudflare Worker e torna affidabile (fondi inclusi).
+ *   FX -> EUR: api.frankfurter.app (tassi BCE, senza chiave).
  *
- * Uso: node scripts/update-prices.mjs
- * Richiede Node >= 18 (fetch globale).
+ * Con la variabile d'ambiente PROXY_BASE impostata (URL del Cloudflare Worker in
+ * worker/) le chiamate Yahoo passano dal worker e tornano affidabili (fondi inclusi).
+ *
+ * Limite di tempo complessivo: DEADLINE_MS. Oltre quello scrive quel che ha.
+ *
+ * Uso: node scripts/update-prices.mjs           (Node >= 18)
  */
 
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
@@ -22,200 +26,250 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 
 const BASE_CURRENCY = 'EUR';
-const FX_PAIRS = { USD: 'EURUSD=X', GBP: 'EURGBP=X', CHF: 'EURCHF=X', JPY: 'EURJPY=X' };
+const FX_CURRENCIES = ['USD', 'GBP', 'CHF', 'JPY'];
 const HISTORY_MAX_POINTS = 1200;
-const REQUEST_TIMEOUT_MS = 9000;
-const RETRY_DELAY_MS = 350;
-// Su runner GitHub la chiamata diretta a Yahoo di solito basta; in locale l'IP è spesso
-// rate-limited e si passa dai proxy. Con DIRECT_ONLY=1 si saltano i proxy (test rapido).
-const DIRECT_ONLY = process.env.DIRECT_ONLY === '1';
+const REQUEST_TIMEOUT_MS = 6000;
+const DEADLINE_MS = 6 * 60 * 1000;
+const YAHOO_FAILURE_LIMIT = 4; // dopo N fallimenti consecutivi si smette con Yahoo
 
+const PROXY_BASE = (process.env.PROXY_BASE || '').trim().replace(/\/+$/, '');
 const USER_AGENT =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
 
+const START = Date.now();
+const timeLeft = () => DEADLINE_MS - (Date.now() - START);
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+let yahooFailures = 0;
+let yahooDisabled = false;
+
 /* ------------------------------------------------------------------ *
- *  Fetch helpers con fallback su proxy pubblici (come fa la web app)
+ *  Fetch di base
  * ------------------------------------------------------------------ */
 
-async function rawFetch(url, { as = 'json' } = {}) {
+async function rawFetch(url, as) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
   try {
     const response = await fetch(url, {
       signal: controller.signal,
-      headers: { 'User-Agent': USER_AGENT, Accept: as === 'json' ? 'application/json,text/plain,*/*' : 'text/html,*/*' },
+      headers: {
+        'User-Agent': USER_AGENT,
+        Accept: as === 'json' ? 'application/json,text/plain,*/*' : 'text/*,*/*'
+      },
       cache: 'no-store'
     });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const text = await response.text();
-    if (as === 'text') return text;
-    return JSON.parse(text);
+    return as === 'json' ? JSON.parse(text) : text;
   } finally {
     clearTimeout(timer);
   }
 }
 
-function proxied(url) {
-  if (DIRECT_ONLY) return [url];
-  return [
-    url,
-    `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
-    `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`
-  ];
+async function getJSON(url) {
+  return rawFetch(url, 'json');
 }
-
-async function fetchWith(url, as) {
-  let lastError;
-  for (const attempt of proxied(url)) {
-    try {
-      return await rawFetch(attempt, { as });
-    } catch (error) {
-      lastError = error;
-      await sleep(RETRY_DELAY_MS);
-    }
-  }
-  throw lastError || new Error(`fetch ${as} failed`);
+async function getText(url) {
+  return rawFetch(url, 'text');
 }
-
-const fetchJSON = (url) => fetchWith(url, 'json');
-const fetchText = (url) => fetchWith(url, 'text');
 
 /* ------------------------------------------------------------------ *
- *  Sorgenti prezzo
+ *  FX -> EUR
  * ------------------------------------------------------------------ */
 
-async function yahooQuote(idRaw) {
-  const id = String(idRaw || '').trim();
-  if (!id) return null;
-  const hosts = ['query1.finance.yahoo.com', 'query2.finance.yahoo.com'];
-  for (const host of hosts) {
+async function loadFx() {
+  const fx = { EUR: 1 };
+  // Frankfurter (tassi BCE, nessuna chiave, risponde da qualsiasi IP)
+  for (const host of ['api.frankfurter.app', 'api.frankfurter.dev']) {
     try {
-      const url = `https://${host}/v8/finance/chart/${encodeURIComponent(id)}?interval=1d&range=5d`;
-      const data = await fetchJSON(url);
-      const result = data?.chart?.result?.[0];
-      if (!result) continue;
-      const meta = result.meta || {};
-      const closes = (result?.indicators?.quote?.[0]?.close || []).filter((n) => Number.isFinite(n));
-      const price = Number.isFinite(meta.regularMarketPrice) ? meta.regularMarketPrice : closes[closes.length - 1];
-      if (!Number.isFinite(price) || price <= 0) continue;
-      const prev = Number.isFinite(meta.chartPreviousClose)
-        ? meta.chartPreviousClose
-        : Number.isFinite(meta.previousClose)
-        ? meta.previousClose
-        : closes[closes.length - 2];
-      const changePct = Number.isFinite(prev) && prev !== 0 ? ((price - prev) / prev) * 100 : 0;
-      return {
-        price,
-        currency: meta.currency || BASE_CURRENCY,
-        changePct: Number(changePct.toFixed(3)),
-        name: meta.shortName || meta.longName || id,
-        source: `yahoo:${id}`
-      };
-    } catch {
-      /* prova host successivo */
+      const data = await getJSON(`https://${host}/latest?base=EUR&symbols=${FX_CURRENCIES.join(',')}`);
+      for (const ccy of FX_CURRENCIES) {
+        const perEur = data?.rates?.[ccy];
+        if (Number.isFinite(perEur) && perEur > 0) fx[ccy] = Number((1 / perEur).toFixed(6));
+      }
+      if (FX_CURRENCIES.every((c) => Number.isFinite(fx[c]))) return fx;
+    } catch (error) {
+      console.warn(`FX ${host} non disponibile:`, error.message);
     }
   }
-  return null;
-}
-
-// Yahoo non quota i fondi per ISIN grezzo: prima risolvi ISIN/nome -> simbolo Yahoo.
-async function yahooSymbolFor(query) {
-  const q = String(query || '').trim();
-  if (!q) return null;
-  const hosts = ['query1.finance.yahoo.com', 'query2.finance.yahoo.com'];
-  for (const host of hosts) {
-    try {
-      const url = `https://${host}/v1/finance/search?q=${encodeURIComponent(q)}&quotesCount=5&newsCount=0&listsCount=0`;
-      const data = await fetchJSON(url);
-      const quotes = Array.isArray(data?.quotes) ? data.quotes : [];
-      const hit = quotes.find((entry) => entry && entry.symbol);
-      if (hit) return hit.symbol;
-    } catch {
-      /* prova host successivo */
-    }
+  // Bonus: Yahoo per le valute ancora mancanti (se raggiungibile)
+  for (const ccy of FX_CURRENCIES) {
+    if (Number.isFinite(fx[ccy])) continue;
+    const q = await yahooQuote(`EUR${ccy}=X`);
+    if (q && q.price > 0) fx[ccy] = Number((1 / q.price).toFixed(6));
   }
-  return null;
+  return fx;
 }
 
-function isItalianGov(inst) {
-  const hay = `${inst.isin || ''} ${inst.symbol || ''} ${inst.name || ''}`.toUpperCase();
-  return /^IT000/.test(inst.isin || '') || /\b(BTP|CCT|CCTEU|CTZ|BOT)\b/.test(hay);
+/* ------------------------------------------------------------------ *
+ *  Sorgente 1: Borsa Italiana
+ * ------------------------------------------------------------------ */
+
+// Le schede Borsa Italiana (azioni, ETF, MOT) hanno tutte lo stesso blocco prezzo:
+//   <span class="... -formatPrice"><strong>8,97</strong></span>
+//   <span class="... -percPrice"><strong>-0,30%</strong></span>
+// Il path senza suffisso di mercato redirige da solo a quello giusto (-MTAA, -ETFP, ...).
+const BORSA_BOND_SECTIONS = [
+  'obbligazioni/mot/btp/scheda',
+  'obbligazioni/mot/btp-indicizzati-all-inflazione-europea/scheda',
+  'obbligazioni/mot/cct/scheda',
+  'obbligazioni/mot/bot/scheda',
+  'obbligazioni/mot/obbligazioni-euro/scheda',
+  'obbligazioni/mot/obbligazioni-in-valuta/scheda'
+];
+function parseBorsaPrice(html) {
+  if (!html) return null;
+  const priceM = html.match(/-formatPrice"[^>]*>\s*<strong>\s*([\d.]+,\d+)\s*<\/strong>/i);
+  if (!priceM) return null;
+  const price = parseFloat(priceM[1].replace(/\./g, '').replace(',', '.'));
+  if (!Number.isFinite(price) || price <= 0 || price > 1e7) return null;
+  const pctM = html.match(/-percPrice"[^>]*>\s*<strong>\s*([+-]?[\d.]+,\d+)\s*%/i);
+  const changePct = pctM ? parseFloat(pctM[1].replace(/\./g, '').replace(',', '.')) : 0;
+  return { price, changePct: Number.isFinite(changePct) ? changePct : 0 };
 }
 
-/** Fallback per titoli di Stato italiani: scheda MOT di Borsa Italiana. */
-async function borsaItaliana(isin) {
+async function borsaItalianaTry(isin, sections) {
   const code = String(isin || '').trim().toUpperCase();
   if (!/^[A-Z]{2}[A-Z0-9]{9}\d$/.test(code)) return null;
-  const sections = ['btp', 'cct', 'obbligazioni-euro', 'ctz', 'bot'];
   for (const section of sections) {
+    if (timeLeft() < 12000) return null;
     try {
-      const html = await fetchText(
-        `https://www.borsaitaliana.it/borsa/obbligazioni/mot/${section}/scheda/${code}.html?lang=it`
-      );
-      if (!html || /Pagina non trovata|Page not found/i.test(html)) continue;
-      // "Prezzo Ultimo Contratto" oppure "Prezzo di riferimento"
-      const m =
-        html.match(/Prezzo Ultimo Contratto[\s\S]{0,240}?([0-9]{1,3}(?:[.,][0-9]{2,4}))/i) ||
-        html.match(/Prezzo di [Rr]iferimento[\s\S]{0,240}?([0-9]{1,3}(?:[.,][0-9]{2,4}))/i) ||
-        html.match(/Prezzo Ufficiale[\s\S]{0,240}?([0-9]{1,3}(?:[.,][0-9]{2,4}))/i);
-      if (!m) continue;
-      const price = parseFloat(m[1].replace(/\./g, '').replace(',', '.'));
-      if (Number.isFinite(price) && price > 0 && price < 1000) {
-        return { price, currency: 'EUR', changePct: 0, name: code, source: `borsaitaliana:${section}` };
+      const html = await getText(`https://www.borsaitaliana.it/borsa/${section}/${code}.html?lang=it`);
+      const parsed = parseBorsaPrice(html);
+      if (parsed) {
+        return {
+          price: parsed.price,
+          currency: 'EUR',
+          changePct: Number(parsed.changePct.toFixed(3)),
+          name: code,
+          source: `borsaitaliana:${section.split('/')[0]}`
+        };
       }
     } catch {
-      /* prova sezione successiva */
+      /* sezione successiva */
     }
   }
   return null;
+}
+
+/* ------------------------------------------------------------------ *
+ *  Sorgente 2: Yahoo (bonus, con circuit breaker)
+ * ------------------------------------------------------------------ */
+
+async function yahooGet(path) {
+  const url = PROXY_BASE
+    ? `${PROXY_BASE}/fetch?url=${encodeURIComponent(`https://query1.finance.yahoo.com${path}`)}`
+    : `https://query1.finance.yahoo.com${path}`;
+  return getJSON(url);
+}
+
+async function yahooQuote(idRaw) {
+  if (yahooDisabled) return null;
+  const id = String(idRaw || '').trim();
+  if (!id) return null;
+  try {
+    const data = await yahooGet(`/v8/finance/chart/${encodeURIComponent(id)}?interval=1d&range=5d`);
+    const result = data?.chart?.result?.[0];
+    const meta = result?.meta || {};
+    const closes = (result?.indicators?.quote?.[0]?.close || []).filter((n) => Number.isFinite(n));
+    const price = Number.isFinite(meta.regularMarketPrice) ? meta.regularMarketPrice : closes[closes.length - 1];
+    if (!Number.isFinite(price) || price <= 0) throw new Error('no price');
+    const prev = meta.chartPreviousClose ?? meta.previousClose ?? closes[closes.length - 2];
+    const changePct = Number.isFinite(prev) && prev !== 0 ? ((price - prev) / prev) * 100 : 0;
+    yahooFailures = 0;
+    return {
+      price,
+      currency: meta.currency || BASE_CURRENCY,
+      changePct: Number(changePct.toFixed(3)),
+      name: meta.shortName || meta.longName || id,
+      source: `yahoo:${id}`
+    };
+  } catch {
+    if (!PROXY_BASE && ++yahooFailures >= YAHOO_FAILURE_LIMIT) {
+      yahooDisabled = true;
+      console.warn(`Yahoo irraggiungibile da questo IP: disattivato dopo ${yahooFailures} tentativi.`);
+    }
+    return null;
+  }
+}
+
+async function yahooSymbolFor(query) {
+  if (yahooDisabled) return null;
+  const q = String(query || '').trim();
+  if (!q) return null;
+  try {
+    const data = await yahooGet(`/v1/finance/search?q=${encodeURIComponent(q)}&quotesCount=5&newsCount=0&listsCount=0`);
+    const hit = (data?.quotes || []).find((e) => e && e.symbol);
+    return hit ? hit.symbol : null;
+  } catch {
+    if (!PROXY_BASE && ++yahooFailures >= YAHOO_FAILURE_LIMIT) yahooDisabled = true;
+    return null;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ *  Risoluzione prezzo per strumento
+ * ------------------------------------------------------------------ */
+
+function isBondish(inst) {
+  const hay = `${inst.isin || ''} ${inst.symbol || ''} ${inst.name || ''} ${inst.type || ''}`.toUpperCase();
+  return /OBBLIG|BOND/.test(hay) || /\b(BTP|CCT|CCTEU|CTZ|BOT|BUND|TREASURY|T-BOND)\b/.test(hay);
+}
+function hasIsin(inst) {
+  return /^[A-Z]{2}[A-Z0-9]{9}\d$/.test(String(inst.isin || '').toUpperCase());
+}
+function isItalianIsin(inst) {
+  return /^IT[A-Z0-9]{9}\d$/.test(String(inst.isin || '').toUpperCase());
+}
+function looksLikeEtf(inst) {
+  const hay = `${inst.symbol || ''} ${inst.name || ''} ${inst.type || ''}`.toUpperCase();
+  return inst.type === 'ETF' || /\b(ETF|UCITS|ISHARES|LYXOR|XTRACKERS|VANGUARD|AMUNDI|INVESCO|WISDOMTREE|SPDR)\b/.test(hay);
 }
 
 async function resolvePrice(inst) {
-  const candidates = [];
-  const push = (v) => {
-    const s = String(v || '').trim();
-    if (s && !candidates.includes(s)) candidates.push(s);
-  };
-  push(inst.isin);
-  push(inst.symbol);
-  // ticker "puliti" tipo "BTP-TF-3-00-AG29-EUR" non sono quotabili: saltali
-  const usable = candidates.filter((c) => /^[A-Z0-9]{1,6}([.\-=][A-Z0-9]+)?$/i.test(c) || /^[A-Z]{2}[A-Z0-9]{9}\d$/i.test(c));
-
-  for (const candidate of usable) {
-    const quote = await yahooQuote(candidate);
-    if (quote) return { ...quote, matched: candidate };
-    await sleep(150);
-  }
-
-  // Titoli di Stato italiani: scheda MOT di Borsa Italiana (fonte più affidabile per i bond).
-  if (isItalianGov(inst) && inst.isin) {
-    const bi = await borsaItaliana(inst.isin);
-    if (bi) return { ...bi, matched: inst.isin };
-  }
-
-  // Fondi / ETF: risolvi ISIN o nome -> simbolo Yahoo, poi quota.
-  for (const query of [inst.isin, inst.name].filter(Boolean)) {
-    const symbol = await yahooSymbolFor(query);
-    await sleep(150);
-    if (symbol && symbol.toUpperCase() !== String(inst.symbol || '').toUpperCase()) {
-      const quote = await yahooQuote(symbol);
-      if (quote) return { ...quote, matched: `${query}->${symbol}` };
-      await sleep(150);
+  // 1) Borsa Italiana — fonte principale.
+  //    Azioni: SOLO ISIN italiani (il segmento BGEM per i titoli esteri è poco
+  //    liquido e i prezzi possono essere stantii -> meglio Yahoo o manuale).
+  //    ETF: anche ISIN IE/LU, il segmento ETFplus è liquido.
+  if (hasIsin(inst)) {
+    if (isBondish(inst)) {
+      const bi = await borsaItalianaTry(inst.isin, BORSA_BOND_SECTIONS);
+      if (bi) return { ...bi, matched: inst.isin };
+    } else if (looksLikeEtf(inst)) {
+      const bi = await borsaItalianaTry(inst.isin, ['etf/scheda']);
+      if (bi) return { ...bi, matched: inst.isin };
+    } else if (isItalianIsin(inst)) {
+      const bi = await borsaItalianaTry(inst.isin, ['azioni/scheda']);
+      if (bi) return { ...bi, matched: inst.isin };
     }
   }
 
+  // 2) Yahoo — bonus (ticker/ISIN diretto, poi ricerca ISIN->simbolo per i fondi)
+  const directCandidates = [inst.symbol, inst.isin]
+    .map((c) => String(c || '').trim())
+    .filter((c) => /^[A-Z0-9]{1,6}([.\-=][A-Z0-9]+)?$/i.test(c) || /^[A-Z]{2}[A-Z0-9]{9}\d$/i.test(c));
+  for (const candidate of directCandidates) {
+    const q = await yahooQuote(candidate);
+    if (q) return { ...q, matched: candidate };
+  }
+  for (const query of [inst.isin, inst.name].filter(Boolean)) {
+    if (yahooDisabled) break;
+    const symbol = await yahooSymbolFor(query);
+    if (symbol) {
+      const q = await yahooQuote(symbol);
+      if (q) return { ...q, matched: `${query}->${symbol}` };
+    }
+  }
   return null;
 }
 
 /* ------------------------------------------------------------------ *
- *  Lettura strumenti dal portafoglio
+ *  Lettura strumenti
  * ------------------------------------------------------------------ */
 
 function loadStaticData() {
-  const file = join(ROOT, 'portfolio-static-data.js');
-  const text = readFileSync(file, 'utf8');
+  const text = readFileSync(join(ROOT, 'portfolio-static-data.js'), 'utf8');
   const start = text.indexOf('{');
   const end = text.lastIndexOf('}');
   if (start < 0 || end < 0) throw new Error('portfolio-static-data.js: JSON non trovato');
@@ -227,50 +281,32 @@ function collectInstruments(staticData) {
   const add = (p) => {
     if (!p) return;
     const key = String(p.isin || p.symbol || '').toUpperCase();
-    if (!key) return;
-    const type = p.type || 'Altro';
-    if (type === 'Liquidità') return;
+    if (!key || (p.type || 'Altro') === 'Liquidità') return;
     if (!map.has(key)) {
       map.set(key, {
         key,
         isin: p.isin || '',
         symbol: p.symbol || '',
         currency: p.currency || BASE_CURRENCY,
-        type,
+        type: p.type || 'Altro',
         name: p.name || p.symbol || p.isin || key
       });
     }
   };
-  (staticData.clients || []).forEach((client) => (client.positions || []).forEach(add));
+  (staticData.clients || []).forEach((c) => (c.positions || []).forEach(add));
 
   const watchPath = join(__dirname, 'watchlist.json');
   if (existsSync(watchPath)) {
     try {
-      const extra = JSON.parse(readFileSync(watchPath, 'utf8'));
-      (Array.isArray(extra) ? extra : []).forEach((entry) =>
-        add(typeof entry === 'string' ? { symbol: entry } : entry)
+      JSON.parse(readFileSync(watchPath, 'utf8')).forEach((e) =>
+        add(typeof e === 'string' ? { symbol: e } : e)
       );
     } catch (error) {
       console.warn('watchlist.json ignorato:', error.message);
     }
   }
-  return [...map.values()];
-}
-
-/* ------------------------------------------------------------------ *
- *  Cambi valuta
- * ------------------------------------------------------------------ */
-
-async function loadFx() {
-  const fx = { EUR: 1 };
-  for (const [currency, pair] of Object.entries(FX_PAIRS)) {
-    const quote = await yahooQuote(pair);
-    if (quote && Number.isFinite(quote.price) && quote.price > 0) {
-      fx[currency] = Number((1 / quote.price).toFixed(6)); // valuta -> EUR
-    }
-    await sleep(150);
-  }
-  return fx;
+  // Bond prima (Borsa Italiana è rapida e affidabile), poi il resto
+  return [...map.values()].sort((a, b) => Number(isBondish(b)) - Number(isBondish(a)));
 }
 
 /* ------------------------------------------------------------------ *
@@ -286,8 +322,8 @@ function readJsonSafe(path, fallback) {
   return fallback;
 }
 
-// Stessa logica lato app (reconcileBakedPrice): allinea la scala per-100 / per-1 e
-// scarta il prezzo di mercato se diverge troppo dal carico.
+// Come lato app (reconcileBakedPrice): allinea la scala per-100 / per-1 e scarta
+// il prezzo di mercato se diverge troppo dal prezzo di carico.
 function reconcilePrice(price, avgCost) {
   if (!Number.isFinite(price) || price <= 0) return null;
   const ref = Number(avgCost);
@@ -313,12 +349,12 @@ function buildHistoryPoint(staticData, priceMap, fx) {
       const posCcy = p.currency || BASE_CURRENCY;
       let priceEur;
       if (p.type === 'Liquidità') {
-        priceEur = (fx[posCcy] || 1);
+        priceEur = fx[posCcy] || 1;
       } else {
-        const hit = priceMap[String(p.isin || '').toUpperCase()] || priceMap[String(p.symbol || '').toUpperCase()];
-        const marketInPosCcy = hit && Number.isFinite(hit.price)
-          ? hit.price * (fx[hit.currency] || 1) / (fx[posCcy] || 1)
-          : null;
+        const hit =
+          priceMap[String(p.isin || '').toUpperCase()] || priceMap[String(p.symbol || '').toUpperCase()];
+        const marketInPosCcy =
+          hit && Number.isFinite(hit.price) ? (hit.price * (fx[hit.currency] || 1)) / (fx[posCcy] || 1) : null;
         const reconciled = marketInPosCcy !== null ? reconcilePrice(marketInPosCcy, p.avgCost) : null;
         priceEur = Number.isFinite(reconciled)
           ? reconciled * (fx[posCcy] || 1)
@@ -346,19 +382,27 @@ function upsertHistory(existing, point) {
 async function main() {
   const staticData = loadStaticData();
   const instruments = collectInstruments(staticData);
-  console.log(`Strumenti da aggiornare: ${instruments.length}`);
+  console.log(`Strumenti da aggiornare: ${instruments.length}${PROXY_BASE ? ' (via proxy)' : ''}`);
 
   const fx = await loadFx();
   console.log('Cambi -> EUR:', fx);
 
   const prices = {};
   let ok = 0;
-  let miss = 0;
   const missed = [];
 
   for (const inst of instruments) {
-    const resolved = await resolvePrice(inst);
-    if (resolved) {
+    if (timeLeft() < 20000) {
+      console.warn(`Tempo scaduto: interrotto a ${ok} risolti, ${instruments.length - ok - missed.length} non tentati.`);
+      break;
+    }
+    let resolved = null;
+    try {
+      resolved = await resolvePrice(inst);
+    } catch (error) {
+      console.warn(`  ! ${inst.name}: ${error.message}`);
+    }
+    if (resolved && Number.isFinite(resolved.price)) {
       const record = {
         price: Number(resolved.price.toFixed(6)),
         currency: resolved.currency || inst.currency || BASE_CURRENCY,
@@ -372,21 +416,18 @@ async function main() {
       ok++;
       console.log(`  ✓ ${inst.name} (${resolved.matched}) = ${record.price} ${record.currency}`);
     } else {
-      miss++;
       missed.push(inst.name);
       console.log(`  · ${inst.name} — nessun prezzo (resta manuale)`);
     }
-    await sleep(150);
   }
 
   const output = {
     generatedAt: new Date().toISOString(),
     base: BASE_CURRENCY,
     fx,
-    counts: { total: instruments.length, resolved: ok, manual: miss },
+    counts: { total: instruments.length, resolved: ok, manual: instruments.length - ok },
     prices
   };
-
   for (const dir of [ROOT, join(ROOT, 'docs')]) {
     writeFileSync(join(dir, 'prices.json'), JSON.stringify(output, null, 2) + '\n');
   }
@@ -397,7 +438,7 @@ async function main() {
     writeFileSync(join(dir, 'portfolio-history.json'), JSON.stringify(history, null, 2) + '\n');
   }
 
-  console.log(`\nFatto: ${ok} prezzi risolti, ${miss} restano manuali.`);
+  console.log(`\nFatto in ${((Date.now() - START) / 1000).toFixed(0)}s: ${ok} prezzi risolti, ${instruments.length - ok} manuali.`);
   if (missed.length) console.log('Manuali:', missed.join(' | '));
 }
 
