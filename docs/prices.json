@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T12:12:16.129Z",
+  "generatedAt": "2026-09-08T12:21:36.670Z",
   "base": "EUR",
   "fx": {
     "EUR": 1,
@@ -79,17 +79,17 @@
       "source": "borsaitaliana:obbligazioni"
     },
     "IT0003128367": {
-      "price": 8.954,
+      "price": 8.953,
       "currency": "EUR",
-      "changePct": -0.48,
+      "changePct": -0.49,
       "name": "ENEL",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
     },
     "ENEL.MI": {
-      "price": 8.954,
+      "price": 8.953,
       "currency": "EUR",
-      "changePct": -0.48,
+      "changePct": -0.49,
       "name": "ENEL",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
@@ -111,33 +111,33 @@
       "source": "borsaitaliana:azioni"
     },
     "IT0001233417": {
-      "price": 2.33,
+      "price": 2.331,
       "currency": "EUR",
-      "changePct": 0.69,
+      "changePct": 0.73,
       "name": "A2A",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
     },
     "A2A.MI": {
-      "price": 2.33,
+      "price": 2.331,
       "currency": "EUR",
-      "changePct": 0.69,
+      "changePct": 0.73,
       "name": "A2A",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
     },
     "IT0005239360": {
-      "price": 83.29,
+      "price": 83.3,
       "currency": "EUR",
-      "changePct": -1.02,
+      "changePct": -1.01,
       "name": "UNICREDIT",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
     },
     "UCG.MI": {
-      "price": 83.29,
+      "price": 83.3,
       "currency": "EUR",
-      "changePct": -1.02,
+      "changePct": -1.01,
       "name": "UNICREDIT",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
@@ -175,97 +175,97 @@
       "source": "borsaitaliana:azioni"
     },
     "IT0000072618": {
-      "price": 6.655,
+      "price": 6.661,
       "currency": "EUR",
-      "changePct": -1.17,
+      "changePct": -1.08,
       "name": "INTESA SANPAOLO",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
     },
     "ISP.MI": {
-      "price": 6.655,
+      "price": 6.661,
       "currency": "EUR",
-      "changePct": -1.17,
+      "changePct": -1.08,
       "name": "INTESA SANPAOLO",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
     },
     "IT0003796171": {
-      "price": 26.23,
+      "price": 26.26,
       "currency": "EUR",
-      "changePct": -0.08,
+      "changePct": 0.04,
       "name": "POSTE ITALIANE",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
     },
     "PST.MI": {
-      "price": 26.23,
+      "price": 26.26,
       "currency": "EUR",
-      "changePct": -0.08,
+      "changePct": 0.04,
       "name": "POSTE ITALIANE",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
     },
     "IT0003132476": {
-      "price": 23.31,
+      "price": 23.3,
       "currency": "EUR",
-      "changePct": 0.43,
+      "changePct": 0.39,
       "name": "ENI",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
     },
     "ENI.MI": {
-      "price": 23.31,
+      "price": 23.3,
       "currency": "EUR",
-      "changePct": 0.43,
+      "changePct": 0.39,
       "name": "ENI",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
     },
     "IT0005495657": {
-      "price": 4.352,
+      "price": 4.356,
       "currency": "EUR",
-      "changePct": 0.46,
+      "changePct": 0.55,
       "name": "SAIPEM",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
     },
     "SPM.MI": {
-      "price": 4.352,
+      "price": 4.356,
       "currency": "EUR",
-      "changePct": 0.46,
+      "changePct": 0.55,
       "name": "SAIPEM",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
     },
     "IT0005218380": {
-      "price": 16.08,
+      "price": 16.11,
       "currency": "EUR",
-      "changePct": -0.43,
+      "changePct": -0.25,
       "name": "BANCO BPM",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
     },
     "BAMI.MI": {
-      "price": 16.08,
+      "price": 16.11,
       "currency": "EUR",
-      "changePct": -0.43,
+      "changePct": -0.25,
       "name": "BANCO BPM",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
     },
     "IT0005508921": {
-      "price": 11.56,
+      "price": 11.574,
       "currency": "EUR",
-      "changePct": -0.41,
+      "changePct": -0.29,
       "name": "BANCA MONTE PASCHI SIENA",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
     },
     "BMPS.MI": {
-      "price": 11.56,
+      "price": 11.574,
       "currency": "EUR",
-      "changePct": -0.41,
+      "changePct": -0.29,
       "name": "BANCA MONTE PASCHI SIENA",
       "asOf": "2026-09-08",
       "source": "borsaitaliana:azioni"
