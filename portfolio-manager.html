@@ -58,12 +58,10 @@
   /* SIDEBAR — dark glass rail */
   .sidebar {
     position:fixed; left:0; top:0; bottom:0; width:232px;
-    background:rgba(9,14,26,0.82);
+    background:linear-gradient(180deg, #0d1524 0%, #0a1120 55%, #090e1a 100%);
     border-right:1px solid rgba(255,255,255,0.06);
     box-shadow:24px 0 60px rgba(3,8,20,0.4);
     display:flex; flex-direction:column; z-index:100; padding:0;
-    backdrop-filter:blur(28px) saturate(150%);
-    -webkit-backdrop-filter:blur(28px) saturate(150%);
     overflow:hidden;
   }
   .sidebar::before {
@@ -146,24 +144,24 @@
   }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
-  .sidebar { transition:width 0.2s ease; }
+  .sidebar { transition:width 0.15s ease; }
   .sidebar.collapsed { width:64px; }
   .sidebar.collapsed .logo-title, .sidebar.collapsed .logo-sub,
   .sidebar.collapsed .nav-label, .sidebar.collapsed .nav-section-label,
   .sidebar.collapsed .theme-toggle-label, .sidebar.collapsed .live-label { display:none; }
-  .sidebar.collapsed .logo { flex-direction:column; gap:10px; justify-content:center; padding:20px 0 18px; }
+  .sidebar.collapsed .logo { justify-content:center; padding:20px 0 18px; }
   .sidebar.collapsed .nav-item { justify-content:center; padding:9px; }
   .sidebar.collapsed .sidebar-footer { justify-content:center; padding-left:10px; padding-right:10px; }
   .sidebar-toggle {
+    position:absolute; top:16px; right:12px; z-index:2;
     width:22px; height:22px; border-radius:7px; border:1px solid rgba(255,255,255,0.1);
-    background:rgba(255,255,255,0.05); color:#9fb0d1; cursor:pointer;
+    background:rgba(255,255,255,0.06); color:#9fb0d1; cursor:pointer;
     display:flex; align-items:center; justify-content:center; flex:none;
-    transition:all 0.18s; margin-left:auto;
+    transition:background 0.15s, color 0.15s;
   }
-  .sidebar-toggle:hover { background:rgba(255,255,255,0.1); color:#fff; }
+  .sidebar-toggle:hover { background:rgba(255,255,255,0.12); color:#fff; }
   .sidebar-toggle svg { width:12px; height:12px; transition:transform 0.2s; }
   .sidebar.collapsed .sidebar-toggle svg { transform:rotate(180deg); }
-  .sidebar.collapsed .sidebar-toggle { margin-left:0; }
   .logo-mark-collapsed { display:none; }
   .sidebar.collapsed .logo-mark .logo-mark-full { display:none; }
   .sidebar.collapsed .logo-mark .logo-mark-collapsed { display:block; }
@@ -1822,6 +1820,41 @@ const KNOWN_ISIN_OVERRIDES = {
   US88160R1014: { symbol: 'TSLA', name: 'Tesla Inc.', type: 'Azione', currency: 'USD', exchange: 'NASDAQ' },
   IT0003132476: { symbol: 'ENI.MI', name: 'Eni SpA', type: 'Azione', currency: 'EUR', exchange: 'Milano' },
   IT0003128367: { symbol: 'ENEL.MI', name: 'Enel SpA', type: 'Azione', currency: 'EUR', exchange: 'Milano' }
+};
+
+// Yahoo ha chiuso l'endpoint quoteSummary (assetProfile) alle chiamate anonime
+// ("Invalid Crumb", richiede login/cookie): il settore live per le azioni non
+// arriva piu' da nessun proxy, pubblico o dedicato che sia — non e' un problema
+// di rete, e' l'endpoint stesso che rifiuta la richiesta a monte. Per gli
+// strumenti azionari realmente in portafoglio (un elenco piccolo e stabile,
+// non centinaia di titoli) uso quindi un settore noto e verificato, tenuto
+// qui a mano. Se un titolo nuovo non e' in questa lista, resta il tentativo
+// Yahoo (nel caso tornasse a funzionare) e poi i fallback per nome/categoria.
+const KNOWN_SECTOR_BY_SYMBOL = {
+  'ENI.MI': 'Energy',
+  'SPM.MI': 'Energy',
+  'OXY': 'Energy',
+  'ENEL.MI': 'Utilities',
+  'SRG.MI': 'Utilities',
+  'A2A.MI': 'Utilities',
+  'HER.MI': 'Utilities',
+  'AWK': 'Utilities',
+  'ISP.MI': 'Finance',
+  'UCG.MI': 'Finance',
+  'BAMI.MI': 'Finance',
+  'BMPS.MI': 'Finance',
+  'PST.MI': 'Finance',
+  'ALV.DE': 'Finance',
+  'BRK-B': 'Finance',
+  'MSFT': 'Technology',
+  'AAPL': 'Technology',
+  'NVDA': 'Technology',
+  'ORCL': 'Technology',
+  'ACN': 'Technology',
+  'GOOG': 'Communication',
+  'GOOGL': 'Communication',
+  'EL.PA': 'Consumer',
+  'MC.PA': 'Consumer'
 };
 
 const screenerDefault = [
@@ -7245,6 +7278,13 @@ async function fetchInstrumentProfile(symbol) {
     };
     instrumentProfileCache[symbol] = { ts: Date.now(), data: cashProfile };
     return cashProfile;
+  }
+
+  const knownSector = KNOWN_SECTOR_BY_SYMBOL[String(symbol || '').toUpperCase()];
+  if (knownSector) {
+    const knownProfile = { symbol, name: symbol, sector: knownSector, industry: '', category: '', exchange: '', sectorWeights: {} };
+    instrumentProfileCache[symbol] = { ts: Date.now(), data: knownProfile };
+    return knownProfile;
   }
 
   const urls = [
