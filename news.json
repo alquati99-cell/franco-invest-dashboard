@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T18:33:00.379Z",
+  "generatedAt": "2026-09-25T23:16:56.089Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -61,6 +61,12 @@
       "label": "ENEL",
       "items": [
         {
+          "title": "Le azioni Iris Energy scendono di oltre il 5% dopo non essere riuscite a recuperare la media mobile a 200 giorni",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPZEZ2Z0lOcjlCZlVkNnFiU0YzQlJsLUpidGh5RktWeG5GdTEtUDhtaU9SRGZPYnlGNlRBdk1Gb2JpcFh4RnkwNk1GZ3VvRW5qNHlUNTNRSWhNNUFxVjA1ejg0Q0JkZmUwS29TVG85SzJFTjNZT1NkSFhHREF0bmpxQ1RxTGlqcm43enBCNG9XaEtSaGMz?oc=5",
+          "source": "Traders Union",
+          "publishedAt": "2026-09-25T15:21:44.000Z"
+        },
+        {
           "title": "Perché le azioni di Enphase Energy scendono del 2,4% oggi?",
           "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPN2FzUTdmS1BzT1dRa212NW5YNk42M2g0NXVmcU9keDJ0ZkNudWhPU1ROTkdBVzFOQ1ZNLS1HZFRSOUdpRTliYlB2b09zaTlFZ1ZIeTdmU2lUek5lV25EcmRHbzNTUTdMekhDdkRzLWRNVXY3dzNLcGlEVUZDS3J4ZnNlTC0xWHdnNm1mMTZXM2d2Z1k?oc=5",
           "source": "Traders Union",
@@ -101,12 +107,6 @@
           "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxObmVBQmJ3MXN0QWRqeVN5OW5TTWVmMExLVzRWU1BoNXhqa2VHWjBnNnF6bWg5dmFYT2lFNWRsSUtKOTV1XzA5QXhjZ29FMVdCOEFQQW1PTlVVWkV5UTJ2YmNZZnM2UlAybllnWWZmbU5DNkVPdjhFRHdadFlrRkgxdlVlTXBxbDFCVW9hVGZpenZIaUR5Zm45bWV3?oc=5",
           "source": "Traders Union",
           "publishedAt": "2026-09-14T16:01:41.000Z"
-        },
-        {
-          "title": "Previsione del Prezzo delle Azioni Kosmos Energy Ltd.: Oggi, Domani e la Prossima Settimana (KOS)",
-          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1qRHRzN0Y1d3paQmU3a3duSmVkbTRCdW5KUWZmODV5Z1U4SHZSSTdEX0lQRDJkQmlvNkFrV2tfcEV3WEkzYlIxNjFzZXlfVVB1ZDBjXzlfcFNXMXVocV9qOGhMTXVCSGlQNWF0eWVyM2JvWWFidUZvdjBXLWZDZw?oc=5",
-          "source": "Traders Union",
-          "publishedAt": "2026-09-12T13:05:40.000Z"
         }
       ]
     },
@@ -169,12 +169,6 @@
       "label": "Saipem",
       "items": [
         {
-          "title": "Saipem si aggiudica nuovo contratto offshore in Angola per un valore di circa 350 milioni di dollari",
-          "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOUjZZcDB5Y1oyUUJRNWlQRWUzWS1MT0lTbHZ3NTZFM21IYkZaOHJla2RzTVUzSkt6bFBmbkh2N0RUMWZSbzkteEFVS0FpaVU3ZkdibzY4bjBnYUtfUXNqc3pHcDJmcS1pZFAwRUVxZ1VyajU2S2dKZEs0OS1xWGZzSkxBUThQWlRGbnU0T0JGSVFILURMQS14QVl5Um1Jbk1FV3pyM0J1bkZEY3JEYkthWWhFNUx6TGttd0cxTlkxeTlpSHRoQXFsakdfVTZjN29LbXFkcloyVjgxUzJKYnhRbl93?oc=5",
-          "source": "Corriere dell'Economia",
-          "publishedAt": "2026-09-14T18:36:00.000Z"
-        },
-        {
           "title": "Saipem ottiene un contratto offshore da 350 milioni di dollari in Angola",
           "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQOWkwMjF1VnNvcTBwSTZxYWxvZlRBeUM5T0I2ZHc1QndnSFBBRVVzUHFGY2Vvak1qQmxkbnBrZE9NSEFlRVFMX2luZ1FwUVFucjZIUTlZc1lQQk1YRGZ4bVctRFMyTlJTQkp5amZnbUI1ZFVZa3Fxemd3UHM1S3JWYnFuWGN4V0tOc0I2WDU3dC1NUQ?oc=5",
           "source": "Yahoo Finanza",
@@ -215,6 +209,12 @@
           "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVUpWOVNXSE9vZkVSdERWS1lpbmtfU2pMZERFc2ZGR2xJZFVrWjVuZzRNbFJKTFBtbmlrZC1JZjBZdHNKbWtJTGpvUE5GclJ5SFZOci1aVWMwZXg3bDhTQjhCTnF4ZGs0cVVseWpqcDBPT1JvYmxKVWYxS2NQR2JEdVljNlBYX3ZyMHh5b1E1S0FpMkZLTVc1SkZNVmxQdmpmVlNmb2VCX0RNcnJPb1daSS1wcGdaRXZhOEJIbWxpLVg?oc=5",
           "source": "Teleborsa",
           "publishedAt": "2026-08-12T07:00:00.000Z"
+        },
+        {
+          "title": "A Saipem contratto offshore in Medio Oriente da 1,8 miliardi di dollari",
+          "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPMTR4X3RSNlkyMDNZU2VnSzBLS2RKU2V4d1lYN3dlZk5TTnhwejUzeTlfMkljQ0ZHUWRMaWpFRFpkdHYxQm9DZjJSVXVxc0FHUlZDZEpxN3ZqdFoxTF8yU2Vad1lqSHdCaFdBd1NiOGJpRlBkOUtsemNOd2k3bzhuNGVFNmRLRjEzQVVrZ0UySFRNYTRzNzg3TFRUdk1wc0pKOVJaRlE5UEU3VmFzell6UFc3TmZtVEs0MlcwaV9mamlKU241X2xncFppTFNLWC1xN0w0aVBUS3Z5NXVOZkRWWVZtM0kzN0ZvUFJLbF9vLU95SFJ4Vl9TVdIB_gFBVV95cUxPZGd5VzNqUFVIR0dCVEZqNWRBMGpsbFB3N3BpaG12RldFc1pVQ19XeFVwblFDX2I1NGNYZXdzQjhpRDVObWRDNDJHemNhTVFvWWR2TzRJU2E4UTl5cXkxMThhZjRQbGFTM2hoYklhSE1xU3NSVzFBVHRXLTNyNmZQVldmckVBTDFmaDJ3aU5hX2NUSjBCT2t5cWhQY2E5MzBFVUR3NXF2cG1IdlQtM05VTndlakUzamFTaXdPRjVDdXJiclpnY0t0cFRhYWtRTlowclE1SzJfTWd1SGFrRGlYZ2xnNHVRaFpYR3c4eXJGU1k1cklYT3QwRlpEM0Fudw?oc=5",
+          "source": "ansa.it",
+          "publishedAt": "2026-08-12T07:00:00.000Z"
         }
       ]
     },
@@ -225,7 +225,7 @@
         {
           "title": "UniCredit: 'osservatori' in risiko, rumor su Banco Bpm 'senza fondamento'",
           "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1NQXJYZ2Z4VzFCeUlGai1XQ3MyWUwtRXNCT0FUTTFETVUyWXQ1ZWg1Y2tRZTEtLUNROHp0Y19aZzhYNklKT0F1MndjWVVSdlQ5UDN2LTUxUkpLQkpKbTJoSHFiLVFXN1V1Znc1SzhKNWRjZmM?oc=5",
-          "source": "Il Sole 24 ORE",
+          "source": "en.ilsole24ore.com",
           "publishedAt": "2026-09-25T14:31:30.000Z"
         },
         {
@@ -237,7 +237,7 @@
         {
           "title": "Banco Bpm in luce, sale l'ipotesi di un'azione congiunta Unicredit-Agricole",
           "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxORUFxSEprT1UwSUNfaVJ2OFZMNmJLNFBWWnJMSHk2cG9mS0h2VVZ0bTNDQ2FRN3BCT0EzX3V3YzBWcVhZZFh1WEh0aU9YT3pidEVRTFdST1NPSXVVV2lLYXViMlRfZ3N6emxXVTBZM2xTT1h3bWFjNlpHWXhKb0xJT1RDeXd6SlZLQVNPTGtiaUhFbEduaE5jZ3BpY2NwaV96OWZoRlNwQk5vQ2M?oc=5",
-          "source": "Il Sole 24 ORE",
+          "source": "ilsole24ore.com",
           "publishedAt": "2026-09-25T11:32:45.000Z"
         },
         {
@@ -291,7 +291,7 @@
         {
           "title": "Borse, settimana in rosso per l’Europa stretta tra petrolio e tassi. Milano -0,3%. WS +0,98%",
           "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPQnZJNFNxd3hjZ1hBWU9Bd3pjX01oX1lvTFVBT1Jvc25VR0FSTmlrTkgtZ3d3cTFMNTVvWE9XNzRoN3UzdEV0UjdkVzN1bjlabVNfNTR2WHRlNG52TnZxV1JLS0wzd2Y4WHJvQ3NMTFIyU3JJTzE3VnJSSVpiUS1Ed3lRREw2X1ZX?oc=5",
-          "source": "Il Sole 24 ORE",
+          "source": "ilsole24ore.com",
           "publishedAt": "2026-09-10T07:00:00.000Z"
         },
         {
