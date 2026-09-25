@@ -410,7 +410,7 @@
     color:#fff;
     box-shadow:0 10px 22px rgba(37,99,235,0.16);
   }
-  .news-grid { display:grid; grid-template-columns:1.2fr 0.9fr; gap:16px; margin-top:16px; }
+  .news-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:16px; margin-top:16px; align-items:start; }
   .news-stack { display:flex; flex-direction:column; gap:14px; }
   .news-card {
     background:linear-gradient(180deg, rgba(255,255,255,0.94), rgba(246,249,255,0.9));
@@ -1094,76 +1094,23 @@
 
   <!-- ===== NEWS VIEW ===== -->
   <div class="view content" id="view-news">
-    <div style="margin-bottom:24px">
-      <div style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:4px">News Radar</div>
-      <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text3);letter-spacing:2px">GROQ + RICERCA WEB LIVE CON FONTI CLICCABILI</div>
+    <div style="margin-bottom:24px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px">
+      <div>
+        <div style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:4px">News Radar</div>
+        <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text3);letter-spacing:2px" id="news-source-label">ENI · ENEL · SNAM · SAIPEM · BANCHE ITALIANE · GEOPOLITICA</div>
+      </div>
+      <button class="btn btn-outline" id="btn-news-refresh" onclick="reloadNewsData()">⟳ Ricarica</button>
     </div>
 
     <div class="chart-panel" style="margin-bottom:18px">
-      <div class="chart-title">Impostazioni Notizie</div>
-      <div class="chart-sub">DIGEST RAPIDO SU ENI, ENEL, SNAM, SAIPEM, BANCHE ITALIANE E GEOPOLITICA</div>
-
-      <div class="form-row" style="margin-top:16px">
-        <div class="form-group">
-          <label class="form-label">Groq API Key</label>
-          <input class="form-input" id="news-groq-key" type="password" placeholder="gsk_...">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Modello</label>
-          <select class="form-input form-select" id="news-model">
-            <option value="groq/compound-mini">groq/compound-mini</option>
-            <option value="groq/compound">groq/compound</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="helper-line">
-        Demo client-side: la chiave Groq viene usata dal browser. Va bene per MVP e presentazione, ma per produzione va spostata lato server.
-      </div>
-
       <div class="topic-chip-row" id="news-topic-row"></div>
-
-      <div class="form-group" style="margin-top:8px">
-        <label class="form-label">Focus Personalizzato</label>
-        <textarea class="form-input" id="news-query" rows="3" placeholder="Es. dammi focus su dividendi utilities italiane, banche, spread BTP-Bund, Medio Oriente, gas e regolazione UE"></textarea>
+      <div class="form-group" style="margin-top:12px">
+        <input class="form-input" id="news-query" placeholder="🔍 Filtra le notizie per parola chiave (es. spread, dividendi, gas)…" oninput="renderNewsList()">
       </div>
-
-      <div class="modal-actions" style="margin-top:8px">
-        <button class="btn btn-outline" onclick="saveGroqApiKey()">Salva Chiave</button>
-        <button class="btn btn-outline" onclick="clearGroqApiKey()">Rimuovi Chiave</button>
-        <button class="btn btn-gold" id="btn-news-refresh" onclick="refreshNewsDigest()">Aggiorna Notizie</button>
-      </div>
-
       <div id="news-status" class="import-status"></div>
     </div>
 
-    <div class="news-grid">
-      <div class="news-stack">
-        <div class="news-card">
-          <div class="news-card-title">Digest Operativo</div>
-          <div class="news-card-sub" id="news-digest-sub">NESSUN AGGIORNAMENTO CARICATO</div>
-          <div id="news-digest"></div>
-        </div>
-        <div class="news-card">
-          <div class="news-card-title">Headline e Impatti</div>
-          <div class="news-card-sub">COSA STA MUOVENDO IL MERCATO</div>
-          <div id="news-headlines"></div>
-        </div>
-      </div>
-
-      <div class="news-stack">
-        <div class="news-card">
-          <div class="news-card-title">Watchlist</div>
-          <div class="news-card-sub">DA MONITORARE NELLE PROSSIME ORE</div>
-          <div id="news-watchlist"></div>
-        </div>
-        <div class="news-card">
-          <div class="news-card-title">Fonti</div>
-          <div class="news-card-sub">RISULTATI WEB USATI DAL DIGEST</div>
-          <div id="news-sources"></div>
-        </div>
-      </div>
-    </div>
+    <div class="news-grid" id="news-grid"></div>
   </div>
 
   <!-- ===== EXPORT VIEW ===== -->
@@ -1527,8 +1474,6 @@ let perfChartInst = null;
 let allocChartInst = null;
 let sectorChartInst = null;
 let instrumentChartInst = null;
-let newsRefreshInFlight = false;
-let newsAutoRefreshTimer = null;
 let liveCache = {};
 let quoteCache = {};
 let historicalCache = {};
@@ -1559,6 +1504,7 @@ let entryPreviewBound = false;
 let manualEditState = { clientId: null, index: null };
 let instrumentModalState = { clientId: null, positionIndex: null, range: '5y', interval: '1wk' };
 let newsState = normalizeNewsState(readStoredJSON('pd_news_state', '{}'));
+let newsData = { generatedAt: null, topics: [] };            // caricato da news.json (Google News, via GitHub Action)
 let sharedState = {
   id: '',
   liveKey: '',
@@ -2583,7 +2529,7 @@ function showView(v, clientId) {
     screener: ['Screener Titoli', 'RICERCA MERCATI'],
     holdings: ['Titoli Clienti', 'CHI DETIENE COSA'],
     dividends: ['Calendario Dividendi', 'DATE DI STACCO E YIELD'],
-    news: ['News Radar', 'AGGIORNAMENTI LIVE E CONTESTO MACRO'],
+    news: ['News Radar', 'GOOGLE NEWS · AGGIORNATO IN AUTOMATICO'],
     export: ['Esporta Dati', 'EXCEL EXPORT']
   };
   const titlePair = titles[v] || titles.dashboard;
@@ -5745,40 +5691,20 @@ function renderScreenerDefault() {
 }
 
 function normalizeNewsState(state = {}) {
-  const defaults = {
-    model: 'groq/compound-mini',
-    topics: DEFAULT_NEWS_TOPICS.map(topic => topic.id),
-    query: '',
-    lastUpdated: '',
-    lastReport: null
-  };
+  const defaults = { topics: DEFAULT_NEWS_TOPICS.map(topic => topic.id), query: '' };
   const validTopics = new Set(DEFAULT_NEWS_TOPICS.map(topic => topic.id));
   const selectedTopics = Array.isArray(state.topics)
     ? state.topics.filter(topic => validTopics.has(topic))
     : defaults.topics;
-
   return {
-    ...defaults,
-    ...state,
-    model: ['groq/compound-mini', 'groq/compound'].includes(state.model) ? state.model : defaults.model,
     topics: selectedTopics.length ? selectedTopics : defaults.topics,
-    query: String(state.query || ''),
-    lastUpdated: state.lastUpdated || '',
-    lastReport: state.lastReport && typeof state.lastReport === 'object' ? state.lastReport : null
+    query: String(state.query || '')
   };
 }
 
 function saveNewsState() {
   newsState = normalizeNewsState(newsState);
   safeStorageSet('pd_news_state', JSON.stringify(newsState));
-}
-
-function getConfiguredGroqApiKey() {
-  return String(window.PORTFOLIO_DESK_SECRETS?.groqApiKey || '').trim();
-}
-
-function getStoredGroqApiKey() {
-  return getConfiguredGroqApiKey() || localStorage.getItem('pd_groq_api_key') || '';
 }
 
 function setNewsStatus(html = '', type = 'info') {
@@ -5815,576 +5741,93 @@ function toggleNewsTopic(topicId) {
   newsState.topics = [...selected];
   saveNewsState();
   renderNewsTopicChips();
+  renderNewsList();
 }
 
-function renderNewsEmpty(message = 'Inserisci la chiave Groq e premi Aggiorna Notizie per avere un digest live con fonti cliccabili.') {
-  document.getElementById('news-digest-sub').textContent = 'NESSUN AGGIORNAMENTO CARICATO';
-  document.getElementById('news-digest').innerHTML = `<div class="news-empty">${escapeHtml(message)}</div>`;
-  document.getElementById('news-headlines').innerHTML = `<div class="news-empty">Nessuna headline ancora disponibile.</div>`;
-  document.getElementById('news-watchlist').innerHTML = `<div class="news-empty">La watchlist comparirà qui dopo il primo refresh.</div>`;
-  document.getElementById('news-sources').innerHTML = `<div class="news-empty">Le fonti web usate da Groq appariranno qui.</div>`;
+function newsRelativeTime(iso) {
+  if (!iso) return '';
+  const then = new Date(iso).getTime();
+  if (!Number.isFinite(then)) return '';
+  const diffMin = Math.round((Date.now() - then) / 60000);
+  if (diffMin < 60) return `${Math.max(diffMin, 0)} min fa`;
+  const diffH = Math.round(diffMin / 60);
+  if (diffH < 24) return `${diffH} ${diffH === 1 ? 'ora' : 'ore'} fa`;
+  const diffD = Math.round(diffH / 24);
+  return `${diffD} ${diffD === 1 ? 'giorno' : 'giorni'} fa`;
+}
+
+// Carica il digest generato dalla GitHub Action (news.json, Google News RSS,
+// nessuna chiave richiesta). Stesso pattern di loadBakedData per i prezzi.
+async function loadNewsData() {
+  try {
+    const response = await fetch(`./news.json?ts=${Date.now()}`, { cache: 'no-store' });
+    if (response.ok) {
+      const data = await response.json();
+      if (data && Array.isArray(data.topics)) newsData = data;
+    }
+  } catch (error) {
+    /* nessun digest ancora disponibile: prima esecuzione della Action non ancora avvenuta */
+  }
+}
+
+async function reloadNewsData() {
+  const btn = document.getElementById('btn-news-refresh');
+  if (btn) { btn.disabled = true; btn.innerHTML = '<span class="spinner"></span> Ricarico…'; }
+  setNewsStatus('<span class="spinner"></span> Ricarico le ultime notizie…', 'info');
+  await loadNewsData();
+  renderNewsDefault();
+  if (btn) { btn.disabled = false; btn.innerHTML = '⟳ Ricarica'; }
 }
 
 function renderNewsDefault() {
   newsState = normalizeNewsState(newsState);
-  document.getElementById('news-model').value = newsState.model;
-  document.getElementById('news-query').value = newsState.query || '';
-  document.getElementById('news-groq-key').value = getStoredGroqApiKey();
+  const queryInput = document.getElementById('news-query');
+  if (queryInput) queryInput.value = newsState.query || '';
   renderNewsTopicChips();
-  const lastUpdatedText = newsState.lastUpdated && Number.isFinite(new Date(newsState.lastUpdated).getTime())
-    ? new Date(newsState.lastUpdated).toLocaleString('it-IT')
-    : '';
-  if (newsState.lastReport) {
-    renderNewsReport(newsState.lastReport);
-    setNewsStatus(lastUpdatedText
-      ? `ℹ️ Ultimo digest salvato il <strong style="color:var(--text)">${escapeHtml(lastUpdatedText)}</strong>.`
-      : '',
-      'info'
-    );
-  } else {
-    renderNewsEmpty();
-    setNewsStatus('', 'info');
+  const label = document.getElementById('news-source-label');
+  if (label) {
+    label.textContent = newsData.generatedAt
+      ? `AGGIORNATO ${new Date(newsData.generatedAt).toLocaleString('it-IT', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })} · GOOGLE NEWS`
+      : 'ENI · ENEL · SNAM · SAIPEM · BANCHE ITALIANE · GEOPOLITICA';
   }
-
-  const apiKey = getStoredGroqApiKey().trim();
-  const lastUpdatedTs = new Date(newsState.lastUpdated || '').getTime();
-  const shouldAutoRefresh = Boolean(apiKey) && !newsRefreshInFlight && (
-    !newsState.lastReport || !Number.isFinite(lastUpdatedTs) || (Date.now() - lastUpdatedTs) > (4 * 60 * 60 * 1000)
-  );
-  if (shouldAutoRefresh) {
-    clearTimeout(newsAutoRefreshTimer);
-    newsAutoRefreshTimer = setTimeout(() => {
-      if (document.getElementById('view-news')?.classList.contains('active')) {
-        refreshNewsDigest();
-      }
-    }, 120);
-  }
+  setNewsStatus('', 'info');
+  renderNewsList();
 }
 
-function saveGroqApiKey() {
-  const input = document.getElementById('news-groq-key');
-  const apiKey = input?.value?.trim() || '';
-  if (!apiKey) {
-    setNewsStatus('⚠️ Inserisci prima una chiave Groq valida.', 'err');
-    return;
-  }
-  const saved = safeStorageSet('pd_groq_api_key', apiKey);
-  setNewsStatus(saved
-    ? '✅ Chiave Groq salvata in locale su questo browser demo.'
-    : '⚠️ Non sono riuscito a salvare la chiave in locale, ma puoi comunque usarla in questa sessione.',
-    saved ? 'ok' : 'info'
-  );
-}
-
-function clearGroqApiKey() {
-  safeStorageRemove('pd_groq_api_key');
-  const input = document.getElementById('news-groq-key');
-  const configuredKey = getConfiguredGroqApiKey();
-  if (input) input.value = configuredKey || '';
-  setNewsStatus(configuredKey
-    ? '✅ Ho rimosso la chiave salvata nel browser. Resta attiva quella integrata nel file locale di configurazione.'
-    : '✅ Chiave Groq rimossa da questo browser.',
-    'ok'
-  );
-}
-
-function buildNewsPortfolioContext(client) {
-  if (!client?.positions?.length) return '';
-  const snapshot = buildPortfolioSnapshot(client.positions || []);
-  const total = snapshot.totalValue || 1;
-  const topRows = [...snapshot.rows]
-    .sort((a, b) => b.valueBase - a.valueBase)
-    .slice(0, 3)
-    .map(row => `${row.name || row.symbol} (${row.type}, ${(row.valueBase / total * 100).toFixed(1)}%)`);
-  return `Client focus ${client.nome} ${client.cognome}. Top holdings: ${topRows.join('; ')}.`;
-}
-
-function buildNewsPrompt(topicIds = newsState.topics) {
-  const selectedTopics = DEFAULT_NEWS_TOPICS.filter(topic => (topicIds || []).includes(topic.id));
-  const customQuery = newsState.query?.trim();
-  const currentClient = currentClientId ? getClient(currentClientId) : null;
-  const portfolioContext = buildNewsPortfolioContext(currentClient);
-  const searchHints = selectedTopics.map(topic => topic.prompt).join(' ; ');
-  const focusLabels = selectedTopics.map(topic => topic.label).join(', ');
-
-  return [
-    'Italian market brief for a wealth manager.',
-    `Date: ${new Date().toISOString().slice(0, 10)}.`,
-    `Focus: ${focusLabels}.`,
-    `Search hints: ${searchHints}.`,
-    customQuery ? `User focus: ${customQuery}.` : '',
-    portfolioContext ? portfolioContext : '',
-    'Use web search. Prefer last 72h, else last 7d.',
-    'Return valid JSON only: headline, summary, impacts, headlines, watchlist, macro.',
-    'summary: 1-2 short Italian strings.',
-    'impacts: max 2 objects {topic, impact, why, portfolioAngle}.',
-    'impact must be positive, negative, neutral or mixed.',
-    'headlines: max 3 objects {topic, title, source, url, date, takeaway}.',
-    'watchlist: 1-2 short Italian strings.',
-    'macro: short Italian text, max 220 chars.',
-    'If nothing material, say Nessun aggiornamento rilevante.',
-    'No markdown. Italian only.'
-  ].filter(Boolean).join('\n');
-}
-
-function getGroqMessageText(message) {
-  if (typeof message?.content === 'string') return message.content;
-  if (Array.isArray(message?.content)) {
-    return message.content.map(item => {
-      if (typeof item === 'string') return item;
-      if (typeof item?.text === 'string') return item.text;
-      return '';
-    }).join('\n').trim();
-  }
-  return '';
-}
-
-function extractJSONObjectFromText(text) {
-  const raw = String(text || '').trim();
-  if (!raw) return null;
-  try {
-    return JSON.parse(raw);
-  } catch (error) {}
-
-  const start = raw.indexOf('{');
-  const end = raw.lastIndexOf('}');
-  if (start === -1 || end === -1 || end <= start) return null;
-  try {
-    return JSON.parse(raw.slice(start, end + 1));
-  } catch (error) {
-    return null;
-  }
-}
-
-function normalizeNewsStringList(items) {
-  return (Array.isArray(items) ? items : [])
-    .map(item => typeof item === 'string' ? item.trim() : '')
-    .filter(Boolean)
-    .slice(0, 8);
-}
-
-function normalizeNewsImpactList(items) {
-  return (Array.isArray(items) ? items : [])
-    .map(item => typeof item === 'string'
-      ? { topic: 'Mercato', impact: 'mixed', why: item.trim(), portfolioAngle: '' }
-      : {
-          topic: String(item?.topic || 'Mercato').trim(),
-          impact: ['positive', 'negative', 'neutral', 'mixed'].includes(String(item?.impact || '').toLowerCase())
-            ? String(item.impact).toLowerCase()
-            : 'mixed',
-          why: String(item?.why || item?.reason || '').trim(),
-          portfolioAngle: String(item?.portfolioAngle || item?.portfolio_angle || '').trim()
-        }
-    )
-    .filter(item => item.why || item.portfolioAngle)
-    .slice(0, 8);
-}
-
-function normalizeNewsHeadlineList(items) {
-  return (Array.isArray(items) ? items : [])
-    .map(item => typeof item === 'string'
-      ? { topic: 'Mercato', title: item.trim(), source: '', url: '', date: '', takeaway: '' }
-      : {
-          topic: String(item?.topic || 'Mercato').trim(),
-          title: String(item?.title || '').trim(),
-          source: String(item?.source || '').trim(),
-          url: String(item?.url || '').trim(),
-          date: String(item?.date || '').trim(),
-          takeaway: String(item?.takeaway || item?.summary || '').trim()
-        }
-    )
-    .filter(item => item.title)
-    .slice(0, 8);
-}
-
-function extractGroqSearchResults(message) {
-  const results = [];
-  const seen = new Set();
-  (message?.executed_tools || []).forEach(tool => {
-    const rawResults = tool?.search_results?.results || tool?.search_results || tool?.results || [];
-    (Array.isArray(rawResults) ? rawResults : []).forEach(result => {
-      if (!result?.url || seen.has(result.url)) return;
-      seen.add(result.url);
-      results.push({
-        title: String(result.title || result.url).trim(),
-        url: String(result.url || '').trim(),
-        content: String(result.content || '').trim(),
-        score: Number(result.score)
-      });
-    });
-  });
-  return results.slice(0, 12);
-}
-
-function normalizeNewsReport(rawReport, sources = []) {
-  const report = rawReport && typeof rawReport === 'object' ? rawReport : {};
-  const normalizedSources = [...sources];
-  const headlines = normalizeNewsHeadlineList(report.headlines || report.news || report.articles);
-  headlines.forEach(item => {
-    if (!item.url || normalizedSources.some(source => source.url === item.url)) return;
-    normalizedSources.push({
-      title: item.source || item.title,
-      url: item.url,
-      content: item.takeaway || '',
-      score: NaN
-    });
-  });
-
-  return {
-    headline: String(report.headline || report.title || 'Digest mercati Italia').trim(),
-    summary: normalizeNewsStringList(report.summary || report.highlights || report.key_points),
-    impacts: normalizeNewsImpactList(report.impacts || report.market_impacts),
-    headlines,
-    watchlist: normalizeNewsStringList(report.watchlist || report.monitor || report.watch),
-    macro: String(report.macro || report.geopolitics || report.context || '').trim(),
-    generatedAt: report.generatedAt || new Date().toISOString(),
-    sources: normalizedSources.slice(0, 12)
-  };
-}
-
-function buildGroqNewsModelOrder(preferredModel) {
-  const preferred = ['groq/compound-mini', 'groq/compound'].includes(preferredModel)
-    ? preferredModel
-    : 'groq/compound-mini';
-  return [...new Set([preferred, 'groq/compound-mini', 'groq/compound'])];
-}
-
-function buildGroqNewsPayload(model, topicIds) {
-  return {
-    model,
-    temperature: 0.15,
-    max_completion_tokens: model === 'groq/compound' ? 700 : 520,
-    response_format: { type: 'json_object' },
-    compound_custom: {
-      tools: {
-        enabled_tools: ['web_search']
-      }
-    },
-    messages: [
-      {
-        role: 'system',
-        content: 'You are a factual financial news analyst. Use web search, stay concise, and output only valid JSON.'
-      },
-      {
-        role: 'user',
-        content: buildNewsPrompt(topicIds)
-      }
-    ]
-  };
-}
-
-function normalizeGroqErrorMessage(payload, fallback = '') {
-  const message = String(payload?.error?.message || fallback || '').trim();
-  return message.replace(/\s+/g, ' ').trim();
-}
-
-function isGroqRecoverableError(message, status) {
-  const normalized = String(message || '').toLowerCase();
-  if (status === 429 || status === 503) return true;
-  return [
-    'does not support citations',
-    'request_too_large',
-    'request entity too large',
-    'rate_limit',
-    'too many requests',
-    'tool_use_failed',
-    'internal server error',
-    'overloaded',
-    'temporarily unavailable'
-  ].some(token => normalized.includes(token));
-}
-
-function buildFriendlyGroqErrorMessage(message) {
-  const normalized = String(message || '').toLowerCase();
-  if (!normalized || normalized === 'failed to fetch') {
-    return 'Connessione a Groq non riuscita. Controllo rete del browser o chiamata esterna bloccata.';
-  }
-  if (normalized.includes('rate_limit')) {
-    return 'Groq ha rifiutato la richiesta per limite temporaneo. Riprova tra pochi secondi.';
-  }
-  if (normalized.includes('api key')) {
-    return 'La chiave Groq non è stata accettata da Groq.';
-  }
-  if (normalized.includes('tool_use_failed')) {
-    return 'Groq non ha completato la ricerca web correttamente in questo tentativo.';
-  }
-  return String(message || '').trim();
-}
-
-async function attemptGroqDigest(endpoint, useAuthHeader, apiKey, preferredModel, topicIds) {
-  const models = buildGroqNewsModelOrder(preferredModel);
-  let lastError = '';
-
-  for (let index = 0; index < models.length; index += 1) {
-    const model = models[index];
-    const headers = { 'Content-Type': 'application/json', 'Groq-Model-Version': 'latest' };
-    if (useAuthHeader && apiKey) headers['Authorization'] = `Bearer ${apiKey}`;
-    const response = await fetch(endpoint, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify(buildGroqNewsPayload(model, topicIds))
-    });
-
-    const payload = await response.json().catch(() => ({}));
-    if (response.ok) return { payload, model };
-
-    lastError = normalizeGroqErrorMessage(payload, `HTTP ${response.status}`);
-    if (!isGroqRecoverableError(lastError, response.status) || index === models.length - 1) {
-      throw new Error(lastError || 'Groq non ha risposto correttamente.');
-    }
-  }
-  throw new Error(lastError || 'Groq non ha risposto correttamente.');
-}
-
-async function requestGroqNewsDigest(apiKey, preferredModel, topicIds) {
-  const proxyBase = getProxyBase();
-  const groqProxy = window.PORTFOLIO_DESK_SECRETS && window.PORTFOLIO_DESK_SECRETS.groqProxy;
-  const proxyEndpoint = (typeof groqProxy === 'string' && groqProxy.trim())
-    ? groqProxy.trim()
-    : proxyBase
-      ? `${proxyBase}/groq`
-      : '';
-
-  // Con il proxy dedicato la chiave sta lato server: niente Authorization dal browser.
-  if (proxyEndpoint) {
-    try {
-      return await attemptGroqDigest(proxyEndpoint, false, null, preferredModel, topicIds);
-    } catch (error) {
-      // Il worker non ha (ancora) la chiave configurata o non risponde: se il
-      // browser ha comunque una chiave locale, prova la chiamata diretta invece
-      // di arrenderti subito.
-      if (!apiKey) throw error;
-    }
-  }
-  return attemptGroqDigest('https://api.groq.com/openai/v1/chat/completions', true, apiKey, preferredModel, topicIds);
-}
-
-function buildNewsTopicBatches(topicIds) {
-  const fallbackIds = DEFAULT_NEWS_TOPICS.map(topic => topic.id);
-  const ids = (Array.isArray(topicIds) && topicIds.length ? topicIds : fallbackIds)
-    .filter(id => fallbackIds.includes(id));
-  return ids.length ? ids.map(id => [id]) : [fallbackIds.slice(0, 1)];
-}
-
-function extractSourceDomainLabel(url) {
-  try {
-    return new URL(url).hostname.replace(/^www\./, '');
-  } catch (error) {
-    return '';
-  }
-}
-
-function buildNewsFallbackReport(topicIds, content, sources) {
-  const topicLabel = DEFAULT_NEWS_TOPICS
-    .filter(topic => (topicIds || []).includes(topic.id))
-    .map(topic => topic.label)
-    .join(', ') || 'Mercato';
-  const normalizedSources = (sources || []).slice(0, 3);
-  const trimmedContent = String(content || '').trim().replace(/^"+|"+$/g, '');
-  const summary = trimmedContent && !/^nessun aggiornamento rilevante$/i.test(trimmedContent)
-    ? [trimmedContent]
-    : normalizedSources.slice(0, 2).map(source => `${topicLabel}: ${source.title}`);
-  const headlines = normalizedSources.map(source => ({
-    topic: topicLabel,
-    title: source.title,
-    source: extractSourceDomainLabel(source.url),
-    url: source.url,
-    date: '',
-    takeaway: String(source.content || '').trim().slice(0, 220)
-  }));
-
-  return normalizeNewsReport({
-    headline: topicLabel,
-    summary,
-    impacts: trimmedContent && !/^nessun aggiornamento rilevante$/i.test(trimmedContent)
-      ? [{ topic: topicLabel, impact: 'mixed', why: trimmedContent, portfolioAngle: '' }]
-      : [],
-    headlines,
-    watchlist: [`Monitorare sviluppi su ${topicLabel.toLowerCase()}`],
-    macro: (topicIds || []).includes('geopolitics') ? trimmedContent : '',
-    generatedAt: new Date().toISOString()
-  }, sources || []);
-}
-
-function mergeNewsReports(reports) {
-  const uniqueStrings = (items, limit) => [...new Set((items || []).map(item => String(item || '').trim()).filter(Boolean))].slice(0, limit);
-  const sourceMap = new Map();
-  const headlineMap = new Map();
-  const impactMap = new Map();
-
-  reports.forEach(report => {
-    (report.sources || []).forEach(source => {
-      if (!source?.url || sourceMap.has(source.url)) return;
-      sourceMap.set(source.url, source);
-    });
-    (report.headlines || []).forEach(item => {
-      const key = item.url || `${item.topic}|${item.title}`;
-      if (!item.title || headlineMap.has(key)) return;
-      headlineMap.set(key, item);
-    });
-    (report.impacts || []).forEach(item => {
-      const key = `${item.topic}|${item.why}|${item.portfolioAngle}`;
-      if ((!item.why && !item.portfolioAngle) || impactMap.has(key)) return;
-      impactMap.set(key, item);
-    });
-  });
-
-  const macros = uniqueStrings(reports.map(report => report.macro).filter(Boolean), 2);
-  const summaries = uniqueStrings(reports.flatMap(report => report.summary || []), 6);
-  const watchlist = uniqueStrings(reports.flatMap(report => report.watchlist || []), 6);
-
-  return normalizeNewsReport({
-    headline: 'Radar mercati Italia',
-    summary: summaries,
-    impacts: [...impactMap.values()].slice(0, 6),
-    headlines: [...headlineMap.values()].slice(0, 8),
-    watchlist,
-    macro: macros.join(' '),
-    generatedAt: new Date().toISOString()
-  }, [...sourceMap.values()].slice(0, 12));
-}
-
-function renderNewsReport(report) {
-  const normalized = normalizeNewsReport(report, report?.sources || []);
-  const generatedAtText = Number.isFinite(new Date(normalized.generatedAt).getTime())
-    ? new Date(normalized.generatedAt).toLocaleString('it-IT')
-    : 'data non disponibile';
-  document.getElementById('news-digest-sub').textContent = `AGG. ${generatedAtText} · ${newsState.model}`;
-
-  const summaryHtml = normalized.summary.length
-    ? `<div class="news-summary-list">${normalized.summary.map(item => `<div class="news-summary-item news-body">${escapeHtml(item)}</div>`).join('')}</div>`
-    : `<div class="news-empty">Il modello non ha restituito un riassunto strutturato.</div>`;
-
-  document.getElementById('news-digest').innerHTML = `
-    <div class="news-card-title" style="font-size:1.15rem;margin-bottom:10px">${escapeHtml(normalized.headline)}</div>
-    ${normalized.macro ? `<div class="news-macro" style="margin-bottom:14px">${escapeHtml(normalized.macro)}</div>` : ''}
-    ${summaryHtml}
-  `;
-
-  const impactsHtml = normalized.impacts.length
-    ? `<div class="news-impact-list">${normalized.impacts.map(item => `
-        <div class="news-impact-item">
-          <div class="news-impact-top">
-            <div>
-              <div class="news-headline-title">${escapeHtml(item.topic)}</div>
-              <div class="news-body">${escapeHtml(item.why)}</div>
-            </div>
-            <span class="impact-badge ${escapeHtml(item.impact)}">${escapeHtml(item.impact)}</span>
-          </div>
-          ${item.portfolioAngle ? `<div class="news-meta">Impatto portafoglio · ${escapeHtml(item.portfolioAngle)}</div>` : ''}
-        </div>
-      `).join('')}</div>`
-    : `<div class="news-empty">Nessun impatto strutturato disponibile.</div>`;
-
-  const headlinesHtml = normalized.headlines.length
-    ? `<div class="news-headline-list" style="margin-top:12px">${normalized.headlines.map(item => `
-        <div class="news-headline-item">
-          <div class="news-headline-top">
-            <div>
-              <div class="news-headline-title">${escapeHtml(item.title)}</div>
-              <div class="news-meta">${escapeHtml(item.topic)}${item.source ? ` · ${escapeHtml(item.source)}` : ''}${item.date ? ` · ${escapeHtml(item.date)}` : ''}</div>
-            </div>
-          </div>
-          ${item.takeaway ? `<div class="news-body" style="margin-top:8px">${escapeHtml(item.takeaway)}</div>` : ''}
-          ${item.url ? `<div style="margin-top:8px"><a class="news-source-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">Apri fonte</a></div>` : ''}
-        </div>
-      `).join('')}</div>`
-    : `<div class="news-empty" style="margin-top:12px">Nessuna headline dettagliata disponibile.</div>`;
-
-  document.getElementById('news-headlines').innerHTML = impactsHtml + headlinesHtml;
-
-  document.getElementById('news-watchlist').innerHTML = normalized.watchlist.length
-    ? `<div class="news-watch-list">${normalized.watchlist.map(item => `<div class="news-watch-item news-body">${escapeHtml(item)}</div>`).join('')}</div>`
-    : `<div class="news-empty">Nessuna watchlist strutturata disponibile.</div>`;
-
-  document.getElementById('news-sources').innerHTML = normalized.sources.length
-    ? `<div class="news-source-list">${normalized.sources.map(item => `
-        <div class="news-source-item">
-          <div class="news-source-top">
-            <div>
-              <div class="news-source-title">${escapeHtml(item.title)}</div>
-              ${item.content ? `<div class="news-body" style="margin-top:8px">${escapeHtml(item.content)}</div>` : ''}
-            </div>
-          </div>
-          <div style="margin-top:8px"><a class="news-source-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.url)}</a></div>
-        </div>
-      `).join('')}</div>`
-    : `<div class="news-empty">Groq non ha restituito fonti strutturate in questa risposta.</div>`;
-}
-
-async function refreshNewsDigest() {
-  newsState = normalizeNewsState({
-    ...newsState,
-    model: document.getElementById('news-model')?.value || newsState.model,
-    query: document.getElementById('news-query')?.value || ''
-  });
+function renderNewsList() {
+  const grid = document.getElementById('news-grid');
+  if (!grid) return;
+  newsState.query = document.getElementById('news-query')?.value || '';
   saveNewsState();
+  const filterText = newsState.query.trim().toLowerCase();
 
-  const apiKey = (document.getElementById('news-groq-key')?.value || getStoredGroqApiKey()).trim();
-  if (!apiKey) {
-    setNewsStatus('❌ Inserisci prima la tua Groq API key nella sezione Notizie.', 'err');
-    renderNewsEmpty('Manca la Groq API key: inseriscila e premi Aggiorna Notizie.');
+  if (!newsData.topics || !newsData.topics.length) {
+    grid.innerHTML = `<div class="news-empty" style="grid-column:1/-1">Nessun digest ancora disponibile: la Action lo genera in automatico ogni paio d'ore nei feriali (Google News, nessuna chiave richiesta). Premi Ricarica per ricontrollare.</div>`;
     return;
   }
-  safeStorageSet('pd_groq_api_key', apiKey);
 
-  const btn = document.getElementById('btn-news-refresh');
-  newsRefreshInFlight = true;
-  btn.disabled = true;
-  btn.innerHTML = '<span class="spinner"></span> Aggiorno…';
-  setNewsStatus('<span class="spinner"></span> Sto interrogando Groq con ricerca web live e fallback automatico tra modelli…', 'info');
-
-  try {
-    const batches = buildNewsTopicBatches(newsState.topics);
-    const collectedReports = [];
-    let resolvedModel = newsState.model;
-
-    for (let index = 0; index < batches.length; index += 1) {
-      const batch = batches[index];
-      const batchLabel = DEFAULT_NEWS_TOPICS.filter(topic => batch.includes(topic.id)).map(topic => topic.label).join(', ');
-      setNewsStatus(`<span class="spinner"></span> Aggiorno Notizie ${index + 1}/${batches.length}: <strong style="color:var(--text)">${escapeHtml(batchLabel)}</strong>…`, 'info');
-
-      try {
-        const { payload, model } = await requestGroqNewsDigest(apiKey, resolvedModel, batch);
-        resolvedModel = model;
-        const message = payload?.choices?.[0]?.message || {};
-        const content = getGroqMessageText(message);
-        const sources = extractGroqSearchResults(message);
-        const parsed = extractJSONObjectFromText(content);
-        collectedReports.push(parsed
-          ? normalizeNewsReport(parsed, sources)
-          : buildNewsFallbackReport(batch, content, sources)
-        );
-      } catch (batchError) {
-        console.warn('News batch failed', batchLabel, batchError);
-      }
-    }
-
-    if (!collectedReports.length) {
-      throw new Error('Groq non ha restituito un digest valido per nessun tema selezionato.');
-    }
-
-    newsState.model = resolvedModel;
-    const modelSelect = document.getElementById('news-model');
-    if (modelSelect) modelSelect.value = resolvedModel;
-    const report = mergeNewsReports(collectedReports);
-
-    newsState.lastReport = report;
-    newsState.lastUpdated = new Date().toISOString();
-    saveNewsState();
-    renderNewsReport(report);
-    setNewsStatus(`✅ Digest aggiornato con <strong style="color:var(--text)">${report.sources.length}</strong> fonti web tracciate usando <strong style="color:var(--text)">${escapeHtml(newsState.model)}</strong>.`, 'ok');
-  } catch (error) {
-    const friendlyMessage = buildFriendlyGroqErrorMessage(String(error?.message || '').trim());
-    setNewsStatus(`❌ ${escapeHtml(friendlyMessage)}`, 'err');
-    if (!newsState.lastReport) {
-      renderNewsEmpty('Non sono riuscito a recuperare il digest live in questo momento.');
-    }
-  } finally {
-    newsRefreshInFlight = false;
-    btn.disabled = false;
-    btn.innerHTML = 'Aggiorna Notizie';
+  const visibleTopics = newsData.topics.filter(topic => newsState.topics.includes(topic.id));
+  if (!visibleTopics.length) {
+    grid.innerHTML = `<div class="news-empty" style="grid-column:1/-1">Seleziona almeno un tema.</div>`;
+    return;
   }
+
+  grid.innerHTML = visibleTopics.map(topic => {
+    const items = (topic.items || []).filter(item => !filterText || item.title.toLowerCase().includes(filterText));
+    const body = items.length
+      ? `<div class="news-headline-list">${items.map(item => `
+          <a class="news-headline-item" href="${escapeHtml(item.link)}" target="_blank" rel="noopener" style="display:block;text-decoration:none">
+            <div class="news-headline-title">${escapeHtml(item.title)}</div>
+            <div class="news-meta">${escapeHtml(item.source || '')}${item.publishedAt ? ' · ' + escapeHtml(newsRelativeTime(item.publishedAt)) : ''}</div>
+          </a>
+        `).join('')}</div>`
+      : `<div class="news-empty">${filterText ? 'Nessuna notizia corrisponde al filtro.' : 'Nessuna notizia per questo tema al momento.'}</div>`;
+    return `<div class="news-card">
+      <div class="news-card-title">${escapeHtml(topic.label)}</div>
+      <div class="news-card-sub">${items.length} NOTIZI${items.length === 1 ? 'A' : 'E'}</div>
+      ${body}
+    </div>`;
+  }).join('');
 }
 
 function screenSearch() {
@@ -7769,6 +7212,7 @@ async function loadBakedData() {
 
 async function bootstrapApp() {
   await loadBakedData();
+  loadNewsData(); // non bloccante: la view Notizie la rilegge comunque all'apertura
   await initializeSharedWorkspace();
   renderDashboard();
   if (clients.length) {
@@ -7782,6 +7226,8 @@ async function bootstrapApp() {
 
   // Ricarica i prezzi base ogni 30 minuti (la Action li rigenera più volte al giorno).
   setInterval(loadBakedData, 30 * 60 * 1000);
+  // Le notizie si rigenerano ogni ~2 ore: ricarica in linea con quel ritmo.
+  setInterval(loadNewsData, 30 * 60 * 1000);
 }
 
 bootstrapApp();

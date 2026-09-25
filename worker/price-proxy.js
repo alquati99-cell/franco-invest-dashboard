@@ -1,13 +1,13 @@
 /**
  * Franco Invest — proxy dedicato (Cloudflare Worker, piano free).
  *
- * Sostituisce i proxy CORS pubblici (allorigins / codetabs / corsproxy) e tiene
- * la chiave Groq lato server.
+ * Sostituisce i proxy CORS pubblici (allorigins / codetabs / corsproxy): Yahoo
+ * Finance e Borsa Italiana rispondono in modo affidabile passando da qui, anche
+ * dai runner GitHub Actions che Yahoo altrimenti blocca.
  *
  * Endpoint:
- *   GET  /fetch?url=<URL>   -> proxy generico verso host in whitelist (Yahoo, Borsa Italiana)
- *   GET  /quote?symbol=AAPL -> scorciatoia: chart Yahoo per un simbolo
- *   POST /groq              -> inoltra a Groq aggiungendo Authorization: Bearer <GROQ_API_KEY>
+ *   GET /fetch?url=<URL>   -> proxy generico verso host in whitelist (Yahoo, Borsa Italiana)
+ *   GET /quote?symbol=AAPL -> scorciatoia: chart Yahoo per un simbolo
  *
  * Deploy: vedi worker/README.md
  */
@@ -22,8 +22,8 @@ const ALLOWED_HOSTS = [
 
 const CORS = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization, Groq-Model-Version'
+  'Access-Control-Allow-Methods': 'GET, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type'
 };
 
 function json(body, status = 200) {
@@ -38,32 +38,13 @@ function hostAllowed(hostname) {
 }
 
 export default {
-  async fetch(request, env) {
+  async fetch(request) {
     if (request.method === 'OPTIONS') return new Response(null, { headers: CORS });
 
     const url = new URL(request.url);
     const path = url.pathname.replace(/\/+$/, '') || '/';
 
     try {
-      if (path === '/groq') {
-        if (request.method !== 'POST') return json({ error: 'method_not_allowed' }, 405);
-        if (!env.GROQ_API_KEY) return json({ error: 'groq_key_not_configured' }, 500);
-        const upstream = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${env.GROQ_API_KEY}`,
-            'Groq-Model-Version': request.headers.get('Groq-Model-Version') || 'latest'
-          },
-          body: await request.text()
-        });
-        const text = await upstream.text();
-        return new Response(text, {
-          status: upstream.status,
-          headers: { 'Content-Type': 'application/json', ...CORS }
-        });
-      }
-
       if (path === '/quote') {
         const symbol = url.searchParams.get('symbol');
         if (!symbol) return json({ error: 'missing_symbol' }, 400);
@@ -86,7 +67,7 @@ export default {
         return proxyGet(parsed.toString());
       }
 
-      return json({ ok: true, service: 'franco-invest price-proxy', endpoints: ['/fetch', '/quote', '/groq'] });
+      return json({ ok: true, service: 'franco-invest price-proxy', endpoints: ['/fetch', '/quote'] });
     } catch (error) {
       return json({ error: 'proxy_failure', detail: String(error && error.message || error) }, 502);
     }
