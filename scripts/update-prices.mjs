@@ -376,10 +376,25 @@ function buildHistoryPoint(staticData, priceMap, fx) {
 }
 
 function upsertHistory(existing, point) {
+  if (!point) return Array.isArray(existing) ? existing : [];
   const list = Array.isArray(existing) ? existing.filter((e) => e && e.date !== point.date) : [];
   list.push(point);
   list.sort((a, b) => a.date.localeCompare(b.date));
   return list.slice(-HISTORY_MAX_POINTS);
+}
+
+/* ------------------------------------------------------------------ *
+ *  Benchmark (confronto performance in app: portafoglio vs indice)
+ * ------------------------------------------------------------------ */
+
+// Un solo benchmark azionario globale, per semplicita': iShares Core MSCI World,
+// quotato a Milano in EUR (stesso ETF che gia' risolviamo per i clienti che lo detengono).
+const BENCHMARK = { symbol: 'SWDA.MI', label: 'MSCI World (SWDA)' };
+
+async function fetchBenchmarkPoint() {
+  const quote = await yahooQuote(BENCHMARK.symbol);
+  if (!quote || !Number.isFinite(quote.price) || quote.price <= 0) return null;
+  return { date: new Date().toISOString().slice(0, 10), close: Number(quote.price.toFixed(4)) };
 }
 
 /* ------------------------------------------------------------------ *
@@ -444,6 +459,17 @@ async function main() {
   for (const dir of [ROOT, join(ROOT, 'docs')]) {
     writeFileSync(join(dir, 'portfolio-history.json'), JSON.stringify(history, null, 2) + '\n');
   }
+
+  const benchmarkPath = join(ROOT, 'benchmark.json');
+  const benchmarkPoint = await fetchBenchmarkPoint();
+  const benchmarkHistory = upsertHistory(readJsonSafe(benchmarkPath, {}).history, benchmarkPoint);
+  const benchmarkOutput = { label: BENCHMARK.label, symbol: BENCHMARK.symbol, history: benchmarkHistory };
+  for (const dir of [ROOT, join(ROOT, 'docs')]) {
+    writeFileSync(join(dir, 'benchmark.json'), JSON.stringify(benchmarkOutput, null, 2) + '\n');
+  }
+  console.log(benchmarkPoint
+    ? `Benchmark ${BENCHMARK.label}: ${benchmarkPoint.close} (${benchmarkHistory.length} rilevazioni)`
+    : `Benchmark ${BENCHMARK.label}: non disponibile oggi`);
 
   console.log(`\nFatto in ${((Date.now() - START) / 1000).toFixed(0)}s: ${ok} prezzi risolti, ${instruments.length - ok} manuali.`);
   if (missed.length) console.log('Manuali:', missed.join(' | '));

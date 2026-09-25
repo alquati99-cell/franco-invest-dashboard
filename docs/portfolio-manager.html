@@ -645,6 +645,34 @@
   .import-log-item.err {
     border-color:rgba(217,45,32,0.12); color:#9f2a20; background:rgba(255,248,247,0.9);
   }
+
+  /* ===== REPORT PDF ===== */
+  #printReport { display:none; }
+  .report-page { font-family:var(--font-body); color:#132241; padding:0 4px; }
+  .report-head { display:flex; justify-content:space-between; align-items:flex-end; border-bottom:2px solid #175cd3; padding-bottom:14px; margin-bottom:20px; }
+  .report-brand { font-family:var(--font-display); font-size:1.5rem; color:#0f3d91; }
+  .report-brand-sub { font-family:var(--font-mono); font-size:0.62rem; letter-spacing:3px; color:#6b85b6; text-transform:uppercase; margin-top:2px; }
+  .report-meta { text-align:right; font-family:var(--font-mono); font-size:0.72rem; color:#4a5b7a; line-height:1.6; }
+  .report-client-name { font-family:var(--font-display); font-size:1.7rem; margin:4px 0 2px; }
+  .report-client-sub { font-family:var(--font-mono); font-size:0.68rem; letter-spacing:1.5px; color:#6b85b6; text-transform:uppercase; margin-bottom:18px; }
+  .report-kpis { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-bottom:20px; }
+  .report-kpi { border:1px solid #d7e2f5; border-radius:10px; padding:10px 12px; }
+  .report-kpi-label { font-family:var(--font-mono); font-size:0.56rem; letter-spacing:1.2px; color:#6b85b6; text-transform:uppercase; }
+  .report-kpi-value { font-family:var(--font-mono); font-size:1rem; margin-top:5px; color:#132241; }
+  .report-section-title { font-family:var(--font-display); font-size:1.05rem; margin:22px 0 10px; padding-bottom:6px; border-bottom:1px solid #d7e2f5; }
+  .report-table { width:100%; border-collapse:collapse; font-size:0.76rem; }
+  .report-table th { text-align:left; font-family:var(--font-mono); font-size:0.6rem; letter-spacing:0.8px; text-transform:uppercase; color:#6b85b6; padding:6px 8px; border-bottom:1px solid #b9cbe8; }
+  .report-table td { padding:6px 8px; border-bottom:1px solid #eaf0fb; }
+  .report-table tr:last-child td { border-bottom:none; }
+  .report-two-col { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .report-footer { margin-top:28px; padding-top:12px; border-top:1px solid #d7e2f5; font-family:var(--font-mono); font-size:0.62rem; color:#8496b8; display:flex; justify-content:space-between; }
+  .report-pos { color:#0f9f6e; } .report-neg { color:#d92d20; }
+
+  @media print {
+    @page { margin:16mm 14mm; }
+    body > *:not(#printReport) { display:none !important; }
+    #printReport { display:block !important; }
+  }
 </style>
 </head>
 <body>
@@ -755,6 +783,7 @@
         </div>
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-outline btn-sm" onclick="openClientReport()">📄 Report PDF</button>
         <button class="btn btn-outline btn-sm" onclick="exportClientExcel()">↗ Export Excel</button>
         <button class="btn btn-outline btn-sm" onclick="openImportExcelModal()">⤓ Import Excel</button>
         <button class="btn btn-outline btn-sm" onclick="openCashModal()">+ Liquidità</button>
@@ -1141,6 +1170,9 @@
 
 </div><!-- /main -->
 
+<!-- ===== REPORT PDF (stampa/salva come PDF, solo in @media print) ===== -->
+<div id="printReport"></div>
+
 <!-- ===== MODALS ===== -->
 
 <!-- NEW CLIENT -->
@@ -1510,6 +1542,7 @@ let bakedPrices = {};                                  // { KEY(uppercase isin|s
 let bakedFx = {};                                      // { CCY: tasso -> EUR }
 let bakedMeta = { generatedAt: null, counts: null };
 let portfolioHistory = [];                             // [{date, totals:{clientId:val}, total}]
+let benchmarkData = { label: '', symbol: '', history: [] }; // [{date, close}] indice di riferimento (MSCI World)
 let lookedUpData = null;
 let currentAnalyticsToken = 0;
 let currentSectorToken = 0;
@@ -3153,10 +3186,11 @@ function buildCharts(client, analytics) {
   const snapshot = analytics?.snapshot || buildPortfolioSnapshot(client.positions || []);
   const realSeries = buildRealPerfSeries(client.id);
   const perfSeries = realSeries || analytics?.chart || buildFlatChartSeries();
+  const benchmarkSeries = realSeries ? buildBenchmarkSeriesForDates(realSeries.dates) : null;
   const perfSub = document.getElementById('perfChartSub');
   const manualCount = snapshot.rows.filter(row => isManualStaticPosition(row)).length;
   if (realSeries) {
-    perfSub.textContent = `STORICO REALE PORTAFOGLIO · ${realSeries.data.length} rilevazioni · tutti i titoli inclusi`;
+    perfSub.textContent = `STORICO REALE PORTAFOGLIO · ${realSeries.data.length} rilevazioni${benchmarkSeries ? ` · VS ${benchmarkSeries.label.toUpperCase()}` : ''}`;
   } else {
     perfSub.textContent = analytics?.history?.length
       ? `STORICO 1 ANNO SU COMPOSIZIONE ATTUALE${manualCount ? ` · esclusi ${manualCount} titoli statici` : ''}`
@@ -3178,35 +3212,58 @@ function buildCharts(client, analytics) {
     perfGradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
   }
 
+  const perfDatasets = [{
+    label: 'Portafoglio',
+    data: perfSeries.data,
+    borderColor: perfLineColor,
+    backgroundColor: perfGradient,
+    borderWidth: 3,
+    pointRadius: 0,
+    pointHoverRadius: 5,
+    pointHoverBackgroundColor: '#ffffff',
+    pointHoverBorderColor: perfLineColor,
+    pointHoverBorderWidth: 2,
+    tension: 0.4,
+    fill: true
+  }];
+  if (benchmarkSeries) {
+    perfDatasets.push({
+      label: benchmarkSeries.label,
+      data: benchmarkSeries.data,
+      borderColor: '#b8860b',
+      backgroundColor: 'transparent',
+      borderWidth: 2,
+      borderDash: [5, 4],
+      pointRadius: 0,
+      pointHoverRadius: 4,
+      pointHoverBackgroundColor: '#ffffff',
+      pointHoverBorderColor: '#b8860b',
+      tension: 0.4,
+      fill: false,
+      spanGaps: true
+    });
+  }
+
   perfChartInst = new Chart(perfCtx, {
     type: 'line',
     data: {
       labels: perfSeries.labels,
-      datasets: [{
-        data: perfSeries.data,
-        borderColor: perfLineColor,
-        backgroundColor: perfGradient,
-        borderWidth: 3,
-        pointRadius: 0,
-        pointHoverRadius: 5,
-        pointHoverBackgroundColor: '#ffffff',
-        pointHoverBorderColor: perfLineColor,
-        pointHoverBorderWidth: 2,
-        tension: 0.4,
-        fill: true
-      }]
+      datasets: perfDatasets
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { display: false },
+        legend: benchmarkSeries
+          ? { display: true, position: 'top', align: 'end', labels: { boxWidth: 10, font: { size: 10, family: 'DM Mono, monospace' }, color: '#6b85b6' } }
+          : { display: false },
         tooltip: {
           backgroundColor: '#123a87',
           titleColor: '#f8fbff',
           bodyColor: '#f8fbff',
           padding: 12,
-          displayColors: false
+          displayColors: !!benchmarkSeries,
+          callbacks: { label: ctx => `${ctx.dataset.label}: ${Number.isFinite(ctx.parsed.y) ? ctx.parsed.y.toFixed(2) : '—'}%` }
         }
       },
       scales: {
@@ -6125,6 +6182,109 @@ function exportClientExcel() {
   exportClientExcelById(currentClientId);
 }
 
+// Report PDF: popola #printReport e apre la finestra di stampa del browser
+// ("Salva come PDF" tra le destinazioni). Niente librerie esterne, funziona offline.
+function openClientReport() {
+  const client = currentClientId ? getClient(currentClientId) : null;
+  if (!client) return;
+  const analytics = analyticsCache[currentClientId]?.analytics || null;
+  const snapshot = analytics?.snapshot || buildPortfolioSnapshot(client.positions || []);
+  const metrics = analytics?.metrics || null;
+  const now = new Date();
+
+  const typeMap = {};
+  snapshot.rows.forEach(row => { typeMap[row.type] = (typeMap[row.type] || 0) + row.valueBase; });
+  const typeTotal = Object.values(typeMap).reduce((sum, value) => sum + value, 0) || 1;
+  const typeLabels = Object.keys(typeMap).sort((a, b) => typeMap[b] - typeMap[a]);
+
+  const ccyMap = {};
+  snapshot.rows.forEach(row => {
+    const ccy = row.currency || BASE_CURRENCY;
+    ccyMap[ccy] = (ccyMap[ccy] || 0) + row.valueBase;
+  });
+  const ccyTotal = Object.values(ccyMap).reduce((sum, value) => sum + value, 0) || 1;
+  const ccyLabels = Object.keys(ccyMap).sort((a, b) => ccyMap[b] - ccyMap[a]);
+
+  const positionsRows = [...snapshot.rows]
+    .sort((a, b) => b.valueBase - a.valueBase)
+    .map(row => {
+      const manual = isManualStaticPosition(row);
+      const pnl = manual ? null : row.valueBase - row.costBase;
+      const pnlPct = manual || row.costBase <= 0 ? null : (pnl / row.costBase) * 100;
+      return `<tr>
+        <td>${escapeHtml(row.name)}<br><span style="color:#8496b8;font-size:0.68rem">${escapeHtml(row.symbol || row.isin || '')}</span></td>
+        <td>${escapeHtml(row.type)}</td>
+        <td>${fmtNum(row.qty)}</td>
+        <td>${fmtEur(row.valueBase)}</td>
+        <td class="${Number.isFinite(pnlPct) ? (pnlPct >= 0 ? 'report-pos' : 'report-neg') : ''}">${Number.isFinite(pnlPct) ? fmtPct(pnlPct) : 'n.d.'}</td>
+      </tr>`;
+    }).join('');
+
+  const typeRows = typeLabels.map(label => `<tr><td>${escapeHtml(label)}</td><td>${fmtEur(typeMap[label])}</td><td>${((typeMap[label] / typeTotal) * 100).toFixed(1)}%</td></tr>`).join('');
+  const ccyRows = ccyLabels.map(label => `<tr><td>${escapeHtml(label)}</td><td>${fmtEur(ccyMap[label])}</td><td>${((ccyMap[label] / ccyTotal) * 100).toFixed(1)}%</td></tr>`).join('');
+
+  const kpis = [
+    ['Valore Attuale', fmtEur(snapshot.totalValue)],
+    ['Costo Totale', fmtEur(snapshot.totalCost)],
+    ['P&L Totale', fmtSignedMoney(snapshot.totalPL)],
+    ['Performance', fmtPct(snapshot.perfPct)],
+    ['Posizioni', String(snapshot.rows.length)]
+  ];
+  const riskKpis = metrics ? [
+    ['Volatilità Ann.', `${metrics.volatility.toFixed(1)}%`],
+    ['Max Drawdown', `-${metrics.maxDrawdown.toFixed(1)}%`],
+    ['VaR 95% 1G', `-${metrics.varPct.toFixed(1)}%`],
+    ['Diversificazione', snapshot.diversification.toFixed(1)],
+    ['Profilo Rischio', String(client.risk || '').toUpperCase()]
+  ] : [];
+
+  const kpiRow = pairs => `<div class="report-kpis">${pairs.map(([label, value]) => `<div class="report-kpi"><div class="report-kpi-label">${escapeHtml(label)}</div><div class="report-kpi-value">${value}</div></div>`).join('')}</div>`;
+
+  document.getElementById('printReport').innerHTML = `
+    <div class="report-page">
+      <div class="report-head">
+        <div>
+          <div class="report-brand">PortfolioDesk</div>
+          <div class="report-brand-sub">Report Cliente</div>
+        </div>
+        <div class="report-meta">
+          Generato il ${now.toLocaleDateString('it-IT')} alle ${now.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' })}<br>
+          Base valuta EUR
+        </div>
+      </div>
+      <div class="report-client-name">${escapeHtml(client.nome)} ${escapeHtml(client.cognome)}</div>
+      <div class="report-client-sub">PROFILO ${escapeHtml(String(client.risk || '').toUpperCase())} · ${snapshot.rows.length} POSIZIONI</div>
+
+      ${kpiRow(kpis)}
+      ${riskKpis.length ? kpiRow(riskKpis) : ''}
+
+      <div class="report-section-title">Posizioni</div>
+      <table class="report-table">
+        <thead><tr><th>Titolo</th><th>Tipo</th><th>Quantità</th><th>Valore</th><th>P&L %</th></tr></thead>
+        <tbody>${positionsRows || '<tr><td colspan="5">Nessuna posizione</td></tr>'}</tbody>
+      </table>
+
+      <div class="report-two-col">
+        <div>
+          <div class="report-section-title">Allocazione per Tipologia</div>
+          <table class="report-table"><thead><tr><th>Tipo</th><th>Valore</th><th>Peso</th></tr></thead><tbody>${typeRows || '<tr><td colspan="3">—</td></tr>'}</tbody></table>
+        </div>
+        <div>
+          <div class="report-section-title">Esposizione Valutaria</div>
+          <table class="report-table"><thead><tr><th>Valuta</th><th>Valore</th><th>Peso</th></tr></thead><tbody>${ccyRows || '<tr><td colspan="3">—</td></tr>'}</tbody></table>
+        </div>
+      </div>
+
+      <div class="report-footer">
+        <span>PortfolioDesk · report a uso interno, non costituisce consulenza finanziaria</span>
+        <span>${escapeHtml(client.nome)} ${escapeHtml(client.cognome)} · ${now.toISOString().slice(0, 10)}</span>
+      </div>
+    </div>
+  `;
+
+  setTimeout(() => window.print(), 80);
+}
+
 function exportClientExcelById(clientId) {
   const client = getClient(clientId);
   if (!client) return;
@@ -6460,6 +6620,7 @@ function buildRealPerfSeries(clientId) {
   const base = points[0].value;
   if (!Number.isFinite(base) || base <= 0) return null;
   return {
+    dates: points.map(point => point.date),
     labels: points.map(point => {
       const parsed = new Date(`${point.date}T00:00:00`);
       return Number.isNaN(parsed.getTime())
@@ -6469,6 +6630,36 @@ function buildRealPerfSeries(clientId) {
     data: points.map(point => Number((((point.value - base) / base) * 100).toFixed(2))),
     real: true
   };
+}
+
+// Allinea lo storico del benchmark (benchmark.json) alle stesse date della serie
+// reale del portafoglio, cosi' si confrontano sullo stesso periodo. Per ogni data
+// prende l'ultima quotazione benchmark disponibile a quella data o prima (i due
+// storici non aggiornano sempre lo stesso identico giorno).
+function buildBenchmarkSeriesForDates(dates) {
+  const history = benchmarkData?.history;
+  if (!Array.isArray(history) || history.length < 2 || !Array.isArray(dates) || dates.length < 2) return null;
+  const sorted = [...history].filter(point => point && point.date && Number.isFinite(point.close)).sort((a, b) => a.date.localeCompare(b.date));
+  if (sorted.length < 2) return null;
+
+  const closeAtOrBefore = (targetDate) => {
+    let match = null;
+    for (const point of sorted) {
+      if (point.date > targetDate) break;
+      match = point;
+    }
+    return match ? match.close : null;
+  };
+
+  const base = closeAtOrBefore(dates[0]) ?? sorted[0].close;
+  if (!Number.isFinite(base) || base <= 0) return null;
+
+  const data = dates.map(date => {
+    const close = closeAtOrBefore(date);
+    return Number.isFinite(close) ? Number((((close - base) / base) * 100).toFixed(2)) : null;
+  });
+  if (data.every(value => value === null)) return null;
+  return { data, label: benchmarkData.label || 'Benchmark' };
 }
 
 // Proxy dedicato opzionale (Cloudflare Worker). Se impostato in portfolio-shared-config.js
@@ -7348,6 +7539,16 @@ async function loadBakedData() {
     }
   } catch (error) {
     /* nessuno storico ancora disponibile */
+  }
+
+  try {
+    const response = await fetch(`./benchmark.json?ts=${Date.now()}`, { cache: 'no-store' });
+    if (response.ok) {
+      const data = await response.json();
+      if (data && Array.isArray(data.history)) benchmarkData = data;
+    }
+  } catch (error) {
+    /* nessun benchmark ancora disponibile */
   }
 }
 
