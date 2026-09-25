@@ -55,51 +55,99 @@
     pointer-events:none; z-index:0; filter:blur(10px);
   }
 
-  /* SIDEBAR */
+  /* SIDEBAR — dark glass rail */
   .sidebar {
-    position:fixed; left:0; top:0; bottom:0; width:220px;
-    background:linear-gradient(180deg, rgba(244,248,255,0.92), rgba(230,239,255,0.94));
-    border-right:1px solid rgba(23,92,211,0.12);
-    box-shadow:18px 0 40px rgba(37,99,235,0.08);
+    position:fixed; left:0; top:0; bottom:0; width:232px;
+    background:rgba(9,14,26,0.82);
+    border-right:1px solid rgba(255,255,255,0.06);
+    box-shadow:24px 0 60px rgba(3,8,20,0.4);
     display:flex; flex-direction:column; z-index:100; padding:0;
-    backdrop-filter:blur(18px);
+    backdrop-filter:blur(28px) saturate(150%);
+    -webkit-backdrop-filter:blur(28px) saturate(150%);
+    overflow:hidden;
+  }
+  .sidebar::before {
+    content:''; position:absolute; inset:-20% -40% auto -20%; height:60%; pointer-events:none;
+    background:radial-gradient(circle, rgba(240,180,60,0.20), transparent 65%);
+    filter:blur(10px);
+  }
+  .sidebar::after {
+    content:''; position:absolute; inset:auto -30% -25% -10%; height:50%; pointer-events:none;
+    background:radial-gradient(circle, rgba(56,189,248,0.14), transparent 65%);
+    filter:blur(10px);
   }
   .logo {
-    padding:28px 24px 24px;
-    border-bottom:1px solid var(--border);
+    display:flex; align-items:center; gap:11px;
+    padding:24px 22px 22px;
+    border-bottom:1px solid rgba(255,255,255,0.07);
+    position:relative; z-index:1;
   }
-  .logo-title { font-family:var(--font-display); font-size:1.3rem; color:#0f3d91; letter-spacing:-0.5px; line-height:1.1; }
-  .logo-sub { font-family:var(--font-mono); font-size:0.6rem; color:#6b85b6; letter-spacing:3px; text-transform:uppercase; margin-top:4px; }
+  .logo-mark {
+    width:38px; height:38px; border-radius:12px; flex:none;
+    background:linear-gradient(135deg, #f7c65b 0%, #e8792a 100%);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-display); font-weight:900; font-size:1.02rem; color:#1a1206;
+    box-shadow:0 10px 24px rgba(217,119,6,0.4), 0 0 0 1px rgba(255,255,255,0.14) inset;
+  }
+  .logo-title { font-family:var(--font-display); font-size:1.08rem; color:#fff; letter-spacing:-0.3px; line-height:1.15; }
+  .logo-sub { font-family:var(--font-mono); font-size:0.58rem; color:#7387ac; letter-spacing:2.5px; text-transform:uppercase; margin-top:3px; }
 
-  .nav { flex:1; padding:16px 0; }
+  .nav { flex:1; padding:18px 14px; display:flex; flex-direction:column; gap:4px; position:relative; z-index:1; }
+  .nav-section-label {
+    font-family:var(--font-mono); font-size:0.56rem; color:#4c5c7a; letter-spacing:2.5px;
+    text-transform:uppercase; padding:12px 10px 8px;
+  }
   .nav-item {
-    display:flex; align-items:center; gap:12px;
-    padding:11px 24px; cursor:pointer; color:var(--text2);
-    font-size:0.82rem; font-weight:500; letter-spacing:0.2px;
-    transition:all 0.2s; border-left:2px solid transparent;
-    position:relative;
+    display:flex; align-items:center; gap:11px;
+    padding:8px 9px; cursor:pointer; color:#93a2c2;
+    font-size:0.82rem; font-weight:500; letter-spacing:0.1px;
+    transition:all 0.18s cubic-bezier(.2,.8,.2,1); border-radius:12px;
+    position:relative; border:1px solid transparent;
   }
-  .nav-item:hover { color:#0f3d91; background:rgba(23,92,211,0.08); }
+  .nav-item:hover {
+    color:#fff; background:rgba(255,255,255,0.06);
+    border-color:rgba(255,255,255,0.08);
+    transform:translateX(2px);
+  }
   .nav-item.active {
-    color:#fff; border-left-color:var(--gold);
-    background:linear-gradient(90deg, #175cd3 0%, #4b8bff 100%);
-    box-shadow:0 10px 24px rgba(23,92,211,0.18);
+    color:#fff;
+    background:linear-gradient(120deg, rgba(247,198,91,0.16) 0%, rgba(232,121,42,0.16) 100%);
+    border-color:rgba(247,198,91,0.35);
+    box-shadow:0 10px 26px rgba(217,119,6,0.16), 0 0 0 1px rgba(247,198,91,0.06) inset;
   }
-  .nav-icon { font-size:1rem; width:20px; text-align:center; }
+  .nav-item.active .nav-icon {
+    background:linear-gradient(135deg, #f7c65b 0%, #e8792a 100%);
+    border-color:transparent; color:#1a1206;
+    box-shadow:0 6px 16px rgba(217,119,6,0.45);
+  }
+  .nav-icon {
+    width:28px; height:28px; border-radius:9px; flex:none;
+    display:flex; align-items:center; justify-content:center;
+    background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08);
+    color:#9fb0d1; transition:all 0.18s;
+  }
+  .nav-icon svg { width:15px; height:15px; }
+  .nav-icon.tint-violet { background:rgba(167,139,250,0.14); color:#c4b5fd; }
+  .nav-icon.tint-cyan { background:rgba(56,189,248,0.14); color:#7dd3fc; }
+  .nav-icon.tint-rose { background:rgba(251,113,133,0.14); color:#fda4af; }
+  .nav-icon.tint-green { background:rgba(74,222,128,0.14); color:#86efac; }
+  .nav-icon.tint-blue { background:rgba(96,165,250,0.14); color:#93c5fd; }
 
   .sidebar-footer {
-    padding:16px 24px; border-top:1px solid var(--border);
-    font-family:var(--font-mono); font-size:0.65rem; color:#5b7bb2;
+    padding:16px 22px; border-top:1px solid rgba(255,255,255,0.07);
+    font-family:var(--font-mono); font-size:0.63rem; color:#7387ac;
+    display:flex; align-items:center; position:relative; z-index:1;
   }
   .live-dot {
     display:inline-block; width:6px; height:6px; border-radius:50%;
     background:var(--green); margin-right:6px;
     animation: pulse 2s infinite;
+    box-shadow:0 0 0 3px rgba(15,159,110,0.18);
   }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
   /* MAIN */
-  .main { margin-left:220px; min-height:100vh; position:relative; z-index:1; }
+  .main { margin-left:232px; min-height:100vh; position:relative; z-index:1; }
 
   /* TOP BAR */
   .topbar {
@@ -528,9 +576,10 @@
 
   /* RESPONSIVE bits */
   @media(max-width:900px) {
-    .sidebar { width:60px; }
-    .logo-title, .logo-sub, .nav-item span, .sidebar-footer { display:none; }
-    .main { margin-left:60px; }
+    .sidebar { width:64px; }
+    .logo-title, .logo-sub, .nav-label, .nav-section-label, .sidebar-footer { display:none; }
+    .nav-item { justify-content:center; padding:9px; }
+    .main { margin-left:64px; }
     .stats-row { grid-template-columns:repeat(2,1fr); }
     .ptf-stats { grid-template-columns:repeat(3,1fr); }
     .chart-row { grid-template-columns:1fr; }
@@ -680,27 +729,32 @@
 <!-- SIDEBAR -->
 <nav class="sidebar">
   <div class="logo">
-    <div class="logo-title">Portfolio<br>Desk</div>
-    <div class="logo-sub">Pro Manager</div>
+    <div class="logo-mark">PD</div>
+    <div>
+      <div class="logo-title">Portfolio Desk</div>
+      <div class="logo-sub">Pro Manager</div>
+    </div>
   </div>
   <div class="nav">
+    <div class="nav-section-label">Principale</div>
     <div class="nav-item active" onclick="showView('dashboard')">
-      <span class="nav-icon">⬡</span><span>Dashboard</span>
+      <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="2"/><rect x="14" y="3" width="7" height="5" rx="2"/><rect x="14" y="12" width="7" height="9" rx="2"/><rect x="3" y="16" width="7" height="5" rx="2"/></svg></span><span class="nav-label">Dashboard</span>
     </div>
     <div class="nav-item" onclick="showView('screener')">
-      <span class="nav-icon">◈</span><span>Screener</span>
+      <span class="nav-icon tint-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><span class="nav-label">Screener</span>
     </div>
     <div class="nav-item" onclick="showView('holdings')">
-      <span class="nav-icon">▣</span><span>Titoli Clienti</span>
+      <span class="nav-icon tint-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span><span class="nav-label">Titoli Clienti</span>
     </div>
+    <div class="nav-section-label">Insights</div>
     <div class="nav-item" onclick="showView('dividends')">
-      <span class="nav-icon">◌</span><span>Dividendi</span>
+      <span class="nav-icon tint-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span><span class="nav-label">Dividendi</span>
     </div>
     <div class="nav-item" onclick="showView('news')">
-      <span class="nav-icon">✦</span><span>Notizie</span>
+      <span class="nav-icon tint-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h13a2 2 0 0 1 2 2v13a1 1 0 0 1-1.55.83L4 12"/><path d="M4 4v16"/><path d="M8 8h6M8 12h4"/></svg></span><span class="nav-label">Notizie</span>
     </div>
     <div class="nav-item" onclick="showView('export')">
-      <span class="nav-icon">↗</span><span>Esporta</span>
+      <span class="nav-icon tint-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/></svg></span><span class="nav-label">Esporta</span>
     </div>
   </div>
   <div class="sidebar-footer">
@@ -4256,12 +4310,26 @@ function sanitizeManualSymbol(value) {
   return cleaned || `MANUAL-${Date.now()}`;
 }
 
+function extractIsinFromText(text) {
+  const match = String(text || '').toUpperCase().match(/\b[A-Z]{2}[A-Z0-9]{9}[0-9]\b/);
+  return match ? match[0] : '';
+}
+
+function isLikelyUsTreasuryIsin(isin) {
+  return /^US9128/.test(String(isin || '').trim().toUpperCase());
+}
+
 function inferTypeFromIdentifierText(text, fallbackType = 'Altro') {
   const normalized = normalizeImportKey(text);
+  const isin = extractIsinFromText(text);
+  if (isLikelyUsTreasuryIsin(isin)) return 'Obbligazione';
   if (/(btp|btpei|btei|bot|ccteu|cct|ctz|bund|bond|treasury|gov|government|sovereign|obblig|titolodistato|titolostato|buono|certificatodicreditodeltesoro)/.test(normalized)) return 'Obbligazione';
   if (/(etf|ishares|lyxor|xtrackers|vanguard|amundi)/.test(normalized)) return 'ETF';
   if (/(fund|fondo|sicav)/.test(normalized)) return 'Fondo';
-  if (/(stock|equity|azion)/.test(normalized)) return 'Azione';
+  if (/(stock|equity|azion|corporation|corp|holding|spa|plc)/.test(normalized)) return 'Azione';
+  // Un ISIN valido che non matcha bond/etf/fondo è quasi sempre un'azione: nel
+  // dataset i fondi pensione/polizze non hanno un ISIN standard riconoscibile.
+  if (isin) return 'Azione';
   return fallbackType || 'Altro';
 }
 
@@ -5389,7 +5457,10 @@ function normalizeImportedType(value) {
   if (raw.includes('etp')) return 'ETP Obbligazionario';
   if (raw.includes('fondo') || raw.includes('fund')) return 'Fondo';
   if (raw.includes('azion') || raw.includes('equity') || raw.includes('stock')) return 'Azione';
-  return 'Altro';
+  // Valore presente ma non riconosciuto: meglio lasciare vuoto e far decidere
+  // a inferTypeFromIdentifierText (che ha nome/simbolo/ISIN) piuttosto che
+  // bloccare la riga su "Altro" a prescindere dallo strumento reale.
+  return '';
 }
 
 function adjustImportedAvgCost(row) {
