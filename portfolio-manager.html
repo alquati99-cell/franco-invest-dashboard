@@ -1168,10 +1168,6 @@
 
   <!-- ===== SCREENER VIEW ===== -->
   <div class="view content" id="view-screener">
-    <div style="margin-bottom:20px">
-      <div style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:4px">Screener Titoli</div>
-      <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text3);letter-spacing:2px">RICERCA E ANALISI — DATI LIVE YAHOO FINANCE</div>
-    </div>
     <div class="filter-row">
       <input class="form-input filter-input" id="scrSearch" placeholder="🔍  Cerca simbolo o nome (es. AAPL, ENI.MI…)" oninput="screenSearch()">
       <select class="form-input form-select" id="scrSector" onchange="screenSearch()" style="max-width:180px">
@@ -1201,11 +1197,6 @@
 
   <!-- ===== HOLDINGS VIEW ===== -->
   <div class="view content" id="view-holdings">
-    <div style="margin-bottom:24px">
-      <div style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:4px">Titoli nei Portafogli</div>
-      <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text3);letter-spacing:2px">CHI DETIENE COSA TRA I CLIENTI</div>
-    </div>
-
     <div class="stats-row" style="margin-bottom:18px">
       <div class="stat-card">
         <div class="stat-label">Titoli Unici</div>
@@ -1262,11 +1253,6 @@
 
   <!-- ===== DIVIDENDS VIEW ===== -->
   <div class="view content" id="view-dividends">
-    <div style="margin-bottom:24px">
-      <div style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:4px">Calendario Dividendi</div>
-      <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text3);letter-spacing:2px">DATE DI STACCO SUI TITOLI GIA PRESENTI</div>
-    </div>
-
     <div class="stats-row" style="margin-bottom:18px">
       <div class="stat-card">
         <div class="stat-label">Titoli Monitorati</div>
@@ -1341,10 +1327,7 @@
 
   <!-- ===== EXPORT VIEW ===== -->
   <div class="view content" id="view-export">
-    <div style="margin-bottom:24px">
-      <div style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:4px">Esporta Dati</div>
-      <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text3);letter-spacing:2px">EXPORT EXCEL PER CLIENTE O GLOBALE</div>
-    </div>
+    <div class="helper-line" style="margin-bottom:16px">Scarica un file Excel con tutte le posizioni: per un singolo cliente dalla sua card, oppure tutti insieme con il pulsante in fondo.</div>
     <div class="clients-grid" id="exportGrid"></div>
     <div style="margin-top:20px;display:flex;gap:12px">
       <button class="btn btn-gold" onclick="exportAllExcel()">↗ Esporta Tutti i Clienti</button>
@@ -1692,12 +1675,13 @@ const STATIC_INSTRUMENT_CACHE_FALLBACK = STATIC_DATA.knownInstrumentCache && typ
 const STATIC_PUBLIC_SHARE_URL = String(
   STATIC_DATA.publicShareUrl || 'https://alquati99-cell.github.io/franco-invest-dashboard/portfolio-manager.html'
 ).trim();
+// Nessun workspace live di default: va attivato apposta dal pulsante "Attiva
+// Live" (vedi copySharedLink/ensureLiveWorkspace). Un valore fisso qui veniva
+// riprovato ad ogni apertura pagina anche dopo che il namespace smetteva di
+// esistere sul backend (mantledb.sh), producendo il banner rosso permanente.
 const STATIC_PUBLIC_LIVE_WORKSPACE = STATIC_DATA.liveWorkspace && typeof STATIC_DATA.liveWorkspace === 'object'
   ? STATIC_DATA.liveWorkspace
-  : {
-      namespace: 'pdlive-4cbb4abe-8c91-442f-a1c2-41fe85768bf9',
-      key: '9f5e0d8346e3970bf80f8e5702b16322616e85f02b86832dba3c76cf3bcbf292'
-    };
+  : { namespace: '', key: '' };
 const STATIC_SNAPSHOT_MARKER_KEY = 'pd_static_snapshot_marker';
 let clients = readStoredJSON('pd_clients', JSON.stringify(STATIC_CLIENTS_FALLBACK));
 repairLegacyPositionTypes();
