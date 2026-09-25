@@ -830,8 +830,13 @@
 
     <div class="chart-row">
       <div class="chart-panel">
-        <div class="chart-title">Performance Portafoglio</div>
-        <div class="chart-sub" id="perfChartSub">STORICO 1 ANNO SU COMPOSIZIONE ATTUALE</div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+          <div>
+            <div class="chart-title">Performance Portafoglio</div>
+            <div class="chart-sub" id="perfChartSub">STORICO 1 ANNO SU COMPOSIZIONE ATTUALE</div>
+          </div>
+          <div class="control-pills" id="perfRangeToggle"></div>
+        </div>
         <div class="chart-wrap"><canvas id="perfChart"></canvas></div>
       </div>
       <div class="chart-panel">
@@ -1521,6 +1526,7 @@ let allocChartInst = null;
 let sectorChartInst = null;
 let instrumentChartInst = null;
 let drawdownChartInst = null;
+let perfRangeMode = 'real'; // 'real' = storico giornaliero reale (dalla Action) · 'year' = 1 anno stimato (Yahoo, esclusi i titoli manuali)
 let currencyChartInst = null;
 let liveCache = {};
 let quoteCache = {};
@@ -3182,19 +3188,42 @@ function renderRiskMetrics(client, analytics) {
   document.getElementById('ra-fit-note').textContent = `${client.risk.toUpperCase()} · score ${riskScore.toFixed(0)}/100`;
 }
 
+function renderPerfRangeToggle(hasReal, hasYear) {
+  const row = document.getElementById('perfRangeToggle');
+  if (!row) return;
+  const options = [
+    { id: 'real', label: 'STORICO REALE', disabled: !hasReal },
+    { id: 'year', label: '1 ANNO STIMATO', disabled: !hasYear }
+  ];
+  row.innerHTML = options.map(opt => `
+    <button class="control-pill ${perfRangeMode === opt.id ? 'active' : ''}" ${opt.disabled ? 'disabled style="opacity:0.4;cursor:default"' : ''} onclick="setPerfRangeMode('${opt.id}')">${opt.label}</button>
+  `).join('');
+}
+
+function setPerfRangeMode(mode) {
+  if (perfRangeMode === mode) return;
+  perfRangeMode = mode;
+  const client = currentClientId ? getClient(currentClientId) : null;
+  if (client) buildCharts(client, analyticsCache[currentClientId]?.analytics || null);
+}
+
 function buildCharts(client, analytics) {
   const snapshot = analytics?.snapshot || buildPortfolioSnapshot(client.positions || []);
   const realSeries = buildRealPerfSeries(client.id);
-  const perfSeries = realSeries || analytics?.chart || buildFlatChartSeries();
-  const benchmarkSeries = realSeries ? buildBenchmarkSeriesForDates(realSeries.dates) : null;
+  const yearSeries = (analytics?.chart && analytics.chart.data?.length) ? analytics.chart : null;
+  renderPerfRangeToggle(!!realSeries, !!yearSeries);
+
+  const useYear = perfRangeMode === 'year' ? !!yearSeries : !realSeries;
+  const perfSeries = useYear ? (yearSeries || buildFlatChartSeries()) : realSeries;
+  const benchmarkSeries = perfSeries?.dates ? buildBenchmarkSeriesForDates(perfSeries.dates) : null;
   const perfSub = document.getElementById('perfChartSub');
   const manualCount = snapshot.rows.filter(row => isManualStaticPosition(row)).length;
-  if (realSeries) {
+  if (!useYear && realSeries) {
     perfSub.textContent = `STORICO REALE PORTAFOGLIO · ${realSeries.data.length} rilevazioni${benchmarkSeries ? ` · VS ${benchmarkSeries.label.toUpperCase()}` : ''}`;
+  } else if (yearSeries) {
+    perfSub.textContent = `STORICO 1 ANNO STIMATO SU COMPOSIZIONE ATTUALE${manualCount ? ` · esclusi ${manualCount} titoli statici` : ''}${benchmarkSeries ? ` · VS ${benchmarkSeries.label.toUpperCase()}` : ''}`;
   } else {
-    perfSub.textContent = analytics?.history?.length
-      ? `STORICO 1 ANNO SU COMPOSIZIONE ATTUALE${manualCount ? ` · esclusi ${manualCount} titoli statici` : ''}`
-      : manualCount ? `STORICO PARZIALE LIVE · esclusi ${manualCount} titoli statici` : 'STORICO REALE IN CARICAMENTO';
+    perfSub.textContent = manualCount ? `STORICO PARZIALE LIVE · esclusi ${manualCount} titoli statici` : 'STORICO REALE IN CARICAMENTO';
   }
 
   if (perfChartInst) perfChartInst.destroy();
@@ -6597,6 +6626,7 @@ function buildPerformanceChartSeries(history) {
 
   const base = points[0].value || 1;
   return {
+    dates: points.map(point => point.date),
     labels: points.map(point => formatMonthLabel(point.date)),
     data: points.map(point => ((point.value / base) - 1) * 100)
   };
@@ -6698,7 +6728,7 @@ function buildTextFetchAttempts(url) {
 }
 
 async function parseFetchAttempt(attempt) {
-  const response = await fetch(attempt.url, { cache: 'no-store' });
+  const response = await fetchWithTimeout(attempt.url, { cache: 'no-store' });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   if (attempt.parser === 'json') return await response.json();
   if (attempt.parser === 'text-json') return JSON.parse(await response.text());
@@ -7073,10 +7103,12 @@ async function fetchHistoricalSeries(symbol, range = '1y', interval = '1d') {
       close: closes[index]
     })).filter(point => Number.isFinite(point.close));
 
-    historicalCache[key] = series;
+    // Metti in cache solo un risultato non vuoto: un fallimento/vuoto transitorio
+    // (rete, proxy momentaneamente giù) non deve restare "nessuno storico" per
+    // tutta la sessione — al prossimo tentativo si riprova davvero.
+    if (series.length) historicalCache[key] = series;
     return series;
   } catch (error) {
-    historicalCache[key] = [];
     return [];
   }
 }
@@ -7112,6 +7144,20 @@ async function fetchFxHistory(currency, range = '1y', interval = '1d') {
   return converted;
 }
 
+// Timeout per singolo tentativo: senza, un proxy pubblico che non risponde blocca
+// la catena per sempre (niente errore, niente fallback al tentativo successivo) —
+// bastava uno strumento a "impiccare" l'intera modale storico.
+const FETCH_ATTEMPT_TIMEOUT_MS = 9000;
+async function fetchWithTimeout(url, options = {}) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), FETCH_ATTEMPT_TIMEOUT_MS);
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 async function fetchJSON(url) {
   const attempts = [
     { url, parser: 'json' },
@@ -7125,7 +7171,7 @@ async function fetchJSON(url) {
   let lastError = null;
   for (const attempt of attempts) {
     try {
-      const response = await fetch(attempt.url, { cache: 'no-store' });
+      const response = await fetchWithTimeout(attempt.url, { cache: 'no-store' });
       if (!response.ok) continue;
       if (attempt.parser === 'json') return await response.json();
       if (attempt.parser === 'text-json') return JSON.parse(await response.text());
@@ -7153,7 +7199,7 @@ async function fetchText(url) {
   let lastError = null;
   for (const attempt of attempts) {
     try {
-      const response = await fetch(attempt.url, { cache: 'no-store' });
+      const response = await fetchWithTimeout(attempt.url, { cache: 'no-store' });
       if (!response.ok) continue;
       if (attempt.parser === 'text') return await response.text();
       if (attempt.parser === 'wrapped-text') {
