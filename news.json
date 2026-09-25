@@ -1,11 +1,17 @@
 {
-  "generatedAt": "2026-09-25T07:22:17.763Z",
+  "generatedAt": "2026-09-25T13:42:24.705Z",
   "source": "Google News RSS",
   "topics": [
     {
       "id": "eni",
       "label": "ENI",
       "items": [
+        {
+          "title": "Azioni Eni, 25 Settembre 2026: quotazione e target price",
+          "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1KUmVFNzdXcXRzbkZXRWMxZWhIN0lob2hYbmFtay1nNzFXbHFCRDRNRWZYcnk1MHVlNzgzMDFSdzltdkJlQXhmWW4xRzVGbUpxckVlWlNGSnR1cGIzdEItakdIZ0ZMM0pMTVV1VVQzN05DQ3F0LXUyMg?oc=5",
+          "source": "Finanza Italiacom",
+          "publishedAt": "2026-09-25T10:07:39.000Z"
+        },
         {
           "title": "Borsa Milano giù (-0,85%): vola Eni, crolla Fincantieri",
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNcDFfMk1jVFJsVm1kWWJkT0RNRV9jMGZwWUZWb3ZfWUl3T1BYaG5qNWNCanhHOWotN2M0SkUyRFFnYmVlem9xNVhpRnExNXRxNmtQYmNCTFN5SnNFNk04QzJpQklqUENHcU5HWkdDbTJ4S0xLeXBCWjRJdlh1aUZuMFhSV0FQLVlnckx5Z3B6SDEzWktmVko2dGFwems0Zw?oc=5",
@@ -23,12 +29,6 @@
           "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUTBKQ0NjTnhFUWhIa1dkQTVONlBkZC1kZ2puVGY1dG1tN1k2NlcyLWctclloZkFBZjNFQjIydFQ1c25IMklxTjB1TVdTQ1BjZnZQSVN3bElENlFzZm5VTk9sc3FFV05NOFlWa2pJZGhNQXg0WFplSXhVbkphOGhXLWRfVUR6U2ZnN1k2dXRsQnpvN25xdHFLa3Vn?oc=5",
           "source": "SoldiOnline.it",
           "publishedAt": "2026-09-23T11:51:00.000Z"
-        },
-        {
-          "title": "Eni, azioni proprie al 5,18% del capitale sociale",
-          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxONFQ4TERzdGhhV0NkQmNSREZvVjBEeFJmMDlSTVlsdUdScEk1cXplU1lpQS1UbDlEX1V4eUVIakZZV09oV3hGM2steGt1WjhvVHoycW4zYXpkTHZpdy12a01qTHlUaWpZTUJFd2JYaWRoTkJqeDd5LVV2RERzYlVrT2x3UzhnOERadGhmV0tLT2xUdm9ISHVoSlBLZnlqUXZpUVQtb2dXc1FFdw?oc=5",
-          "source": "la Repubblica",
-          "publishedAt": "2026-09-23T11:30:00.000Z"
         },
         {
           "title": "Eni, azioni proprie al 5,18% del capitale sociale",
@@ -73,6 +73,12 @@
           "publishedAt": "2026-09-18T18:10:46.000Z"
         },
         {
+          "title": "Previsione del prezzo delle azioni Patterson-UTI Energy: incombe il test del supporto dopo la notizia del pagamento del dividendo",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTHhWQ284WGptQ1hseXJDdzBFNVFFREI5bEtndV9FVVktSmV1bndBejRDTXZteGYyNlFLRHhtLTZSR2x4ZXFHcFlwY05YOTl3b2xSLUx5RzFlVGM1cW12MDJFQ1k0X253U2E1R3RTcXF5anI3Y3Y5am5EOUV4aDFfVmRSNXRrTHFtSGZGYmNBWFZ4anc0WVlkd3A4Q3JQRGs?oc=5",
+          "source": "Traders Union",
+          "publishedAt": "2026-09-16T21:10:11.000Z"
+        },
+        {
           "title": "Cosa si cela dietro l'ultimo calo dell'8,5% delle azioni di Diamondback Energy?",
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTUswNlV4M0RQeEZuUHppQlZXbmVYbDloVVJiMVRldU1aQm5sZGcwOV9iNUs2WUcyVHpnWEFVNnpaVEJ1Z1JTeVdpZHBBUTRCZ2FpMl82N3pCMllqX1hRSmJHY0RZZldad2wyRXZuSGVRLXdka1RUVHFEOXBwa3NOVXk2aTR1czV2Wl8yZGV1cEFCNUcwbUkyU2dzTWctdw?oc=5",
           "source": "Traders Union",
@@ -81,7 +87,7 @@
         {
           "title": "Migliori azioni di energia rinnovabile: quali comprare nel 2026",
           "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0zeEdsQUFfTUxncWlDY2tOLVVTcExqSE9CQVZnaHZKOWJ4TFVfZVFqLWNZTmZwR1FTZWk0VkNzdWZoeXUweEZMZ2RyRmc1eks2U2ROMV9Raml6MGprcDJYbmZlcHNEX1hq?oc=5",
-          "source": "Rankia IT",
+          "source": "rankia.it",
           "publishedAt": "2026-09-16T15:35:17.000Z"
         },
         {
@@ -101,12 +107,6 @@
           "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNODZMVTlRS3BXRDRPZzIzRlNsQWhzQ2U0SDVzQm5GOVhvYTBYS1BtNUlxNjJycnJ1dS1zUm1IUEhXajRVbnloeDNEdGdJaFM3QW9FblpVUkwzUkpxNU9aa2Fvbm1maWFhLUIzUnNnYmMwLTdjMndGOExnYU5CNHZQX3FKT3B4UQ?oc=5",
           "source": "Traders Union",
           "publishedAt": "2026-09-12T12:41:54.000Z"
-        },
-        {
-          "title": "Azioni Enel scendono sotto 9 euro. Cosa sta succedendo da un mese?",
-          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPNFI1Z2FDeHNtaEczdUhMbEJMUTFYd01ReTNYNVM2RExZWmRMX0lnY2tjRUdVQmVDNnZyZkx0YXFzQUtnZU9PMDlmaHFTR09MVmlpMnBReHVpX1FXVDVCQkQ1UDJQUWpHMFVEcFVwc3dnZllTR3pmeVd6NHNfU0NLeDhrYXl2Nms0QVRPaGNZZ2NrWWJfWU1oOA?oc=5",
-          "source": "RisparmiOggi",
-          "publishedAt": "2026-09-08T07:00:00.000Z"
         }
       ]
     },
@@ -117,49 +117,49 @@
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9MdHpORUFQNzE0NDJEQ3hoZFc0Y0hxSjZ0cVZJSGZWZnZ6Um9NdS11VG5GZHozY1JCUDBlTEtsRFZCOF9OOXllLXBmdHZlY2E2T3BCczF5U1NuUGdYVlQxVnNnbkF6UQ?oc=5",
-          "source": "Staffetta Quotidiana",
+          "source": "staffettaonline.com",
           "publishedAt": "2026-09-24T09:38:39.000Z"
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE11UXNyZ05KVTA2bzlsSXhyNC14Y2tQVXZsYlZpdUx6S2RCRER0VHF5cUJrNkk0UGJSUGc0aGdvdGtPWmQ5MG5RRThsQzFNSVUwa0hJWFRaWFdEZi03VTA5WmJ1RDVRZw?oc=5",
-          "source": "Staffetta Quotidiana",
+          "source": "staffettaonline.com",
           "publishedAt": "2026-09-09T07:00:00.000Z"
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9STTVzN0dmUWwtMkhBWVhCaUdudl9HeFNIX0hZY2FqbzgzaVRiLXZubTFGcjVuTWhKTHN1SFMyZTdnNXE1MGZwRFVRRDdCeWhZQ1FhcFd3YkFVOGM2emZoaFBlMm5fQQ?oc=5",
-          "source": "Staffetta Quotidiana",
+          "source": "staffettaonline.com",
           "publishedAt": "2026-08-28T09:24:45.000Z"
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1IdVhJNmxXYnM4VDJhNm83UXJqeXk1WjBSX1FXd0cySm9DOERwbnFtR252aHo1Z3VtRFZHMUxtdW11REgwVXZXUTNtN0ZBMlF2Z1lNdTFsSlllQWszV2dxc015amRwdw?oc=5",
-          "source": "Staffetta Quotidiana",
+          "source": "staffettaonline.com",
           "publishedAt": "2026-08-03T07:00:00.000Z"
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBvdVZxeVZ0TENub2RpR2RiYmxiQzNpZUVMdXg1cDNobXRXXzg2RV9JRDR4aVllamJmczcxZTFndlJFa3otaWlTMV9CdGlpc2I5MXRQUlF5WnU2T2FNT0g0S193SEJTdw?oc=5",
-          "source": "Staffetta Quotidiana",
+          "source": "staffettaonline.com",
           "publishedAt": "2026-07-31T09:20:24.000Z"
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1BQmhTUkJ0Y3owbFYtbEJvLWpnb3FrLW9kM3dhYW1vd2EtZ2Qwcmg3UHBFazlIdXg0MWRlZVJya3ZNN1lCLXZJM2pZREp3RkM3cDlzYll6dUtyUFNQZWZRQUEwaG1XUQ?oc=5",
-          "source": "Staffetta Quotidiana",
+          "source": "staffettaonline.com",
           "publishedAt": "2026-07-30T07:00:00.000Z"
         },
         {
           "title": "Gas, Terega (Snam) verso possibile deficit di ricavi al 2027",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5INjJzX3VXdXE1U01GOHc2bV9lclJNRVB3QUpCSnJ5UkpuTUk4WWFQLUM2bDFHb2FobGJybEI1Q1dOMzBfR0EwSDdLT0NjTjMzZnRnRWM4eHA3S2U3U3RVX0N0WnNQUQ?oc=5",
-          "source": "Staffetta Quotidiana",
+          "source": "staffettaonline.com",
           "publishedAt": "2026-07-28T07:00:00.000Z"
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE12MEFiaGRYbFpUcWp0VEw5SGdSNmlJM2Y0bGhLT1JWX21wVGNoSF92UDY3dmwwejF1NnJRVng4S1lyNGtqc0FlcU9Rc0V4QzRnU0VhSUNKcThtR3ZMNHlidEZ4Qi1LQQ?oc=5",
-          "source": "Staffetta Quotidiana",
+          "source": "staffettaonline.com",
           "publishedAt": "2026-07-20T10:02:43.000Z"
         }
       ]
@@ -169,28 +169,10 @@
       "label": "Saipem",
       "items": [
         {
-          "title": "Saipem, nuovo contratto offshore da 350 milioni di dollari in Angola",
-          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNSVYxeFAwdEc3LXMtUVh6UFJ0bG9LZTM5d2tJV0IybWdZSmJqNVNGb2tna3cyamV3aXVRcWFMSEJ3S1hyMU9FX1c2ZGZvMWJiRW1TV2FRczU0NGtRSTEtdEctSVhyUy11OE1LMFhybVhPZWZGcHhzS1BMMl9GaGx0ZmFfdERXZUo1NnBLZDB2eXRiZWFDeUE?oc=5",
-          "source": "Shipmag",
-          "publishedAt": "2026-09-19T16:03:58.000Z"
-        },
-        {
           "title": "Saipem si aggiudica nuovo contratto offshore in Angola per un valore di circa 350 milioni di dollari",
-          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNZVlkTHlFV01KNXFMNVJZb3ZlUVphWElhd044UGZhaHBuQW1DTHdOTkpWbHNYRDhxUUJ3RFJUX2xlMkw3ZVk2MHV4VlJETnY3VFBsTnI4SHRpRXRLN1lDLVkyc181OWwtU29oak5oU1ljNTVBY2JpcXFMNjIxekVsLVFFU1c0a2pHcFF4aWhZVHVNbFZyR3RkTkR4ZXdrNTRCM2g5VGNJRDZOWU5pLXFVM0QxT25zMVVoZjhuX2RLMF9INWhwM0ZobmVjMDM5QQ?oc=5",
-          "source": "economiadelmare.org",
-          "publishedAt": "2026-09-15T10:44:48.000Z"
-        },
-        {
-          "title": "Saipem si aggiudica un contratto offshore da 350 milioni di dollari in Angola",
-          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxObjlFMFdpU2dTb201aGFGSk8zN3labm1QM29QdEV5MGRHLTlFbDZhUDZxSlY3V2FmOFJEdUV2MVJWaWZnaVU1VmdVRFVNaktXblB6cC01azJTY2ZLMF9QYThlZVlCOTlCWlgzVmc1Nlo5YWZJcklteHhRcGRJbWdSZEtEdG9FRnk5QjF3dw?oc=5",
-          "source": "Yahoo Finanza",
-          "publishedAt": "2026-09-15T09:10:31.000Z"
-        },
-        {
-          "title": "Saipem, nuovo contratto in Angola da 350 milioni di dollari",
-          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNNnQ2SXBPWkRsTUoyNU03MnhuQS1VSWpVd28xdVlGYUtvaUdTcl9KWFkzWEtlbFp1NzJvMFl6VVN3Vk40UTAtZm1QNkk5SzgxXzdvSlNNOWVYendRbWNnZlY4RmhwS3Z4dzEzM1ZJRzAtSXNPZjFPZy1Qb1QtM2gxSTlGMHluVzM0MFJ0WVBxUkRJUQ?oc=5",
-          "source": "orafinanza.it",
-          "publishedAt": "2026-09-14T23:45:00.000Z"
+          "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOUjZZcDB5Y1oyUUJRNWlQRWUzWS1MT0lTbHZ3NTZFM21IYkZaOHJla2RzTVUzSkt6bFBmbkh2N0RUMWZSbzkteEFVS0FpaVU3ZkdibzY4bjBnYUtfUXNqc3pHcDJmcS1pZFAwRUVxZ1VyajU2S2dKZEs0OS1xWGZzSkxBUThQWlRGbnU0T0JGSVFILURMQS14QVl5Um1Jbk1FV3pyM0J1bkZEY3JEYkthWWhFNUx6TGttd0cxTlkxeTlpSHRoQXFsakdfVTZjN29LbXFkcloyVjgxUzJKYnhRbl93?oc=5",
+          "source": "Corriere dell'Economia",
+          "publishedAt": "2026-09-14T18:36:00.000Z"
         },
         {
           "title": "Saipem ottiene un contratto offshore da 350 milioni di dollari in Angola",
@@ -205,16 +187,34 @@
           "publishedAt": "2026-09-14T08:55:00.000Z"
         },
         {
-          "title": "Saipem si aggiudica nuovo contratto offshore da 350 mln dlr in Angola",
-          "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9RRXJhbDZmOG96cHhCcnQ0RDlaTjJ4cmV0eW1kY2k4WXZfR091QXl3NjNmWGpLaXhnYTFNNXRwOHFHcXhuTlNZUnlwdGJaM3IwSmkzQ2VoMk9Zdk5TcnlDbTE4blRIVFNndnNYNWZHcFJqekFpN0RXYw?oc=5",
-          "source": "TradingView",
-          "publishedAt": "2026-09-14T08:40:00.000Z"
-        },
-        {
           "title": "Saipem si aggiudica un nuovo contratto offshore in Angola",
           "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQYXpZQUk0TWRqTmgzQXFyVWhuLVVlVl9xelVIbWtvY1RpOGxvSUZKeDU3VFgtQXcxWE9CXy1seGM5ak9udi1SNlRHOHZia0g4YTdWejBZeHM0SDNaYnNjcm91RWJwbzNBNkd2dVNOYUNPS2FTX3hzTllnRl83bTJoTzhCSDBuTEtKS0ZLdTVXZDFIc01IXzhjelliSkU0ZlFl?oc=5",
           "source": "SoldiOnline.it",
           "publishedAt": "2026-09-14T07:00:00.000Z"
+        },
+        {
+          "title": "Saipem si aggiudica nuovo contratto offshore da 350 million $ in Angola",
+          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRlViNFNiQTRybHpmdzZCdURVZ3lFRlpaS01GeHQ3enpnNEhfcHlNd2RfSlo5M3paSmx2X2dnb25MVXpqOHl5U3F2M3EteXJoTXJXNlgzQmVpaklqUkgxOU5NVHc1R0VFZXg2X2c3Q0NBZHo5cUVEbmtwSTJ4T0JpRmkyTGVFTW9DRGlTSWZpM0ZlaE1JZTBuRjh2X0dwTnNiRWtvZmZlX2l2c2s1VVVRMUJmd1NoaHByRnRNSWtoMnZ0dw?oc=5",
+          "source": "MarketScreener Italia",
+          "publishedAt": "2026-09-14T07:00:00.000Z"
+        },
+        {
+          "title": "Saipem ottiene contratto offshore da USD350 milioni in Angola",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOM1o1ZzhXQWs1VWFkUlE0eHBVcmpYTHpqemYtVGtGUFAxaEFzMXVZcWJNVWN0NHZiTi0xcmRDb2pCTHF3QXNvYnZpQjhFMUZDR0tMYXhQV1NtSzRUUTdRMUM2cGtteTNweW1TcGxhUnN2MEZyeWM4NUgzcHpsTHZFaW1Jc0tKVFlWMXJTNWhBSnZEM0l1VXJBci1aYkdNZjE2WHB3UnA3V0FHelM3UzhuSHRoaUcyOVk?oc=5",
+          "source": "MarketScreener Italia",
+          "publishedAt": "2026-09-14T07:00:00.000Z"
+        },
+        {
+          "title": "Saipem ottiene un contratto di ingegneria per un impianto di carburanti sintetici in Germania",
+          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUVM0RGR2c1hwVVNPR1ltcGVhTGxpS0l3Nm1MYndIV1V6LVpnX21wMFFKMGtZTm1NanFWWFpqcGc3S0kyaWdzRTJzZGpaTmNfMXlyTjZPLVZabjVhcHNyZlRaZ1JIVGx4MVVxZXFxYm5IQUZndVoyZmQyNGRDVmllVGVBTGM2ZlY4T1E?oc=5",
+          "source": "Yahoo Finanza",
+          "publishedAt": "2026-09-01T07:00:00.000Z"
+        },
+        {
+          "title": "Saipem: aggiudicati nuovi contratti offshore per circa 1,2 mld di dollari",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZEhDdlZ4WXotQ3NBR2poNXM4UFJjU0Z0enpETVh1ZERwaVI3ZV9YZjlTdjhlWGJlWVdPRDlRWEhuY19SNXBhZ2gtWHR0Rm42bk5JWENTTGJHdFBFTDFhQTlqTko4NVg2MzlMNW0ycmVpelo5ZnhKdGRDNGh0ZEpwcVc5VGhZSm9zTC1RVTZLdkhESVdzVDhBQXpYczlVX3JYUUpnYzhKTQ?oc=5",
+          "source": "Energia Oltre",
+          "publishedAt": "2026-08-25T14:03:44.000Z"
         }
       ]
     },
@@ -222,6 +222,24 @@
       "id": "banks",
       "label": "Banche ITA",
       "items": [
+        {
+          "title": "Banco Bpm in luce, sale l'ipotesi di un'azione congiunta Unicredit-Agricole",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxORUFxSEprT1UwSUNfaVJ2OFZMNmJLNFBWWnJMSHk2cG9mS0h2VVZ0bTNDQ2FRN3BCT0EzX3V3YzBWcVhZZFh1WEh0aU9YT3pidEVRTFdST1NPSXVVV2lLYXViMlRfZ3N6emxXVTBZM2xTT1h3bWFjNlpHWXhKb0xJT1RDeXd6SlZLQVNPTGtiaUhFbEduaE5jZ3BpY2NwaV96OWZoRlNwQk5vQ2M?oc=5",
+          "source": "Il Sole 24 ORE",
+          "publishedAt": "2026-09-25T11:32:45.000Z"
+        },
+        {
+          "title": "Il Banco non vince sempre. La strada di Bpm porta a Parigi",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGNDV4eHFISmdTcG55Q01ZcF90YWtLbS1OVmhxV0x0OFV2SVJlTzNWdDlxaHFlNlhnYkQ5VVBIRkdBSk1vTkRNdlR0VTN2dXBDZmYwdkV5bk9PcE5WVVJfMEhUMDlOdXZlaEkydFRXUVJ4VEJmNlllNUpnblVodlU?oc=5",
+          "source": "HuffPost Italia",
+          "publishedAt": "2026-09-25T10:44:00.000Z"
+        },
+        {
+          "title": "Banco BPM - Rumors su unoperazione congiunta Crédit Agricole-UniCredit",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPM1VPUk9pM2dPVXZQQ25TM3lYWVN4XzMySWVnWnlsc3dVOFI2emRRUjIyZlF1WEdETWd1UVNTcDg0bFZnNFg3bV9qZmR4V3RiX0hZd1ljVDZhV0oxTVFSVHlkUkRVUXdpUGlmQ05iNk5aRWNFd0JhM1RIR3VWY21hVmN6aXE0NWhPS1RCU3ItSzVhc3VsRkJVazRwd1d1NExSbHlsaURkWDI3R0ta?oc=5",
+          "source": "Websim",
+          "publishedAt": "2026-09-25T07:43:28.000Z"
+        },
         {
           "title": "Banco BPM, la spartizione tra UniCredit e Credit Agricole",
           "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQdWxHcWRsOEtwYXY0UGI4ZXVzb1FEbXVhVnIwSS1fT2l3RXQ1ajVKbDhCVHlIbXVRZHpGVkJ2emJjbW9BSGdiM3M0Q1dEcXFORGxBa1R2Vk5FOHNBUGp5YzBBTmEweHY1QWwyczdzTDI2S2hxeDJLRTl6UlZ1bmtya2RxU05SaV9sZERlSFZiWE0wX3ZrMk5vUzRIRnpzUHFqSXhvNkVFQ054X20wbEo4UlZYUHZUWFMyNXlGakFRVWJFanRTV0p3RTZ5aw?oc=5",
@@ -251,24 +269,6 @@
           "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQNUo1UHlqMGhBbjZJQkJDTkxUQWl4RzRQbDdVbngwTjltWFE0Ui1xSmtsS3BaRWs5OVZyVlJYc0RZU2xKWUl5YUdQYW1yNExmQVZxb3lUVzUzX2VydlJfS0hwLW1KVW0xWDFBMTZmczAwbm1XUFF3WUt0d2dtWnVaRkFRb3kzaGtJeXlWVnd4alZhQlF2QWd3VVZ2N1dHYzhQM3d2U1pBOHdfSTZkbWQzSDhiQ1RlMzdhWHo2THhJMW9KZw?oc=5",
           "source": "PLTV.it",
           "publishedAt": "2026-09-21T13:30:32.000Z"
-        },
-        {
-          "title": "Unicredit-Crédit Agricole: rumor, obiettivi e scenari",
-          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOekJTeVU3cWdhbHVGVzhndzE5NWRFcGdhQWluRVBOdG95NUFjMDlkNjdJR210MnNsNDJvWkg0aGdqTTJBVGxwRlF4ZnNfOTMyUDRTbUxzX2d5VjRBNEVuRmVSTXdjVjRKNXEzRUY0X1ZyTC1Na29uTG91NHJBU19obGN1ZkVsNFVHQ0NtRHc3REp0QQ?oc=5",
-          "source": "Startmag",
-          "publishedAt": "2026-09-21T13:18:00.000Z"
-        },
-        {
-          "title": "Banco BPM guadagna oltre il 3% su indiscrezioni relative a una possibile iniziativa congiunta UniCredit-Crédit Agricole",
-          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNMml6dXduOUU4N0UyOWNqLXhiMm9MMmZHaF85dU1SSWdxU2FiU1FodUZINFdhcGZsY1hSdWl6dmc1RE9HQWFWSEVDQmt0bVBuMnliTGNwNnZ2bHM1b1pwT0dOeFU3QkZMTFRnSzI2VnhTS1JxdGc1SlNFcDZpTVU4Mi1OWmlwdw?oc=5",
-          "source": "Yahoo Finanza",
-          "publishedAt": "2026-09-21T09:14:50.000Z"
-        },
-        {
-          "title": "Banco Bpm strappa in Borsa su ipotesi mossa Unicredit-Agricole",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOYWVLNC1IVWUwMF9odjBhb2VNVzhyRV93T2U3T3hxZ3kyN2tGNWtEbFZ3VTJBOVJteksxYUtlY2NUUHZNOHRWVzRQY2dlcGxZMWJqMmVnWm1kcHQzMTVXWkYwQ3JBRTlHdnhiekM4cndLT2EwelNzbWtvMERodjRSNnN2UnN6VU9hMjNmWnFjUndOYWFCQVJha0dla2llZw?oc=5",
-          "source": "Il Sole 24 ORE",
-          "publishedAt": "2026-09-21T08:50:46.000Z"
         }
       ]
     },
@@ -289,22 +289,10 @@
           "publishedAt": "2026-09-15T07:00:00.000Z"
         },
         {
-          "title": "Borse oggi in diretta | Il Ftse Mib chiude sotto la parità (-0,1%). Sprint di Lottomatica, male Moncler",
-          "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNQzJIU2liMm5EU3BoUzMzSmU1bUZieWs5cklYVW93VE1pRU9MamZLYnJpeUhPaklrcGYxYXFJaVBGSzRSRWg0NlVSbjJsRXRHQ0UyWUlhT1BSY1B6VmRYQ0tiX1d4SUhzbTJ4S1gzSEg5ZUMxeW5yMkdCOVZwOGtVemxDM2RwYUhjNkVLRW9PUHZfckJDcy1LdWpnV0Y0V1RnZnVhaE1ockNNMGJ3bW9UUElpeVNQS2pxeUVyRS1sWUNTRGpLNThSNjRmdER2WnFQbGFvQV9NdUFqMGc5N1JzN0FmWl9NUQ?oc=5",
-          "source": "Milano Finanza",
-          "publishedAt": "2026-09-10T07:00:00.000Z"
-        },
-        {
           "title": "Borse, settimana in rosso per l’Europa stretta tra petrolio e tassi. Milano -0,3%. WS +0,98%",
           "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPQnZJNFNxd3hjZ1hBWU9Bd3pjX01oX1lvTFVBT1Jvc25VR0FSTmlrTkgtZ3d3cTFMNTVvWE9XNzRoN3UzdEV0UjdkVzN1bjlabVNfNTR2WHRlNG52TnZxV1JLS0wzd2Y4WHJvQ3NMTFIyU3JJTzE3VnJSSVpiUS1Ed3lRREw2X1ZX?oc=5",
           "source": "Il Sole 24 ORE",
           "publishedAt": "2026-09-10T07:00:00.000Z"
-        },
-        {
-          "title": "Piazza Affari chiude in calo e resiste al sell-off europeo, vola lo spread a 84 punti",
-          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOVHA1UnhiTmhDdmZwZkJDYmwwdzd0MG9Ma1pZT2lmVXp3ak1WVUZuY29qSURqakNxZm5aUWJ0Ni13NEJyTUxVZjBhQ0s3WTRkbDRoR0dMd2hkRFlLYkhhUVZhYWx0TlYtUFBGX2JzdXVRWG9QVXRyeE1KbklUanpXMm9Ld1Z6eXFacHRsMQ?oc=5",
-          "source": "euroborsa.it",
-          "publishedAt": "2026-09-09T05:00:00.000Z"
         },
         {
           "title": "Dove investire oggi: miglior investimento attuale | Settembre 2026",
@@ -323,6 +311,18 @@
           "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNVmhkX3ZRSjRQNFdRQ2pBX1AzRnZSa2twdG9LVFpNaE53bGRzWkVUczREVmhIazItcmVsdWdMSGRvRXVMS2dWQjVlTnd6TGVJd1kxN0RGeHZyU2hGTUVLYVd3Ul9sQW5EWmR4YUNNOFNYTlBxWG9LcmVfR3htbzR5dUZoSGtFV3ptaEg0YXlzWEhiSGp3SGR0VUEtS0FUMUItMFBWekhBZ3BaVmlJZHcweXk0RkpGZHM?oc=5",
           "source": "SoldiOnline.it",
           "publishedAt": "2026-08-03T07:00:00.000Z"
+        },
+        {
+          "title": "Mercati finanziari 27 luglio 2026: cosa aspettarsi",
+          "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5FbHNpZUpReEJjOUpoclpBRk9EMWl5RkZUY1k2al9VTC1UdE9BVG5zb0h5cGd5TXNzd0QwNjM5MS1VbUxsWUJuY2xZMnllVGpkcDM5Y3paSkd6ZjNycFVuemR1RU9yV0hXcERZXzh5LTdMd1JSdlZ6dg?oc=5",
+          "source": "Finanza Italiacom",
+          "publishedAt": "2026-07-26T07:00:00.000Z"
+        },
+        {
+          "title": "Petrolio, inflazione e tassi: perché i mercati tornano a temere Fed, BTP e oro",
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWFU1UGZjYlRFd25nYlhQS28zYVBrU2N5RVJRcUFkUWxNN3QtMjh6RDYxd0lOSVczenpkYlQ2QUEtSEYxTV8zQWJ6VG9UbllrSUxLajZRN2RfczRGZjJFS3gwU2xQbEtQSGJEUjBkRVlXMkQwZUlQYXpqV0k0d09ON2ZGcU16aXplQVpmNQ?oc=5",
+          "source": "Dove Investire",
+          "publishedAt": "2026-07-09T07:00:00.000Z"
         }
       ]
     }
