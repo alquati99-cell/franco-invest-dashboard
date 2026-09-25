@@ -813,6 +813,20 @@
       </div>
     </div>
 
+    <div class="chart-row">
+      <div class="chart-panel">
+        <div class="chart-title">Drawdown</div>
+        <div class="chart-sub" id="drawdownChartSub">DISTANZA DAL MASSIMO STORICO</div>
+        <div class="chart-wrap"><canvas id="drawdownChart"></canvas></div>
+      </div>
+      <div class="chart-panel">
+        <div class="chart-title">Esposizione Valutaria</div>
+        <div class="chart-sub" id="currencyChartSub">PER DIVISA DI DENOMINAZIONE</div>
+        <div class="chart-wrap"><canvas id="currencyChart"></canvas></div>
+        <div class="donut-legend" id="currencyLegend"></div>
+      </div>
+    </div>
+
     <div class="chart-panel" style="margin-bottom:20px">
       <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap">
         <div>
@@ -1474,6 +1488,8 @@ let perfChartInst = null;
 let allocChartInst = null;
 let sectorChartInst = null;
 let instrumentChartInst = null;
+let drawdownChartInst = null;
+let currencyChartInst = null;
 let liveCache = {};
 let quoteCache = {};
 let historicalCache = {};
@@ -3251,6 +3267,131 @@ function buildCharts(client, analytics) {
   const legend = document.getElementById('donutLegend');
   legend.innerHTML = labels.length
     ? labels.map((label, index) => `<div class="legend-item"><div class="legend-dot" style="background:${ALLOC_COLORS[index % ALLOC_COLORS.length]}"></div><span class="legend-label">${escapeHtml(label)}</span><span class="legend-pct">${((values[index] / total) * 100).toFixed(1)}%</span></div>`).join('')
+    : '<div style="color:var(--text3);font-size:0.75rem">Nessuna posizione</div>';
+
+  buildDrawdownChart(perfSeries);
+  buildCurrencyExposureChart(snapshot);
+}
+
+// Sott'acqua rispetto al massimo storico: stessa serie (reale o stimata) del
+// grafico Performance qui sopra, riletta come indice 100 e distanza dal picco.
+function buildDrawdownChart(perfSeries) {
+  const canvas = document.getElementById('drawdownChart');
+  if (!canvas) return;
+  if (drawdownChartInst) drawdownChartInst.destroy();
+  const ctx = canvas.getContext('2d');
+
+  let peakIndex = 100;
+  const data = (perfSeries.data || []).map(pct => {
+    const indexValue = 100 + pct;
+    peakIndex = Math.max(peakIndex, indexValue);
+    return Number((((indexValue - peakIndex) / peakIndex) * 100).toFixed(2));
+  });
+  const worstDrawdown = data.length ? Math.min(...data) : 0;
+  document.getElementById('drawdownChartSub').textContent = data.length
+    ? `MASSIMO -${Math.abs(worstDrawdown).toFixed(1)}% DAL PICCO NEL PERIODO`
+    : 'STORICO NON ANCORA DISPONIBILE';
+
+  const gradient = ctx.createLinearGradient(0, 0, 0, 220);
+  gradient.addColorStop(0, 'rgba(217, 45, 32, 0.05)');
+  gradient.addColorStop(1, 'rgba(217, 45, 32, 0.32)');
+
+  drawdownChartInst = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: perfSeries.labels,
+      datasets: [{
+        data,
+        borderColor: '#d92d20',
+        backgroundColor: gradient,
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHoverRadius: 4,
+        pointHoverBackgroundColor: '#ffffff',
+        pointHoverBorderColor: '#d92d20',
+        tension: 0.25,
+        fill: true
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#123a87',
+          titleColor: '#f8fbff',
+          bodyColor: '#f8fbff',
+          padding: 12,
+          displayColors: false,
+          callbacks: { label: ctx => `${ctx.parsed.y.toFixed(2)}%` }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: 'rgba(23,92,211,0.08)', drawBorder: false },
+          ticks: { color: '#6b85b6', font: { size: 10 } }
+        },
+        y: {
+          grid: { color: 'rgba(23,92,211,0.08)', drawBorder: false },
+          ticks: { color: '#6b85b6', font: { size: 10 }, callback: value => `${value.toFixed(1)}%` },
+          suggestedMax: 0
+        }
+      }
+    }
+  });
+}
+
+// Peso per divisa di denominazione (prima della conversione in EUR): quanto del
+// portafoglio si muove col cambio invece che col titolo.
+function buildCurrencyExposureChart(snapshot) {
+  const canvas = document.getElementById('currencyChart');
+  if (!canvas) return;
+  if (currencyChartInst) currencyChartInst.destroy();
+  const ctx = canvas.getContext('2d');
+
+  const ccyMap = {};
+  (snapshot.rows || []).forEach(row => {
+    const ccy = row.currency || BASE_CURRENCY;
+    ccyMap[ccy] = (ccyMap[ccy] || 0) + row.valueBase;
+  });
+  const ccyLabels = Object.keys(ccyMap).sort((a, b) => ccyMap[b] - ccyMap[a]);
+  const ccyValues = ccyLabels.map(label => ccyMap[label]);
+  const ccyTotal = ccyValues.reduce((sum, value) => sum + value, 0) || 1;
+
+  currencyChartInst = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ccyLabels,
+      datasets: [{
+        data: ccyValues,
+        backgroundColor: ccyLabels.map((_, index) => SECTOR_COLORS[index % SECTOR_COLORS.length]),
+        borderColor: '#ffffff',
+        borderWidth: 4,
+        hoverOffset: 10
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: '66%',
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#123a87',
+          titleColor: '#f8fbff',
+          bodyColor: '#f8fbff',
+          padding: 12,
+          callbacks: { label: ctx => ` ${ctx.label}: ${((ctx.raw / ccyTotal) * 100).toFixed(1)}%` }
+        }
+      }
+    }
+  });
+
+  document.getElementById('currencyChartSub').textContent = ccyLabels.length ? `SU ${fmtEur(ccyTotal)} DI VALORE` : 'NESSUNA POSIZIONE';
+  const legend = document.getElementById('currencyLegend');
+  legend.innerHTML = ccyLabels.length
+    ? ccyLabels.map((label, index) => `<div class="legend-item"><div class="legend-dot" style="background:${SECTOR_COLORS[index % SECTOR_COLORS.length]}"></div><span class="legend-label">${escapeHtml(label)}</span><span class="legend-pct">${((ccyValues[index] / ccyTotal) * 100).toFixed(1)}%</span></div>`).join('')
     : '<div style="color:var(--text3);font-size:0.75rem">Nessuna posizione</div>';
 }
 
