@@ -6111,42 +6111,52 @@ function buildFriendlyGroqErrorMessage(message) {
   return String(message || '').trim();
 }
 
-async function requestGroqNewsDigest(apiKey, preferredModel, topicIds) {
+async function attemptGroqDigest(endpoint, useAuthHeader, apiKey, preferredModel, topicIds) {
   const models = buildGroqNewsModelOrder(preferredModel);
   let lastError = '';
-
-  const proxyBase = getProxyBase();
-  const groqProxy = window.PORTFOLIO_DESK_SECRETS && window.PORTFOLIO_DESK_SECRETS.groqProxy;
-  const groqEndpoint = (typeof groqProxy === 'string' && groqProxy.trim())
-    ? groqProxy.trim()
-    : proxyBase
-      ? `${proxyBase}/groq`
-      : 'https://api.groq.com/openai/v1/chat/completions';
-  const viaProxy = groqEndpoint !== 'https://api.groq.com/openai/v1/chat/completions';
 
   for (let index = 0; index < models.length; index += 1) {
     const model = models[index];
     const headers = { 'Content-Type': 'application/json', 'Groq-Model-Version': 'latest' };
-    // Con il proxy dedicato la chiave sta lato server: niente Authorization dal browser.
-    if (!viaProxy && apiKey) headers['Authorization'] = `Bearer ${apiKey}`;
-    const response = await fetch(groqEndpoint, {
+    if (useAuthHeader && apiKey) headers['Authorization'] = `Bearer ${apiKey}`;
+    const response = await fetch(endpoint, {
       method: 'POST',
       headers,
       body: JSON.stringify(buildGroqNewsPayload(model, topicIds))
     });
 
     const payload = await response.json().catch(() => ({}));
-    if (response.ok) {
-      return { payload, model };
-    }
+    if (response.ok) return { payload, model };
 
     lastError = normalizeGroqErrorMessage(payload, `HTTP ${response.status}`);
     if (!isGroqRecoverableError(lastError, response.status) || index === models.length - 1) {
       throw new Error(lastError || 'Groq non ha risposto correttamente.');
     }
   }
-
   throw new Error(lastError || 'Groq non ha risposto correttamente.');
+}
+
+async function requestGroqNewsDigest(apiKey, preferredModel, topicIds) {
+  const proxyBase = getProxyBase();
+  const groqProxy = window.PORTFOLIO_DESK_SECRETS && window.PORTFOLIO_DESK_SECRETS.groqProxy;
+  const proxyEndpoint = (typeof groqProxy === 'string' && groqProxy.trim())
+    ? groqProxy.trim()
+    : proxyBase
+      ? `${proxyBase}/groq`
+      : '';
+
+  // Con il proxy dedicato la chiave sta lato server: niente Authorization dal browser.
+  if (proxyEndpoint) {
+    try {
+      return await attemptGroqDigest(proxyEndpoint, false, null, preferredModel, topicIds);
+    } catch (error) {
+      // Il worker non ha (ancora) la chiave configurata o non risponde: se il
+      // browser ha comunque una chiave locale, prova la chiamata diretta invece
+      // di arrenderti subito.
+      if (!apiKey) throw error;
+    }
+  }
+  return attemptGroqDigest('https://api.groq.com/openai/v1/chat/completions', true, apiKey, preferredModel, topicIds);
 }
 
 function buildNewsTopicBatches(topicIds) {
