@@ -151,7 +151,7 @@
   .sidebar.collapsed .logo-title, .sidebar.collapsed .logo-sub,
   .sidebar.collapsed .nav-label, .sidebar.collapsed .nav-section-label,
   .sidebar.collapsed .theme-toggle-label, .sidebar.collapsed .live-label { display:none; }
-  .sidebar.collapsed .logo { justify-content:center; padding-left:0; padding-right:0; }
+  .sidebar.collapsed .logo { flex-direction:column; gap:10px; justify-content:center; padding:20px 0 18px; }
   .sidebar.collapsed .nav-item { justify-content:center; padding:9px; }
   .sidebar.collapsed .sidebar-footer { justify-content:center; padding-left:10px; padding-right:10px; }
   .sidebar-toggle {
@@ -164,6 +164,9 @@
   .sidebar-toggle svg { width:12px; height:12px; transition:transform 0.2s; }
   .sidebar.collapsed .sidebar-toggle svg { transform:rotate(180deg); }
   .sidebar.collapsed .sidebar-toggle { margin-left:0; }
+  .logo-mark-collapsed { display:none; }
+  .sidebar.collapsed .logo-mark .logo-mark-full { display:none; }
+  .sidebar.collapsed .logo-mark .logo-mark-collapsed { display:block; }
 
   /* MAIN */
   .main { margin-left:232px; min-height:100vh; position:relative; z-index:1; transition:margin-left 0.2s ease; }
@@ -458,18 +461,19 @@
   .screener-table .neg { font-family:var(--font-mono); }
 
   /* ===== NEWS ===== */
-  .topic-chip-row { display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 16px; }
+  .topic-chip-row, .news-topic-row { display:flex; gap:8px; flex-wrap:wrap; }
   .topic-chip {
     border:1px solid rgba(23,92,211,0.14);
     background:rgba(255,255,255,0.92);
     color:var(--text2);
     border-radius:999px;
-    padding:8px 14px;
+    padding:7px 13px;
     cursor:pointer;
     font-family:var(--font-mono);
-    font-size:0.7rem;
+    font-size:0.68rem;
     letter-spacing:0.6px;
     transition:all 0.18s;
+    display:inline-flex; align-items:center; gap:6px;
   }
   .topic-chip:hover { border-color:rgba(23,92,211,0.28); color:#1247a7; transform:translateY(-1px); }
   .topic-chip.active {
@@ -478,11 +482,14 @@
     color:#fff;
     box-shadow:0 10px 22px rgba(37,99,235,0.16);
   }
+  .topic-chip.all-chip.active { background:linear-gradient(135deg, #334155 0%, #1e293b 100%); }
+  .topic-chip-dot { width:7px; height:7px; border-radius:50%; flex:none; background:var(--dot, #94a3b8); }
   .news-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:16px; margin-top:16px; align-items:start; }
   .news-stack { display:flex; flex-direction:column; gap:14px; }
   .news-card {
     background:linear-gradient(180deg, rgba(255,255,255,0.94), rgba(246,249,255,0.9));
     border:1px solid rgba(23,92,211,0.1);
+    border-top:3px solid var(--accent, rgba(23,92,211,0.4));
     border-radius:18px;
     padding:16px;
     box-shadow:var(--shadow-soft);
@@ -492,6 +499,7 @@
     font-size:1.05rem;
     color:var(--text);
     margin-bottom:6px;
+    display:flex; align-items:center; gap:8px;
   }
   .news-card-sub {
     font-family:var(--font-mono);
@@ -500,7 +508,15 @@
     letter-spacing:1.6px;
     text-transform:uppercase;
     margin-bottom:12px;
+    display:flex; align-items:center; justify-content:space-between; gap:8px;
   }
+  .news-show-more {
+    display:block; text-align:center; margin-top:10px; padding:8px;
+    font-family:var(--font-mono); font-size:0.66rem; letter-spacing:1px; text-transform:uppercase;
+    color:var(--text2); cursor:pointer; border-radius:10px; border:1px dashed rgba(23,92,211,0.2);
+    transition:all 0.15s;
+  }
+  .news-show-more:hover { background:rgba(23,92,211,0.06); color:#1247a7; }
   .news-summary-list,
   .news-watch-list,
   .news-impact-list,
@@ -519,12 +535,16 @@
     border:1px solid rgba(23,92,211,0.08);
     border-radius:14px;
     padding:12px 14px;
+    transition:all 0.15s;
   }
+  .news-headline-item:hover { border-color:var(--accent, rgba(23,92,211,0.3)); background:rgba(244,248,255,0.95); transform:translateX(2px); }
   .news-headline-title,
   .news-source-title {
     color:var(--text);
     font-weight:600;
     line-height:1.4;
+    font-size:0.86rem;
+    display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden;
   }
   .news-impact-top,
   .news-headline-top,
@@ -812,6 +832,17 @@
     background:linear-gradient(135deg, rgba(247,198,91,0.18), rgba(56,189,248,0.1));
     border-color:rgba(255,255,255,0.1); color:#f7c65b;
   }
+  body.theme-dark .news-summary-item,
+  body.theme-dark .news-watch-item,
+  body.theme-dark .news-impact-item,
+  body.theme-dark .news-headline-item,
+  body.theme-dark .news-source-item {
+    background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.08);
+  }
+  body.theme-dark .news-headline-item:hover { background:rgba(255,255,255,0.07); }
+  body.theme-dark .news-show-more { border-color:rgba(255,255,255,0.14); color:var(--text2); }
+  body.theme-dark .news-show-more:hover { background:rgba(255,255,255,0.06); color:#f7c65b; }
+  body.theme-dark .topic-chip.all-chip.active { background:linear-gradient(135deg, #475569 0%, #1e293b 100%); }
 </style>
 </head>
 <body>
@@ -819,7 +850,7 @@
 <!-- SIDEBAR -->
 <nav class="sidebar" id="sidebarNav">
   <div class="logo">
-    <div class="logo-mark">PD</div>
+    <div class="logo-mark"><span class="logo-mark-full">PD</span><span class="logo-mark-collapsed">FV</span></div>
     <div>
       <div class="logo-title">Portfolio Desk</div>
       <div class="logo-sub">Pro Manager</div>
@@ -1293,19 +1324,15 @@
 
   <!-- ===== NEWS VIEW ===== -->
   <div class="view content" id="view-news">
-    <div style="margin-bottom:24px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px">
-      <div>
-        <div style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:4px">News Radar</div>
-        <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text3);letter-spacing:2px" id="news-source-label">ENI · ENEL · SNAM · SAIPEM · BANCHE ITALIANE · GEOPOLITICA</div>
-      </div>
-      <button class="btn btn-outline" id="btn-news-refresh" onclick="reloadNewsData()">⟳ Ricarica</button>
-    </div>
-
     <div class="chart-panel" style="margin-bottom:18px">
-      <div class="topic-chip-row" id="news-topic-row"></div>
-      <div class="form-group" style="margin-top:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px">
+        <div class="news-topic-row" id="news-topic-row"></div>
+        <button class="btn btn-outline btn-sm" id="btn-news-refresh" onclick="reloadNewsData()">⟳ Ricarica</button>
+      </div>
+      <div class="form-group">
         <input class="form-input" id="news-query" placeholder="🔍 Filtra le notizie per parola chiave (es. spread, dividendi, gas)…" oninput="renderNewsList()">
       </div>
+      <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text3);letter-spacing:1.4px;margin-top:10px" id="news-source-label">GOOGLE NEWS</div>
       <div id="news-status" class="import-status"></div>
     </div>
 
@@ -1621,13 +1648,15 @@ const IMPORT_COLUMN_ALIASES = {
   name: ['nome', 'nomestrumento', 'descrizione', 'description', 'name']
 };
 const DEFAULT_NEWS_TOPICS = [
-  { id: 'eni', label: 'ENI', prompt: 'Eni SpA Italy energy earnings guidance upstream downstream' },
-  { id: 'enel', label: 'ENEL', prompt: 'Enel SpA Italy utilities renewables regulation dividends grid' },
-  { id: 'snam', label: 'SNAM', prompt: 'Snam SpA Italy gas infrastructure hydrogen regulation tariffs' },
-  { id: 'saipem', label: 'Saipem', prompt: 'Saipem Italy offshore contracts backlog energy engineering' },
-  { id: 'banks', label: 'Banche ITA', prompt: 'Italian banks UniCredit Intesa Sanpaolo Banco BPM MPS Mediobanca profits M&A regulation' },
-  { id: 'geopolitics', label: 'Geopolitica', prompt: 'Europe Italy geopolitics energy gas inflation rates tariffs Middle East Russia macro' }
+  { id: 'eni', label: 'ENI', prompt: 'Eni SpA Italy energy earnings guidance upstream downstream', color: '#f0b429' },
+  { id: 'enel', label: 'ENEL', prompt: 'Enel SpA Italy utilities renewables regulation dividends grid', color: '#4ade80' },
+  { id: 'snam', label: 'SNAM', prompt: 'Snam SpA Italy gas infrastructure hydrogen regulation tariffs', color: '#38bdf8' },
+  { id: 'saipem', label: 'Saipem', prompt: 'Saipem Italy offshore contracts backlog energy engineering', color: '#a78bfa' },
+  { id: 'banks', label: 'Banche ITA', prompt: 'Italian banks UniCredit Intesa Sanpaolo Banco BPM MPS Mediobanca profits M&A regulation', color: '#fb7185' },
+  { id: 'geopolitics', label: 'Geopolitica', prompt: 'Europe Italy geopolitics energy gas inflation rates tariffs Middle East Russia macro', color: '#60a5fa' }
 ];
+const NEWS_ITEMS_PER_PAGE = 5;
+let newsExpandedTopics = new Set();
 
 function readStoredJSON(key, fallback) {
   try {
@@ -6141,11 +6170,24 @@ function setNewsStatus(html = '', type = 'info') {
 function renderNewsTopicChips() {
   const row = document.getElementById('news-topic-row');
   if (!row) return;
-  row.innerHTML = DEFAULT_NEWS_TOPICS.map(topic => `
+  const allActive = newsState.topics.length === DEFAULT_NEWS_TOPICS.length;
+  const chips = DEFAULT_NEWS_TOPICS.map(topic => `
     <button class="topic-chip ${newsState.topics.includes(topic.id) ? 'active' : ''}" onclick="toggleNewsTopic('${topic.id}')">
-      ${escapeHtml(topic.label)}
+      <span class="topic-chip-dot" style="--dot:${topic.color}"></span>${escapeHtml(topic.label)}
     </button>
   `).join('');
+  row.innerHTML = `
+    <button class="topic-chip all-chip ${allActive ? 'active' : ''}" onclick="toggleAllNewsTopics()">Tutti</button>
+    ${chips}
+  `;
+}
+
+function toggleAllNewsTopics() {
+  const allActive = newsState.topics.length === DEFAULT_NEWS_TOPICS.length;
+  newsState.topics = allActive ? [DEFAULT_NEWS_TOPICS[0].id] : DEFAULT_NEWS_TOPICS.map(topic => topic.id);
+  saveNewsState();
+  renderNewsTopicChips();
+  renderNewsList();
 }
 
 function toggleNewsTopic(topicId) {
@@ -6211,6 +6253,27 @@ function renderNewsDefault() {
   renderNewsList();
 }
 
+// Il digest Google News per tema spesso riporta la stessa notizia ripresa da
+// più aggregatori con titoli quasi identici: dedupe sul prefisso normalizzato
+// del titolo per non riempire la colonna di doppioni.
+function dedupeNewsItems(items) {
+  const seen = new Set();
+  const out = [];
+  (items || []).forEach(item => {
+    const key = normalizeImportKey((item.title || '').slice(0, 42));
+    if (!key || seen.has(key)) return;
+    seen.add(key);
+    out.push(item);
+  });
+  return out;
+}
+
+function toggleNewsTopicExpanded(topicId) {
+  if (newsExpandedTopics.has(topicId)) newsExpandedTopics.delete(topicId);
+  else newsExpandedTopics.add(topicId);
+  renderNewsList();
+}
+
 function renderNewsList() {
   const grid = document.getElementById('news-grid');
   if (!grid) return;
@@ -6230,18 +6293,23 @@ function renderNewsList() {
   }
 
   grid.innerHTML = visibleTopics.map(topic => {
-    const items = (topic.items || []).filter(item => !filterText || item.title.toLowerCase().includes(filterText));
-    const body = items.length
+    const meta = DEFAULT_NEWS_TOPICS.find(t => t.id === topic.id);
+    const color = meta?.color || '#175cd3';
+    const allItems = dedupeNewsItems(topic.items).filter(item => !filterText || item.title.toLowerCase().includes(filterText));
+    const expanded = newsExpandedTopics.has(topic.id);
+    const items = expanded ? allItems : allItems.slice(0, NEWS_ITEMS_PER_PAGE);
+    const body = allItems.length
       ? `<div class="news-headline-list">${items.map(item => `
-          <a class="news-headline-item" href="${escapeHtml(item.link)}" target="_blank" rel="noopener" style="display:block;text-decoration:none">
+          <a class="news-headline-item" href="${escapeHtml(item.link)}" target="_blank" rel="noopener" style="display:block;text-decoration:none;--accent:${color}">
             <div class="news-headline-title">${escapeHtml(item.title)}</div>
             <div class="news-meta">${escapeHtml(item.source || '')}${item.publishedAt ? ' · ' + escapeHtml(newsRelativeTime(item.publishedAt)) : ''}</div>
           </a>
-        `).join('')}</div>`
+        `).join('')}</div>
+        ${allItems.length > NEWS_ITEMS_PER_PAGE ? `<div class="news-show-more" onclick="toggleNewsTopicExpanded('${topic.id}')">${expanded ? '— Mostra meno' : `Mostra altre ${allItems.length - NEWS_ITEMS_PER_PAGE}`}</div>` : ''}`
       : `<div class="news-empty">${filterText ? 'Nessuna notizia corrisponde al filtro.' : 'Nessuna notizia per questo tema al momento.'}</div>`;
-    return `<div class="news-card">
-      <div class="news-card-title">${escapeHtml(topic.label)}</div>
-      <div class="news-card-sub">${items.length} NOTIZI${items.length === 1 ? 'A' : 'E'}</div>
+    return `<div class="news-card" style="--accent:${color}">
+      <div class="news-card-title"><span class="topic-chip-dot" style="--dot:${color}"></span>${escapeHtml(topic.label)}</div>
+      <div class="news-card-sub">${allItems.length} NOTIZI${allItems.length === 1 ? 'A' : 'E'}</div>
       ${body}
     </div>`;
   }).join('');
