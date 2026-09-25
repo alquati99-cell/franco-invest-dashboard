@@ -7284,36 +7284,13 @@ async function fetchInstrumentProfile(symbol) {
     return knownProfile;
   }
 
-  const urls = [
-    `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(symbol)}?modules=assetProfile,fundProfile,topHoldings,price`,
-    `https://query2.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(symbol)}?modules=assetProfile,fundProfile,topHoldings,price`
-  ];
-
-  for (const url of urls) {
-    try {
-      const data = await fetchJSON(url);
-      const result = data?.quoteSummary?.result?.[0];
-      if (!result) continue;
-
-      const assetProfile = result.assetProfile || {};
-      const fundProfile = result.fundProfile || {};
-      const topHoldings = result.topHoldings || {};
-      const price = result.price || {};
-      const profile = {
-        symbol,
-        name: sanitizeProfileText(price.longName || price.shortName || symbol),
-        sector: sanitizeProfileText(assetProfile.sector || ''),
-        industry: sanitizeProfileText(assetProfile.industry || ''),
-        category: sanitizeProfileText(fundProfile.categoryName || fundProfile.family || ''),
-        exchange: sanitizeProfileText(price.exchangeName || price.exchange || ''),
-        sectorWeights: parseSectorWeightings(topHoldings.sectorWeightings)
-      };
-
-      instrumentProfileCache[symbol] = { ts: Date.now(), data: profile };
-      return profile;
-    } catch (error) {}
-  }
-
+  // NOTA: l'endpoint Yahoo quoteSummary (assetProfile/fundProfile/topHoldings)
+  // e' verificato morto per chiamate anonime ("Unauthorized: Invalid Crumb"),
+  // non e' un problema di rete/proxy. Prima tentava comunque 2 URL x fino a 6
+  // fallback ciascuno (proxy pubblici spesso lenti/irraggiungibili): nel caso
+  // peggiore la scheda cliente restava bloccata su "stima rapida" anche per
+  // oltre un minuto prima di arrendersi. Tolto il tentativo: si passa subito
+  // al fallback, la vista si aggiorna in meno di un secondo.
   const fallbackProfile = {
     symbol,
     name: symbol,
