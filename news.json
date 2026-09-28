@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T13:46:40.148Z",
+  "generatedAt": "2026-09-28T20:31:56.279Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -9,7 +9,7 @@
         {
           "title": "Le azioni Eni salgono a Milano mentre aumentano i prezzi del petrolio",
           "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQYmpTOFFPQ0VDV2dnVElJTWxlQVRZRDRSazVUckFQT3RQSy1PRmJmbDRxN0NFQWd5cGZnT2NnY2ZLbnV2WHhuQlhKd2FJTWtRajJmQ1FmcHdlb19adUlRaWFYMzdHTTg4SjBoenR2RzM2NlYwMk1RV1pvNTR4NGxzZ1RGTmdJLUU?oc=5",
-          "source": "Yahoo Finanza",
+          "source": "it.finance.yahoo.com",
           "publishedAt": "2026-09-28T08:54:45.000Z"
         },
         {
@@ -23,6 +23,12 @@
           "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1KUmVFNzdXcXRzbkZXRWMxZWhIN0lob2hYbmFtay1nNzFXbHFCRDRNRWZYcnk1MHVlNzgzMDFSdzltdkJlQXhmWW4xRzVGbUpxckVlWlNGSnR1cGIzdEItakdIZ0ZMM0pMTVV1VVQzN05DQ3F0LXUyMg?oc=5",
           "source": "Finanza Italiacom",
           "publishedAt": "2026-09-25T10:07:39.000Z"
+        },
+        {
+          "title": "Borsa Milano giù (-0,85%): vola Eni, crolla Fincantieri",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNcDFfMk1jVFJsVm1kWWJkT0RNRV9jMGZwWUZWb3ZfWUl3T1BYaG5qNWNCanhHOWotN2M0SkUyRFFnYmVlem9xNVhpRnExNXRxNmtQYmNCTFN5SnNFNk04QzJpQklqUENHcU5HWkdDbTJ4S0xLeXBCWjRJdlh1aUZuMFhSV0FQLVlnckx5Z3B6SDEzWktmVko2dGFwems0Zw?oc=5",
+          "source": "SoldiOnline.it",
+          "publishedAt": "2026-09-24T16:41:00.000Z"
         },
         {
           "title": "Dividendo Eni 2026: Ammontare e date stacco",
@@ -47,12 +53,6 @@
           "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQc2tCcGdja2JOMTlGdXJPNGdHMU5mck93a21qTkxOWFVWdmxhX2trNHg2WC1VUERZYUdQN0dPNWVyZW0xMjNRVmVKUzRrMEJCVlhXc2hFNkxhRkJISVhkTVB2bjlFLWlONndsS1Rac1NldUlqV0dmc2Y5cmJ2LUdqQklnUDB5N3hIdWp6ek1oaWx4UEt2U2dpdGNkX3NIZ2hIRWtjQnNR?oc=5",
           "source": "SoldiOnline.it",
           "publishedAt": "2026-09-21T06:27:00.000Z"
-        },
-        {
-          "title": "Azioni Eni Oggi 21 Settembre 2026: Quotazione e Buyback",
-          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNdlR0UW8zQkN2NXlYNEpBSjVEaW91ZzJSYkFFaGotRV9sX0w0eEFFaGJ4SHZsS2o4TGVLeEJhck05Y3d3MHRTYnRmUDFqaE9ORzZqazJfRHN6eUYtX192a0xnZnpkZUFWSXBPUGFwZFp1cEk0VjBjTm5GcU1aZnhKbVZKT3UzVGd0eTBzSEExeTViQnR1UmRqTVEzU21ydk1VOFoyc3JZbzhtX2UxT2FwYnJB?oc=5",
-          "source": "Finanza Italiacom",
-          "publishedAt": "2026-09-21T02:52:15.000Z"
         }
       ]
     },
@@ -63,50 +63,50 @@
         {
           "title": "Previsione del Prezzo delle Azioni Epsilon Energy Ltd.: Oggi, Domani e la Prossima Settimana (EPSN)",
           "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5qcV9tZDBocGVpeHdLMEFHbUpaeXN6Y3g5ZkpIV0o0bWlNOHMzMGhZX1MyVzZZWGEwakczTXRLZ2F4NmVCY2duUzd5cS0xLTB6WXVEbUJVZzNWakM5UkhRRG1UWW9ITzJTNlFFbk1kYTF3VnRYcks4ZFR2WmUtSUE?oc=5",
-          "source": "Traders Union",
+          "source": "tradersunion.com",
           "publishedAt": "2026-09-27T16:11:19.000Z"
+        },
+        {
+          "title": "Prezzo delle azioni Epsilon Energy Ltd. oggi | EPSN grafico in tempo reale e notizie",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9qSVprV2U2YlZHLUhNWVItTkx0MzU2QXhvZzZSOHBGaDNzVUlPY3hxQXl6Ulc3SFlPNXFkMklJZmJGemo5VkpkVV9BcnNYU3l6Vk1QMFlGb1Jnanh5WWQtMUFLb1M?oc=5",
+          "source": "tradersunion.com",
+          "publishedAt": "2026-09-27T14:26:34.000Z"
         },
         {
           "title": "Le azioni Iris Energy scendono di oltre il 5% dopo non essere riuscite a recuperare la media mobile a 200 giorni",
           "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPZEZ2Z0lOcjlCZlVkNnFiU0YzQlJsLUpidGh5RktWeG5GdTEtUDhtaU9SRGZPYnlGNlRBdk1Gb2JpcFh4RnkwNk1GZ3VvRW5qNHlUNTNRSWhNNUFxVjA1ejg0Q0JkZmUwS29TVG85SzJFTjNZT1NkSFhHREF0bmpxQ1RxTGlqcm43enBCNG9XaEtSaGMz?oc=5",
-          "source": "Traders Union",
+          "source": "tradersunion.com",
           "publishedAt": "2026-09-25T15:21:44.000Z"
         },
         {
           "title": "Analisi tecnica in tempo reale dell’azione Ring Energy, Inc. (REI)",
           "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9wMFFqQ2Z1WmFQWDAzdzh5MVhQUGhJVC1LVjl0TnQ0bmpXVUFKc3d4QUF5MmczdGlKM2J3LXc0azFZS1Fud1kwV2x0d1ZhT2dvd2taT0NpTzZhdHNnMlFBWmJQSGlkaVdYNEJLcHp4NzRmZTlGOXF0aW5rN18?oc=5",
-          "source": "Traders Union",
+          "source": "tradersunion.com",
           "publishedAt": "2026-09-25T07:33:29.000Z"
         },
         {
           "title": "A2A S.p.A.: prezzo obiettivo e consensus degli analisti| A2A | IT0001233417",
           "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1DMXhKUk9MeXZRS0VRcWdZZS1ZYm1iZ1dpQTZJd2xUcXVOYnFFRDEtUkpKYVZKT1lEX1pvdnB5eW5UTnYzSGEtbGRLYV8xZ1J5WnFOdlI1UEtOLTJMaXRDSkF6bXBWV2xKd3hhNG9lLWRXZ0hmeTliX3dRT3B3Xzg?oc=5",
-          "source": "MarketScreener Italia",
+          "source": "it.marketscreener.com",
           "publishedAt": "2026-09-25T07:00:00.000Z"
         },
         {
           "title": "Perché le azioni di Enphase Energy scendono del 2,4% oggi?",
           "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPN2FzUTdmS1BzT1dRa212NW5YNk42M2g0NXVmcU9keDJ0ZkNudWhPU1ROTkdBVzFOQ1ZNLS1HZFRSOUdpRTliYlB2b09zaTlFZ1ZIeTdmU2lUek5lV25EcmRHbzNTUTdMekhDdkRzLWRNVXY3dzNLcGlEVUZDS3J4ZnNlTC0xWHdnNm1mMTZXM2d2Z1k?oc=5",
-          "source": "Traders Union",
+          "source": "tradersunion.com",
           "publishedAt": "2026-09-23T17:45:48.000Z"
         },
         {
           "title": "Le azioni Atlassian salgono di quasi il 3% grazie ai solidi utili software e allo slancio dell'IA, che sostengono una prospettiva rialzista",
           "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNcjZQbTdhcW1fWHJkV1BYTE5tRDl0UDI5b1VVVnZBWFZoQ1BwaTFxVXFRY1JXUXpzcUNkaDFReFJtZHVLdWx6NlNRR2FpTHE5ck5Xbm5fbXdJYk5SakNuOEdaQk80ZjNMbzQtaWNyNnNPZmdRNVIwc0ZfaEdNd3pJZHU5VXdsTkdRNmZ5Z01RZ3BxNXgwNXc?oc=5",
-          "source": "Traders Union",
+          "source": "tradersunion.com",
           "publishedAt": "2026-09-21T16:17:59.000Z"
         },
         {
           "title": "Previsioni settimanali per le azioni AMD: la volatilità aumenta tra solidi utili e una maggiore pressione rialzista",
           "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQblc5RGxZVEx1bEtDSmZBdk14UmpOR1F2VEFSWXRualBLY0YyVzhlSEIwM1FZQ1lmQTEzMnhRTjM1d3kybmJjejVLdG81eEZaRHZ4Z015RTJET3VGUU9CQU5Xa3VlQ2NXcHN2clJGaTdlSEFIdHN0dFZpTUZLZy1yVE1mdXBkUHdrXzRmSjVn?oc=5",
-          "source": "Traders Union",
+          "source": "tradersunion.com",
           "publishedAt": "2026-09-21T14:37:01.000Z"
-        },
-        {
-          "title": "Cosa si cela dietro l'ultimo calo dell'8,5% delle azioni di Diamondback Energy?",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTUswNlV4M0RQeEZuUHppQlZXbmVYbDloVVJiMVRldU1aQm5sZGcwOV9iNUs2WUcyVHpnWEFVNnpaVEJ1Z1JTeVdpZHBBUTRCZ2FpMl82N3pCMllqX1hRSmJHY0RZZldad2wyRXZuSGVRLXdka1RUVHFEOXBwa3NOVXk2aTR1czV2Wl8yZGV1cEFCNUcwbUkyU2dzTWctdw?oc=5",
-          "source": "Traders Union",
-          "publishedAt": "2026-09-16T19:41:43.000Z"
         }
       ]
     },
@@ -119,6 +119,12 @@
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9Ob1NjejY1TU9lSW1UcFdzZ3Fhalc0UHJ0NHo1d05SOHhEa2tGQnV0Y0hheFh4b0RzdVZtWjB3bUg2bTVoR3gtNXE5bElGdUF5MkYyMUd6bFBFNVVvT1lKYm9VRWFMUQ?oc=5",
           "source": "Staffetta Quotidiana",
           "publishedAt": "2026-09-28T09:28:06.000Z"
+        },
+        {
+          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9MdHpORUFQNzE0NDJEQ3hoZFc0Y0hxSjZ0cVZJSGZWZnZ6Um9NdS11VG5GZHozY1JCUDBlTEtsRFZCOF9OOXllLXBmdHZlY2E2T3BCczF5U1NuUGdYVlQxVnNnbkF6UQ?oc=5",
+          "source": "Staffetta Quotidiana",
+          "publishedAt": "2026-09-24T09:38:39.000Z"
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
@@ -155,12 +161,6 @@
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5INjJzX3VXdXE1U01GOHc2bV9lclJNRVB3QUpCSnJ5UkpuTUk4WWFQLUM2bDFHb2FobGJybEI1Q1dOMzBfR0EwSDdLT0NjTjMzZnRnRWM4eHA3S2U3U3RVX0N0WnNQUQ?oc=5",
           "source": "Staffetta Quotidiana",
           "publishedAt": "2026-07-28T07:00:00.000Z"
-        },
-        {
-          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5QZ0ZWWGcwcnJLelAwXzRMWmhtR2h1Ujh3V2lUOWstdDJDZHA2WE50ZG4wTmpvejVrOS1XU1ZaVjJxM0VvWDNxTzNCUWpqQzBWZGd3a1ZXT1ZiVmtobzA3ZWNjNFo4QQ?oc=5",
-          "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-07-23T07:00:00.000Z"
         }
       ]
     },
@@ -171,7 +171,7 @@
         {
           "title": "Saipem ottiene un contratto offshore da 350 milioni di dollari in Angola",
           "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQOWkwMjF1VnNvcTBwSTZxYWxvZlRBeUM5T0I2ZHc1QndnSFBBRVVzUHFGY2Vvak1qQmxkbnBrZE9NSEFlRVFMX2luZ1FwUVFucjZIUTlZc1lQQk1YRGZ4bVctRFMyTlJTQkp5amZnbUI1ZFVZa3Fxemd3UHM1S3JWYnFuWGN4V0tOc0I2WDU3dC1NUQ?oc=5",
-          "source": "Yahoo Finanza",
+          "source": "it.finance.yahoo.com",
           "publishedAt": "2026-09-14T10:21:44.000Z"
         },
         {
@@ -183,19 +183,19 @@
         {
           "title": "Saipem ottiene contratto offshore da USD350 milioni in Angola",
           "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOM1o1ZzhXQWs1VWFkUlE0eHBVcmpYTHpqemYtVGtGUFAxaEFzMXVZcWJNVWN0NHZiTi0xcmRDb2pCTHF3QXNvYnZpQjhFMUZDR0tMYXhQV1NtSzRUUTdRMUM2cGtteTNweW1TcGxhUnN2MEZyeWM4NUgzcHpsTHZFaW1Jc0tKVFlWMXJTNWhBSnZEM0l1VXJBci1aYkdNZjE2WHB3UnA3V0FHelM3UzhuSHRoaUcyOVk?oc=5",
-          "source": "MarketScreener Italia",
+          "source": "it.marketscreener.com",
           "publishedAt": "2026-09-14T07:00:00.000Z"
         },
         {
           "title": "Saipem ottiene un contratto di ingegneria per un impianto di carburanti sintetici in Germania",
           "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUVM0RGR2c1hwVVNPR1ltcGVhTGxpS0l3Nm1MYndIV1V6LVpnX21wMFFKMGtZTm1NanFWWFpqcGc3S0kyaWdzRTJzZGpaTmNfMXlyTjZPLVZabjVhcHNyZlRaZ1JIVGx4MVVxZXFxYm5IQUZndVoyZmQyNGRDVmllVGVBTGM2ZlY4T1E?oc=5",
-          "source": "Yahoo Finanza",
+          "source": "it.finance.yahoo.com",
           "publishedAt": "2026-09-01T07:00:00.000Z"
         },
         {
           "title": "Saipem, contratto offshore in Medio Oriente da quasi 2 miliardi di dollari",
           "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVUpWOVNXSE9vZkVSdERWS1lpbmtfU2pMZERFc2ZGR2xJZFVrWjVuZzRNbFJKTFBtbmlrZC1JZjBZdHNKbWtJTGpvUE5GclJ5SFZOci1aVWMwZXg3bDhTQjhCTnF4ZGs0cVVseWpqcDBPT1JvYmxKVWYxS2NQR2JEdVljNlBYX3ZyMHh5b1E1S0FpMkZLTVc1SkZNVmxQdmpmVlNmb2VCX0RNcnJPb1daSS1wcGdaRXZhOEJIbWxpLVg?oc=5",
-          "source": "Teleborsa",
+          "source": "teleborsa.it",
           "publishedAt": "2026-08-12T07:00:00.000Z"
         },
         {
@@ -225,7 +225,7 @@
         {
           "title": "Risiko: UniCredit sulle filiali dismesse da Intesa e Agricole, BPM si allinea ai francesi, MPS cerca voti",
           "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPVDlobW5EN1dMU1ZzRGZHcHprMUtYWWlaQk1YQnI1RGMwX1djTFVCVVBRZEozOEZsdHNPalM0WDJxZmN3S1N6OUhTbFJMbUJRTzhlMWhJdXlMMXozc1N5Q1RQZGQ2bWp2eXdVaG1FUkZGOHdhYXR3cGozVkhObWdnbGJsQ29EbnFMSXBscDVIMG92SVdVdzJqYmtoejU3NDc1bU5nTjVZOXZzZ2Z5QXVUeHNtRG5ncVpLdGkwQktYc1d1R2ltSHdYczdrRUFlS0tMM2JWN09fYXlxbFVkeHE0ZlhMOEFnd0JQelE?oc=5",
-          "source": "pltv.it",
+          "source": "PLTV.it",
           "publishedAt": "2026-09-28T09:21:30.000Z"
         },
         {
@@ -237,7 +237,7 @@
         {
           "title": "UniCredit osserva il riassetto bancario italiano, possibile acquisto di filiali e asset",
           "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPRTlGUTlRdmVMUXAzVzN2ektKZzRUMW14ejExVGNLWXlBYVhFWklMZ09OMjY0UDJJUGNzQVRWQ3JVS1NGdWRRUFVQVHo0dG1Dbk9hempUUm13OG9fbkdzVTNLRTN2UGVFWk1hM3RZOGFRNnhUY2tzd3ZXM3VIYkpraUhudEN4QzFRb1g2eDN6SE5YSzN6VDJEbzF0cUNlSnd4aVZYRWV1M0FLcUhYUy1fYU85MlhQbDFqWXhfNVR3Y0NIQjQ3VlVYREI3TTd2YW9MMXc?oc=5",
-          "source": "Teleborsa",
+          "source": "teleborsa.it",
           "publishedAt": "2026-09-25T14:28:21.000Z"
         },
         {
@@ -285,7 +285,7 @@
         {
           "title": "Intermonte – Mercati in equilibrio tra petrolio, inflazione e il dilemma dei tassi",
           "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNUzBqemZEeVo3aEE1Nk9pZ3RGbHAycGJvZEpmbXhjRkFVdEl1M1RIQW1peFNXbmtIeF9lRlljeUNFbnliMktBT2o1cTJKc08xOElzTnVBOHJTejI3aHVIVzdTY1BJdXhpU2hreDgyQ1dCVTkzcFZpaWt5WGFCNUE2WmQxcFdUSDd4Xzd0bVRqNDBMWnNVUzJpTy1mNGxvemE1RDUtTmJnTFl6VHl5?oc=5",
-          "source": "Easy News Press Agency",
+          "source": "easynewsweb.com",
           "publishedAt": "2026-09-15T07:00:00.000Z"
         },
         {
@@ -309,7 +309,7 @@
         {
           "title": "Lo spread in lieve calo a 78,9 punti base, via all’asta per i Btp del 12 agosto",
           "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPSzlrU3J4am1aTmw2T0JBTnBCSVdhNXd0MzZWUUM1QlJkOGlIRkpHNkMyR0lRdFhsaVRKXzZCdll6WkxzQXV4RW9kemkycXpHNFZldUpTT3Utd1BTVEJwLUpTd3JZdTRrSDlzOXJSVjk0OGpQZ0FtMXQxZlQtNjhkVnZPeWbSAYoBQVVfeXFMTmFvYmFJU3hwVmlBZzVyS1FjNVhmQTVrM2pSSWJTdUNLNVpQQjMtYTdPaDA5ZGhTQTRIeV9zbHZLSU5HdFRnaUtHbWg5b09nbzR3azkwbHlSclowRVotWExXUXF1ZXNFNHFodWNjOG1nUS1xR3pVa2t1Q2RhNkJKci15RVhSYl9Lck53?oc=5",
-          "source": "quifinanza.it",
+          "source": "QuiFinanza",
           "publishedAt": "2026-08-12T07:00:00.000Z"
         },
         {
