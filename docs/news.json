@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T19:23:16.064Z",
+  "generatedAt": "2026-09-29T23:40:47.122Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -79,12 +79,6 @@
           "publishedAt": "2026-09-29T07:49:23.000Z"
         },
         {
-          "title": "Le utility italiane chiudono in calo, FTSE Italia Utilities perde l'1,73%",
-          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMTVkUkhYWTRUVVJBVVNKYmNZamZTVHJsMkw1TEdyWjFZZzBoejlYcFV3TDl5bUxhdEZCREJjTjh4dzVKTjJTckREOEROOTVqZzRHTXc1V044RmRSb2NSS0FfblBKVUVMT2Y2aGVUN3c0amdBRVFncmNZLXd0eWk0TWVpRGQ2VEZzM3hPdWcxUWloNmJ6d1dv?oc=5",
-          "source": "Traders Union",
-          "publishedAt": "2026-09-28T18:00:52.000Z"
-        },
-        {
           "title": "Previsione del Prezzo delle Azioni Epsilon Energy Ltd.: Oggi, Domani e la Prossima Settimana (EPSN)",
           "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5qcV9tZDBocGVpeHdLMEFHbUpaeXN6Y3g5ZkpIV0o0bWlNOHMzMGhZX1MyVzZZWGEwakczTXRLZ2F4NmVCY2duUzd5cS0xLTB6WXVEbUJVZzNWakM5UkhRRG1UWW9ITzJTNlFFbk1kYTF3VnRYcks4ZFR2WmUtSUE?oc=5",
           "source": "Traders Union",
@@ -107,6 +101,12 @@
           "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9wMFFqQ2Z1WmFQWDAzdzh5MVhQUGhJVC1LVjl0TnQ0bmpXVUFKc3d4QUF5MmczdGlKM2J3LXc0azFZS1Fud1kwV2x0d1ZhT2dvd2taT0NpTzZhdHNnMlFBWmJQSGlkaVdYNEJLcHp4NzRmZTlGOXF0aW5rN18?oc=5",
           "source": "Traders Union",
           "publishedAt": "2026-09-25T07:33:29.000Z"
+        },
+        {
+          "title": "A2A S.p.A.: prezzo obiettivo e consensus degli analisti| A2A | IT0001233417",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1DMXhKUk9MeXZRS0VRcWdZZS1ZYm1iZ1dpQTZJd2xUcXVOYnFFRDEtUkpKYVZKT1lEX1pvdnB5eW5UTnYzSGEtbGRLYV8xZ1J5WnFOdlI1UEtOLTJMaXRDSkF6bXBWV2xKd3hhNG9lLWRXZ0hmeTliX3dRT3B3Xzg?oc=5",
+          "source": "MarketScreener Italia",
+          "publishedAt": "2026-09-25T07:00:00.000Z"
         }
       ]
     },
@@ -118,7 +118,7 @@
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE56SDdsbTJvVWEySDBtQU5FOUw4TTZ6SGdIWWJ6enR2N0lQUzVZMDI1ak9SdGREdEl5TW9qbWFZTTZndGJxSUhDWWlLall2eXJGWW9pNU84ZEMzbjVrb2R1RXYxTUVvdw?oc=5",
           "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-09-29T09:11:45.000Z"
+          "publishedAt": "2026-09-29T15:07:52.000Z"
         },
         {
           "title": "Snam S.p.A.: azionisti, dirigenti e profilo società | SRG | IT0003153415",
@@ -187,12 +187,6 @@
           "publishedAt": "2026-09-14T07:00:00.000Z"
         },
         {
-          "title": "Saipem ottiene contratto offshore da USD350 milioni in Angola",
-          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOM1o1ZzhXQWs1VWFkUlE0eHBVcmpYTHpqemYtVGtGUFAxaEFzMXVZcWJNVWN0NHZiTi0xcmRDb2pCTHF3QXNvYnZpQjhFMUZDR0tMYXhQV1NtSzRUUTdRMUM2cGtteTNweW1TcGxhUnN2MEZyeWM4NUgzcHpsTHZFaW1Jc0tKVFlWMXJTNWhBSnZEM0l1VXJBci1aYkdNZjE2WHB3UnA3V0FHelM3UzhuSHRoaUcyOVk?oc=5",
-          "source": "MarketScreener Italia",
-          "publishedAt": "2026-09-14T07:00:00.000Z"
-        },
-        {
           "title": "Saipem ottiene un contratto di ingegneria per un impianto di carburanti sintetici in Germania",
           "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUVM0RGR2c1hwVVNPR1ltcGVhTGxpS0l3Nm1MYndIV1V6LVpnX21wMFFKMGtZTm1NanFWWFpqcGc3S0kyaWdzRTJzZGpaTmNfMXlyTjZPLVZabjVhcHNyZlRaZ1JIVGx4MVVxZXFxYm5IQUZndVoyZmQyNGRDVmllVGVBTGM2ZlY4T1E?oc=5",
           "source": "Yahoo Finanza",
@@ -201,7 +195,7 @@
         {
           "title": "A Saipem contratto offshore in Medio Oriente da 1,8 miliardi di dollari",
           "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPMTR4X3RSNlkyMDNZU2VnSzBLS2RKU2V4d1lYN3dlZk5TTnhwejUzeTlfMkljQ0ZHUWRMaWpFRFpkdHYxQm9DZjJSVXVxc0FHUlZDZEpxN3ZqdFoxTF8yU2Vad1lqSHdCaFdBd1NiOGJpRlBkOUtsemNOd2k3bzhuNGVFNmRLRjEzQVVrZ0UySFRNYTRzNzg3TFRUdk1wc0pKOVJaRlE5UEU3VmFzell6UFc3TmZtVEs0MlcwaV9mamlKU241X2xncFppTFNLWC1xN0w0aVBUS3Z5NXVOZkRWWVZtM0kzN0ZvUFJLbF9vLU95SFJ4Vl9TVdIB_gFBVV95cUxPZGd5VzNqUFVIR0dCVEZqNWRBMGpsbFB3N3BpaG12RldFc1pVQ19XeFVwblFDX2I1NGNYZXdzQjhpRDVObWRDNDJHemNhTVFvWWR2TzRJU2E4UTl5cXkxMThhZjRQbGFTM2hoYklhSE1xU3NSVzFBVHRXLTNyNmZQVldmckVBTDFmaDJ3aU5hX2NUSjBCT2t5cWhQY2E5MzBFVUR3NXF2cG1IdlQtM05VTndlakUzamFTaXdPRjVDdXJiclpnY0t0cFRhYWtRTlowclE1SzJfTWd1SGFrRGlYZ2xnNHVRaFpYR3c4eXJGU1k1cklYT3QwRlpEM0Fudw?oc=5",
-          "source": "ANSA",
+          "source": "ansa.it",
           "publishedAt": "2026-08-12T07:00:00.000Z"
         },
         {
@@ -215,6 +209,12 @@
           "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObk9QcnV5WWdhT1RkZ0hoVmtreklfSGpibzlYS0lDdVFEVTVHTXpLdWF5bmtHREtwODhwdUNkZnJ0UGVGNm9oSk50cjgzQ2UtUG1Vd2lka3hFUkI1M05laWxZbnpTNlBzczhFb0dHRGstaTZ4RWJSMEhzVFlYQ2ZQd19SMDRhdW9Lb0wwZzRSd1RUQzNYX3dRWmhxeTBpSnZ0UUdGektuTHBjSG1GWDVLLQ?oc=5",
           "source": "SoldiOnline.it",
           "publishedAt": "2026-08-12T07:00:00.000Z"
+        },
+        {
+          "title": "Saipem, nuovi contratti in Costa d’Avorio e in Italia",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9ncUR1ZnNfYUVhQndCNVplUkVZcXBMQVVJdjU3bXhiV3NNd2phNXliLUJFbC14cHUzZUZXX3ZWS185Zll4bHlLMWotRmd1cjRqaEE3dDh5UmZWWnRpUG1YUjk5VEpQRmEzNWxQUHhSaG1IQTYzU1R3eXFLdkkzM3c?oc=5",
+          "source": "OilGas News",
+          "publishedAt": "2026-07-27T15:10:21.000Z"
         }
       ]
     },
@@ -277,12 +277,6 @@
       "label": "Geopolitica & Macro",
       "items": [
         {
-          "title": "Petrolio, inflazione e dilemma tassi: cosa aspettarsi dai mercati",
-          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRXh6Y1dsX2dicXFjaklocWRqOURBMEoteDVYY3RhVnp3dmFIeTB5Q1hjakZ0QTJUV3ZpSEFnbjRFcUdlRzBKck56cnJRVVFxQTRtdXJFVlNqNHltOC1EYzFmaXZ2UTZRWF9RMjNQazd6Z0Z0a28yM1RzYnNWRXo3N0hOM1pOdTl0LUEtREp5am5CbzRWQThQVDV6SXE5TFhYeEFGdjVQUGJtYzRqMlFMNThfeVBhQQ?oc=5",
-          "source": "Websim",
-          "publishedAt": "2026-09-15T09:23:35.000Z"
-        },
-        {
           "title": "Intermonte – Mercati in equilibrio tra petrolio, inflazione e il dilemma dei tassi",
           "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNUzBqemZEeVo3aEE1Nk9pZ3RGbHAycGJvZEpmbXhjRkFVdEl1M1RIQW1peFNXbmtIeF9lRlljeUNFbnliMktBT2o1cTJKc08xOElzTnVBOHJTejI3aHVIVzdTY1BJdXhpU2hreDgyQ1dCVTkzcFZpaWt5WGFCNUE2WmQxcFdUSDd4Xzd0bVRqNDBMWnNVUzJpTy1mNGxvemE1RDUtTmJnTFl6VHl5?oc=5",
           "source": "Easy News Press Agency",
@@ -309,7 +303,7 @@
         {
           "title": "Lo spread in lieve calo a 78,9 punti base, via all’asta per i Btp del 12 agosto",
           "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPSzlrU3J4am1aTmw2T0JBTnBCSVdhNXd0MzZWUUM1QlJkOGlIRkpHNkMyR0lRdFhsaVRKXzZCdll6WkxzQXV4RW9kemkycXpHNFZldUpTT3Utd1BTVEJwLUpTd3JZdTRrSDlzOXJSVjk0OGpQZ0FtMXQxZlQtNjhkVnZPeWbSAYoBQVVfeXFMTmFvYmFJU3hwVmlBZzVyS1FjNVhmQTVrM2pSSWJTdUNLNVpQQjMtYTdPaDA5ZGhTQTRIeV9zbHZLSU5HdFRnaUtHbWg5b09nbzR3azkwbHlSclowRVotWExXUXF1ZXNFNHFodWNjOG1nUS1xR3pVa2t1Q2RhNkJKci15RVhSYl9Lck53?oc=5",
-          "source": "QuiFinanza",
+          "source": "quifinanza.it",
           "publishedAt": "2026-08-12T07:00:00.000Z"
         },
         {
@@ -323,6 +317,12 @@
           "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWFU1UGZjYlRFd25nYlhQS28zYVBrU2N5RVJRcUFkUWxNN3QtMjh6RDYxd0lOSVczenpkYlQ2QUEtSEYxTV8zQWJ6VG9UbllrSUxLajZRN2RfczRGZjJFS3gwU2xQbEtQSGJEUjBkRVlXMkQwZUlQYXpqV0k0d09ON2ZGcU16aXplQVpmNQ?oc=5",
           "source": "DoveInvestire.com",
           "publishedAt": "2026-07-09T07:00:00.000Z"
+        },
+        {
+          "title": "Prospettive per i titoli di Stato nel terzo trimestre: il peggio è ormai alle spalle?",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOb0xTdVJ4VG9UMXcxT1BsNTJnWkFwU1NVRnNxQ0JIcHVPZ3dEN2VRWkZycFM5bUk3dU41TXF0N2s0LVl4SnUzcU9QSnEzWXJNN2VfMnIwM3dyMHhoVGxleXRUOTdKcGxWWU1LcXRHdUEzc18wQVhROVJzbW9qeS1aT2psUEJndVdnb3BWYkdTa0xLQ040dnpmY3k1S250ZXJHRUN3QUl2MTdOMWFXUFdCbWpmQTZVMGEzT2M4ZTdMT3ByZDBnRkdn?oc=5",
+          "source": "Morningstar",
+          "publishedAt": "2026-06-29T07:00:00.000Z"
         }
       ]
     }
