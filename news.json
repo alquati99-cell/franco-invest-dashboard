@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T19:14:28.675Z",
+  "generatedAt": "2026-09-30T23:45:12.794Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -9,7 +9,7 @@
         {
           "title": "ENI, acquistate 3.144.244 azioni proprie tra il 22 e il 25 settembre 2026",
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPNmdpaXZMaldOM3BsRXhjejV4Y1NackIzdWFaaFJMRldZVWVFUTRtUUZsR290OFBVRVhaZjFaazd5aWk3UEF6RW1Nd3lsLW9LVXlreVl0eExYX2VJSFZlTUVMQkNFQ1hZeWFwbVpMeElFNm5DUEpGcTVONHd0ZTRVWTZXbmNJX2ZiMEIwdXhuREROS3gwRzRuaFpBX0p4dw?oc=5",
-          "source": "soldionline.it",
+          "source": "SoldiOnline.it",
           "publishedAt": "2026-09-30T12:05:00.000Z"
         },
         {
@@ -27,7 +27,7 @@
         {
           "title": "Le azioni Eni salgono a Milano mentre aumentano i prezzi del petrolio",
           "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQYmpTOFFPQ0VDV2dnVElJTWxlQVRZRDRSazVUckFQT3RQSy1PRmJmbDRxN0NFQWd5cGZnT2NnY2ZLbnV2WHhuQlhKd2FJTWtRajJmQ1FmcHdlb19adUlRaWFYMzdHTTg4SjBoenR2RzM2NlYwMk1RV1pvNTR4NGxzZ1RGTmdJLUU?oc=5",
-          "source": "it.finance.yahoo.com",
+          "source": "Yahoo Finanza",
           "publishedAt": "2026-09-28T08:54:45.000Z"
         },
         {
@@ -169,33 +169,27 @@
       "label": "Saipem",
       "items": [
         {
-          "title": "Saipem selezionata per il progetto di espansione di Profertil in Argentina",
-          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVHU4VWFLdGo0WjR5Und1TjdUbzlQSzh1VGpfY01uQkhJVG00Z0V6T3N3cVREWTRvOXdzYzdQNW5SdzJRcm1TMjNnWnk0SmtjUElUdWEtTFRlV3lWdU56M3ZPcmN3TmtTZ01TMUxXd05EaElQVlNOSUFuV1dab2JWQXVYb1BBd19pTUVNUFM1bw?oc=5",
-          "source": "it.finance.yahoo.com",
-          "publishedAt": "2026-09-29T08:51:16.000Z"
-        },
-        {
           "title": "Saipem ottiene un contratto di ingegneria per un impianto di carburanti sintetici in Germania",
           "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUVM0RGR2c1hwVVNPR1ltcGVhTGxpS0l3Nm1MYndIV1V6LVpnX21wMFFKMGtZTm1NanFWWFpqcGc3S0kyaWdzRTJzZGpaTmNfMXlyTjZPLVZabjVhcHNyZlRaZ1JIVGx4MVVxZXFxYm5IQUZndVoyZmQyNGRDVmllVGVBTGM2ZlY4T1E?oc=5",
-          "source": "it.finance.yahoo.com",
+          "source": "Yahoo Finanza",
           "publishedAt": "2026-09-01T07:00:00.000Z"
         },
         {
           "title": "Saipem e le nuove commesse. Analisti vedono ancora potenziale upside di oltre il 10%",
           "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNd0h5RllENHlqZkdTM0x5dUZiWTdBajhndWtqU3hCRnYwVnBncFZMaFd4YzZSNkYwMmFqNDJ5cmsyYnYtTzQ2NEJlYkdnY0VXT0xJSzdFR3F6Y25TS3pGSUV4VzZ6WEVqb05qTXl6T2FDd1VhM1ZyVjNpellRUlpSRlFrc3pkVWtwY01mc0trNXhTaHV3aHJMcUJKMl9GZlhySVlYV3dtbWxURXJYd1pVdnk5cFFBOGxSQ2VYUA?oc=5",
-          "source": "FinanzaOnline",
+          "source": "finanzaonline.com",
           "publishedAt": "2026-08-13T07:00:00.000Z"
         },
         {
           "title": "Saipem, maxi-contratto offshore in Medio Oriente da 1,8 miliardi",
           "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObk9QcnV5WWdhT1RkZ0hoVmtreklfSGpibzlYS0lDdVFEVTVHTXpLdWF5bmtHREtwODhwdUNkZnJ0UGVGNm9oSk50cjgzQ2UtUG1Vd2lka3hFUkI1M05laWxZbnpTNlBzczhFb0dHRGstaTZ4RWJSMEhzVFlYQ2ZQd19SMDRhdW9Lb0wwZzRSd1RUQzNYX3dRWmhxeTBpSnZ0UUdGektuTHBjSG1GWDVLLQ?oc=5",
-          "source": "soldionline.it",
+          "source": "SoldiOnline.it",
           "publishedAt": "2026-08-12T07:00:00.000Z"
         },
         {
           "title": "A Saipem contratto offshore in Medio Oriente da 1,8 miliardi di dollari",
           "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPMTR4X3RSNlkyMDNZU2VnSzBLS2RKU2V4d1lYN3dlZk5TTnhwejUzeTlfMkljQ0ZHUWRMaWpFRFpkdHYxQm9DZjJSVXVxc0FHUlZDZEpxN3ZqdFoxTF8yU2Vad1lqSHdCaFdBd1NiOGJpRlBkOUtsemNOd2k3bzhuNGVFNmRLRjEzQVVrZ0UySFRNYTRzNzg3TFRUdk1wc0pKOVJaRlE5UEU3VmFzell6UFc3TmZtVEs0MlcwaV9mamlKU241X2xncFppTFNLWC1xN0w0aVBUS3Z5NXVOZkRWWVZtM0kzN0ZvUFJLbF9vLU95SFJ4Vl9TVdIB_gFBVV95cUxPZGd5VzNqUFVIR0dCVEZqNWRBMGpsbFB3N3BpaG12RldFc1pVQ19XeFVwblFDX2I1NGNYZXdzQjhpRDVObWRDNDJHemNhTVFvWWR2TzRJU2E4UTl5cXkxMThhZjRQbGFTM2hoYklhSE1xU3NSVzFBVHRXLTNyNmZQVldmckVBTDFmaDJ3aU5hX2NUSjBCT2t5cWhQY2E5MzBFVUR3NXF2cG1IdlQtM05VTndlakUzamFTaXdPRjVDdXJiclpnY0t0cFRhYWtRTlowclE1SzJfTWd1SGFrRGlYZ2xnNHVRaFpYR3c4eXJGU1k1cklYT3QwRlpEM0Fudw?oc=5",
-          "source": "ansa.it",
+          "source": "ANSA",
           "publishedAt": "2026-08-12T07:00:00.000Z"
         },
         {
@@ -214,6 +208,12 @@
           "title": "Saipem: da Eni nuovi contratti in Costa d’Avorio e in Italia per circa 800 milioni di euro",
           "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPWk4xTVppaWpKcExaYU1uNWx2aXFFRDNmWUFBZTdLVzBKVUtyempNMTVjV1RHU1liM0pIeC1URHB0RVNzMFNDUWo3bWgzUW10M2VQWUxRY2R3STdJU2s4ZkNtc0FFTXdjUThuOGFfck5WMFNWc3VSc1VVaU1sNFdER2NMd05ET3NtM1VuU0l4aWpIS3lyTVZTNGdBakhpcGE1RHBsVEVyUXdiZXFpWmxkNGkzWmNoZFlyVGI2SFdrVQ?oc=5",
           "source": "Agenzia Nova",
+          "publishedAt": "2026-07-27T07:00:00.000Z"
+        },
+        {
+          "title": "Saipem conquista contratti per 800 milioni di euro da Eni ed Enilive",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOMnp1Q3pVZ0lYUlBoQ0lIWUhEN2pxQmtYOWl3UUFNbWk1YUNhX2pGMWhfSlhyYnZ1OUY4RDRyVkdTdkJTUkJmMGpvclVESkhNdEpWMWpQVXA4c0U0U2Zhd21rYzFYUTV4LTNKRTNnNEJqMUE0XzgzbTZONktkVkM1RGVkMC0zZWhZbGpCdmVuVQ?oc=5",
+          "source": "Yahoo Finanza",
           "publishedAt": "2026-07-27T07:00:00.000Z"
         }
       ]
@@ -237,7 +237,7 @@
         {
           "title": "Unicredit, i due percorsi di Orcel in agguato su Mps e Banco Bpm",
           "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdjJqb3FWYWU2MDZJbFpFOTlGSVhQbWMyMzhid0ktOTV0NFc3bzh2SGZIdzlBV0VYUTVCNEpBVGtDU1FIMzlTNTRmSmt3Tm9iOXZjM1RDdWNpcDl2OXRRdFZVT2VVQ1lQSWlHa0QwSUdqbWlTMTRWREZQVTUtWnlPWmxlVkdzNjdKWi00cHF4cXFBa1ZRVTBQb3hmYVBreVdzWW53Qg?oc=5",
-          "source": "ilgiornale.it",
+          "source": "il Giornale",
           "publishedAt": "2026-09-29T05:20:46.000Z"
         },
         {
@@ -249,7 +249,7 @@
         {
           "title": "UniCredit: 'osservatori' in risiko, rumor su Banco Bpm 'senza fondamento'",
           "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1NQXJYZ2Z4VzFCeUlGai1XQ3MyWUwtRXNCT0FUTTFETVUyWXQ1ZWg1Y2tRZTEtLUNROHp0Y19aZzhYNklKT0F1MndjWVVSdlQ5UDN2LTUxUkpLQkpKbTJoSHFiLVFXN1V1Znc1SzhKNWRjZmM?oc=5",
-          "source": "en.ilsole24ore.com",
+          "source": "Il Sole 24 ORE",
           "publishedAt": "2026-09-25T14:31:30.000Z"
         },
         {
@@ -283,12 +283,6 @@
           "publishedAt": "2026-09-15T07:00:00.000Z"
         },
         {
-          "title": "Borse, settimana in rosso per l’Europa stretta tra petrolio e tassi. Milano -0,3%. WS +0,98%",
-          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPQnZJNFNxd3hjZ1hBWU9Bd3pjX01oX1lvTFVBT1Jvc25VR0FSTmlrTkgtZ3d3cTFMNTVvWE9XNzRoN3UzdEV0UjdkVzN1bjlabVNfNTR2WHRlNG52TnZxV1JLS0wzd2Y4WHJvQ3NMTFIyU3JJTzE3VnJSSVpiUS1Ed3lRREw2X1ZX?oc=5",
-          "source": "Il Sole 24 ORE",
-          "publishedAt": "2026-09-10T07:00:00.000Z"
-        },
-        {
           "title": "Dove investire oggi: miglior investimento attuale | Settembre 2026",
           "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNSVY4UkxDajM5TFNBOFlFazJyVy1xM2l5M0NaZjRrS1FGRkZtZHJYWEpCc2JDcXlHZzVIbmVFNC1nN24zV3hFNWJMTHJsVU5tTTVlNWo5a1BlUkRqeEVESEpXTnFXN2hZeWE2YVpPd2hiRFI5ZC0xc0ZDQW1pN01qY1RkQ2ZhSmpRekFFM09rYnFCY2V5ZGlXLUdBdkNSV05LcWtZWEdERmt0QzA?oc=5",
           "source": "Investing.com - Quotazioni, Borsa, Economia e Finanza",
@@ -309,7 +303,7 @@
         {
           "title": "Spread Btp-Bund giù a 79,6 punti: cosa segnala ai risparmiatori",
           "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNVmhkX3ZRSjRQNFdRQ2pBX1AzRnZSa2twdG9LVFpNaE53bGRzWkVUczREVmhIazItcmVsdWdMSGRvRXVMS2dWQjVlTnd6TGVJd1kxN0RGeHZyU2hGTUVLYVd3Ul9sQW5EWmR4YUNNOFNYTlBxWG9LcmVfR3htbzR5dUZoSGtFV3ptaEg0YXlzWEhiSGp3SGR0VUEtS0FUMUItMFBWekhBZ3BaVmlJZHcweXk0RkpGZHM?oc=5",
-          "source": "soldionline.it",
+          "source": "SoldiOnline.it",
           "publishedAt": "2026-08-03T07:00:00.000Z"
         },
         {
@@ -321,8 +315,14 @@
         {
           "title": "Prospettive per i titoli di Stato nel terzo trimestre: il peggio è ormai alle spalle?",
           "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOb0xTdVJ4VG9UMXcxT1BsNTJnWkFwU1NVRnNxQ0JIcHVPZ3dEN2VRWkZycFM5bUk3dU41TXF0N2s0LVl4SnUzcU9QSnEzWXJNN2VfMnIwM3dyMHhoVGxleXRUOTdKcGxWWU1LcXRHdUEzc18wQVhROVJzbW9qeS1aT2psUEJndVdnb3BWYkdTa0xLQ040dnpmY3k1S250ZXJHRUN3QUl2MTdOMWFXUFdCbWpmQTZVMGEzT2M4ZTdMT3ByZDBnRkdn?oc=5",
-          "source": "global.morningstar.com",
+          "source": "Morningstar",
           "publishedAt": "2026-06-29T07:00:00.000Z"
+        },
+        {
+          "title": "Accordo USA-Iran verso la firma",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPeldUR25QbWUxZEFWY0NjOGs0Z1JTRFBNcF9rVTlKQldEVE5jalQ0TEppTDZtN293QkV3N3dncnlacjVaZ0pHSEV0MjQ4VmVialNtbUl1UXJPdWpkZWI3UzZlSWhBS2VaSG5KUEpQbnc1SlR5b2NuQXlDSTJmb0xXWEx1OF95aFJtVWVzSUkyWFF5VjBncEJqTEllRzZDVHFtcUhld2VIQQ?oc=5",
+          "source": "Websim",
+          "publishedAt": "2026-06-16T07:00:00.000Z"
         }
       ]
     }
