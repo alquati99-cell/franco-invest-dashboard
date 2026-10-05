@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T16:00:21.183Z",
+  "generatedAt": "2026-10-05T22:54:52.233Z",
   "base": "EUR",
   "fx": {
     "EUR": 1,
@@ -10,8 +10,8 @@
   },
   "counts": {
     "total": 78,
-    "resolved": 53,
-    "manual": 25
+    "resolved": 54,
+    "manual": 24
   },
   "prices": {
     "IT0005421703": {
@@ -57,7 +57,7 @@
     "LU0109666635": {
       "price": 14.2312,
       "currency": "EUR",
-      "changePct": -0.752,
+      "changePct": -1.705,
       "name": "FONDITALIA BOND GL. E.M.",
       "asOf": "2026-10-05",
       "source": "yahoo:0P00000UCO.F"
@@ -151,81 +151,81 @@
       "source": "yahoo:EL.PA"
     },
     "IE00B4BNMY34": {
-      "price": 196.115,
+      "price": 195.05,
       "currency": "USD",
-      "changePct": 12.406,
+      "changePct": 11.796,
       "name": "Accenture plc",
       "asOf": "2026-10-05",
       "source": "yahoo:ACN"
     },
     "ACN": {
-      "price": 196.115,
+      "price": 195.05,
       "currency": "USD",
-      "changePct": 12.406,
+      "changePct": 11.796,
       "name": "Accenture plc",
       "asOf": "2026-10-05",
       "source": "yahoo:ACN"
     },
     "US0846707026": {
-      "price": 503.62,
+      "price": 504.26,
       "currency": "USD",
-      "changePct": 0.105,
+      "changePct": 0.233,
       "name": "Berkshire Hathaway Inc. New",
       "asOf": "2026-10-05",
       "source": "yahoo:BRK-B"
     },
     "BRK-B": {
-      "price": 503.62,
+      "price": 504.26,
       "currency": "USD",
-      "changePct": 0.105,
+      "changePct": 0.233,
       "name": "Berkshire Hathaway Inc. New",
       "asOf": "2026-10-05",
       "source": "yahoo:BRK-B"
     },
     "US67066G1040": {
-      "price": 236.8,
+      "price": 238.9,
       "currency": "USD",
-      "changePct": 3.469,
+      "changePct": 4.387,
       "name": "NVIDIA Corporation",
       "asOf": "2026-10-05",
       "source": "yahoo:NVDA"
     },
     "NVDA": {
-      "price": 236.8,
+      "price": 238.9,
       "currency": "USD",
-      "changePct": 3.469,
+      "changePct": 4.387,
       "name": "NVIDIA Corporation",
       "asOf": "2026-10-05",
       "source": "yahoo:NVDA"
     },
     "US6745991058": {
-      "price": 59.185,
+      "price": 58.31,
       "currency": "USD",
-      "changePct": 5.499,
+      "changePct": 3.939,
       "name": "Occidental Petroleum Corporatio",
       "asOf": "2026-10-05",
       "source": "yahoo:OXY"
     },
     "OXY": {
-      "price": 59.185,
+      "price": 58.31,
       "currency": "USD",
-      "changePct": 5.499,
+      "changePct": 3.939,
       "name": "Occidental Petroleum Corporatio",
       "asOf": "2026-10-05",
       "source": "yahoo:OXY"
     },
     "US5949181045": {
-      "price": 526.465,
+      "price": 525.18,
       "currency": "USD",
-      "changePct": 3.387,
+      "changePct": 3.134,
       "name": "Microsoft Corporation",
       "asOf": "2026-10-05",
       "source": "yahoo:MSFT"
     },
     "MSFT": {
-      "price": 526.465,
+      "price": 525.18,
       "currency": "USD",
-      "changePct": 3.387,
+      "changePct": 3.134,
       "name": "Microsoft Corporation",
       "asOf": "2026-10-05",
       "source": "yahoo:MSFT"
@@ -279,49 +279,49 @@
       "source": "borsaitaliana:azioni"
     },
     "US0304201033": {
-      "price": 128,
+      "price": 127.84,
       "currency": "USD",
-      "changePct": -0.721,
+      "changePct": -0.845,
       "name": "American Water Works Company, I",
       "asOf": "2026-10-05",
       "source": "yahoo:AWK"
     },
     "AWK": {
-      "price": 128,
+      "price": 127.84,
       "currency": "USD",
-      "changePct": -0.721,
+      "changePct": -0.845,
       "name": "American Water Works Company, I",
       "asOf": "2026-10-05",
       "source": "yahoo:AWK"
     },
     "US02079K3059": {
-      "price": 341.727,
+      "price": 343.83,
       "currency": "USD",
-      "changePct": 0.757,
+      "changePct": 1.377,
       "name": "Alphabet Inc. Class C",
       "asOf": "2026-10-05",
       "source": "yahoo:GOOG"
     },
     "GOOG": {
-      "price": 341.727,
+      "price": 343.83,
       "currency": "USD",
-      "changePct": 0.757,
+      "changePct": 1.377,
       "name": "Alphabet Inc. Class C",
       "asOf": "2026-10-05",
       "source": "yahoo:GOOG"
     },
     "US68389X1054": {
-      "price": 143.425,
+      "price": 142.48,
       "currency": "USD",
-      "changePct": 8.164,
+      "changePct": 7.451,
       "name": "Oracle Corporation",
       "asOf": "2026-10-05",
       "source": "yahoo:ORCL"
     },
     "ORCL": {
-      "price": 143.425,
+      "price": 142.48,
       "currency": "USD",
-      "changePct": 8.164,
+      "changePct": 7.451,
       "name": "Oracle Corporation",
       "asOf": "2026-10-05",
       "source": "yahoo:ORCL"
@@ -343,17 +343,17 @@
       "source": "yahoo:MC.PA"
     },
     "US0378331005": {
-      "price": 333.61,
+      "price": 332.89,
       "currency": "USD",
-      "changePct": -1.415,
+      "changePct": -1.628,
       "name": "Apple Inc.",
       "asOf": "2026-10-05",
       "source": "yahoo:AAPL"
     },
     "AAPL": {
-      "price": 333.61,
+      "price": 332.89,
       "currency": "USD",
-      "changePct": -1.415,
+      "changePct": -1.628,
       "name": "Apple Inc.",
       "asOf": "2026-10-05",
       "source": "yahoo:AAPL"
@@ -473,7 +473,7 @@
     "LU0058496836": {
       "price": 9.25302,
       "currency": "EUR",
-      "changePct": 0.88,
+      "changePct": -1.856,
       "name": "FONDITALIA EQ. PACIFIC EX JAPAN",
       "asOf": "2026-10-05",
       "source": "yahoo:0P00000UBV.F"
@@ -481,15 +481,15 @@
     "LU0109666981": {
       "price": 23.949,
       "currency": "EUR",
-      "changePct": 0.953,
+      "changePct": -6.266,
       "name": "FONDITALIA EQ. GL. E.M.",
       "asOf": "2026-10-05",
       "source": "yahoo:0P00000UCE.F"
     },
     "LU0072913022": {
-      "price": 430.426,
+      "price": 431.031,
       "currency": "EUR",
-      "changePct": 1.758,
+      "changePct": 1.901,
       "name": "UBS LUX. EQ. GREATER CHINA",
       "asOf": "2026-10-05",
       "source": "yahoo:UBFN.F"
@@ -518,6 +518,14 @@
       "asOf": "2026-10-05",
       "source": "yahoo:0P0000SB48.F"
     },
+    "LU0147408487": {
+      "price": 140.17,
+      "currency": "USD",
+      "changePct": 3.707,
+      "name": "BALCK ROCK WORLD TECHNOLOGIES E2 USD",
+      "asOf": "2026-10-05",
+      "source": "yahoo:0P00000SK7"
+    },
     "LU1093290960": {
       "price": 171.01,
       "currency": "EUR",
@@ -535,9 +543,9 @@
       "source": "yahoo:MSJL.MU"
     },
     "LU0868753731": {
-      "price": 80.031,
+      "price": 80.528,
       "currency": "EUR",
-      "changePct": -0.19,
+      "changePct": 0.43,
       "name": "MORGAN STANLEY INVESTMEENT FOUDN GLOBAL INSIGHTS A USD",
       "asOf": "2026-10-05",
       "source": "yahoo:MSJ0.F"
@@ -551,17 +559,17 @@
       "source": "yahoo:L7F0.MU"
     },
     "IT0001083424": {
-      "price": 23.9166,
+      "price": 26.047,
       "currency": "EUR",
-      "changePct": 0.633,
+      "changePct": 0.634,
       "name": "EURIZON AZIONARIO INTERNATIONAL ETICO",
       "asOf": "2026-10-05",
       "source": "yahoo:0P00000U1V.F"
     },
     "IE00B83BYG91": {
-      "price": 11.52,
+      "price": 11.57,
       "currency": "EUR",
-      "changePct": -0.087,
+      "changePct": 0.347,
       "name": "Janus Hend. Balanced A Dis EUR Hdg,",
       "asOf": "2026-10-05",
       "source": "yahoo:0P0000ZND4.F"
@@ -615,9 +623,9 @@
       "source": "yahoo:0P0000Z31B.F"
     },
     "LU0731782826": {
-      "price": 27.649,
+      "price": 27.679,
       "currency": "EUR",
-      "changePct": 0.08,
+      "changePct": 0.188,
       "name": "FIDELITY GLOBAL DIVIDEND S EUR",
       "asOf": "2026-10-05",
       "source": "yahoo:FPGM.F"
@@ -625,7 +633,7 @@
     "LU0058496919": {
       "price": 306.594,
       "currency": "EUR",
-      "changePct": -0.064,
+      "changePct": -1.567,
       "name": "FONDI ITALIA GLOBAL R",
       "asOf": "2026-10-05",
       "source": "yahoo:0P00000UBQ.F"
@@ -639,9 +647,9 @@
       "source": "yahoo:0P000195BT.F"
     },
     "LU0210534227": {
-      "price": 72.188,
+      "price": 72.384,
       "currency": "EUR",
-      "changePct": 0.143,
+      "changePct": 0.415,
       "name": "JPM INVESTEMENT FOUND  GLOBAL FOCUS A EUR",
       "asOf": "2026-10-05",
       "source": "yahoo:JR6L.F"
