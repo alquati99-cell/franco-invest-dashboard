@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T14:28:40.642Z",
+  "generatedAt": "2026-10-05T22:35:41.253Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -9,7 +9,7 @@
         {
           "title": "Azioni Eni Lunedì 5 ottobre: Previsioni per questa Settimana",
           "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE96UWtBeFlCSXlRb3RUenE2R2RUZDUzUXZiaXJvajdnYkhXek0yQUF1dmNqVUJwbzlyd2VCYXZDOXktSVNXS2FTbUwwM1hpVGtmNEI1X1ZhNGV3Ym4xTjFDRldheEVtLW9CMTl6UmFn?oc=5",
-          "source": "Finanza Italiacom",
+          "source": "finanza.economia-italia.com",
           "publishedAt": "2026-10-05T03:44:04.000Z"
         },
         {
@@ -39,7 +39,7 @@
         {
           "title": "Azioni Eni 29 settembre: quotazione e target price 2026",
           "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPV29nTF92YzB6NVVzVUxGdEJ4T0FpRDQ5ajZXVkNqbE5nQURvVkNNNUFGU2lPVVIydFBZd2I1ZG16bEExRXZvaUpkdVdPVTNBZGNzUlg0bXkzQW1wSnpJdHlDV3UySVd5Zjk5NUM5NkdscEYzQk5MWGlSVU13MzQwZFJn?oc=5",
-          "source": "Finanza Italiacom",
+          "source": "finanza.economia-italia.com",
           "publishedAt": "2026-09-29T04:06:53.000Z"
         },
         {
@@ -51,7 +51,7 @@
         {
           "title": "Azioni ENI: Quotazione, Target Price Ottobre 2026",
           "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBqSjhFa3lFa3ZmbE9LSjdKcWQwb1UxQXdxRkhOR2d1UUFZdnRrb25WdUNXb3JldG5FNVhDNWdyMEFILXlRbU1IeHdDNzE0WkxkTDJZTzdMYk1ZZw?oc=5",
-          "source": "Finanza Italiacom",
+          "source": "finanza.economia-italia.com",
           "publishedAt": "2026-09-27T07:00:00.000Z"
         }
       ]
@@ -60,6 +60,12 @@
       "id": "enel",
       "label": "ENEL",
       "items": [
+        {
+          "title": "Le utility italiane chiudono in calo, FTSE Italia Utilities sotto la parità",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPM2Nnb1l5RENkZGVXelNucHlQeVBmbzZiWFJTZkhVM2pja0k4czlFYWpHQzdQRTl3STFGN0RVOVJmRjVUcGRhTUJWUEFzWWFBbWQxWmtydHBYVWx5N081TnJ1MGY3Sm9XQ3ktXy01VGlPRk1tTG1qZlY1NWpSTmp6R1NlYWVJVHktZ3owQlMwSzBsTUhPZVlOSDJmaw?oc=5",
+          "source": "Traders Union",
+          "publishedAt": "2026-10-05T18:13:32.000Z"
+        },
         {
           "title": "Affari da old economy: da Enel a Leonardo e Prysmian. Ecco quali azioni dell’economia reale hanno maggiori potenzialità di rialzo in borsa",
           "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOR2JUV0FCS2pjZ2lSX1I4eWJfTWQ5cGVzNElfVzB1S3lpOU54dWFOTGc3Vk5ib3NvN1ZJN2lpS191TVExMjJyMjJIX3FfYWh4eUw0cDFnT2ZhQWRTYS1wMlVPWEVocUxzTUpsSlBWX2o3QXpxSTZacXdMU2JONnUxbkViS1ktRDBhcVcxTHJZazlLenBIcTdjaFFjX19kUmtNOHNNblRaTHl0Y0Y4cHpmWWtMd2ZyNnlWd3Z6SjJuTmd3YlJFWi1ST0I1UjBGNWVEZzRXWUFkOTVjVXpySE5HZ3FRUEtxRjVvZ1MyZHd3?oc=5",
@@ -101,12 +107,6 @@
           "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMTVkUkhYWTRUVVJBVVNKYmNZamZTVHJsMkw1TEdyWjFZZzBoejlYcFV3TDl5bUxhdEZCREJjTjh4dzVKTjJTckREOEROOTVqZzRHTXc1V044RmRSb2NSS0FfblBKVUVMT2Y2aGVUN3c0amdBRVFncmNZLXd0eWk0TWVpRGQ2VEZzM3hPdWcxUWloNmJ6d1dv?oc=5",
           "source": "Traders Union",
           "publishedAt": "2026-09-28T18:00:52.000Z"
-        },
-        {
-          "title": "Le azioni Valero Energy salgono di circa il 4,5% grazie ai margini su diesel e carburante per jet che incrementano i profitti",
-          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPeUZHY3g2dElxbDhUSVd2VHJFNmhQalRLQTgwU3VKRDFBZWo4aGpuMzQzVG5JRlNTenZFTUxLQ3YybkVSQ2lKNkFvTlQ1Z1VueG9RRkJFb0JSb1pnbGduQjA0SUJCTEsyRm1CZmJhd0xReFNLM0dmakFZZ3N4OXdzYzNkT0tzQlMzNXBPZkRSejc0ejRaV3Q4?oc=5",
-          "source": "Traders Union",
-          "publishedAt": "2026-09-24T17:51:45.000Z"
         }
       ]
     },
@@ -116,15 +116,33 @@
       "items": [
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4xaWd2UG1QR0FTU1hFQlNNMWZ0bXRSaEpfMy1nNDR2TDJ6RzZISW9uRVpSVWZ5cnF0dzRQRm5FOUE1SElCQ1RSWVFIZWZLTXJ1NU1HazBqUWItS0xQSzZVZkhMRERsdw?oc=5",
+          "source": "Staffetta Quotidiana",
+          "publishedAt": "2026-10-05T10:00:48.000Z"
+        },
+        {
+          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE0tcFU4N3NPV1ZTT2VVV0owLXRReUkzS3dzRmh3eE1GYWJINUEtaDFKelZFVnFyNGg5cTZ3RGloVmY2T3NkVkxCYVprWTlzbWtLZG1HVUdkN0Y4OHlIYjZ3SWFObW9NQQ?oc=5",
           "source": "Staffetta Quotidiana",
           "publishedAt": "2026-10-02T09:32:35.000Z"
+        },
+        {
+          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE40b1hZTHZ0SnlrVUVUVU5mSklYS0xhMnB3WUw3WTBoMzk3WEdOS1pzbk9qalI0RFFpU3JYMzNRc0dyX2hGbDlkbF9acGd4UmdLUUprZEJObjh6bExTQWZvZTFheW9JZw?oc=5",
+          "source": "Staffetta Quotidiana",
+          "publishedAt": "2026-10-01T09:31:19.000Z"
         },
         {
           "title": "Notifica per pubblici proclami: ricorso Snam Rete Gas Spa c/ Corrao A.+ altri",
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcUVaY3Q0NjNQZmdQbWRvaE52N2FFb21xTy1maks2TEZMb25yNkxoWEQyZkctZzY2V24wbF8xY0pZdHdhUUFvTUE0Z2loUjZDR2RRQVRCdkhubzE1TF9YY0tua0NkUnpEZFVVdnpURGwydktvRUJUQVE0SlpNUFJNR2dnbXFBMjEyWFQwVHItajRiX1FaeDVXTDRmZS1wUQ?oc=5",
           "source": "gnewsonline.it",
           "publishedAt": "2026-09-30T12:18:42.000Z"
+        },
+        {
+          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE02VEppdVF1NFBYQlYzekhqb2t6c0g2TjVTbVhhbGRQZzEyUEdGb25DdXZ5S3JScFZqaVZnQUN0MlMzZ2E0SElfUUhVVDNQVXQ0QmV5NldqY2V5OV9ZbkdIcXM5RENBdw?oc=5",
+          "source": "Staffetta Quotidiana",
+          "publishedAt": "2026-09-30T09:46:31.000Z"
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
@@ -143,24 +161,6 @@
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1BQmhTUkJ0Y3owbFYtbEJvLWpnb3FrLW9kM3dhYW1vd2EtZ2Qwcmg3UHBFazlIdXg0MWRlZVJya3ZNN1lCLXZJM2pZREp3RkM3cDlzYll6dUtyUFNQZWZRQUEwaG1XUQ?oc=5",
           "source": "Staffetta Quotidiana",
           "publishedAt": "2026-07-30T07:00:00.000Z"
-        },
-        {
-          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE12MEFiaGRYbFpUcWp0VEw5SGdSNmlJM2Y0bGhLT1JWX21wVGNoSF92UDY3dmwwejF1NnJRVng4S1lyNGtqc0FlcU9Rc0V4QzRnU0VhSUNKcThtR3ZMNHlidEZ4Qi1LQQ?oc=5",
-          "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-07-20T10:02:43.000Z"
-        },
-        {
-          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBEQm5BMGVpUlZQRlRtNXptSVQwS2JiRFE1aXZfZTk1RmEtWFNpb1duQzExUWZkT1dpTWtRX2YwMl9tWXBITHZNdVdtYW9NeW4xVTcwME8wSE13UDBVeF9nVUFzX3RlZw?oc=5",
-          "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-06-17T07:00:00.000Z"
-        },
-        {
-          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE42aTBRcGRPekYzcVFrQ281cDIzZDlGc1UyaVk2STNtbGkxbjV0LVRuZ1FSNkcyTXcwY0pBMmJaYmJLTzhxbFZBUDdZUkczd0NwMzdvalV5VFZEb3hzNktkOXJ4VExrQQ?oc=5",
-          "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-06-16T07:00:00.000Z"
         }
       ]
     },
