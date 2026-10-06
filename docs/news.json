@@ -1,17 +1,11 @@
 {
-  "generatedAt": "2026-10-06T19:30:10.200Z",
+  "generatedAt": "2026-10-06T23:46:15.640Z",
   "source": "Google News RSS",
   "topics": [
     {
       "id": "eni",
       "label": "ENI",
       "items": [
-        {
-          "title": "Azioni Eni Lunedì 5 ottobre: Previsioni per questa Settimana",
-          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE96UWtBeFlCSXlRb3RUenE2R2RUZDUzUXZiaXJvajdnYkhXek0yQUF1dmNqVUJwbzlyd2VCYXZDOXktSVNXS2FTbUwwM1hpVGtmNEI1X1ZhNGV3Ym4xTjFDRldheEVtLW9CMTl6UmFn?oc=5",
-          "source": "Finanza Italiacom",
-          "publishedAt": "2026-10-05T03:44:04.000Z"
-        },
         {
           "title": "Eni prepara il dividendo straordinario, ecco come calcolare quanto spetterà a ogni azionista",
           "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxObUdsbTdWSF94TEoxMVBvelRlOUQ1NzhvNEc5N2V0NzMyRFZUVzZ0R3pjYVVuX28xQkw1LUhXWGJ5dy1RZlZLV2FkdWhPVDd6VkJIR3R6YU90MmNGRWRhdF90M1h3X05Hb0g2ZXZaVmFHTjMwbE9HUllPTTBYcDZZX2JrdmVaWkFQbnZ0RS12eVd2azM3RHU5T2VWUEVZNXAxNkVqdDk3RWVQeTBVZGJzaGZrZzdLVk45cE01SlJHRkY0d3ptMHJWSEJMaWpwdnZObUpJS3lpQ0Y0OEpu?oc=5",
@@ -37,22 +31,28 @@
           "publishedAt": "2026-09-30T11:47:00.000Z"
         },
         {
-          "title": "Azioni Eni 29 settembre: quotazione e target price 2026",
-          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPV29nTF92YzB6NVVzVUxGdEJ4T0FpRDQ5ajZXVkNqbE5nQURvVkNNNUFGU2lPVVIydFBZd2I1ZG16bEExRXZvaUpkdVdPVTNBZGNzUlg0bXkzQW1wSnpJdHlDV3UySVd5Zjk5NUM5NkdscEYzQk5MWGlSVU13MzQwZFJn?oc=5",
-          "source": "Finanza Italiacom",
-          "publishedAt": "2026-09-29T04:06:53.000Z"
-        },
-        {
           "title": "Le azioni Eni salgono a Milano mentre aumentano i prezzi del petrolio",
           "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQYmpTOFFPQ0VDV2dnVElJTWxlQVRZRDRSazVUckFQT3RQSy1PRmJmbDRxN0NFQWd5cGZnT2NnY2ZLbnV2WHhuQlhKd2FJTWtRajJmQ1FmcHdlb19adUlRaWFYMzdHTTg4SjBoenR2RzM2NlYwMk1RV1pvNTR4NGxzZ1RGTmdJLUU?oc=5",
           "source": "Yahoo Finanza",
           "publishedAt": "2026-09-28T08:54:45.000Z"
         },
         {
-          "title": "Azioni ENI: Quotazione, Target Price Ottobre 2026",
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBqSjhFa3lFa3ZmbE9LSjdKcWQwb1UxQXdxRkhOR2d1UUFZdnRrb25WdUNXb3JldG5FNVhDNWdyMEFILXlRbU1IeHdDNzE0WkxkTDJZTzdMYk1ZZw?oc=5",
-          "source": "Finanza Italiacom",
-          "publishedAt": "2026-09-27T07:00:00.000Z"
+          "title": "Dividendo Eni 2026: Ammontare e date stacco",
+          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9uQVRDcGtlS3h5MGFyVHFTdmNscEtRcGNiUjlXVUZhdmgwQjNyWHpXRVJ4dlJEbk5rR2ViUm9kemFjTGo0Q1RWMlFnODE4aldWSklXczdmWk5vNWZtRnkzMmRxZGZLY2tqTTVrRTNzaXBLR1dfZ1RQR25hcw?oc=5",
+          "source": "OraFinanza.it",
+          "publishedAt": "2026-09-24T07:00:00.000Z"
+        },
+        {
+          "title": "Eni, azioni proprie al 5,18% del capitale sociale",
+          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNWk9vMk5mOHZUcDQxNjR0ekVUbEVtYWw3RU1saTQtS0R6SmtRcEZoY0pBZl90ckZZWDdUSjlfTVZySThZQWlWaExpSGg3aUN0UEtNTDZuVnRGM0gycU1ISDg0anJyQ0ZDWFFyazF1ZjRTQmNheFUyT2RpS2x3QlBSSndUaGk3VUVRYV9NY0hFRGt3Qk92aFJTcHhfWW9GSk9PVXg2NHdqOGY5azkxSzh3RGVheW84SjBxWHVscDczZVhaV3V1aWNTS3NpT3REUG9jZHpORnp3?oc=5",
+          "source": "Borsa Italiana",
+          "publishedAt": "2026-09-23T07:00:00.000Z"
+        },
+        {
+          "title": "Il giorno dei dividendi a Piazza Affari: quanto incassano gli azionisti di Eni, Stm, Piaggio e Sesa",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBzM1hsNTJPa3Z4SWRLZjRkYk5wanE5T19CdkxMbVNpX1F3UndUUV9XYWlBSV8tSjg4MjFBd3VlazJBNmRYWHpVVkNFTmR0X0ZVVC1UWWtZTkZxMkNIVzhLSlJHcHhTQ0ZBcFhtMkZNZmREMThTUUZnX1JFb1F5ZWc?oc=5",
+          "source": "Forbes Italia",
+          "publishedAt": "2026-09-21T07:00:00.000Z"
         }
       ]
     },
@@ -71,6 +71,12 @@
           "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPM2Nnb1l5RENkZGVXelNucHlQeVBmbzZiWFJTZkhVM2pja0k4czlFYWpHQzdQRTl3STFGN0RVOVJmRjVUcGRhTUJWUEFzWWFBbWQxWmtydHBYVWx5N081TnJ1MGY3Sm9XQ3ktXy01VGlPRk1tTG1qZlY1NWpSTmp6R1NlYWVJVHktZ3owQlMwSzBsTUhPZVlOSDJmaw?oc=5",
           "source": "Traders Union",
           "publishedAt": "2026-10-05T18:13:32.000Z"
+        },
+        {
+          "title": "Cosa c'è dietro l'ultimo rialzo del 4,6% del titolo Constellation Energy?",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPSWdQTmlBc2VYR0xDdGJkaUhQdWowMXdQTHhLNWs3S0U3RmFrVGZsdXB0RVNYOFdMdkNFZmdqLWtlNTJCVndZUzhuWkpPSnF4R09CMTIyeWtSSndxT2puaDdIUVJtVmNjMHZIc0RLWjFad0czd3k2YVlGcWs4Wi1hcHNGZmF0cHRrcjlZVG4tcHRQY2QtM19ZbWYwUUZCTXdi?oc=5",
+          "source": "Traders Union",
+          "publishedAt": "2026-10-05T15:56:37.000Z"
         },
         {
           "title": "Affari da old economy: da Enel a Leonardo e Prysmian. Ecco quali azioni dell’economia reale hanno maggiori potenzialità di rialzo in borsa",
@@ -101,12 +107,6 @@
           "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQbkFhUmVBNmM5MWlLNGg4aG9XSEZDdnlaMVhaVWtDcl8ycVQyYjkzRjVUcUxndDBHM1hjVzQ5ZkxGMjd1QXRNYU9mZ0JTS1gzTHpvY2c2VnYxN0l5T0hXOWRzTmo3RTBsdzZJMkpwWWpCRkp6TjFxVS00NVFrcFlaZ0ZlUXI4d1VqdVN2cU5SVWVvTWhoaDZ4YU5SdzNfTExJZTBGag?oc=5",
           "source": "Traders Union",
           "publishedAt": "2026-09-29T08:26:32.000Z"
-        },
-        {
-          "title": "Crollano le azioni Shein mentre gli utili deludono",
-          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9NTW5KUV92ZUdyREhxUVE1MFZoaVR3UHlQS0dRVWV0eVFhVk5oUlF2NXpTc2JlUEpRRW9fU2RiUzFGLTIwVGp0eUdVeWVzTWNtQ3M5MWJMZDU2UVN1VGM3ZlhJSE5CUUFGeWl4WjRQazV5Z1VleGF6MS1jS1diZw?oc=5",
-          "source": "Traders Union",
-          "publishedAt": "2026-09-29T07:49:23.000Z"
         }
       ]
     },
@@ -169,18 +169,6 @@
       "label": "Saipem",
       "items": [
         {
-          "title": "Saipem selezionata per il progetto di espansione di Profertil in Argentina",
-          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVHU4VWFLdGo0WjR5Und1TjdUbzlQSzh1VGpfY01uQkhJVG00Z0V6T3N3cVREWTRvOXdzYzdQNW5SdzJRcm1TMjNnWnk0SmtjUElUdWEtTFRlV3lWdU56M3ZPcmN3TmtTZ01TMUxXd05EaElQVlNOSUFuV1dab2JWQXVYb1BBd19pTUVNUFM1bw?oc=5",
-          "source": "Yahoo Finanza",
-          "publishedAt": "2026-09-29T08:51:16.000Z"
-        },
-        {
-          "title": "Saipem si aggiudica un nuovo contratto offshore in Angola",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQYXpZQUk0TWRqTmgzQXFyVWhuLVVlVl9xelVIbWtvY1RpOGxvSUZKeDU3VFgtQXcxWE9CXy1seGM5ak9udi1SNlRHOHZia0g4YTdWejBZeHM0SDNaYnNjcm91RWJwbzNBNkd2dVNOYUNPS2FTX3hzTllnRl83bTJoTzhCSDBuTEtKS0ZLdTVXZDFIc01IXzhjelliSkU0ZlFl?oc=5",
-          "source": "SoldiOnline.it",
-          "publishedAt": "2026-09-14T07:00:00.000Z"
-        },
-        {
           "title": "Saipem ottiene un contratto di ingegneria per un impianto di carburanti sintetici in Germania",
           "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUVM0RGR2c1hwVVNPR1ltcGVhTGxpS0l3Nm1MYndIV1V6LVpnX21wMFFKMGtZTm1NanFWWFpqcGc3S0kyaWdzRTJzZGpaTmNfMXlyTjZPLVZabjVhcHNyZlRaZ1JIVGx4MVVxZXFxYm5IQUZndVoyZmQyNGRDVmllVGVBTGM2ZlY4T1E?oc=5",
           "source": "Yahoo Finanza",
@@ -199,6 +187,12 @@
           "publishedAt": "2026-08-13T07:00:00.000Z"
         },
         {
+          "title": "Saipem, maxi-contratto offshore in Medio Oriente da 1,8 miliardi",
+          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObk9QcnV5WWdhT1RkZ0hoVmtreklfSGpibzlYS0lDdVFEVTVHTXpLdWF5bmtHREtwODhwdUNkZnJ0UGVGNm9oSk50cjgzQ2UtUG1Vd2lka3hFUkI1M05laWxZbnpTNlBzczhFb0dHRGstaTZ4RWJSMEhzVFlYQ2ZQd19SMDRhdW9Lb0wwZzRSd1RUQzNYX3dRWmhxeTBpSnZ0UUdGektuTHBjSG1GWDVLLQ?oc=5",
+          "source": "SoldiOnline.it",
+          "publishedAt": "2026-08-12T07:00:00.000Z"
+        },
+        {
           "title": "A Saipem contratto offshore in Medio Oriente da 1,8 miliardi di dollari",
           "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPMTR4X3RSNlkyMDNZU2VnSzBLS2RKU2V4d1lYN3dlZk5TTnhwejUzeTlfMkljQ0ZHUWRMaWpFRFpkdHYxQm9DZjJSVXVxc0FHUlZDZEpxN3ZqdFoxTF8yU2Vad1lqSHdCaFdBd1NiOGJpRlBkOUtsemNOd2k3bzhuNGVFNmRLRjEzQVVrZ0UySFRNYTRzNzg3TFRUdk1wc0pKOVJaRlE5UEU3VmFzell6UFc3TmZtVEs0MlcwaV9mamlKU241X2xncFppTFNLWC1xN0w0aVBUS3Z5NXVOZkRWWVZtM0kzN0ZvUFJLbF9vLU95SFJ4Vl9TVdIB_gFBVV95cUxPZGd5VzNqUFVIR0dCVEZqNWRBMGpsbFB3N3BpaG12RldFc1pVQ19XeFVwblFDX2I1NGNYZXdzQjhpRDVObWRDNDJHemNhTVFvWWR2TzRJU2E4UTl5cXkxMThhZjRQbGFTM2hoYklhSE1xU3NSVzFBVHRXLTNyNmZQVldmckVBTDFmaDJ3aU5hX2NUSjBCT2t5cWhQY2E5MzBFVUR3NXF2cG1IdlQtM05VTndlakUzamFTaXdPRjVDdXJiclpnY0t0cFRhYWtRTlowclE1SzJfTWd1SGFrRGlYZ2xnNHVRaFpYR3c4eXJGU1k1cklYT3QwRlpEM0Fudw?oc=5",
           "source": "ANSA",
@@ -211,10 +205,16 @@
           "publishedAt": "2026-08-12T07:00:00.000Z"
         },
         {
-          "title": "Saipem, maxi-contratto offshore in Medio Oriente da 1,8 miliardi",
-          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObk9QcnV5WWdhT1RkZ0hoVmtreklfSGpibzlYS0lDdVFEVTVHTXpLdWF5bmtHREtwODhwdUNkZnJ0UGVGNm9oSk50cjgzQ2UtUG1Vd2lka3hFUkI1M05laWxZbnpTNlBzczhFb0dHRGstaTZ4RWJSMEhzVFlYQ2ZQd19SMDRhdW9Lb0wwZzRSd1RUQzNYX3dRWmhxeTBpSnZ0UUdGektuTHBjSG1GWDVLLQ?oc=5",
-          "source": "SoldiOnline.it",
-          "publishedAt": "2026-08-12T07:00:00.000Z"
+          "title": "Saipem, nuovi contratti in Costa d’Avorio e in Italia",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9ncUR1ZnNfYUVhQndCNVplUkVZcXBMQVVJdjU3bXhiV3NNd2phNXliLUJFbC14cHUzZUZXX3ZWS185Zll4bHlLMWotRmd1cjRqaEE3dDh5UmZWWnRpUG1YUjk5VEpQRmEzNWxQUHhSaG1IQTYzU1R3eXFLdkkzM3c?oc=5",
+          "source": "OilGas News",
+          "publishedAt": "2026-07-27T15:10:21.000Z"
+        },
+        {
+          "title": "Saipem conquista contratti per 800 milioni di euro da Eni ed Enilive",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOMnp1Q3pVZ0lYUlBoQ0lIWUhEN2pxQmtYOWl3UUFNbWk1YUNhX2pGMWhfSlhyYnZ1OUY4RDRyVkdTdkJTUkJmMGpvclVESkhNdEpWMWpQVXA4c0U0U2Zhd21rYzFYUTV4LTNKRTNnNEJqMUE0XzgzbTZONktkVkM1RGVkMC0zZWhZbGpCdmVuVQ?oc=5",
+          "source": "Yahoo Finanza",
+          "publishedAt": "2026-07-27T07:00:00.000Z"
         }
       ]
     },
@@ -313,15 +313,15 @@
           "publishedAt": "2026-09-30T05:33:21.000Z"
         },
         {
-          "title": "Mercati globali: tassi in salita tra inflazione energetica, vertice Trump-Xi e assemblea ONU",
-          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPaUVGVWNOTTAyNFhFcDFXbVVUZmZ1Y20wUk85akE4MmpTcHBwSkF0ZFJmWXRLYzFSQkg4cFZqTzZ1c0UzTDhsNjQwTV96eUVsVS1nRlR5NUtxWWxPaGpQekt3ZGRQRTQ2dHF0cnU0S2RsOG0xWklfaXZTWHpybWY4R0NmZDVVbnlGbURSY1FmQmZUclhKcTNqU2NLaFByU2ktQXR5Yllna3JiS2NZRWhWYUZJdnpjN2Jqb21ZdzhERlJQV1JRR0NGYWp2dzVXenJwX1JDNA?oc=5",
-          "source": "Websim",
-          "publishedAt": "2026-09-29T10:07:49.000Z"
-        },
-        {
           "title": "Petrolio, inflazione e dilemma tassi: cosa aspettarsi dai mercati",
           "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOT3pwMFVnaTdoSWhrcGlEUFdMY1JqTmVCd0kyck14S3lnWjQ1Ym1NYzlUQ19FTkxSZkgzSi1SdFlLY242YkEtOWV0UWhiTjZMc3REdklFSHJLaTF2QTM4R0prUnBieWZWX2pHRThFRl9hWWloMWVrSFZQUFBvWVM5VW12MTZYa054N1NVOEZvbDU3d3ZmVnpobnNiNjRVVGJ1RWRmaEVIR0hWdmZVRmJRMjZFSGJ2QQ?oc=5",
           "source": "Websim",
+          "publishedAt": "2026-09-15T07:00:00.000Z"
+        },
+        {
+          "title": "Intermonte – Mercati in equilibrio tra petrolio, inflazione e il dilemma dei tassi",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNUzBqemZEeVo3aEE1Nk9pZ3RGbHAycGJvZEpmbXhjRkFVdEl1M1RIQW1peFNXbmtIeF9lRlljeUNFbnliMktBT2o1cTJKc08xOElzTnVBOHJTejI3aHVIVzdTY1BJdXhpU2hreDgyQ1dCVTkzcFZpaWt5WGFCNUE2WmQxcFdUSDd4Xzd0bVRqNDBMWnNVUzJpTy1mNGxvemE1RDUtTmJnTFl6VHl5?oc=5",
+          "source": "Easy News Press Agency",
           "publishedAt": "2026-09-15T07:00:00.000Z"
         }
       ]
