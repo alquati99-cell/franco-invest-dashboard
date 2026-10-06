@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T13:14:39.466Z",
+  "generatedAt": "2026-10-06T19:30:10.200Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -13,15 +13,21 @@
           "publishedAt": "2026-10-05T03:44:04.000Z"
         },
         {
+          "title": "Eni prepara il dividendo straordinario, ecco come calcolare quanto spetterà a ogni azionista",
+          "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxObUdsbTdWSF94TEoxMVBvelRlOUQ1NzhvNEc5N2V0NzMyRFZUVzZ0R3pjYVVuX28xQkw1LUhXWGJ5dy1RZlZLV2FkdWhPVDd6VkJIR3R6YU90MmNGRWRhdF90M1h3X05Hb0g2ZXZaVmFHTjMwbE9HUllPTTBYcDZZX2JrdmVaWkFQbnZ0RS12eVd2azM3RHU5T2VWUEVZNXAxNkVqdDk3RWVQeTBVZGJzaGZrZzdLVk45cE01SlJHRkY0d3ptMHJWSEJMaWpwdnZObUpJS3lpQ0Y0OEpu?oc=5",
+          "source": "Milano Finanza",
+          "publishedAt": "2026-10-02T18:00:00.000Z"
+        },
+        {
           "title": "Eni S.p.A.: analisi fondamentale e valutazioni finanziarie ENI | IT0003132476",
           "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1QajBhamhPRHNQVGU2RURCVm1leG1Xa1dLVVpXZVJjcEVaZ2I5cTk0UHQ3dkZYWlNFZDJoa3dUbUV2ZE5vQzFOQUtrclFWT0h0dS1vY2RSejdCNlJtLUNMYWJnam9pT1NNLU9OdHRvV1dCcEd1TlBWOXJTNFI?oc=5",
-          "source": "it.marketscreener.com",
+          "source": "MarketScreener Italia",
           "publishedAt": "2026-10-02T07:00:00.000Z"
         },
         {
           "title": "ENI, acquistate 3.144.244 azioni proprie tra il 22 e il 25 settembre 2026",
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPNmdpaXZMaldOM3BsRXhjejV4Y1NackIzdWFaaFJMRldZVWVFUTRtUUZsR290OFBVRVhaZjFaazd5aWk3UEF6RW1Nd3lsLW9LVXlreVl0eExYX2VJSFZlTUVMQkNFQ1hZeWFwbVpMeElFNm5DUEpGcTVONHd0ZTRVWTZXbmNJX2ZiMEIwdXhuREROS3gwRzRuaFpBX0p4dw?oc=5",
-          "source": "soldionline.it",
+          "source": "SoldiOnline.it",
           "publishedAt": "2026-09-30T12:05:00.000Z"
         },
         {
@@ -47,12 +53,6 @@
           "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBqSjhFa3lFa3ZmbE9LSjdKcWQwb1UxQXdxRkhOR2d1UUFZdnRrb25WdUNXb3JldG5FNVhDNWdyMEFILXlRbU1IeHdDNzE0WkxkTDJZTzdMYk1ZZw?oc=5",
           "source": "Finanza Italiacom",
           "publishedAt": "2026-09-27T07:00:00.000Z"
-        },
-        {
-          "title": "Azioni Eni 23 Settembre: quotazione, dividendo e prezzo del petrolio",
-          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBURmVpTlJFdW9xNGwyUk93SEdXOUhpaEV4REVSUUFwSGhxREVIYmhiRWZXT2k1YXl5X2JLRW9pOG9xU2ZjdG1nZ0RLbTJKOVpjRzZuUV9Gbl9jMDhjN2tNdUVHTW9HTV9vS2xRNE5tOWYwZw?oc=5",
-          "source": "Finanza Italiacom",
-          "publishedAt": "2026-09-25T10:14:53.000Z"
         }
       ]
     },
@@ -81,7 +81,7 @@
         {
           "title": "NANO Nuclear Energy Inc.: azionisti, dirigenti e profilo società | NNE | US63010H1086",
           "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxON2doMGhobi13LTlQaU5KYlQxQXllLUctMTFBaUZWZTVwUjlXRFBQdEZWRUVwamJ6Wk1rbDZzVWFtalJRYURJVVNHYTI2NERQR2NXSE9BYU9Gemh5MTlzc0ZEdkNfUS1PU1dJdHg0cVpoNnRwOXJoLWxla2EzOW5wRDZkQTVnNGlmd0ZsajYxZGVBLWg2?oc=5",
-          "source": "it.marketscreener.com",
+          "source": "MarketScreener Italia",
           "publishedAt": "2026-10-02T07:00:00.000Z"
         },
         {
@@ -135,8 +135,14 @@
         {
           "title": "Notifica per pubblici proclami: ricorso Snam Rete Gas Spa c/ Corrao A.+ altri",
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcUVaY3Q0NjNQZmdQbWRvaE52N2FFb21xTy1maks2TEZMb25yNkxoWEQyZkctZzY2V24wbF8xY0pZdHdhUUFvTUE0Z2loUjZDR2RRQVRCdkhubzE1TF9YY0tua0NkUnpEZFVVdnpURGwydktvRUJUQVE0SlpNUFJNR2dnbXFBMjEyWFQwVHItajRiX1FaeDVXTDRmZS1wUQ?oc=5",
-          "source": "gnewsonline.it",
+          "source": "Quotidiano del Ministero della giustizia",
           "publishedAt": "2026-09-30T12:18:42.000Z"
+        },
+        {
+          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE56SDdsbTJvVWEySDBtQU5FOUw4TTZ6SGdIWWJ6enR2N0lQUzVZMDI1ak9SdGREdEl5TW9qbWFZTTZndGJxSUhDWWlLall2eXJGWW9pNU84ZEMzbjVrb2R1RXYxTUVvdw?oc=5",
+          "source": "Staffetta Quotidiana",
+          "publishedAt": "2026-09-29T18:06:03.000Z"
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
@@ -155,12 +161,6 @@
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1BQmhTUkJ0Y3owbFYtbEJvLWpnb3FrLW9kM3dhYW1vd2EtZ2Qwcmg3UHBFazlIdXg0MWRlZVJya3ZNN1lCLXZJM2pZREp3RkM3cDlzYll6dUtyUFNQZWZRQUEwaG1XUQ?oc=5",
           "source": "Staffetta Quotidiana",
           "publishedAt": "2026-07-30T07:00:00.000Z"
-        },
-        {
-          "title": "A giugno più gas in rete: ecco da dove arriva e perché non siamo a rischio",
-          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSXg0WlI3UGo5eG1aLXcweTVpSzdSUExuOUpzQkh4Y0U4Ynd5c05ydEYwVmRxWTlGd2dlWGNiMjR5WGVpVi1FcHhsOGwxODdjdi1nX2tuVzdQcHQ1R0JZWmtkQmt2Mzh2anF6U25pUS0tN0lVeHdzbHdWTVhRU2dMVmZlcVh4VHVlem5HX1h6LUNqaVV5LVU5OHIwb193WEhxU3JoWWF1Wl8?oc=5",
-          "source": "Il Sole 24 ORE",
-          "publishedAt": "2026-07-09T07:00:00.000Z"
         }
       ]
     },
@@ -177,7 +177,7 @@
         {
           "title": "Saipem si aggiudica un nuovo contratto offshore in Angola",
           "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQYXpZQUk0TWRqTmgzQXFyVWhuLVVlVl9xelVIbWtvY1RpOGxvSUZKeDU3VFgtQXcxWE9CXy1seGM5ak9udi1SNlRHOHZia0g4YTdWejBZeHM0SDNaYnNjcm91RWJwbzNBNkd2dVNOYUNPS2FTX3hzTllnRl83bTJoTzhCSDBuTEtKS0ZLdTVXZDFIc01IXzhjelliSkU0ZlFl?oc=5",
-          "source": "soldionline.it",
+          "source": "SoldiOnline.it",
           "publishedAt": "2026-09-14T07:00:00.000Z"
         },
         {
@@ -207,13 +207,13 @@
         {
           "title": "Saipem, contratto offshore in Medio Oriente da quasi 2 miliardi di dollari",
           "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVUpWOVNXSE9vZkVSdERWS1lpbmtfU2pMZERFc2ZGR2xJZFVrWjVuZzRNbFJKTFBtbmlrZC1JZjBZdHNKbWtJTGpvUE5GclJ5SFZOci1aVWMwZXg3bDhTQjhCTnF4ZGs0cVVseWpqcDBPT1JvYmxKVWYxS2NQR2JEdVljNlBYX3ZyMHh5b1E1S0FpMkZLTVc1SkZNVmxQdmpmVlNmb2VCX0RNcnJPb1daSS1wcGdaRXZhOEJIbWxpLVg?oc=5",
-          "source": "teleborsa.it",
+          "source": "Teleborsa",
           "publishedAt": "2026-08-12T07:00:00.000Z"
         },
         {
           "title": "Saipem, maxi-contratto offshore in Medio Oriente da 1,8 miliardi",
           "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObk9QcnV5WWdhT1RkZ0hoVmtreklfSGpibzlYS0lDdVFEVTVHTXpLdWF5bmtHREtwODhwdUNkZnJ0UGVGNm9oSk50cjgzQ2UtUG1Vd2lka3hFUkI1M05laWxZbnpTNlBzczhFb0dHRGstaTZ4RWJSMEhzVFlYQ2ZQd19SMDRhdW9Lb0wwZzRSd1RUQzNYX3dRWmhxeTBpSnZ0UUdGektuTHBjSG1GWDVLLQ?oc=5",
-          "source": "soldionline.it",
+          "source": "SoldiOnline.it",
           "publishedAt": "2026-08-12T07:00:00.000Z"
         }
       ]
@@ -231,7 +231,7 @@
         {
           "title": "Mps, Lovaglio apre a possibile intervento di Unicredit post assemblea: \"È un'opzione. Con il sì dei soci pressione competitiva su prezzo Opas Intesa\"",
           "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQUFNDSGxKUFA2b3FTNy00NGlnT29TT2Y4d3FBRmYzTzRuaEFaaXROYzgxR0NtQWVuLW1LYUZGZFJKWUs4QXN3NnlWRHF6bDBnUUxwSlJ6WG12eEYzYXVocWJqS2Q3blVBWW4tVXlwRGcwRjgxWjFGNlZiRHR6M1dCUktCaHFyMkdRSEZvMl9rUVdDaVpidHJCbk5PXzBXeWFpa3FsT3g4clk1MzVXTTdwTkNpMExuUjFjSEFYRWxaS0Q4S2ZvdEhDWnpacy04cUZENFJaUnNLY2tmajhucW1EV1dIZmY4NTdOTmRibmpYM1VhVDdrNkJtdzdfUjRaSXhrQXZF?oc=5",
-          "source": "firstonline.info",
+          "source": "FIRSTonline",
           "publishedAt": "2026-09-30T11:44:11.000Z"
         },
         {
@@ -256,7 +256,7 @@
           "title": "Risiko: UniCredit sulle filiali dismesse da Intesa e Agricole, BPM si allinea ai francesi, MPS cerca voti",
           "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPVDlobW5EN1dMU1ZzRGZHcHprMUtYWWlaQk1YQnI1RGMwX1djTFVCVVBRZEozOEZsdHNPalM0WDJxZmN3S1N6OUhTbFJMbUJRTzhlMWhJdXlMMXozc1N5Q1RQZGQ2bWp2eXdVaG1FUkZGOHdhYXR3cGozVkhObWdnbGJsQ29EbnFMSXBscDVIMG92SVdVdzJqYmtoejU3NDc1bU5nTjVZOXZzZ2Z5QXVUeHNtRG5ncVpLdGkwQktYc1d1R2ltSHdYczdrRUFlS0tMM2JWN09fYXlxbFVkeHE0ZlhMOEFnd0JQelE?oc=5",
           "source": "PLTV.it",
-          "publishedAt": "2026-09-28T09:21:30.000Z"
+          "publishedAt": "2026-09-28T07:00:00.000Z"
         },
         {
           "title": "Banco BPM - Rumors su unoperazione congiunta Crédit Agricole-UniCredit",
@@ -276,6 +276,12 @@
       "id": "geopolitics",
       "label": "Geopolitica & Macro",
       "items": [
+        {
+          "title": "Euro e spread in allargamento dopo le recenti tensioni politiche",
+          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNMW8yaHNnVmN4T2RNOUw2UEc4WVEzR0VCMjhGdG9hYzd1Y3E3YWNuUXhtemxSNTdPcjg5Z2tpZUx1am1weTV1X3d6NFJ2bXNSTnY4VXV2S2lQTjFsZHJTQkZIZGI0ZGRsd3paM0E3OEMxS19ESF9NTThBSjdkS2tqM0RHZ0JNMDZRNFUtQkVzeFJBTlp2dENBMHhoelhZNHRGaTdHY3FyRG1MMkpnNFBPbm9wS1l6TmJ4dS1oN2pOcDBDNjV0bU1nTGFzRTNqRWRRelE1Sw?oc=5",
+          "source": "Websim",
+          "publishedAt": "2026-10-05T14:47:38.000Z"
+        },
         {
           "title": "Perché i titoli di Stato italiani sono ok",
           "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNMVRGMWlNMDd4TzlzYURKSTdrZHVoM0Fzc1NGazhybkp5cUlPSEtJRGozVGdhWnhJSDdyRU1Oc2NwbmFhV01kZWNzMlowZUl2bnc0czRGTmgyOTZkYmtmbi1IVm9lVGlUMW5tZUlVTDNaMWZKTzUxVkxEeDFuUlN1WQ?oc=5",
@@ -307,22 +313,16 @@
           "publishedAt": "2026-09-30T05:33:21.000Z"
         },
         {
+          "title": "Mercati globali: tassi in salita tra inflazione energetica, vertice Trump-Xi e assemblea ONU",
+          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPaUVGVWNOTTAyNFhFcDFXbVVUZmZ1Y20wUk85akE4MmpTcHBwSkF0ZFJmWXRLYzFSQkg4cFZqTzZ1c0UzTDhsNjQwTV96eUVsVS1nRlR5NUtxWWxPaGpQekt3ZGRQRTQ2dHF0cnU0S2RsOG0xWklfaXZTWHpybWY4R0NmZDVVbnlGbURSY1FmQmZUclhKcTNqU2NLaFByU2ktQXR5Yllna3JiS2NZRWhWYUZJdnpjN2Jqb21ZdzhERlJQV1JRR0NGYWp2dzVXenJwX1JDNA?oc=5",
+          "source": "Websim",
+          "publishedAt": "2026-09-29T10:07:49.000Z"
+        },
+        {
           "title": "Petrolio, inflazione e dilemma tassi: cosa aspettarsi dai mercati",
           "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOT3pwMFVnaTdoSWhrcGlEUFdMY1JqTmVCd0kyck14S3lnWjQ1Ym1NYzlUQ19FTkxSZkgzSi1SdFlLY242YkEtOWV0UWhiTjZMc3REdklFSHJLaTF2QTM4R0prUnBieWZWX2pHRThFRl9hWWloMWVrSFZQUFBvWVM5VW12MTZYa054N1NVOEZvbDU3d3ZmVnpobnNiNjRVVGJ1RWRmaEVIR0hWdmZVRmJRMjZFSGJ2QQ?oc=5",
           "source": "Websim",
           "publishedAt": "2026-09-15T07:00:00.000Z"
-        },
-        {
-          "title": "Intermonte – Mercati in equilibrio tra petrolio, inflazione e il dilemma dei tassi",
-          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNUzBqemZEeVo3aEE1Nk9pZ3RGbHAycGJvZEpmbXhjRkFVdEl1M1RIQW1peFNXbmtIeF9lRlljeUNFbnliMktBT2o1cTJKc08xOElzTnVBOHJTejI3aHVIVzdTY1BJdXhpU2hreDgyQ1dCVTkzcFZpaWt5WGFCNUE2WmQxcFdUSDd4Xzd0bVRqNDBMWnNVUzJpTy1mNGxvemE1RDUtTmJnTFl6VHl5?oc=5",
-          "source": "Easy News Press Agency",
-          "publishedAt": "2026-09-15T07:00:00.000Z"
-        },
-        {
-          "title": "Borse, settimana in rosso per l’Europa stretta tra petrolio e tassi. Milano -0,3%. WS +0,98%",
-          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPQnZJNFNxd3hjZ1hBWU9Bd3pjX01oX1lvTFVBT1Jvc25VR0FSTmlrTkgtZ3d3cTFMNTVvWE9XNzRoN3UzdEV0UjdkVzN1bjlabVNfNTR2WHRlNG52TnZxV1JLS0wzd2Y4WHJvQ3NMTFIyU3JJTzE3VnJSSVpiUS1Ed3lRREw2X1ZX?oc=5",
-          "source": "Il Sole 24 ORE",
-          "publishedAt": "2026-09-10T07:00:00.000Z"
         }
       ]
     }
