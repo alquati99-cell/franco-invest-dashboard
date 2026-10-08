@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T19:57:27.839Z",
+  "generatedAt": "2026-10-08T00:09:50.686Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -61,12 +61,6 @@
       "label": "ENEL",
       "items": [
         {
-          "title": "Azioni Enel 7 ottobre 2026: quotazione e target price",
-          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE8za3h1UHZnSmEtaUlxS2o3QTVoN05GYWhfajIyZG4zY2V4RF9ZUThaZ213OFpOV3RWUUxjcjRPNk95eW5DcUprdTM3T1dXS0NjcmdMOGNmY29YMTc4cEJiWHBWcjQ4OG5BTFFOY1lGNA?oc=5",
-          "source": "Finanza Italiacom",
-          "publishedAt": "2026-10-07T04:23:00.000Z"
-        },
-        {
           "title": "Test del supporto per il titolo Enel: obiettivi di prezzo da monitorare",
           "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQMDJjcXFDNDZBYzQ0Skw2UmN4dXNoVldFTXd4ZkRLYktMejR4OS10aklTY1RWaFAtcGMzZ1RuaFZneW4wN0phYTBGeTdITFdnb2V6WE9wRGxtdHhkaFNpSVRzbE1McDM5bDJBR1dWT3JRMkdyYl9jMXEtbnZUWW5MeVZ4Y0hmQ0ZXYUs0OWhsZjU?oc=5",
           "source": "Traders Union",
@@ -85,10 +79,22 @@
           "publishedAt": "2026-10-02T19:11:00.000Z"
         },
         {
+          "title": "NANO Nuclear Energy Inc.: azionisti, dirigenti e profilo società | NNE | US63010H1086",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxON2doMGhobi13LTlQaU5KYlQxQXllLUctMTFBaUZWZTVwUjlXRFBQdEZWRUVwamJ6Wk1rbDZzVWFtalJRYURJVVNHYTI2NERQR2NXSE9BYU9Gemh5MTlzc0ZEdkNfUS1PU1dJdHg0cVpoNnRwOXJoLWxla2EzOW5wRDZkQTVnNGlmd0ZsajYxZGVBLWg2?oc=5",
+          "source": "MarketScreener Italia",
+          "publishedAt": "2026-10-02T07:00:00.000Z"
+        },
+        {
           "title": "Migliori azioni di energia rinnovabile: quali comprare nel 2026",
           "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0zeEdsQUFfTUxncWlDY2tOLVVTcExqSE9CQVZnaHZKOWJ4TFVfZVFqLWNZTmZwR1FTZWk0VkNzdWZoeXUweEZMZ2RyRmc1eks2U2ROMV9Raml6MGprcDJYbmZlcHNEX1hq?oc=5",
           "source": "Rankia IT",
           "publishedAt": "2026-10-02T06:44:07.000Z"
+        },
+        {
+          "title": "Cosa c'è dietro l'ultimo rialzo del 3,4% delle azioni Talen Energy?",
+          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPbS0zaEZCTXNWaHNVNkt3bnBHUFIxUjFVRlpVZkdKRHR1Z0JqLTFrdXdOTG1PMGRKcmgzMkg3NF8xVXBFZC1aT0lIY2c1N092Ym9BY0pqTkZfUWxqS2JtM0w5RWZzZmFPNDNNTmF0U2U4eDBkazFEcmpHdDJIOXlUeTNMUHRla2RzV2JtYzVoQWpNY1B5MVE?oc=5",
+          "source": "Traders Union",
+          "publishedAt": "2026-10-01T17:19:42.000Z"
         },
         {
           "title": "Italian Energy Summit, Il Sole 24 Ore indica energia come sfida trasversale per l'Italia",
@@ -101,12 +107,6 @@
           "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9NTW5KUV92ZUdyREhxUVE1MFZoaVR3UHlQS0dRVWV0eVFhVk5oUlF2NXpTc2JlUEpRRW9fU2RiUzFGLTIwVGp0eUdVeWVzTWNtQ3M5MWJMZDU2UVN1VGM3ZlhJSE5CUUFGeWl4WjRQazV5Z1VleGF6MS1jS1diZw?oc=5",
           "source": "Traders Union",
           "publishedAt": "2026-09-29T07:49:23.000Z"
-        },
-        {
-          "title": "Le utility italiane chiudono in calo, FTSE Italia Utilities perde l'1,73%",
-          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMTVkUkhYWTRUVVJBVVNKYmNZamZTVHJsMkw1TEdyWjFZZzBoejlYcFV3TDl5bUxhdEZCREJjTjh4dzVKTjJTckREOEROOTVqZzRHTXc1V044RmRSb2NSS0FfblBKVUVMT2Y2aGVUN3c0amdBRVFncmNZLXd0eWk0TWVpRGQ2VEZzM3hPdWcxUWloNmJ6d1dv?oc=5",
-          "source": "Traders Union",
-          "publishedAt": "2026-09-28T18:00:52.000Z"
         }
       ]
     },
@@ -268,7 +268,7 @@
           "title": "Risiko: UniCredit sulle filiali dismesse da Intesa e Agricole, BPM si allinea ai francesi, MPS cerca voti",
           "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPVDlobW5EN1dMU1ZzRGZHcHprMUtYWWlaQk1YQnI1RGMwX1djTFVCVVBRZEozOEZsdHNPalM0WDJxZmN3S1N6OUhTbFJMbUJRTzhlMWhJdXlMMXozc1N5Q1RQZGQ2bWp2eXdVaG1FUkZGOHdhYXR3cGozVkhObWdnbGJsQ29EbnFMSXBscDVIMG92SVdVdzJqYmtoejU3NDc1bU5nTjVZOXZzZ2Z5QXVUeHNtRG5ncVpLdGkwQktYc1d1R2ltSHdYczdrRUFlS0tMM2JWN09fYXlxbFVkeHE0ZlhMOEFnd0JQelE?oc=5",
           "source": "PLTV.it",
-          "publishedAt": "2026-09-28T07:00:00.000Z"
+          "publishedAt": "2026-09-28T09:21:42.000Z"
         }
       ]
     },
