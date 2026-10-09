@@ -1,11 +1,17 @@
 {
-  "generatedAt": "2026-10-09T00:18:56.154Z",
+  "generatedAt": "2026-10-09T13:10:10.699Z",
   "source": "Google News RSS",
   "topics": [
     {
       "id": "eni",
       "label": "ENI",
       "items": [
+        {
+          "title": "Eni - Spazio per una politica di remunerazione più generosa",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNZnpXSEoydk1BSnB1MkZhb1p6UnB3cUdOdVlZV1k4UlRIa1NjdlZzYlJONFJHbzJrTDdUM2xtUVdPVzNBVFZfeEhpNVFRMTFoTFRWMEVNOW1lYzU4VUhUSllCMDZ0bHluNWY3dnZGNXMzamtDcFo5SUpyVDEzR3hoSWk0bUJvOG5kMlpiZHc0RFVweWhCQlRKTmFjN0dXdUV3T1AyNkN1STZBMHVGX2g5NnhXUGd4UQ?oc=5",
+          "source": "Websim",
+          "publishedAt": "2026-10-09T06:00:00.000Z"
+        },
         {
           "title": "Azioni Eni +55% nel 2026: ecco il nuovo target price",
           "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOVU5URElkQzNvZzZNQVh0RWNnS0t0RVZvdm94UG5EYU5VT0U4S1R2S0pmQVQ4akxoZVhXallqMDFabnh0SjBhbnhYM3ZGdzl2WWJwazI2YXR4akdyOE1RTE5QUURha0tvb2pLX2o0enlFWXZvOWJjeWllenctMU1NdA?oc=5",
@@ -47,12 +53,6 @@
           "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1QajBhamhPRHNQVGU2RURCVm1leG1Xa1dLVVpXZVJjcEVaZ2I5cTk0UHQ3dkZYWlNFZDJoa3dUbUV2ZE5vQzFOQUtrclFWT0h0dS1vY2RSejdCNlJtLUNMYWJnam9pT1NNLU9OdHRvV1dCcEd1TlBWOXJTNFI?oc=5",
           "source": "MarketScreener Italia",
           "publishedAt": "2026-10-02T07:00:00.000Z"
-        },
-        {
-          "title": "ENI, acquistate 3.144.244 azioni proprie tra il 22 e il 25 settembre 2026",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPNmdpaXZMaldOM3BsRXhjejV4Y1NackIzdWFaaFJMRldZVWVFUTRtUUZsR290OFBVRVhaZjFaazd5aWk3UEF6RW1Nd3lsLW9LVXlreVl0eExYX2VJSFZlTUVMQkNFQ1hZeWFwbVpMeElFNm5DUEpGcTVONHd0ZTRVWTZXbmNJX2ZiMEIwdXhuREROS3gwRzRuaFpBX0p4dw?oc=5",
-          "source": "SoldiOnline.it",
-          "publishedAt": "2026-09-30T12:05:00.000Z"
         }
       ]
     },
@@ -146,6 +146,12 @@
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE41U3dIdmhna2VYM3BDMm5VVFpETFBFTElvMHNUbUJNOWJMLXNRLUJtMmg2MnVHOUx0R2FWaU5OWWplTW1XQ2VvUkE5bkxCSHFXR2ZDWDBPVkRGN2o5RFNGSzREWHpHdw?oc=5",
+          "source": "Staffetta Quotidiana",
+          "publishedAt": "2026-09-02T07:00:00.000Z"
+        },
+        {
+          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1IdVhJNmxXYnM4VDJhNm83UXJqeXk1WjBSX1FXd0cySm9DOERwbnFtR252aHo1Z3VtRFZHMUxtdW11REgwVXZXUTNtN0ZBMlF2Z1lNdTFsSlllQWszV2dxc015amRwdw?oc=5",
           "source": "Staffetta Quotidiana",
           "publishedAt": "2026-08-03T07:00:00.000Z"
@@ -155,12 +161,6 @@
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBvdVZxeVZ0TENub2RpR2RiYmxiQzNpZUVMdXg1cDNobXRXXzg2RV9JRDR4aVllamJmczcxZTFndlJFa3otaWlTMV9CdGlpc2I5MXRQUlF5WnU2T2FNT0g0S193SEJTdw?oc=5",
           "source": "Staffetta Quotidiana",
           "publishedAt": "2026-07-31T09:20:24.000Z"
-        },
-        {
-          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1BQmhTUkJ0Y3owbFYtbEJvLWpnb3FrLW9kM3dhYW1vd2EtZ2Qwcmg3UHBFazlIdXg0MWRlZVJya3ZNN1lCLXZJM2pZREp3RkM3cDlzYll6dUtyUFNQZWZRQUEwaG1XUQ?oc=5",
-          "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-07-30T07:00:00.000Z"
         }
       ]
     },
@@ -238,7 +238,7 @@
           "title": "Mps, Lovaglio resiste. L’opzione Unicredit",
           "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSkNhVmc0TTdIODN2MF9GMmktVzNhTDRiSk5VczU5amhRU2JOOGExRWpFSmFld1EwVE5fTDZSSFhGZzZ5bkt0aGV3OXl1ZUJGSWlCakNoM3NrVHNsZXljbTBhX3hSb0UzM2xVWnEtcWk5Q01Ic1NST1pmc1Uyd3Z5VV9Xakg?oc=5",
           "source": "il Giornale",
-          "publishedAt": "2026-10-01T05:38:49.000Z"
+          "publishedAt": "2026-10-01T07:00:00.000Z"
         },
         {
           "title": "Mps-Generali, Lovaglio apre a un intervento di Unicredit: È un’opzione. E confida nell’appoggio di Delfin e Caltagirone",
@@ -298,19 +298,13 @@
           "title": "Btp, come comportarsi con i rendimenti in rialzo?",
           "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxObmt2clN3XzhPcTZVTEZQOWhldURtNUVialRHQ1VFM0ppekR2aW5lSE5RdXh3MzkzMEVkcUY1NEhVSmRiR2N0MU1ScUtQbEIzNFhtSW83NE85NC1kamhqRWI4bGhCdFhkYm10WFRabk5rYThaekJLQjVRdjlsYzJWTGp4N1hoLXZSZ25OY0kzOWtDajVQ?oc=5",
           "source": "SoldiOnline.it",
-          "publishedAt": "2026-10-01T11:16:00.000Z"
-        },
-        {
-          "title": "Spread torna a salire con tensioni Iran. Generali AM resta long su Btp",
-          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOakQ5MVhpWG54RU5pRElsbmFudjh0ZmpucWF4NmpDWWVyTE1fTVB0TndLdXVZd2RIRVdsSkZkRXpNdjUtanNwUzBxSUVfX2NYOFR5cUF5WEJ2S3NZRnBXRFM1a0IzQjQyTnQyMlNqT19uOU8yZllpTkZBNVVkNl9pUE10VFVFZ1JVcWdiYmFQUlhYeHZpd1RWUldlVnpLdl94NXlYUHRvUl9qYjJhNkxKNFVVclQ?oc=5",
-          "source": "Borse.it",
-          "publishedAt": "2026-10-01T10:49:03.000Z"
+          "publishedAt": "2026-10-01T07:00:00.000Z"
         },
         {
           "title": "Borse oggi in diretta | Piazza Affari chiude in rosso: -2,2% e lo spread sale ai 118 punti, ai massimi da ottobre 2023. Male i titoli delle banche",
           "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNSEszcGYxTlZ3NU5uZlJXWUI0TzJSZlp2VmpiV240ZG9JaG5VSlNjYjhPOUZnNEU4UG9nRkxXU1BRNDBwd01pN3VxTVNMWUhpaUZzQ3ltU2w4ZHVHa1g5NjJoVFZtWG5aMV9zSzhFTmJtSlRmbm02c3h1NDh4eThBN2laZ2djRWZxdE5Vd3VLUTcwNnRkWlQ2RW16eG1UejZoTTJXRGk0OFJwbDB3SHpXWThHNFVuNlRIbVBXWi1WMkl6OE9ZR1VTT2dBRG9QM2tsNjVETDZUOFhmemIxWlRndFRLZ2RNX1JrOTJSbjRQQVJrUQ?oc=5",
           "source": "Milano Finanza",
-          "publishedAt": "2026-10-01T06:20:00.000Z"
+          "publishedAt": "2026-10-01T07:00:00.000Z"
         },
         {
           "title": "Intermonte – Mercati in equilibrio tra petrolio, inflazione e il dilemma dei tassi",
@@ -323,6 +317,12 @@
           "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPVEJzT01sRzJjdWFnUWtQQUJBTXZTcEJJUEhtWWNQdjdWZXo2VXBnWkZuVEZNNUZrdWM0VGlUQ09UaGstSWkxRTA0WjFOd0h1S1BlUXYxbm9MT3hoeHc3Ylh5Vy1lMmN5UEhtX2ZWaEhwRFpDM0x4NHFQdi1YRjhzM282Q0xfRm1heUlzQmFtaHRodVJVSXA0Q1FHUjZiR2QyYUNIZ3RueG1uc2ZPSGNpRHZ6NTdJb0oxcnc?oc=5",
           "source": "SoldiOnline.it",
           "publishedAt": "2026-09-07T07:00:00.000Z"
+        },
+        {
+          "title": "Dove investire oggi: miglior investimento attuale | Settembre 2026",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNSVY4UkxDajM5TFNBOFlFazJyVy1xM2l5M0NaZjRrS1FGRkZtZHJYWEpCc2JDcXlHZzVIbmVFNC1nN24zV3hFNWJMTHJsVU5tTTVlNWo5a1BlUkRqeEVESEpXTnFXN2hZeWE2YVpPd2hiRFI5ZC0xc0ZDQW1pN01qY1RkQ2ZhSmpRekFFM09rYnFCY2V5ZGlXLUdBdkNSV05LcWtZWEdERmt0QzA?oc=5",
+          "source": "Investing.com - Quotazioni, Borsa, Economia e Finanza",
+          "publishedAt": "2026-09-03T07:00:00.000Z"
         }
       ]
     }
