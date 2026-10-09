@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T19:54:29.860Z",
+  "generatedAt": "2026-10-09T00:18:56.154Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -73,12 +73,6 @@
           "publishedAt": "2026-10-05T18:13:32.000Z"
         },
         {
-          "title": "Cosa c'è dietro l'ultimo rialzo del 4,6% del titolo Constellation Energy?",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPSWdQTmlBc2VYR0xDdGJkaUhQdWowMXdQTHhLNWs3S0U3RmFrVGZsdXB0RVNYOFdMdkNFZmdqLWtlNTJCVndZUzhuWkpPSnF4R09CMTIyeWtSSndxT2puaDdIUVJtVmNjMHZIc0RLWjFad0czd3k2YVlGcWs4Wi1hcHNGZmF0cHRrcjlZVG4tcHRQY2QtM19ZbWYwUUZCTXdi?oc=5",
-          "source": "Traders Union",
-          "publishedAt": "2026-10-05T15:56:37.000Z"
-        },
-        {
           "title": "Affari da old economy: da Enel a Leonardo e Prysmian. Ecco quali azioni dell’economia reale hanno maggiori potenzialità di rialzo in borsa",
           "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOR2JUV0FCS2pjZ2lSX1I4eWJfTWQ5cGVzNElfVzB1S3lpOU54dWFOTGc3Vk5ib3NvN1ZJN2lpS191TVExMjJyMjJIX3FfYWh4eUw0cDFnT2ZhQWRTYS1wMlVPWEVocUxzTUpsSlBWX2o3QXpxSTZacXdMU2JONnUxbkViS1ktRDBhcVcxTHJZazlLenBIcTdjaFFjX19kUmtNOHNNblRaTHl0Y0Y4cHpmWWtMd2ZyNnlWd3Z6SjJuTmd3YlJFWi1ST0I1UjBGNWVEZzRXWUFkOTVjVXpySE5HZ3FRUEtxRjVvZ1MyZHd3?oc=5",
           "source": "Milano Finanza",
@@ -107,6 +101,12 @@
           "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQbkFhUmVBNmM5MWlLNGg4aG9XSEZDdnlaMVhaVWtDcl8ycVQyYjkzRjVUcUxndDBHM1hjVzQ5ZkxGMjd1QXRNYU9mZ0JTS1gzTHpvY2c2VnYxN0l5T0hXOWRzTmo3RTBsdzZJMkpwWWpCRkp6TjFxVS00NVFrcFlaZ0ZlUXI4d1VqdVN2cU5SVWVvTWhoaDZ4YU5SdzNfTExJZTBGag?oc=5",
           "source": "Traders Union",
           "publishedAt": "2026-09-29T08:26:32.000Z"
+        },
+        {
+          "title": "Crollano le azioni Shein mentre gli utili deludono",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9NTW5KUV92ZUdyREhxUVE1MFZoaVR3UHlQS0dRVWV0eVFhVk5oUlF2NXpTc2JlUEpRRW9fU2RiUzFGLTIwVGp0eUdVeWVzTWNtQ3M5MWJMZDU2UVN1VGM3ZlhJSE5CUUFGeWl4WjRQazV5Z1VleGF6MS1jS1diZw?oc=5",
+          "source": "Traders Union",
+          "publishedAt": "2026-09-29T07:49:23.000Z"
         }
       ]
     },
@@ -244,7 +244,7 @@
           "title": "Mps-Generali, Lovaglio apre a un intervento di Unicredit: È un’opzione. E confida nell’appoggio di Delfin e Caltagirone",
           "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOVTVDaFU0VEJHaFdjUHpRRTZyNVRaUGZQQnk5SFd3S3h3UXNCdlh0YzZ6WC1pT3R6VjQ5aVY0dXBsVWY1aTlwUXNFazVDbWRnMW1oOUhxRU9kU2hydHBGd29iNWpOSThreTcteGRpY1YtaDhtdG9kQ180bGF5YUY3RTBhWUhuZ25EVmJPTWRBNFFDalUxTnl2YmV1cnRMNnhlMDZEZ3IxUnhMNEEwTU1FbExpVFRLS3ZiQmpaOVhia1MyMzhya2hyWWRVanQ3N3lxS1VGQi05b1BsXzdoR3RxNENpSE5pQWoySVE?oc=5",
           "source": "Milano Finanza",
-          "publishedAt": "2026-09-30T08:59:00.000Z"
+          "publishedAt": "2026-09-30T07:00:00.000Z"
         },
         {
           "title": "Mps, Lovaglio apre a possibile intervento di Unicredit post assemblea: \"È un'opzione. Con il sì dei soci pressione competitiva su prezzo Opas Intesa\"",
@@ -277,10 +277,22 @@
       "label": "Geopolitica & Macro",
       "items": [
         {
+          "title": "Spread BTP-Bund oggi: BTP al 4,7%, cosa succede",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBseS1DaTNSUWxTYmpnMFR0OENjN3hxaWtTendRcVdiRmNiQldwRXhKNFpDbkNvSFN2bi1RNDB4cXJNblNwTkdMdDQ4VmpLMEJk?oc=5",
+          "source": "Rankia IT",
+          "publishedAt": "2026-10-08T18:56:01.000Z"
+        },
+        {
           "title": "Perché i titoli di Stato italiani sono ok",
           "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNMVRGMWlNMDd4TzlzYURKSTdrZHVoM0Fzc1NGazhybkp5cUlPSEtJRGozVGdhWnhJSDdyRU1Oc2NwbmFhV01kZWNzMlowZUl2bnc0czRGTmgyOTZkYmtmbi1IVm9lVGlUMW5tZUlVTDNaMWZKTzUxVkxEeDFuUlN1WQ?oc=5",
           "source": "Startmag",
           "publishedAt": "2026-10-03T06:00:00.000Z"
+        },
+        {
+          "title": "Borse, operatori si aspettano una fase di stabilità ma tornano i timori per lo Spread",
+          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPNXBFdGpVUnpiMVRnN0g3T1liMDFBLWRibEt0QUdJai1nMWYzMnZSVHJ2eEx3WHNySnVyVE1ZajlWeGNjRzdoc1U2OEIxcGxXa2lKUHhSLXZqdjZlWDAzWGJELUxUbFhvSTZ2TUJjMXJlT0xqN1otN3daTUJLdFhib3BZelhta09aWEYxR1FTN2N5UUNhUFFkNTZpb21VdGJmS2lDVWE1ZU5TWENtc08wNFNB?oc=5",
+          "source": "Il Sole 24 ORE",
+          "publishedAt": "2026-10-02T13:37:56.000Z"
         },
         {
           "title": "Btp, come comportarsi con i rendimenti in rialzo?",
@@ -307,22 +319,10 @@
           "publishedAt": "2026-09-15T07:00:00.000Z"
         },
         {
-          "title": "Borse, settimana in rosso per l’Europa stretta tra petrolio e tassi. Milano -0,3%. WS +0,98%",
-          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPQnZJNFNxd3hjZ1hBWU9Bd3pjX01oX1lvTFVBT1Jvc25VR0FSTmlrTkgtZ3d3cTFMNTVvWE9XNzRoN3UzdEV0UjdkVzN1bjlabVNfNTR2WHRlNG52TnZxV1JLS0wzd2Y4WHJvQ3NMTFIyU3JJTzE3VnJSSVpiUS1Ed3lRREw2X1ZX?oc=5",
-          "source": "Il Sole 24 ORE",
-          "publishedAt": "2026-09-10T07:00:00.000Z"
-        },
-        {
           "title": "Spread Btp-Bund fermo a 81, ma i rendimenti salgono: cosa succede",
           "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPVEJzT01sRzJjdWFnUWtQQUJBTXZTcEJJUEhtWWNQdjdWZXo2VXBnWkZuVEZNNUZrdWM0VGlUQ09UaGstSWkxRTA0WjFOd0h1S1BlUXYxbm9MT3hoeHc3Ylh5Vy1lMmN5UEhtX2ZWaEhwRFpDM0x4NHFQdi1YRjhzM282Q0xfRm1heUlzQmFtaHRodVJVSXA0Q1FHUjZiR2QyYUNIZ3RueG1uc2ZPSGNpRHZ6NTdJb0oxcnc?oc=5",
           "source": "SoldiOnline.it",
           "publishedAt": "2026-09-07T07:00:00.000Z"
-        },
-        {
-          "title": "Dove investire oggi: miglior investimento attuale | Settembre 2026",
-          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNSVY4UkxDajM5TFNBOFlFazJyVy1xM2l5M0NaZjRrS1FGRkZtZHJYWEpCc2JDcXlHZzVIbmVFNC1nN24zV3hFNWJMTHJsVU5tTTVlNWo5a1BlUkRqeEVESEpXTnFXN2hZeWE2YVpPd2hiRFI5ZC0xc0ZDQW1pN01qY1RkQ2ZhSmpRekFFM09rYnFCY2V5ZGlXLUdBdkNSV05LcWtZWEdERmt0QzA?oc=5",
-          "source": "Investing.com - Quotazioni, Borsa, Economia e Finanza",
-          "publishedAt": "2026-09-03T07:00:00.000Z"
         }
       ]
     }
