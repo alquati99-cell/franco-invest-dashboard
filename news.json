@@ -1,11 +1,17 @@
 {
-  "generatedAt": "2026-10-12T15:14:39.865Z",
+  "generatedAt": "2026-10-12T22:55:21.430Z",
   "source": "Google News RSS",
   "topics": [
     {
       "id": "eni",
       "label": "ENI",
       "items": [
+        {
+          "title": "Azioni Eni 12 ottobre 2026: accordo Trump-Putin e cedola",
+          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOWXk3alNWWGhJemREVm1EdlFhTmJPUk93WDRnblQyUXZ2NFNRVGUwbVN6XzB0SWlrSVN6azNUUVBudE83bU9DZjcydnJNRDVkcUZPVkpZbWxqZnY1SUlfUXdOQ1o0MUQwZ0NNWGptQV9iLTBhWmRtaEVNREp1M3NoblNwZDl4R0ZBOUE?oc=5",
+          "source": "Finanza Italiacom",
+          "publishedAt": "2026-10-12T15:14:17.000Z"
+        },
         {
           "title": "Eni, Equita alza il target, la nuova soglia indica più upside",
           "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQZ05IODlaN2t6UWZHUHRxWnVJUGFSV3MyWFpJdXNRNkxGTnRQWFFqcVBjSEJsaVl2d1V5enZCYTFVd2FJZ3NweDdxSl96aUg0RVZnbWl0b2lIVWNOWTZyZHFYZUw1cHlIYUxhRXBZV0hzanVYZnowaGFienpwZUQ1MkFWOHA2YlJ6T1lrWUp6WUFNUlBFRTZaalVwMTZ3S3VFRHNjbmp3LWZFLTIwY1NwaWRxUENTYldqelE?oc=5",
@@ -47,12 +53,6 @@
           "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE96UWtBeFlCSXlRb3RUenE2R2RUZDUzUXZiaXJvajdnYkhXek0yQUF1dmNqVUJwbzlyd2VCYXZDOXktSVNXS2FTbUwwM1hpVGtmNEI1X1ZhNGV3Ym4xTjFDRldheEVtLW9CMTl6UmFn?oc=5",
           "source": "Finanza Italiacom",
           "publishedAt": "2026-10-05T03:44:04.000Z"
-        },
-        {
-          "title": "ENI, acquistate 3.144.244 azioni proprie tra il 22 e il 25 settembre 2026",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPNmdpaXZMaldOM3BsRXhjejV4Y1NackIzdWFaaFJMRldZVWVFUTRtUUZsR290OFBVRVhaZjFaazd5aWk3UEF6RW1Nd3lsLW9LVXlreVl0eExYX2VJSFZlTUVMQkNFQ1hZeWFwbVpMeElFNm5DUEpGcTVONHd0ZTRVWTZXbmNJX2ZiMEIwdXhuREROS3gwRzRuaFpBX0p4dw?oc=5",
-          "source": "SoldiOnline.it",
-          "publishedAt": "2026-09-30T12:05:00.000Z"
         }
       ]
     },
@@ -73,8 +73,8 @@
           "publishedAt": "2026-10-09T18:00:49.000Z"
         },
         {
-          "title": "Enel S.p.A.: prezzo obiettivo e consensus degli analisti| ENEL | IT0003128367",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOalRWMU0yWVZUaHo4cG9KS0NzcFVEUGlRS1ZHZzlYVzFJLUZQUDJHcGNqVGdyc2JwWFBRYVoxSWVOa2o5emhVZktCSkxMZ3luNklHd2Fsam5RX2lkT3RQd01Pbzl1TmNGUi1yNTgwU05QblVBZXI5QWhIckFzcG4wMw?oc=5",
+          "title": "Enel S.p.A.: analisi fondamentale e valutazioni finanziarie ENEL | IT0003128367",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE51em5xV2dlMF80SDlocE0xZC1xN2cxZ0Yza1hlSXlmNmRDNUV5YVc5VW50REtsWWZuY2JPa1VRZWhNNmVBQkh6YzhTTC1nVkNhcjRtQVB1V0tQNVZRNGJSYlVlaGhJaXFWV24yQU1sSkJDcE5hNXAwSHdPQzM?oc=5",
           "source": "MarketScreener Italia",
           "publishedAt": "2026-10-09T07:00:00.000Z"
         },
@@ -83,12 +83,6 @@
           "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0zeEdsQUFfTUxncWlDY2tOLVVTcExqSE9CQVZnaHZKOWJ4TFVfZVFqLWNZTmZwR1FTZWk0VkNzdWZoeXUweEZMZ2RyRmc1eks2U2ROMV9Raml6MGprcDJYbmZlcHNEX1hq?oc=5",
           "source": "Rankia IT",
           "publishedAt": "2026-10-08T14:50:08.000Z"
-        },
-        {
-          "title": "UBS prevede un’ulteriore crescita degli utili europei nonostante tassi ed energia più elevati",
-          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSFl5ejdQSjNmT3o5TzFtQklZQ3lUUmJpSnVRNFh0SXBRNmNjR2dHQ3NsTUZzX0N5SWh4Z2I1NlIyRXFGZkhNSy1maXNBLXp1Qm1paFFsZDZ1LWh5eV92TExXRHNjajB3SUdqTW5mMXE2eVMwNTlYOFVfdlRKUXdsaGI0cGhLUnJqNUFteHRR?oc=5",
-          "source": "Yahoo Finanza",
-          "publishedAt": "2026-10-07T09:06:14.000Z"
         },
         {
           "title": "Azioni Enel 7 ottobre 2026: quotazione e target price",
@@ -107,6 +101,12 @@
           "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPM2Nnb1l5RENkZGVXelNucHlQeVBmbzZiWFJTZkhVM2pja0k4czlFYWpHQzdQRTl3STFGN0RVOVJmRjVUcGRhTUJWUEFzWWFBbWQxWmtydHBYVWx5N081TnJ1MGY3Sm9XQ3ktXy01VGlPRk1tTG1qZlY1NWpSTmp6R1NlYWVJVHktZ3owQlMwSzBsTUhPZVlOSDJmaw?oc=5",
           "source": "Traders Union",
           "publishedAt": "2026-10-05T18:13:32.000Z"
+        },
+        {
+          "title": "Affari da old economy: da Enel a Leonardo e Prysmian. Ecco quali azioni dell’economia reale hanno maggiori potenzialità di rialzo in borsa",
+          "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOR2JUV0FCS2pjZ2lSX1I4eWJfTWQ5cGVzNElfVzB1S3lpOU54dWFOTGc3Vk5ib3NvN1ZJN2lpS191TVExMjJyMjJIX3FfYWh4eUw0cDFnT2ZhQWRTYS1wMlVPWEVocUxzTUpsSlBWX2o3QXpxSTZacXdMU2JONnUxbkViS1ktRDBhcVcxTHJZazlLenBIcTdjaFFjX19kUmtNOHNNblRaTHl0Y0Y4cHpmWWtMd2ZyNnlWd3Z6SjJuTmd3YlJFWi1ST0I1UjBGNWVEZzRXWUFkOTVjVXpySE5HZ3FRUEtxRjVvZ1MyZHd3?oc=5",
+          "source": "Milano Finanza",
+          "publishedAt": "2026-10-02T07:00:00.000Z"
         }
       ]
     },
@@ -122,6 +122,12 @@
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9XZDZxLVRodVU1MjFHaGdHaUxQZ3NxOTBtS0ZzU21adFQxSjJGUHpnSHJSaWxHb1VjYzVPMzVzT1JITFB0Vm9FdW02dms2SzJwTUNPZFB2aGM2d043WnFyYm5OOFIxUQ?oc=5",
+          "source": "Staffetta Quotidiana",
+          "publishedAt": "2026-10-08T09:17:01.000Z"
+        },
+        {
+          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4xaWd2UG1QR0FTU1hFQlNNMWZ0bXRSaEpfMy1nNDR2TDJ6RzZISW9uRVpSVWZ5cnF0dzRQRm5FOUE1SElCQ1RSWVFIZWZLTXJ1NU1HazBqUWItS0xQSzZVZkhMRERsdw?oc=5",
           "source": "Staffetta Quotidiana",
           "publishedAt": "2026-10-05T10:00:48.000Z"
@@ -130,7 +136,7 @@
           "title": "Notifica per pubblici proclami: ricorso Snam Rete Gas Spa c/ Corrao A.+ altri",
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcUVaY3Q0NjNQZmdQbWRvaE52N2FFb21xTy1maks2TEZMb25yNkxoWEQyZkctZzY2V24wbF8xY0pZdHdhUUFvTUE0Z2loUjZDR2RRQVRCdkhubzE1TF9YY0tua0NkUnpEZFVVdnpURGwydktvRUJUQVE0SlpNUFJNR2dnbXFBMjEyWFQwVHItajRiX1FaeDVXTDRmZS1wUQ?oc=5",
           "source": "Quotidiano del Ministero della giustizia",
-          "publishedAt": "2026-09-30T12:18:42.000Z"
+          "publishedAt": "2026-09-30T07:00:00.000Z"
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
@@ -155,12 +161,6 @@
           "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSXg0WlI3UGo5eG1aLXcweTVpSzdSUExuOUpzQkh4Y0U4Ynd5c05ydEYwVmRxWTlGd2dlWGNiMjR5WGVpVi1FcHhsOGwxODdjdi1nX2tuVzdQcHQ1R0JZWmtkQmt2Mzh2anF6U25pUS0tN0lVeHdzbHdWTVhRU2dMVmZlcVh4VHVlem5HX1h6LUNqaVV5LVU5OHIwb193WEhxU3JoWWF1Wl8?oc=5",
           "source": "Il Sole 24 ORE",
           "publishedAt": "2026-07-09T07:00:00.000Z"
-        },
-        {
-          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBEQm5BMGVpUlZQRlRtNXptSVQwS2JiRFE1aXZfZTk1RmEtWFNpb1duQzExUWZkT1dpTWtRX2YwMl9tWXBITHZNdVdtYW9NeW4xVTcwME8wSE13UDBVeF9nVUFzX3RlZw?oc=5",
-          "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-06-17T07:00:00.000Z"
         }
       ]
     },
@@ -223,6 +223,18 @@
       "label": "Banche ITA",
       "items": [
         {
+          "title": "L’offerta di Intesa Sanpaolo spacca il cda di Mps e blocca il piano Lovaglio",
+          "link": "https://news.google.com/rss/articles/CBMipwJBVV95cUxOaDlUQWNXa0xPNkpPbjZmSmVmNHg5eXloMXhPRFhsWGw1TGNTajdxRml3MXVydlZ4clpmNW5wMElrMTh0cEYyOFA0VmU4SGtTT0NRM2U4UmxLWmtPd05CWENOZEQydGJndnBHbDB3QWtQbDdBb1RCWmpuMDk1MDJfbjUtRkF6bExGZll2MHBHRWs2TzlXUnpKYkRQUWdCVWhMS0dPRDMtNVhOUTdueUt2X09tbVZGWjVob1U5Rl9iT3hWeDlUZE42dS1iSXJqUGRiYnJlek5yM0NKV2txUVNJaTE0YVVCNFZUa2xVTWJORVN3T2lMMFpfOE5ZRWJhdlpjWWdrZzU2RjVia0tSLU84OWg1TFpua1FXZVZjOFFBT1ZUM2tZanE00gGsAkFVX3lxTE9mSzZSRW5KRnNpX1hteHY1YzczQkJobTBFMW1BOElHMGNMQnJ4RXZmeXVoUmVTYjBiZ2V0NjQ4TkZXM1hfdXJta3FCSTNzc3VCV01Udk03UjNIYndBd1lHbWRQOUl5UzJJQlRSNlRFRTMwbERUQUtycGtHcVoyUHhYLUxveXdkMS1Cbm1NZnBuenN5VGh5d3NmZndNWUhiMXpRc2kzRTZHc09fTmJVX3d5bURlbG83aG5QWGpFX2RoalVOZXdLUlk3ejRFV0Z5TmxGeVNHWlB5aGpTcWpicFh0eS1VM1N5LTYwMFhWMDBFem9TRWEtYldzOXdoMERmNW8yZEoyQTBMYU8ybHVFdVpqWUNfNGQzb0UxY1FYQ0xFS3ppRU42ckdnYnEwcA?oc=5",
+          "source": "RaiNews",
+          "publishedAt": "2026-10-12T21:24:00.000Z"
+        },
+        {
+          "title": "Intesa avanza su Mps, Lovaglio cerca una via d’uscita: tutte le opzioni sul tavolo",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9NOWxIeGNaeXkzZy1idmV5RDJjd0RCVU9lRjR3QV9WUEhiYk9XMGVTRm4yX1hKNUxWeW9ORC1pOGlrVVZDSVk3Z2dPcVUtbXQwT3gtOGZhOUFXV2tQQnQyeUZVMGU1NGdRR3JJVEtIVl9ZVUdx?oc=5",
+          "source": "Forbes Italia",
+          "publishedAt": "2026-10-12T07:09:15.000Z"
+        },
+        {
           "title": "Risiko Bancario e Trimestrali: Intesa, UniCredit, MPS o Banco BPM?",
           "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdlVfa2ZNUzA5dU1vX2VmeEktNS1jLUdETmk1b1hHdTRpR3lUMG5CRGVxM1I5RkNrTElpU1NQQmlSeVFEcnVPWkdZTHN5LUdHRmd3RUJ5aTh1Y3pKamxzLVQ4a1pCM09ubmpzRnNTZFNmVlJGUDZqWWVEdGRoMjNBMnVqSk9PQkgtbzJhWmMxT2lDMERhbkpfUFhaSkpYVk1lYXd0Yk41V3BIdw?oc=5",
           "source": "Investing.com",
@@ -257,18 +269,6 @@
           "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPU1NGWWg5anpuWFMwSDlEc2dJYlhMdVdCTlNZc0cwalRVLXNSd2xycFdnS2hockdRV2Fud0RMcU1rdDdTT2RQVmFzX2VrM2pHRi01U3ZhOGlua05hOVlaRGZXV1V1ZkI4YmdPLUktZ2Y0YmhnZkdVaktBSWpqVXNrSzJ1cHlqWHoxTHlNQUJtaEFWS2RiS2p3aXI0bFJzdmhkWUFGLUowMmRDM3ctTzJUWEZHdEFiRXY1dS1Id19neGhnS2plQkJzSTRuU3pHSzZCaGxBdHJWYlM4SG5ZbVNGQmxwRGZGMHp4UTlWUnhDNjA3dw?oc=5",
           "source": "Industria Italiana",
           "publishedAt": "2026-10-07T09:17:57.000Z"
-        },
-        {
-          "title": "Unicredit, ecco piani e ambizioni su Generali, Mps e Russia",
-          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPaW5wc1l5UmloY21xTjJXdjVLc29DNF81Q1NzQ3kxUnY0aFBDZU5jNnJ4SjVQVDhYSGdUWFVKWmxiYzFqQnczNHdhWGJMeVBrUXhJSXBFZTdHWHZJTkhPQnJUdTctbkdlVU02UFZlM3ZrU2xSQ3hQQnA0dHctV1JreF9hX1RiSURUR2V2OUltaEh1LVRzeXc?oc=5",
-          "source": "Startmag",
-          "publishedAt": "2026-10-07T09:05:00.000Z"
-        },
-        {
-          "title": "Mps, Lovaglio resiste. L’opzione Unicredit",
-          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSkNhVmc0TTdIODN2MF9GMmktVzNhTDRiSk5VczU5amhRU2JOOGExRWpFSmFld1EwVE5fTDZSSFhGZzZ5bkt0aGV3OXl1ZUJGSWlCakNoM3NrVHNsZXljbTBhX3hSb0UzM2xVWnEtcWk5Q01Ic1NST1pmc1Uyd3Z5VV9Xakg?oc=5",
-          "source": "il Giornale",
-          "publishedAt": "2026-10-01T07:00:00.000Z"
         }
       ]
     },
@@ -319,9 +319,9 @@
           "publishedAt": "2026-09-15T07:00:00.000Z"
         },
         {
-          "title": "Borse, settimana in rosso per l’Europa stretta tra petrolio e tassi. Milano -0,3%. WS +0,98%",
-          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPQnZJNFNxd3hjZ1hBWU9Bd3pjX01oX1lvTFVBT1Jvc25VR0FSTmlrTkgtZ3d3cTFMNTVvWE9XNzRoN3UzdEV0UjdkVzN1bjlabVNfNTR2WHRlNG52TnZxV1JLS0wzd2Y4WHJvQ3NMTFIyU3JJTzE3VnJSSVpiUS1Ed3lRREw2X1ZX?oc=5",
-          "source": "Il Sole 24 ORE",
+          "title": "Borse oggi in diretta | Il Ftse Mib chiude sotto la parità (-0,1%). Sprint di Lottomatica, male Moncler",
+          "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNQzJIU2liMm5EU3BoUzMzSmU1bUZieWs5cklYVW93VE1pRU9MamZLYnJpeUhPaklrcGYxYXFJaVBGSzRSRWg0NlVSbjJsRXRHQ0UyWUlhT1BSY1B6VmRYQ0tiX1d4SUhzbTJ4S1gzSEg5ZUMxeW5yMkdCOVZwOGtVemxDM2RwYUhjNkVLRW9PUHZfckJDcy1LdWpnV0Y0V1RnZnVhaE1ockNNMGJ3bW9UUElpeVNQS2pxeUVyRS1sWUNTRGpLNThSNjRmdER2WnFQbGFvQV9NdUFqMGc5N1JzN0FmWl9NUQ?oc=5",
+          "source": "Milano Finanza",
           "publishedAt": "2026-09-10T07:00:00.000Z"
         }
       ]
