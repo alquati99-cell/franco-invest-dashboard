@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T20:14:26.434Z",
+  "generatedAt": "2026-10-13T23:43:40.306Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -61,6 +61,12 @@
       "label": "ENEL",
       "items": [
         {
+          "title": "Le azioni di Advanced Energy perdono circa il 4,5% dopo un'apertura con gap ribassista in un contesto di segnali di momentum contrastanti",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNUWVjbWhwZk11UEhTTzBHZVg3YTdfR0p5YXAxRFhXMzlEekVfM1V0eXFHcFF6MHZ5VlRXd1dwM2MzOXduc1dtcHplSWRmQ1NHUXpKU0JxQkpSX1pYM3FtMjZONzQxRTBtclZCSVYzbU5BLXhVNmNHdy16aEw4UUlHZjA4LWwwZFJieGxOX0hITGswbURObU42V2RB?oc=5",
+          "source": "Traders Union",
+          "publishedAt": "2026-10-13T17:13:42.000Z"
+        },
+        {
           "title": "OKX amplia la piattaforma con azioni tokenizzate, app per stablecoin, strumenti di trading basati sull'IA e investimenti istituzionali",
           "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWFI2SHhKQmY5YjA5M3VoVEdqWmRmQlJQNDJfUzJFNVE4RGRuQW5ZOC1yXy0wRzVRajdRMUJmWE9VNGVNb2dXaHpRcUhhZFpCTnFYSFAxcFJlcUZOVUtsT1ZJWXR3RkRUZDNWcGRtSEN3b2J0WnhIelFCM2RmWkFFcEh2ZGZLa0xPNXJvTGtHUl9LZm4xQ0J3VFFjREI1VHc?oc=5",
           "source": "Traders Union",
@@ -83,12 +89,6 @@
           "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0zeEdsQUFfTUxncWlDY2tOLVVTcExqSE9CQVZnaHZKOWJ4TFVfZVFqLWNZTmZwR1FTZWk0VkNzdWZoeXUweEZMZ2RyRmc1eks2U2ROMV9Raml6MGprcDJYbmZlcHNEX1hq?oc=5",
           "source": "Rankia IT",
           "publishedAt": "2026-10-08T14:50:08.000Z"
-        },
-        {
-          "title": "UBS prevede un’ulteriore crescita degli utili europei nonostante tassi ed energia più elevati",
-          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSFl5ejdQSjNmT3o5TzFtQklZQ3lUUmJpSnVRNFh0SXBRNmNjR2dHQ3NsTUZzX0N5SWh4Z2I1NlIyRXFGZkhNSy1maXNBLXp1Qm1paFFsZDZ1LWh5eV92TExXRHNjajB3SUdqTW5mMXE2eVMwNTlYOFVfdlRKUXdsaGI0cGhLUnJqNUFteHRR?oc=5",
-          "source": "Yahoo Finanza",
-          "publishedAt": "2026-10-07T09:06:14.000Z"
         },
         {
           "title": "Test del supporto per il titolo Enel: obiettivi di prezzo da monitorare",
@@ -169,6 +169,12 @@
       "label": "Saipem",
       "items": [
         {
+          "title": "Saipem si aggiudica nuovo contratto offshore in Angola per un valore di circa 350 milioni di dollari",
+          "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOUjZZcDB5Y1oyUUJRNWlQRWUzWS1MT0lTbHZ3NTZFM21IYkZaOHJla2RzTVUzSkt6bFBmbkh2N0RUMWZSbzkteEFVS0FpaVU3ZkdibzY4bjBnYUtfUXNqc3pHcDJmcS1pZFAwRUVxZ1VyajU2S2dKZEs0OS1xWGZzSkxBUThQWlRGbnU0T0JGSVFILURMQS14QVl5Um1Jbk1FV3pyM0J1bkZEY3JEYkthWWhFNUx6TGttd0cxTlkxeTlpSHRoQXFsakdfVTZjN29LbXFkcloyVjgxUzJKYnhRbl93?oc=5",
+          "source": "Corriere dell'Economia",
+          "publishedAt": "2026-09-14T07:00:00.000Z"
+        },
+        {
           "title": "Saipem si aggiudica un nuovo contratto offshore in Angola",
           "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQYXpZQUk0TWRqTmgzQXFyVWhuLVVlVl9xelVIbWtvY1RpOGxvSUZKeDU3VFgtQXcxWE9CXy1seGM5ak9udi1SNlRHOHZia0g4YTdWejBZeHM0SDNaYnNjcm91RWJwbzNBNkd2dVNOYUNPS2FTX3hzTllnRl83bTJoTzhCSDBuTEtKS0ZLdTVXZDFIc01IXzhjelliSkU0ZlFl?oc=5",
           "source": "SoldiOnline.it",
@@ -208,12 +214,6 @@
           "title": "Saipem, contratto offshore in Medio Oriente da quasi 2 miliardi di dollari",
           "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVUpWOVNXSE9vZkVSdERWS1lpbmtfU2pMZERFc2ZGR2xJZFVrWjVuZzRNbFJKTFBtbmlrZC1JZjBZdHNKbWtJTGpvUE5GclJ5SFZOci1aVWMwZXg3bDhTQjhCTnF4ZGs0cVVseWpqcDBPT1JvYmxKVWYxS2NQR2JEdVljNlBYX3ZyMHh5b1E1S0FpMkZLTVc1SkZNVmxQdmpmVlNmb2VCX0RNcnJPb1daSS1wcGdaRXZhOEJIbWxpLVg?oc=5",
           "source": "Teleborsa",
-          "publishedAt": "2026-08-12T07:00:00.000Z"
-        },
-        {
-          "title": "Saipem ottiene contratto offshore da USD1,8 miliardi in Medio Oriente",
-          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNSlRObVJGNExKdkRZN0dOc0Z4SnU0ZnBnY0djRExEXzdGYllfdHV0T21sN0NaTkJ4QnJWRHpya2k5QTR6b3B5UW1zbmVrM3puSHZPVGpod1A2VlRDc3R5ckpqU1NQWHhzdkNFR0Vrem5LZlJhNW44a2t0UkdwT0swb3Q2SHlGeWVGOXk2ZEJ5TWVvR1UzZmFZek9kVkhTOVRxMWdRdWhmNHhTdDdNTjFxSTloY3dlY0xkSXdOQ2pyUzc0Zw?oc=5",
-          "source": "MarketScreener Italia",
           "publishedAt": "2026-08-12T07:00:00.000Z"
         }
       ]
