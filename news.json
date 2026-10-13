@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T22:55:21.430Z",
+  "generatedAt": "2026-10-13T14:05:32.683Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -37,12 +37,6 @@
           "publishedAt": "2026-10-08T09:41:27.000Z"
         },
         {
-          "title": "Eni prosegue il buyback e acquista azioni per EUR100 milioni",
-          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPc1pBLTFRU3BIVTN1a0RiNHctWDE1Q3VaZUJuNnBNZUZQVFl5TU1hcU1Pb0t0aEJ6ZURpVmpfeENrb0JMY0lMdWpDUGcyTEt4UTRkalhVRW5NNXNGY1RMb2NCREowYzdSTVhHc3BhQWNQa2pCSzJOd3k3cHMwQ0IzOUFkNGdxNWMxcDVua2dwTHZ3aTM0dHROS3ZxUG5uUlpwYnNvMUhfT3BvOENDSGY2YkJheTQ2UQ?oc=5",
-          "source": "MarketScreener Italia",
-          "publishedAt": "2026-10-07T10:52:21.000Z"
-        },
-        {
           "title": "Azioni ENI 7 ottobre 2026: tetto carburante e target price",
           "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9rQlc2YkNpdFpzaXFJWFpqLUlTYTI4YmpjamtfOWNrQ1otUGItU3FDVlFFVG44T21iZ1JaWjgwZ3pBZnE4VnZPOGk1UmhUaUFmeWd5bk9TNXd5am9fYWdSYWsyRElRaVVqRzdqQUlR?oc=5",
           "source": "Finanza Italiacom",
@@ -53,6 +47,12 @@
           "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE96UWtBeFlCSXlRb3RUenE2R2RUZDUzUXZiaXJvajdnYkhXek0yQUF1dmNqVUJwbzlyd2VCYXZDOXktSVNXS2FTbUwwM1hpVGtmNEI1X1ZhNGV3Ym4xTjFDRldheEVtLW9CMTl6UmFn?oc=5",
           "source": "Finanza Italiacom",
           "publishedAt": "2026-10-05T03:44:04.000Z"
+        },
+        {
+          "title": "Eni, acquistate 3,14 milioni di azioni nella seconda tranche del buyback",
+          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPZmpmbW82NUZZRno0cFFTX0dfYkt6bEkxV3dIR0dKcGkteUEzVVBJM1ItSXp5V2xFQk94T2pGY1JvaEU4czZSQkdSQXdfMm5tWXR1NWlkODhUTmhFaERCU0FKX2VwbzJMdzBkSDdfM0VQY0lkSG8zSExVN1lreTNTbUtjMWxyRm5CT040bllqdU9oYmhyTlI4YjFlVklnR0JkRUxCbjR6S3JoQl9Ia1FVeWQ5RmpxNklSWXFNWDlYcw?oc=5",
+          "source": "la Repubblica",
+          "publishedAt": "2026-09-30T11:47:00.000Z"
         }
       ]
     },
@@ -103,10 +103,10 @@
           "publishedAt": "2026-10-05T18:13:32.000Z"
         },
         {
-          "title": "Affari da old economy: da Enel a Leonardo e Prysmian. Ecco quali azioni dell’economia reale hanno maggiori potenzialità di rialzo in borsa",
-          "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOR2JUV0FCS2pjZ2lSX1I4eWJfTWQ5cGVzNElfVzB1S3lpOU54dWFOTGc3Vk5ib3NvN1ZJN2lpS191TVExMjJyMjJIX3FfYWh4eUw0cDFnT2ZhQWRTYS1wMlVPWEVocUxzTUpsSlBWX2o3QXpxSTZacXdMU2JONnUxbkViS1ktRDBhcVcxTHJZazlLenBIcTdjaFFjX19kUmtNOHNNblRaTHl0Y0Y4cHpmWWtMd2ZyNnlWd3Z6SjJuTmd3YlJFWi1ST0I1UjBGNWVEZzRXWUFkOTVjVXpySE5HZ3FRUEtxRjVvZ1MyZHd3?oc=5",
-          "source": "Milano Finanza",
-          "publishedAt": "2026-10-02T07:00:00.000Z"
+          "title": "Cosa c'è dietro l'ultimo rialzo del 4,6% del titolo Constellation Energy?",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPSWdQTmlBc2VYR0xDdGJkaUhQdWowMXdQTHhLNWs3S0U3RmFrVGZsdXB0RVNYOFdMdkNFZmdqLWtlNTJCVndZUzhuWkpPSnF4R09CMTIyeWtSSndxT2puaDdIUVJtVmNjMHZIc0RLWjFad0czd3k2YVlGcWs4Wi1hcHNGZmF0cHRrcjlZVG4tcHRQY2QtM19ZbWYwUUZCTXdi?oc=5",
+          "source": "Traders Union",
+          "publishedAt": "2026-10-05T15:56:37.000Z"
         }
       ]
     },
@@ -199,6 +199,12 @@
           "publishedAt": "2026-08-13T07:00:00.000Z"
         },
         {
+          "title": "Saipem, maxi-contratto offshore in Medio Oriente da 1,8 miliardi",
+          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObk9QcnV5WWdhT1RkZ0hoVmtreklfSGpibzlYS0lDdVFEVTVHTXpLdWF5bmtHREtwODhwdUNkZnJ0UGVGNm9oSk50cjgzQ2UtUG1Vd2lka3hFUkI1M05laWxZbnpTNlBzczhFb0dHRGstaTZ4RWJSMEhzVFlYQ2ZQd19SMDRhdW9Lb0wwZzRSd1RUQzNYX3dRWmhxeTBpSnZ0UUdGektuTHBjSG1GWDVLLQ?oc=5",
+          "source": "SoldiOnline.it",
+          "publishedAt": "2026-08-12T07:00:00.000Z"
+        },
+        {
           "title": "A Saipem contratto offshore in Medio Oriente da 1,8 miliardi di dollari",
           "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPMTR4X3RSNlkyMDNZU2VnSzBLS2RKU2V4d1lYN3dlZk5TTnhwejUzeTlfMkljQ0ZHUWRMaWpFRFpkdHYxQm9DZjJSVXVxc0FHUlZDZEpxN3ZqdFoxTF8yU2Vad1lqSHdCaFdBd1NiOGJpRlBkOUtsemNOd2k3bzhuNGVFNmRLRjEzQVVrZ0UySFRNYTRzNzg3TFRUdk1wc0pKOVJaRlE5UEU3VmFzell6UFc3TmZtVEs0MlcwaV9mamlKU241X2xncFppTFNLWC1xN0w0aVBUS3Z5NXVOZkRWWVZtM0kzN0ZvUFJLbF9vLU95SFJ4Vl9TVdIB_gFBVV95cUxPZGd5VzNqUFVIR0dCVEZqNWRBMGpsbFB3N3BpaG12RldFc1pVQ19XeFVwblFDX2I1NGNYZXdzQjhpRDVObWRDNDJHemNhTVFvWWR2TzRJU2E4UTl5cXkxMThhZjRQbGFTM2hoYklhSE1xU3NSVzFBVHRXLTNyNmZQVldmckVBTDFmaDJ3aU5hX2NUSjBCT2t5cWhQY2E5MzBFVUR3NXF2cG1IdlQtM05VTndlakUzamFTaXdPRjVDdXJiclpnY0t0cFRhYWtRTlowclE1SzJfTWd1SGFrRGlYZ2xnNHVRaFpYR3c4eXJGU1k1cklYT3QwRlpEM0Fudw?oc=5",
           "source": "ANSA",
@@ -209,12 +215,6 @@
           "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVUpWOVNXSE9vZkVSdERWS1lpbmtfU2pMZERFc2ZGR2xJZFVrWjVuZzRNbFJKTFBtbmlrZC1JZjBZdHNKbWtJTGpvUE5GclJ5SFZOci1aVWMwZXg3bDhTQjhCTnF4ZGs0cVVseWpqcDBPT1JvYmxKVWYxS2NQR2JEdVljNlBYX3ZyMHh5b1E1S0FpMkZLTVc1SkZNVmxQdmpmVlNmb2VCX0RNcnJPb1daSS1wcGdaRXZhOEJIbWxpLVg?oc=5",
           "source": "Teleborsa",
           "publishedAt": "2026-08-12T07:00:00.000Z"
-        },
-        {
-          "title": "Saipem, maxi-contratto offshore in Medio Oriente da 1,8 miliardi",
-          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObk9QcnV5WWdhT1RkZ0hoVmtreklfSGpibzlYS0lDdVFEVTVHTXpLdWF5bmtHREtwODhwdUNkZnJ0UGVGNm9oSk50cjgzQ2UtUG1Vd2lka3hFUkI1M05laWxZbnpTNlBzczhFb0dHRGstaTZ4RWJSMEhzVFlYQ2ZQd19SMDRhdW9Lb0wwZzRSd1RUQzNYX3dRWmhxeTBpSnZ0UUdGektuTHBjSG1GWDVLLQ?oc=5",
-          "source": "SoldiOnline.it",
-          "publishedAt": "2026-08-12T07:00:00.000Z"
         }
       ]
     },
@@ -223,10 +223,22 @@
       "label": "Banche ITA",
       "items": [
         {
+          "title": "Mps, Intesa mette Lovaglio con le spalle al muro: il piano rischia di saltare, decisivi i soci",
+          "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNMEFYU1hlaXZsSEZoWUVLb3ZZVnpLS1pZOGdESlZ4emJQSGgyNjI0RDQyMXIwSmpTY3JVdlRhRmw1WV9KTmVQMjBiODRxclV2bjljanBmSnoyc0Y4OWgyelVPOEhmYlIxMVRtb29xeWdQRHBSVzZiTFppR09GVXBIaTRKY0hyekJTVE9fZjR5ZC1zQXl5N2padWZ4N0llbV83UlBQT1YxTXBneFRGZ3VjQUtJMUZwZnpmWEtudEkwRG9yTjV0ZWh4RGhHOER2SXNJbGotQVVnbzJlWWQxYnQybDNB?oc=5",
+          "source": "Giornale La Voce",
+          "publishedAt": "2026-10-13T02:45:00.000Z"
+        },
+        {
           "title": "L’offerta di Intesa Sanpaolo spacca il cda di Mps e blocca il piano Lovaglio",
           "link": "https://news.google.com/rss/articles/CBMipwJBVV95cUxOaDlUQWNXa0xPNkpPbjZmSmVmNHg5eXloMXhPRFhsWGw1TGNTajdxRml3MXVydlZ4clpmNW5wMElrMTh0cEYyOFA0VmU4SGtTT0NRM2U4UmxLWmtPd05CWENOZEQydGJndnBHbDB3QWtQbDdBb1RCWmpuMDk1MDJfbjUtRkF6bExGZll2MHBHRWs2TzlXUnpKYkRQUWdCVWhMS0dPRDMtNVhOUTdueUt2X09tbVZGWjVob1U5Rl9iT3hWeDlUZE42dS1iSXJqUGRiYnJlek5yM0NKV2txUVNJaTE0YVVCNFZUa2xVTWJORVN3T2lMMFpfOE5ZRWJhdlpjWWdrZzU2RjVia0tSLU84OWg1TFpua1FXZVZjOFFBT1ZUM2tZanE00gGsAkFVX3lxTE9mSzZSRW5KRnNpX1hteHY1YzczQkJobTBFMW1BOElHMGNMQnJ4RXZmeXVoUmVTYjBiZ2V0NjQ4TkZXM1hfdXJta3FCSTNzc3VCV01Udk03UjNIYndBd1lHbWRQOUl5UzJJQlRSNlRFRTMwbERUQUtycGtHcVoyUHhYLUxveXdkMS1Cbm1NZnBuenN5VGh5d3NmZndNWUhiMXpRc2kzRTZHc09fTmJVX3d5bURlbG83aG5QWGpFX2RoalVOZXdLUlk3ejRFV0Z5TmxGeVNHWlB5aGpTcWpicFh0eS1VM1N5LTYwMFhWMDBFem9TRWEtYldzOXdoMERmNW8yZEoyQTBMYU8ybHVFdVpqWUNfNGQzb0UxY1FYQ0xFS3ppRU42ckdnYnEwcA?oc=5",
           "source": "RaiNews",
           "publishedAt": "2026-10-12T21:24:00.000Z"
+        },
+        {
+          "title": "Il risiko spinge le banche, focus sul cda di Mps dopo il rilancio di Intesa",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPdnJZUU8xZnVsUE91YUJfOGhfTEhCWXUxUGNwY0J2cEpNSVZ4RlRvTloxaUFCOXRsVDQwbE1HZ1hGaTZnZkpZSHFKalJzV19XMGRKS2xNV0tYQUNDY1hCNFh6UG5mUEpBNlltRDhqcnM4bFd4dlhvUEN6bTYzRG45Y1VfTnNoYlBrb2RKeDBKRDA3UG5QV2dTU0FDeUtpZw?oc=5",
+          "source": "Il Sole 24 ORE",
+          "publishedAt": "2026-10-12T09:15:07.000Z"
         },
         {
           "title": "Intesa avanza su Mps, Lovaglio cerca una via d’uscita: tutte le opzioni sul tavolo",
@@ -257,18 +269,6 @@
           "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOZmZzVDhSRjQ4NFNLWHE2OUM0Q0ViSXZzSkVCaEt3OXlEVGhybUh4VmpDRk1Xb1lWMEt6S0hmc1BBVDlTN2dteEFwQ1VhRzFRZktUY1RCS3lFZGpyQmpuR250TTFNdXRpZ3MwajVtekg5d2t1OVB1RTkzLW5IS0FBeWRBSm1pOHVObXV0UlV3?oc=5",
           "source": "We Wealth",
           "publishedAt": "2026-10-09T09:39:42.000Z"
-        },
-        {
-          "title": "Mps, Intesa Sanpaolo vede il traguardo e la partita si sposta su Generali: come cambia adesso il risiko della finanza",
-          "link": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOV3JPd3BaQ2l4d2tTSW9NalZJOVFMNmpPVGxBNzd3M3J1QVZvUVk1OTZuZlp2Z3B0YmpQREE2b0J6RlkzdE5zOUthM2JOOHowS1R6SGRjMlNiVHVtal9xWUNVdWFLMXU5aEVvQ0xlQmhDOExrS3JyRGxuOHMzaWUwSjY0dXZnU1VNWEh6ZXVlenVvNmFQMXlBREdmN25xTFNld2RmMlpOaXd4SUM5RGZNTmlzU3Z3Nlk1VFZKbmZIa0hKV3ZzZm5WclVQb01XSG9wQl9Mak55S0xSXzhuQVF3a2JXTUh4cnhuYjE3QjhpR19RWll0eFpUVXBZN0s0a1NQT3lJRXVvRmxmdlpENFdmLXF5Y1BtQ0JScDdpTHMtbUxydWxYa2cyMmhtWjVKcW1Kdkc2clBIZUHSAb4CQVVfeXFMTUY5WlQzZ3dJcFVzQjBVOXRkLWVWdDZQMlMtMTNuVWxRWXVVSzhpU0pTUjgxay1XU0FiM0czMFlianlsUWRCaXJQcnpwZW1WQzFCZmRBN2NnZEtKQnYxVUEwU1ZXQzFZLXktbmhJZDdGMktlMDRzV2dtbGlhWEJKQUhwdjJpeTVuOG9QWTRvaGZIaFc0R3p0WGRTQmxTZmVndFNpQTNSVGY4LUtqeWNPc2FmTV94eHR2bWdnZVhfdmJpLXdwcnhSYV9Ca2pfOERtZmpBMlYyVFNIdm5xaUdHaWhScm5BYWVqN0VZS3B4R0haRm1KbHdpQWU1cFE5RlAxdUduUGFseHdCekdONzhvMWg5ekMzcDhQZXNiZVlwd19YVWFtVlhTY29jM0FRaE1mMlZBMGFqc0ZUWmY1eGVB?oc=5",
-          "source": "Corriere della Sera",
-          "publishedAt": "2026-10-09T05:39:00.000Z"
-        },
-        {
-          "title": "Intesa Sanpaolo, UniCredit e Mps guidano il finanziamento da 470 milioni ad Ansaldo Energia per investimenti e sviluppo al 2030",
-          "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPU1NGWWg5anpuWFMwSDlEc2dJYlhMdVdCTlNZc0cwalRVLXNSd2xycFdnS2hockdRV2Fud0RMcU1rdDdTT2RQVmFzX2VrM2pHRi01U3ZhOGlua05hOVlaRGZXV1V1ZkI4YmdPLUktZ2Y0YmhnZkdVaktBSWpqVXNrSzJ1cHlqWHoxTHlNQUJtaEFWS2RiS2p3aXI0bFJzdmhkWUFGLUowMmRDM3ctTzJUWEZHdEFiRXY1dS1Id19neGhnS2plQkJzSTRuU3pHSzZCaGxBdHJWYlM4SG5ZbVNGQmxwRGZGMHp4UTlWUnhDNjA3dw?oc=5",
-          "source": "Industria Italiana",
-          "publishedAt": "2026-10-07T09:17:57.000Z"
         }
       ]
     },
@@ -276,6 +276,12 @@
       "id": "geopolitics",
       "label": "Geopolitica & Macro",
       "items": [
+        {
+          "title": "Tensioni energetiche, attesa per i tassi Fed e spread in Europa: il punto sui mercati",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV0JqRDc0SDBHNGR0THQ3alBNMnYyTzFWZk13a2RKWmYxZUFkVE5nY1FkRkJNUG8xeFZ4aGhJT2dIU3RJMEUyd3pkMkF2SEpqQXUyOHdocXFub29LcFB6cXptbUNmc2Z6MFF0XzBtZzByS1I4NU1TZG5NWDRoXzZtVEQtZzcweWM0X1FLSDQ2UlNjeDFMd2kyWUVFdVc1VDR0UTJ1RmpnM3E0Tnc?oc=5",
+          "source": "Websim",
+          "publishedAt": "2026-10-13T08:32:05.000Z"
+        },
         {
           "title": "C’è una manina che allarga gli spread per costringere la Bce a intervenire",
           "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAtNHhpOHNtSTBpTy1OdjhjTGh4bGg2VW5tTVU1cElXV3NOSmJON1ExcXF3TnlyalNwSHo4TXQ1NlVSUHltT3BaMThVT1M1NnRSaFE1XzZZMjNuWlVLTllyVzBxY3J0cmhid01HNA?oc=5",
@@ -317,12 +323,6 @@
           "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOT3pwMFVnaTdoSWhrcGlEUFdMY1JqTmVCd0kyck14S3lnWjQ1Ym1NYzlUQ19FTkxSZkgzSi1SdFlLY242YkEtOWV0UWhiTjZMc3REdklFSHJLaTF2QTM4R0prUnBieWZWX2pHRThFRl9hWWloMWVrSFZQUFBvWVM5VW12MTZYa054N1NVOEZvbDU3d3ZmVnpobnNiNjRVVGJ1RWRmaEVIR0hWdmZVRmJRMjZFSGJ2QQ?oc=5",
           "source": "Websim",
           "publishedAt": "2026-09-15T07:00:00.000Z"
-        },
-        {
-          "title": "Borse oggi in diretta | Il Ftse Mib chiude sotto la parità (-0,1%). Sprint di Lottomatica, male Moncler",
-          "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNQzJIU2liMm5EU3BoUzMzSmU1bUZieWs5cklYVW93VE1pRU9MamZLYnJpeUhPaklrcGYxYXFJaVBGSzRSRWg0NlVSbjJsRXRHQ0UyWUlhT1BSY1B6VmRYQ0tiX1d4SUhzbTJ4S1gzSEg5ZUMxeW5yMkdCOVZwOGtVemxDM2RwYUhjNkVLRW9PUHZfckJDcy1LdWpnV0Y0V1RnZnVhaE1ockNNMGJ3bW9UUElpeVNQS2pxeUVyRS1sWUNTRGpLNThSNjRmdER2WnFQbGFvQV9NdUFqMGc5N1JzN0FmWl9NUQ?oc=5",
-          "source": "Milano Finanza",
-          "publishedAt": "2026-09-10T07:00:00.000Z"
         }
       ]
     }
