@@ -1,11 +1,23 @@
 {
-  "generatedAt": "2026-10-13T23:43:40.306Z",
+  "generatedAt": "2026-10-14T11:45:12.231Z",
   "source": "Google News RSS",
   "topics": [
     {
       "id": "eni",
       "label": "ENI",
       "items": [
+        {
+          "title": "Eni prepara un terzo trimestre record. Sempre più vicino il maxi dividendo, per Equita vale 1 miliardo",
+          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQZ2hTR3VRY3RqZE54dTRhM0Vza2I0SDB4Q3N6WXlSWTNxZlhhMF8ydVhtTThmRm1nUGJRUW1VdjgwdTBRQnlyODlJV3YwUHNWOFdULWljQkdFLVpuNGpkd3Brck5WVFc0Y19Dbkl0ODZ3MF9jTkxjNDBCS2ZIaHhiNHRBcm9lVE4zT1FRbVZYQnh6d1M4Qlp4MlVRZW9ZTmZXQXN4ZG4wRlFpdnJtTXVORmd2Z0gxT1JVQ3F2SnFsdU9OVE5jZ0F3a0FSYjBFc2Y5LWlLdA?oc=5",
+          "source": "FinanzaOnline",
+          "publishedAt": "2026-10-14T07:16:00.000Z"
+        },
+        {
+          "title": "Azioni Eni 14 ottobre 2026: quotazione e target price",
+          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoMWlwUHR0U2VxZXNWbktIQkw4MW5zYlV6Z3N6YVI5TnhpSFdjY25hS2pjU3hYTnFZc29PLTRubHh5SnpXUE5hZ3YzQm50LTFGLWlZNlNVTjFJcXpNRVVRQ0VWREExcWliVDc2eXNURQ?oc=5",
+          "source": "Finanza Italiacom",
+          "publishedAt": "2026-10-14T03:46:49.000Z"
+        },
         {
           "title": "Azioni Eni 12 ottobre 2026: accordo Trump-Putin e cedola",
           "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOWXk3alNWWGhJemREVm1EdlFhTmJPUk93WDRnblQyUXZ2NFNRVGUwbVN6XzB0SWlrSVN6azNUUVBudE83bU9DZjcydnJNRDVkcUZPVkpZbWxqZnY1SUlfUXdOQ1o0MUQwZ0NNWGptQV9iLTBhWmRtaEVNREp1M3NoblNwZDl4R0ZBOUE?oc=5",
@@ -25,34 +37,22 @@
           "publishedAt": "2026-10-10T09:32:58.000Z"
         },
         {
-          "title": "Azioni Eni +55% nel 2026: ecco il nuovo target price",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOVU5URElkQzNvZzZNQVh0RWNnS0t0RVZvdm94UG5EYU5VT0U4S1R2S0pmQVQ4akxoZVhXallqMDFabnh0SjBhbnhYM3ZGdzl2WWJwazI2YXR4akdyOE1RTE5QUURha0tvb2pLX2o0enlFWXZvOWJjeWllenctMU1NdA?oc=5",
-          "source": "Finanza Italiacom",
-          "publishedAt": "2026-10-08T13:30:33.000Z"
-        },
-        {
           "title": "ENI, il target price aumenta a 25 euro",
           "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUHNZQUI1cjB6VzBMdndEYUNPdF9RUVE3aXVnSV9HQ0RsUnpvQ0otOFJqMDFyVzJNaDNSV2dLbXBaMmFhWGhwMjJMTkNsWm5TNE51U2hzQVBJZzlRWjY4b3V3dWlzdG5VOXh0UC0wNl9VQ0xXYkFIZlhBQXpmYkxIZzIyT09IbGw1b09FaDd6RHYzYVMwRlEwakR4S19GbGs?oc=5",
           "source": "Websim",
           "publishedAt": "2026-10-08T09:41:27.000Z"
         },
         {
+          "title": "Eni prosegue il buyback e acquista azioni per EUR100 milioni",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPc1pBLTFRU3BIVTN1a0RiNHctWDE1Q3VaZUJuNnBNZUZQVFl5TU1hcU1Pb0t0aEJ6ZURpVmpfeENrb0JMY0lMdWpDUGcyTEt4UTRkalhVRW5NNXNGY1RMb2NCREowYzdSTVhHc3BhQWNQa2pCSzJOd3k3cHMwQ0IzOUFkNGdxNWMxcDVua2dwTHZ3aTM0dHROS3ZxUG5uUlpwYnNvMUhfT3BvOENDSGY2YkJheTQ2UQ?oc=5",
+          "source": "MarketScreener Italia",
+          "publishedAt": "2026-10-07T10:52:21.000Z"
+        },
+        {
           "title": "Azioni ENI 7 ottobre 2026: tetto carburante e target price",
           "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9rQlc2YkNpdFpzaXFJWFpqLUlTYTI4YmpjamtfOWNrQ1otUGItU3FDVlFFVG44T21iZ1JaWjgwZ3pBZnE4VnZPOGk1UmhUaUFmeWd5bk9TNXd5am9fYWdSYWsyRElRaVVqRzdqQUlR?oc=5",
           "source": "Finanza Italiacom",
           "publishedAt": "2026-10-07T04:24:58.000Z"
-        },
-        {
-          "title": "Azioni Eni Lunedì 5 ottobre: Previsioni per questa Settimana",
-          "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE96UWtBeFlCSXlRb3RUenE2R2RUZDUzUXZiaXJvajdnYkhXek0yQUF1dmNqVUJwbzlyd2VCYXZDOXktSVNXS2FTbUwwM1hpVGtmNEI1X1ZhNGV3Ym4xTjFDRldheEVtLW9CMTl6UmFn?oc=5",
-          "source": "Finanza Italiacom",
-          "publishedAt": "2026-10-05T03:44:04.000Z"
-        },
-        {
-          "title": "Eni, acquistate 3,14 milioni di azioni nella seconda tranche del buyback",
-          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPZmpmbW82NUZZRno0cFFTX0dfYkt6bEkxV3dIR0dKcGkteUEzVVBJM1ItSXp5V2xFQk94T2pGY1JvaEU4czZSQkdSQXdfMm5tWXR1NWlkODhUTmhFaERCU0FKX2VwbzJMdzBkSDdfM0VQY0lkSG8zSExVN1lreTNTbUtjMWxyRm5CT040bllqdU9oYmhyTlI4YjFlVklnR0JkRUxCbjR6S3JoQl9Ia1FVeWQ5RmpxNklSWXFNWDlYcw?oc=5",
-          "source": "la Repubblica",
-          "publishedAt": "2026-09-30T11:47:00.000Z"
         }
       ]
     },
@@ -91,6 +91,12 @@
           "publishedAt": "2026-10-08T14:50:08.000Z"
         },
         {
+          "title": "UBS prevede un’ulteriore crescita degli utili europei nonostante tassi ed energia più elevati",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSFl5ejdQSjNmT3o5TzFtQklZQ3lUUmJpSnVRNFh0SXBRNmNjR2dHQ3NsTUZzX0N5SWh4Z2I1NlIyRXFGZkhNSy1maXNBLXp1Qm1paFFsZDZ1LWh5eV92TExXRHNjajB3SUdqTW5mMXE2eVMwNTlYOFVfdlRKUXdsaGI0cGhLUnJqNUFteHRR?oc=5",
+          "source": "Yahoo Finanza",
+          "publishedAt": "2026-10-07T09:06:14.000Z"
+        },
+        {
           "title": "Test del supporto per il titolo Enel: obiettivi di prezzo da monitorare",
           "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQMDJjcXFDNDZBYzQ0Skw2UmN4dXNoVldFTXd4ZkRLYktMejR4OS10aklTY1RWaFAtcGMzZ1RuaFZneW4wN0phYTBGeTdITFdnb2V6WE9wRGxtdHhkaFNpSVRzbE1McDM5bDJBR1dWT3JRMkdyYl9jMXEtbnZUWW5MeVZ4Y0hmQ0ZXYUs0OWhsZjU?oc=5",
           "source": "Traders Union",
@@ -101,12 +107,6 @@
           "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPM2Nnb1l5RENkZGVXelNucHlQeVBmbzZiWFJTZkhVM2pja0k4czlFYWpHQzdQRTl3STFGN0RVOVJmRjVUcGRhTUJWUEFzWWFBbWQxWmtydHBYVWx5N081TnJ1MGY3Sm9XQ3ktXy01VGlPRk1tTG1qZlY1NWpSTmp6R1NlYWVJVHktZ3owQlMwSzBsTUhPZVlOSDJmaw?oc=5",
           "source": "Traders Union",
           "publishedAt": "2026-10-05T18:13:32.000Z"
-        },
-        {
-          "title": "Affari da old economy: da Enel a Leonardo e Prysmian. Ecco quali azioni dell’economia reale hanno maggiori potenzialità di rialzo in borsa",
-          "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOR2JUV0FCS2pjZ2lSX1I4eWJfTWQ5cGVzNElfVzB1S3lpOU54dWFOTGc3Vk5ib3NvN1ZJN2lpS191TVExMjJyMjJIX3FfYWh4eUw0cDFnT2ZhQWRTYS1wMlVPWEVocUxzTUpsSlBWX2o3QXpxSTZacXdMU2JONnUxbkViS1ktRDBhcVcxTHJZazlLenBIcTdjaFFjX19kUmtNOHNNblRaTHl0Y0Y4cHpmWWtMd2ZyNnlWd3Z6SjJuTmd3YlJFWi1ST0I1UjBGNWVEZzRXWUFkOTVjVXpySE5HZ3FRUEtxRjVvZ1MyZHd3?oc=5",
-          "source": "Milano Finanza",
-          "publishedAt": "2026-10-02T07:00:00.000Z"
         }
       ]
     },
@@ -139,6 +139,12 @@
           "publishedAt": "2026-10-05T10:00:48.000Z"
         },
         {
+          "title": "Rottura della condotta del gas, task force al lavoro a Penne per il ripristino della rete",
+          "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOZlRoZUVPb1dqWXdwdDFvLXUxczktSnJWd0RSdUt4MVFHYnhiMWg5Z1hVZ0xIcVNIN3NTTW5aUl9oeXAwVXJqcHE0N19wZjQ2d0kzNFlOMzZNNHdjR1BOM2VxeS0xeDlJclZmLXNaUGhxcnNBdGZpQzYtR1lYeXk1OWVGRXIxS0tuc0RwWmJQUFhTVWpSNnYzOXROWEUyNFBWTldpdEs4MTJvQlZJTG5jcUsxQ1dnU2l2U0FOV3RxcDZ4ZElyWFRBSnprZFV0dVdkNmtVSEdlQjRNTDYw?oc=5",
+          "source": "Abruzzo Popolare",
+          "publishedAt": "2026-10-01T23:41:00.000Z"
+        },
+        {
           "title": "Notifica per pubblici proclami: ricorso Snam Rete Gas Spa c/ Corrao A.+ altri",
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcUVaY3Q0NjNQZmdQbWRvaE52N2FFb21xTy1maks2TEZMb25yNkxoWEQyZkctZzY2V24wbF8xY0pZdHdhUUFvTUE0Z2loUjZDR2RRQVRCdkhubzE1TF9YY0tua0NkUnpEZFVVdnpURGwydktvRUJUQVE0SlpNUFJNR2dnbXFBMjEyWFQwVHItajRiX1FaeDVXTDRmZS1wUQ?oc=5",
           "source": "Quotidiano del Ministero della giustizia",
@@ -155,12 +161,6 @@
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE82VFZsV1hJbXhMRlpOZWY5eTZsX2RtcmxkRHJ5SU5XTl9fdko0Z2RtRXgwaFhVVjNTdTVrSzZ1RUZCRXFfUTllS2YzVVg1MEVtaG5Calowb2RVbHlRS2pTQXFteG0wZw?oc=5",
           "source": "Staffetta Quotidiana",
           "publishedAt": "2026-09-03T07:00:00.000Z"
-        },
-        {
-          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1BQmhTUkJ0Y3owbFYtbEJvLWpnb3FrLW9kM3dhYW1vd2EtZ2Qwcmg3UHBFazlIdXg0MWRlZVJya3ZNN1lCLXZJM2pZREp3RkM3cDlzYll6dUtyUFNQZWZRQUEwaG1XUQ?oc=5",
-          "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-07-30T07:00:00.000Z"
         }
       ]
     },
@@ -319,10 +319,10 @@
           "publishedAt": "2026-09-15T07:00:00.000Z"
         },
         {
-          "title": "Petrolio, inflazione e dilemma tassi: cosa aspettarsi dai mercati",
-          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOT3pwMFVnaTdoSWhrcGlEUFdMY1JqTmVCd0kyck14S3lnWjQ1Ym1NYzlUQ19FTkxSZkgzSi1SdFlLY242YkEtOWV0UWhiTjZMc3REdklFSHJLaTF2QTM4R0prUnBieWZWX2pHRThFRl9hWWloMWVrSFZQUFBvWVM5VW12MTZYa054N1NVOEZvbDU3d3ZmVnpobnNiNjRVVGJ1RWRmaEVIR0hWdmZVRmJRMjZFSGJ2QQ?oc=5",
-          "source": "Websim",
-          "publishedAt": "2026-09-15T07:00:00.000Z"
+          "title": "Borse oggi in diretta | Il Ftse Mib chiude sotto la parità (-0,1%). Sprint di Lottomatica, male Moncler",
+          "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNQzJIU2liMm5EU3BoUzMzSmU1bUZieWs5cklYVW93VE1pRU9MamZLYnJpeUhPaklrcGYxYXFJaVBGSzRSRWg0NlVSbjJsRXRHQ0UyWUlhT1BSY1B6VmRYQ0tiX1d4SUhzbTJ4S1gzSEg5ZUMxeW5yMkdCOVZwOGtVemxDM2RwYUhjNkVLRW9PUHZfckJDcy1LdWpnV0Y0V1RnZnVhaE1ockNNMGJ3bW9UUElpeVNQS2pxeUVyRS1sWUNTRGpLNThSNjRmdER2WnFQbGFvQV9NdUFqMGc5N1JzN0FmWl9NUQ?oc=5",
+          "source": "Milano Finanza",
+          "publishedAt": "2026-09-10T07:00:00.000Z"
         }
       ]
     }
