@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T21:37:26.810Z",
+  "generatedAt": "2026-10-15T11:21:07.911Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -43,16 +43,16 @@
           "publishedAt": "2026-10-10T09:32:58.000Z"
         },
         {
-          "title": "Eni - Spazio per una politica di remunerazione più generosa",
-          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNZnpXSEoydk1BSnB1MkZhb1p6UnB3cUdOdVlZV1k4UlRIa1NjdlZzYlJONFJHbzJrTDdUM2xtUVdPVzNBVFZfeEhpNVFRMTFoTFRWMEVNOW1lYzU4VUhUSllCMDZ0bHluNWY3dnZGNXMzamtDcFo5SUpyVDEzR3hoSWk0bUJvOG5kMlpiZHc0RFVweWhCQlRKTmFjN0dXdUV3T1AyNkN1STZBMHVGX2g5NnhXUGd4UQ?oc=5",
-          "source": "Websim",
-          "publishedAt": "2026-10-09T06:00:00.000Z"
-        },
-        {
           "title": "Azioni Eni +55% nel 2026: ecco il nuovo target price",
           "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOVU5URElkQzNvZzZNQVh0RWNnS0t0RVZvdm94UG5EYU5VT0U4S1R2S0pmQVQ4akxoZVhXallqMDFabnh0SjBhbnhYM3ZGdzl2WWJwazI2YXR4akdyOE1RTE5QUURha0tvb2pLX2o0enlFWXZvOWJjeWllenctMU1NdA?oc=5",
           "source": "Finanza Italiacom",
           "publishedAt": "2026-10-08T13:30:33.000Z"
+        },
+        {
+          "title": "ENI, il target price aumenta a 25 euro",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUHNZQUI1cjB6VzBMdndEYUNPdF9RUVE3aXVnSV9HQ0RsUnpvQ0otOFJqMDFyVzJNaDNSV2dLbXBaMmFhWGhwMjJMTkNsWm5TNE51U2hzQVBJZzlRWjY4b3V3dWlzdG5VOXh0UC0wNl9VQ0xXYkFIZlhBQXpmYkxIZzIyT09IbGw1b09FaDd6RHYzYVMwRlEwakR4S19GbGs?oc=5",
+          "source": "Websim",
+          "publishedAt": "2026-10-08T09:41:27.000Z"
         }
       ]
     },
@@ -60,6 +60,18 @@
       "id": "enel",
       "label": "ENEL",
       "items": [
+        {
+          "title": "Enel, le utility tengono nel sell-off tecnologico",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOREZINXRSZ04wR05CNHU5d2ZSRUZuOEtkek1fdFpyR1JiOHdXb09jWm50cXJ4eVp4NFVSLVRSbzFBc2xXclBzSkx0d2Q5UkZFWEpHaTd1ZWRHQVNhMzZSdmhmaEl3dkQwN3l0Q2pjaDZ2YUNENnF3bU9UdnJBMW11RGZvdXI2em8zQ1EycmpkQVhLd2lVcVZWbG9GTktmUW94ZnpybDNQcXVJZmdSQ0dIdGhrYTNfU1lPU3NMWWtuLWRWX2s?oc=5",
+          "source": "Websim",
+          "publishedAt": "2026-10-15T09:30:34.000Z"
+        },
+        {
+          "title": "Enel, le utility tengono nel sell-off tecnologico",
+          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNTWE3cEpnR3lKR2RyYTM1RS15V1lqdDdlem1FNWYtZ1pCNUlWRjFKXzhJTVZNdVdDd2Q0OHVnbHdud3RyRzIyWlROcFVOSk5FTGxyMW9CaEZSTDNtc0g3R1JYdDAwQ082cnV0RE5XWGllNW5BVXN0YW00RmY1alZ6UkZ1WWJGQWpKOU5reWNuYlRNMUlXbm9VYlNwQTBzWk1uZ3V1T2s1ZzFKYmF5V2JYeW13bUF2VFMtMmc?oc=5",
+          "source": "Websim",
+          "publishedAt": "2026-10-14T08:11:05.000Z"
+        },
         {
           "title": "Le azioni di Expand Energy guadagnano oltre il 4% dopo una solida forza intraday nonostante l’esaurimento tecnico",
           "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNOGx3bDFITXE2Tzl1cjQwaEJkb1VielZ1QTJRVnVnSHBBejM5dVNVUjYtaFFRSjV4QlZSeVZ4bmZUbzhaRFBCRzhSV1k2RU4wMkZSSFI4dGZZc0dETEhjMGlIM1BfVFpXMGNVV0h0OGZQQnMyYklmZjY3eWRjMUw0ajg1YkRPNFlOel9LaUNCNmNfMWROd0hV?oc=5",
@@ -95,18 +107,6 @@
           "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0zeEdsQUFfTUxncWlDY2tOLVVTcExqSE9CQVZnaHZKOWJ4TFVfZVFqLWNZTmZwR1FTZWk0VkNzdWZoeXUweEZMZ2RyRmc1eks2U2ROMV9Raml6MGprcDJYbmZlcHNEX1hq?oc=5",
           "source": "Rankia IT",
           "publishedAt": "2026-10-08T14:50:08.000Z"
-        },
-        {
-          "title": "UBS prevede un’ulteriore crescita degli utili europei nonostante tassi ed energia più elevati",
-          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSFl5ejdQSjNmT3o5TzFtQklZQ3lUUmJpSnVRNFh0SXBRNmNjR2dHQ3NsTUZzX0N5SWh4Z2I1NlIyRXFGZkhNSy1maXNBLXp1Qm1paFFsZDZ1LWh5eV92TExXRHNjajB3SUdqTW5mMXE2eVMwNTlYOFVfdlRKUXdsaGI0cGhLUnJqNUFteHRR?oc=5",
-          "source": "Yahoo Finanza",
-          "publishedAt": "2026-10-07T09:06:14.000Z"
-        },
-        {
-          "title": "Azioni Enel 7 ottobre 2026: quotazione e target price",
-          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE8za3h1UHZnSmEtaUlxS2o3QTVoN05GYWhfajIyZG4zY2V4RF9ZUThaZ213OFpOV3RWUUxjcjRPNk95eW5DcUprdTM3T1dXS0NjcmdMOGNmY29YMTc4cEJiWHBWcjQ4OG5BTFFOY1lGNA?oc=5",
-          "source": "Finanza Italiacom",
-          "publishedAt": "2026-10-07T04:23:00.000Z"
         }
       ]
     },
@@ -301,15 +301,15 @@
           "publishedAt": "2026-10-03T07:00:00.000Z"
         },
         {
-          "title": "Borse oggi in diretta | Piazza Affari chiude in rosso: -2,2% e lo spread sale ai 118 punti, ai massimi da ottobre 2023. Male i titoli delle banche",
-          "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNSEszcGYxTlZ3NU5uZlJXWUI0TzJSZlp2VmpiV240ZG9JaG5VSlNjYjhPOUZnNEU4UG9nRkxXU1BRNDBwd01pN3VxTVNMWUhpaUZzQ3ltU2w4ZHVHa1g5NjJoVFZtWG5aMV9zSzhFTmJtSlRmbm02c3h1NDh4eThBN2laZ2djRWZxdE5Vd3VLUTcwNnRkWlQ2RW16eG1UejZoTTJXRGk0OFJwbDB3SHpXWThHNFVuNlRIbVBXWi1WMkl6OE9ZR1VTT2dBRG9QM2tsNjVETDZUOFhmemIxWlRndFRLZ2RNX1JrOTJSbjRQQVJrUQ?oc=5",
-          "source": "Milano Finanza",
-          "publishedAt": "2026-10-01T07:00:00.000Z"
-        },
-        {
           "title": "Btp, come comportarsi con i rendimenti in rialzo?",
           "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxObmt2clN3XzhPcTZVTEZQOWhldURtNUVialRHQ1VFM0ppekR2aW5lSE5RdXh3MzkzMEVkcUY1NEhVSmRiR2N0MU1ScUtQbEIzNFhtSW83NE85NC1kamhqRWI4bGhCdFhkYm10WFRabk5rYThaekJLQjVRdjlsYzJWTGp4N1hoLXZSZ25OY0kzOWtDajVQ?oc=5",
           "source": "SoldiOnline.it",
+          "publishedAt": "2026-10-01T07:00:00.000Z"
+        },
+        {
+          "title": "Borse oggi in diretta | Piazza Affari chiude in rosso: -2,2% e lo spread sale ai 118 punti, ai massimi da ottobre 2023. Male i titoli delle banche",
+          "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNSEszcGYxTlZ3NU5uZlJXWUI0TzJSZlp2VmpiV240ZG9JaG5VSlNjYjhPOUZnNEU4UG9nRkxXU1BRNDBwd01pN3VxTVNMWUhpaUZzQ3ltU2w4ZHVHa1g5NjJoVFZtWG5aMV9zSzhFTmJtSlRmbm02c3h1NDh4eThBN2laZ2djRWZxdE5Vd3VLUTcwNnRkWlQ2RW16eG1UejZoTTJXRGk0OFJwbDB3SHpXWThHNFVuNlRIbVBXWi1WMkl6OE9ZR1VTT2dBRG9QM2tsNjVETDZUOFhmemIxWlRndFRLZ2RNX1JrOTJSbjRQQVJrUQ?oc=5",
+          "source": "Milano Finanza",
           "publishedAt": "2026-10-01T07:00:00.000Z"
         },
         {
