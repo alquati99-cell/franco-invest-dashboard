@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T16:34:11.920Z",
+  "generatedAt": "2026-10-16T21:02:30.892Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -67,6 +67,12 @@
           "publishedAt": "2026-10-16T02:32:17.000Z"
         },
         {
+          "title": "Analisi tecnica in tempo reale dell’azione Hallador Energy Company (HNRG)",
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9pbDVxMndnVF8tYllBRFE1cVBDWmJsZU9HZ2RnSmdsWjQwbGdScFoyTjdsd1RzZW5OQzNqMzV0X0t5Y2VjcVd0S2F4dXJDY2daZWNYVHpTWmJyRlZDMlJYUlVqZWhkeTRsbkstRkNTTTFYMzA?oc=5",
+          "source": "Traders Union",
+          "publishedAt": "2026-10-15T19:56:59.000Z"
+        },
+        {
           "title": "Hallador Energy Company (HNRG) – Storico dei prezzi e dati delle azioni",
           "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBSUW5RMHI5RFhXRWxDWThVd0R2dEZOLXN6RW9kcjBOcFRnOS1LY0dBSFdsVnZ1X3ZibHdrNTQ3aHNrVXRPZ29vdVVxMGNuYWF6aG94elJXaVdvTGc0LXVzOFhROTZ2c2NQWTBRRjdiRQ?oc=5",
           "source": "Traders Union",
@@ -83,12 +89,6 @@
           "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQRi1CZkNoeEJyTnJFMElLcFhzUTg0UkE0Ql9qUU5EVkJ4WDRES2NoMy1feUxSd0RJamtUc1BzaFZPeFNCdWVyWk5VRWZXc2Zudk5jVGstSzJUTHE1dzQyTEhET05FdGdvd3U0SklIVFRmY0l3RW9SaWlEVU1OaDFtTTl4cFVPa1pBNDlBMDdhM21FN1E?oc=5",
           "source": "Traders Union",
           "publishedAt": "2026-10-14T17:38:42.000Z"
-        },
-        {
-          "title": "Enel, le utility tengono nel sell-off tecnologico",
-          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNTWE3cEpnR3lKR2RyYTM1RS15V1lqdDdlem1FNWYtZ1pCNUlWRjFKXzhJTVZNdVdDd2Q0OHVnbHdud3RyRzIyWlROcFVOSk5FTGxyMW9CaEZSTDNtc0g3R1JYdDAwQ082cnV0RE5XWGllNW5BVXN0YW00RmY1alZ6UkZ1WWJGQWpKOU5reWNuYlRNMUlXbm9VYlNwQTBzWk1uZ3V1T2s1ZzFKYmF5V2JYeW13bUF2VFMtMmc?oc=5",
-          "source": "Websim",
-          "publishedAt": "2026-10-14T08:11:05.000Z"
         },
         {
           "title": "Le azioni di Expand Energy guadagnano oltre il 4% dopo una solida forza intraday nonostante l’esaurimento tecnico",
@@ -122,6 +122,18 @@
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5ubEstQVdoaDJuREQ2M2hhckoweEZOZUVjRUdWcTdrR1BGSUh0QlRYRVZ3MDhJMW9tSXdCTHc4MGI4WjhCY3g1aUdHLVVqX1VJX2NCZS1wZ2tPdnoxR0I4eUtrU185QQ?oc=5",
+          "source": "Staffetta Quotidiana",
+          "publishedAt": "2026-10-14T09:57:47.000Z"
+        },
+        {
+          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5XSVkxWWpIa0gtb1phbUJxUTJGSjZPcW1aT1hXT2V3bjdqZzVmR21ORXhBcXpEazhxQ0JHRU5aUmJ1bU5HSHRyaDRwb3JOalFNRktYaHlqVFNJalJsR283c0d1UTdiQQ?oc=5",
+          "source": "Staffetta Quotidiana",
+          "publishedAt": "2026-10-13T09:02:09.000Z"
+        },
+        {
+          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9CRDJBRU1hLXE1Qi02VnJBbXVYb2gtMmZ0V2l6OEQzcVl1T01kcFNuWFg4NDhiMnBmOEM2SEt6MEV0TTdpeUR5Z04zNHZBNHUtZ2RRTlF6SEtudlBqVHN5c2FuYVhhdw?oc=5",
           "source": "Staffetta Quotidiana",
           "publishedAt": "2026-10-12T09:24:47.000Z"
@@ -149,18 +161,6 @@
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcUVaY3Q0NjNQZmdQbWRvaE52N2FFb21xTy1maks2TEZMb25yNkxoWEQyZkctZzY2V24wbF8xY0pZdHdhUUFvTUE0Z2loUjZDR2RRQVRCdkhubzE1TF9YY0tua0NkUnpEZFVVdnpURGwydktvRUJUQVE0SlpNUFJNR2dnbXFBMjEyWFQwVHItajRiX1FaeDVXTDRmZS1wUQ?oc=5",
           "source": "Quotidiano del Ministero della giustizia",
           "publishedAt": "2026-09-30T07:00:00.000Z"
-        },
-        {
-          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE56SDdsbTJvVWEySDBtQU5FOUw4TTZ6SGdIWWJ6enR2N0lQUzVZMDI1ak9SdGREdEl5TW9qbWFZTTZndGJxSUhDWWlLall2eXJGWW9pNU84ZEMzbjVrb2R1RXYxTUVvdw?oc=5",
-          "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-09-29T07:00:00.000Z"
-        },
-        {
-          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE82VFZsV1hJbXhMRlpOZWY5eTZsX2RtcmxkRHJ5SU5XTl9fdko0Z2RtRXgwaFhVVjNTdTVrSzZ1RUZCRXFfUTllS2YzVVg1MEVtaG5Calowb2RVbHlRS2pTQXFteG0wZw?oc=5",
-          "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-09-03T07:00:00.000Z"
         }
       ]
     },
@@ -262,7 +262,7 @@
           "title": "Mps, cresce il fronte a favore di Intesa. Faro della Borsa su Banca Generali",
           "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOYWQwbm1iMzBsRkRoZ05rRkowQVFpN2x2Nkp0ZmVESHc3dGdiNDRINmdzTnNCX3pUZ05RbGdBNkhCU2JjU05UV2JPX2FGUVF6NUdoZHAwME5zZEVzVHEtazlxbFpfaUtWN1UzODdma01SLXBQLWFqVXA3ejFteVAtaFFEdUhIOFpLNWlxdEdNbDlqazQzc084QlBXUW9BOVhCUmdHT3BCMnBGZHU2SHRjVEJIQjdlQUlLY1NYNm1KMGt0NzhZcHA2Q25sblBPX3F1M0JrVXB0a1hqbldobGNkU3RzNWxadGxXNHhfWW1zOW02eXhxWjFhcDJrdVY1Nzc3YUHSAYcCQVVfeXFMTWo2U0VOb0JYYW1HbXhIdV9OcmIwMFN6M2xUT1J5UDFnd0JjOVFaR3E4VThLVnBKOVlUT0pzUGF3Q1RrVkpWa3luZk9Va0d2bExUNDFqRmFQakc0YlFXZlN2bFptWi1BOGstUGZsQVlsemkxNU5QSlB1VWo0MEJ4Z3BER2h6dW11UjdJYzg2NlZhT3E5WFdWa3dZTXlEV2c3RS1FR2ZQSXR3QWhEcXlha215ck1zVENYZ3lKRm1vT1d6NFM3eUtsZW45bEJOeWtBamJwZy00eHJINW9XM1otZThjVy1MX2JQR2tiOVJqTTRXZ0tUUVoyd0VLYVIwQkVFaFN0czg4UGM?oc=5",
           "source": "Corriere della Sera",
-          "publishedAt": "2026-10-10T05:19:36.000Z"
+          "publishedAt": "2026-10-10T05:08:00.000Z"
         },
         {
           "title": "Risiko bancario, UniCredit guarda a Banca Generali. Le indiscrezioni sulle mosse di Orcel",
