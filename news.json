@@ -1,11 +1,23 @@
 {
-  "generatedAt": "2026-10-16T11:16:11.652Z",
+  "generatedAt": "2026-10-16T16:34:11.920Z",
   "source": "Google News RSS",
   "topics": [
     {
       "id": "eni",
       "label": "ENI",
       "items": [
+        {
+          "title": "Le azioni Eni potrebbero muoversi dell’1,1% con i risultati del 23 ottobre",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOYWtPNFJkS0tpMTBCYml2dkZDLVI4SlNpWHVuTi1hNjVYTlh3ZlVyeWJBM0xiUUhfWmVJNW1zMzB0LS1VdUkyQ0ZZLUJSb2ZlOWVTQzhnYWkzVUMxZkpPZWJoVWZUN3ZsSFF5dkViSDR1dEI1bmRBMm1WS0R5SHZDanpjWG03QW5HYVV0WU1FLUY5ZXl0OHNsTXhuNE5mQURkTGZ0U1JRLVFFc0NxTWVGWm9QZTlPTXVCWndUZml1YTZjUnUzZ2hET2xyakw?oc=5",
+          "source": "Investing.com",
+          "publishedAt": "2026-10-16T11:55:00.000Z"
+        },
+        {
+          "title": "Eni, BofA incrementa target price in vista delle trimestrale",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOOTBzcGZheGx5bXlHTF94RUppTzQwNHJ1di1mUDA4Nkpyc29KY3R4aUNseGtnLUlweXJRTjdSTWxZMEpFLWVxYzdEZERoOHllVVVncWRLMWtXaE5TSmc3UUEwODA4TzJicS1DUlBJOG92dUNmQzRnLTEzRmV4dlZYUjE5ZDBjZkQ3NF9pNlZiNm43VnpkTEtNXzlNNFpZaXZWMjR2ZEVsQnE0VkJiNjdCSHVlUGc5cnM?oc=5",
+          "source": "la Repubblica",
+          "publishedAt": "2026-10-16T11:38:13.000Z"
+        },
         {
           "title": "Eni prosegue buyback e acquista azioni proprie per EUR100 milioni",
           "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNRFR6dTNBNFJHRXZwSTM4X1pCTzhtbE93TnJyYzBxRF9xOWt6dndtMjRLSnRpd3ZMZWxZY0JVS3Zua2VXZENvb0ZscFpDbDUyMW45NGp3bXN3bUM1Sk9QSXJSSC1acnRSblM3NGhPVWY3ZGNnMmZkLTBmTWVLYkZQQVdDTUZRU0d4T1NmeUw5dDNNZkRhOVhsVWZjZlBha0VpYWpnUnI4NDh6cUhIeGh5YXc1ek1wa0JOUjBmcw?oc=5",
@@ -41,18 +53,6 @@
           "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQZ05IODlaN2t6UWZHUHRxWnVJUGFSV3MyWFpJdXNRNkxGTnRQWFFqcVBjSEJsaVl2d1V5enZCYTFVd2FJZ3NweDdxSl96aUg0RVZnbWl0b2lIVWNOWTZyZHFYZUw1cHlIYUxhRXBZV0hzanVYZnowaGFienpwZUQ1MkFWOHA2YlJ6T1lrWUp6WUFNUlBFRTZaalVwMTZ3S3VFRHNjbmp3LWZFLTIwY1NwaWRxUENTYldqelE?oc=5",
           "source": "Websim",
           "publishedAt": "2026-10-12T13:40:21.000Z"
-        },
-        {
-          "title": "Azioni Eni +55% nel 2026: ecco il nuovo target price",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOVU5URElkQzNvZzZNQVh0RWNnS0t0RVZvdm94UG5EYU5VT0U4S1R2S0pmQVQ4akxoZVhXallqMDFabnh0SjBhbnhYM3ZGdzl2WWJwazI2YXR4akdyOE1RTE5QUURha0tvb2pLX2o0enlFWXZvOWJjeWllenctMU1NdA?oc=5",
-          "source": "Finanza Italiacom",
-          "publishedAt": "2026-10-08T13:30:33.000Z"
-        },
-        {
-          "title": "ENI, il target price aumenta a 25 euro",
-          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUHNZQUI1cjB6VzBMdndEYUNPdF9RUVE3aXVnSV9HQ0RsUnpvQ0otOFJqMDFyVzJNaDNSV2dLbXBaMmFhWGhwMjJMTkNsWm5TNE51U2hzQVBJZzlRWjY4b3V3dWlzdG5VOXh0UC0wNl9VQ0xXYkFIZlhBQXpmYkxIZzIyT09IbGw1b09FaDd6RHYzYVMwRlEwakR4S19GbGs?oc=5",
-          "source": "Websim",
-          "publishedAt": "2026-10-08T09:41:27.000Z"
         }
       ]
     },
@@ -199,12 +199,6 @@
           "publishedAt": "2026-08-13T07:00:00.000Z"
         },
         {
-          "title": "Saipem e le nuove commesse. Analisti vedono ancora potenziale upside di oltre il 10%",
-          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNd0h5RllENHlqZkdTM0x5dUZiWTdBajhndWtqU3hCRnYwVnBncFZMaFd4YzZSNkYwMmFqNDJ5cmsyYnYtTzQ2NEJlYkdnY0VXT0xJSzdFR3F6Y25TS3pGSUV4VzZ6WEVqb05qTXl6T2FDd1VhM1ZyVjNpellRUlpSRlFrc3pkVWtwY01mc0trNXhTaHV3aHJMcUJKMl9GZlhySVlYV3dtbWxURXJYd1pVdnk5cFFBOGxSQ2VYUA?oc=5",
-          "source": "FinanzaOnline",
-          "publishedAt": "2026-08-13T07:00:00.000Z"
-        },
-        {
           "title": "Saipem, maxi-contratto offshore in Medio Oriente da 1,8 miliardi",
           "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObk9QcnV5WWdhT1RkZ0hoVmtreklfSGpibzlYS0lDdVFEVTVHTXpLdWF5bmtHREtwODhwdUNkZnJ0UGVGNm9oSk50cjgzQ2UtUG1Vd2lka3hFUkI1M05laWxZbnpTNlBzczhFb0dHRGstaTZ4RWJSMEhzVFlYQ2ZQd19SMDRhdW9Lb0wwZzRSd1RUQzNYX3dRWmhxeTBpSnZ0UUdGektuTHBjSG1GWDVLLQ?oc=5",
           "source": "SoldiOnline.it",
@@ -214,6 +208,12 @@
           "title": "A Saipem contratto offshore in Medio Oriente da 1,8 miliardi di dollari",
           "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPMTR4X3RSNlkyMDNZU2VnSzBLS2RKU2V4d1lYN3dlZk5TTnhwejUzeTlfMkljQ0ZHUWRMaWpFRFpkdHYxQm9DZjJSVXVxc0FHUlZDZEpxN3ZqdFoxTF8yU2Vad1lqSHdCaFdBd1NiOGJpRlBkOUtsemNOd2k3bzhuNGVFNmRLRjEzQVVrZ0UySFRNYTRzNzg3TFRUdk1wc0pKOVJaRlE5UEU3VmFzell6UFc3TmZtVEs0MlcwaV9mamlKU241X2xncFppTFNLWC1xN0w0aVBUS3Z5NXVOZkRWWVZtM0kzN0ZvUFJLbF9vLU95SFJ4Vl9TVdIB_gFBVV95cUxPZGd5VzNqUFVIR0dCVEZqNWRBMGpsbFB3N3BpaG12RldFc1pVQ19XeFVwblFDX2I1NGNYZXdzQjhpRDVObWRDNDJHemNhTVFvWWR2TzRJU2E4UTl5cXkxMThhZjRQbGFTM2hoYklhSE1xU3NSVzFBVHRXLTNyNmZQVldmckVBTDFmaDJ3aU5hX2NUSjBCT2t5cWhQY2E5MzBFVUR3NXF2cG1IdlQtM05VTndlakUzamFTaXdPRjVDdXJiclpnY0t0cFRhYWtRTlowclE1SzJfTWd1SGFrRGlYZ2xnNHVRaFpYR3c4eXJGU1k1cklYT3QwRlpEM0Fudw?oc=5",
           "source": "ANSA",
+          "publishedAt": "2026-08-12T07:00:00.000Z"
+        },
+        {
+          "title": "Saipem, contratto offshore in Medio Oriente da quasi 2 miliardi di dollari",
+          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVUpWOVNXSE9vZkVSdERWS1lpbmtfU2pMZERFc2ZGR2xJZFVrWjVuZzRNbFJKTFBtbmlrZC1JZjBZdHNKbWtJTGpvUE5GclJ5SFZOci1aVWMwZXg3bDhTQjhCTnF4ZGs0cVVseWpqcDBPT1JvYmxKVWYxS2NQR2JEdVljNlBYX3ZyMHh5b1E1S0FpMkZLTVc1SkZNVmxQdmpmVlNmb2VCX0RNcnJPb1daSS1wcGdaRXZhOEJIbWxpLVg?oc=5",
+          "source": "Teleborsa",
           "publishedAt": "2026-08-12T07:00:00.000Z"
         }
       ]
