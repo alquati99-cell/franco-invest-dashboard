@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T11:29:05.130Z",
+  "generatedAt": "2026-10-20T16:57:05.424Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -31,12 +31,6 @@
           "publishedAt": "2026-10-16T07:00:00.000Z"
         },
         {
-          "title": "Eni prosegue buyback e acquista azioni proprie per EUR100 milioni",
-          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNRFR6dTNBNFJHRXZwSTM4X1pCTzhtbE93TnJyYzBxRF9xOWt6dndtMjRLSnRpd3ZMZWxZY0JVS3Zua2VXZENvb0ZscFpDbDUyMW45NGp3bXN3bUM1Sk9QSXJSSC1acnRSblM3NGhPVWY3ZGNnMmZkLTBmTWVLYkZQQVdDTUZRU0d4T1NmeUw5dDNNZkRhOVhsVWZjZlBha0VpYWpnUnI4NDh6cUhIeGh5YXc1ek1wa0JOUjBmcw?oc=5",
-          "source": "MarketScreener Italia",
-          "publishedAt": "2026-10-14T12:44:23.000Z"
-        },
-        {
           "title": "Eni prepara un terzo trimestre record. Sempre più vicino il maxi dividendo, per Equita vale 1 miliardo",
           "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQZ2hTR3VRY3RqZE54dTRhM0Vza2I0SDB4Q3N6WXlSWTNxZlhhMF8ydVhtTThmRm1nUGJRUW1VdjgwdTBRQnlyODlJV3YwUHNWOFdULWljQkdFLVpuNGpkd3Brck5WVFc0Y19Dbkl0ODZ3MF9jTkxjNDBCS2ZIaHhiNHRBcm9lVE4zT1FRbVZYQnh6d1M4Qlp4MlVRZW9ZTmZXQXN4ZG4wRlFpdnJtTXVORmd2Z0gxT1JVQ3F2SnFsdU9OVE5jZ0F3a0FSYjBFc2Y5LWlLdA?oc=5",
           "source": "FinanzaOnline",
@@ -53,6 +47,12 @@
           "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOWXk3alNWWGhJemREVm1EdlFhTmJPUk93WDRnblQyUXZ2NFNRVGUwbVN6XzB0SWlrSVN6azNUUVBudE83bU9DZjcydnJNRDVkcUZPVkpZbWxqZnY1SUlfUXdOQ1o0MUQwZ0NNWGptQV9iLTBhWmRtaEVNREp1M3NoblNwZDl4R0ZBOUE?oc=5",
           "source": "Finanza Italiacom",
           "publishedAt": "2026-10-12T15:14:17.000Z"
+        },
+        {
+          "title": "Eni, Equita alza il target, la nuova soglia indica più upside",
+          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQZ05IODlaN2t6UWZHUHRxWnVJUGFSV3MyWFpJdXNRNkxGTnRQWFFqcVBjSEJsaVl2d1V5enZCYTFVd2FJZ3NweDdxSl96aUg0RVZnbWl0b2lIVWNOWTZyZHFYZUw1cHlIYUxhRXBZV0hzanVYZnowaGFienpwZUQ1MkFWOHA2YlJ6T1lrWUp6WUFNUlBFRTZaalVwMTZ3S3VFRHNjbmp3LWZFLTIwY1NwaWRxUENTYldqelE?oc=5",
+          "source": "Websim",
+          "publishedAt": "2026-10-12T07:00:00.000Z"
         }
       ]
     },
@@ -61,10 +61,10 @@
       "label": "ENEL",
       "items": [
         {
-          "title": "Europa in rosso a meta' seduta, a Milano (-1%) si salvano oil e utility",
-          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNdnBxdW5fVzg1eDlxYU5wYkpSem9jNEg5ZnlJZndjS2hVTmlpTmY3VjU4UlZhb3BpMGFoYjYwc1lDUldfY0Z4OGNZeEFrYjRNRXdJb251eENvdEdkZnRocjBpMW01T2o4RkVmYmJESWFkbUlaUzRNQkRwNnctWk96bDJVSUR2RVZoaGtqeEpmUU5pWDZfZ21YTXc1b3QwZ0lock1QR2tUS1Rma0Vjc0NIMGc5SElsdzYzQ3QyOQ?oc=5",
-          "source": "MarketScreener Italia",
-          "publishedAt": "2026-10-20T11:12:34.000Z"
+          "title": "Azioni Enel 20 ottobre 2026: quotazione e target price",
+          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1WTWRUcDVDUzRHTWQtTHlKNnljOGRGaldMd3pua3p6T1NURTEyTjNtVEhfMTJPcnBSdFdVclJQYTZNbE5GTHB2UlA1TTl5WFh6VzVlYWpqVkxwdzVhdHNuSUkwUWZnZ080cC1tWDBlb04?oc=5",
+          "source": "Finanza Italiacom",
+          "publishedAt": "2026-10-20T15:07:19.000Z"
         },
         {
           "title": "Borsa Milano, Enel in testa al Ftse Mib con utility e attese su trimestrale",
@@ -97,16 +97,16 @@
           "publishedAt": "2026-10-19T17:03:48.000Z"
         },
         {
+          "title": "Azioni CXMT in calo del 7% nonostante la prevista inversione degli utili",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9wSmJXNlZlOEVnVjRraWRxUHlMVlBVV25HaWFZSlMtY0o0Y2hObW01QmR4bXIwbzJNeEkwSXBFQmNudnp2VG04dWV1dFB0ZFFCQnFsX3F2NFd4R0RQR21CVnQ0X0ZzX2lMRGxKdWNZZ3JSM0pScDhYN2c1T2o?oc=5",
+          "source": "Traders Union",
+          "publishedAt": "2026-10-19T07:48:03.000Z"
+        },
+        {
           "title": "Analisi tecnica in tempo reale dell’azione Hallador Energy Company (HNRG)",
           "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9pbDVxMndnVF8tYllBRFE1cVBDWmJsZU9HZ2RnSmdsWjQwbGdScFoyTjdsd1RzZW5OQzNqMzV0X0t5Y2VjcVd0S2F4dXJDY2daZWNYVHpTWmJyRlZDMlJYUlVqZWhkeTRsbkstRkNTTTFYMzA?oc=5",
           "source": "Traders Union",
           "publishedAt": "2026-10-15T19:56:59.000Z"
-        },
-        {
-          "title": "Hallador Energy Company (HNRG) – Storico dei prezzi e dati delle azioni",
-          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBSUW5RMHI5RFhXRWxDWThVd0R2dEZOLXN6RW9kcjBOcFRnOS1LY0dBSFdsVnZ1X3ZibHdrNTQ3aHNrVXRPZ29vdVVxMGNuYWF6aG94elJXaVdvTGc0LXVzOFhROTZ2c2NQWTBRRjdiRQ?oc=5",
-          "source": "Traders Union",
-          "publishedAt": "2026-10-15T15:16:24.000Z"
         }
       ]
     },
@@ -142,7 +142,7 @@
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4xaWd2UG1QR0FTU1hFQlNNMWZ0bXRSaEpfMy1nNDR2TDJ6RzZISW9uRVpSVWZ5cnF0dzRQRm5FOUE1SElCQ1RSWVFIZWZLTXJ1NU1HazBqUWItS0xQSzZVZkhMRERsdw?oc=5",
           "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-10-05T10:00:48.000Z"
+          "publishedAt": "2026-10-05T07:00:00.000Z"
         },
         {
           "title": "Notifica per pubblici proclami: ricorso Snam Rete Gas Spa c/ Corrao A.+ altri",
@@ -205,15 +205,15 @@
           "publishedAt": "2026-08-13T08:50:08.000Z"
         },
         {
+          "title": "Saipem e le nuove commesse. Analisti vedono ancora potenziale upside di oltre il 10%",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNd0h5RllENHlqZkdTM0x5dUZiWTdBajhndWtqU3hCRnYwVnBncFZMaFd4YzZSNkYwMmFqNDJ5cmsyYnYtTzQ2NEJlYkdnY0VXT0xJSzdFR3F6Y25TS3pGSUV4VzZ6WEVqb05qTXl6T2FDd1VhM1ZyVjNpellRUlpSRlFrc3pkVWtwY01mc0trNXhTaHV3aHJMcUJKMl9GZlhySVlYV3dtbWxURXJYd1pVdnk5cFFBOGxSQ2VYUA?oc=5",
+          "source": "FinanzaOnline",
+          "publishedAt": "2026-08-13T07:00:00.000Z"
+        },
+        {
           "title": "Saipem, maxi-contratto offshore in Medio Oriente da 1,8 miliardi",
           "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObk9QcnV5WWdhT1RkZ0hoVmtreklfSGpibzlYS0lDdVFEVTVHTXpLdWF5bmtHREtwODhwdUNkZnJ0UGVGNm9oSk50cjgzQ2UtUG1Vd2lka3hFUkI1M05laWxZbnpTNlBzczhFb0dHRGstaTZ4RWJSMEhzVFlYQ2ZQd19SMDRhdW9Lb0wwZzRSd1RUQzNYX3dRWmhxeTBpSnZ0UUdGektuTHBjSG1GWDVLLQ?oc=5",
           "source": "SoldiOnline.it",
-          "publishedAt": "2026-08-12T07:00:00.000Z"
-        },
-        {
-          "title": "A Saipem contratto offshore in Medio Oriente da 1,8 miliardi di dollari",
-          "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPMTR4X3RSNlkyMDNZU2VnSzBLS2RKU2V4d1lYN3dlZk5TTnhwejUzeTlfMkljQ0ZHUWRMaWpFRFpkdHYxQm9DZjJSVXVxc0FHUlZDZEpxN3ZqdFoxTF8yU2Vad1lqSHdCaFdBd1NiOGJpRlBkOUtsemNOd2k3bzhuNGVFNmRLRjEzQVVrZ0UySFRNYTRzNzg3TFRUdk1wc0pKOVJaRlE5UEU3VmFzell6UFc3TmZtVEs0MlcwaV9mamlKU241X2xncFppTFNLWC1xN0w0aVBUS3Z5NXVOZkRWWVZtM0kzN0ZvUFJLbF9vLU95SFJ4Vl9TVdIB_gFBVV95cUxPZGd5VzNqUFVIR0dCVEZqNWRBMGpsbFB3N3BpaG12RldFc1pVQ19XeFVwblFDX2I1NGNYZXdzQjhpRDVObWRDNDJHemNhTVFvWWR2TzRJU2E4UTl5cXkxMThhZjRQbGFTM2hoYklhSE1xU3NSVzFBVHRXLTNyNmZQVldmckVBTDFmaDJ3aU5hX2NUSjBCT2t5cWhQY2E5MzBFVUR3NXF2cG1IdlQtM05VTndlakUzamFTaXdPRjVDdXJiclpnY0t0cFRhYWtRTlowclE1SzJfTWd1SGFrRGlYZ2xnNHVRaFpYR3c4eXJGU1k1cklYT3QwRlpEM0Fudw?oc=5",
-          "source": "ANSA",
           "publishedAt": "2026-08-12T07:00:00.000Z"
         }
       ]
@@ -307,6 +307,12 @@
           "publishedAt": "2026-10-03T07:00:00.000Z"
         },
         {
+          "title": "Lo spread risale fino a 132 punti: la tempesta parte dalla Francia e arriva ai Btp",
+          "link": "https://news.google.com/rss/articles/CBMijgJBVV95cUxNeEVLZUFPbTNXdWtlREw0Ty1WOGdnaGZfNGtnSGpCeDc2cHR0Q1cxdHFuXzJLa0s4NEFwWmxaZmZSSzRvQ0FTbXdGdzFsd2NDWWc0WUNXcGNLdlpvVUF1VjZqNTJHSEUyNFREaV9QaHpuOW9za0RsbUNYZjFRRVlmTmNsVWZfWnVKdTYxVkxicHBRMHJJOW9BRGdhenJKckU2U3F6R3kxMmFOeldKU1lhSHlLTW5IZ2NQYXhvLVRncGRHNkJzVzQwZjRyQzJ6TEU1RzNUQU55aHFDOTNwNjhaR2JmLUNjcFhCYndqMmw1S3V5MVRqNkZNbk9HOHRiLXRxQVJ1Sk8yT3ZyMXNQU0E?oc=5",
+          "source": "Il Fatto Quotidiano",
+          "publishedAt": "2026-10-02T07:00:00.000Z"
+        },
+        {
           "title": "Francia e inflazione tirano giù i Btp",
           "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1UWUpFLVBPeV9TV3pjNUQtMnZZcThzbXVGV0JQUkFjSXhkVmx3Q2Z4ZU1UNWpHX1pNam5kUXJUVUdsSkpUeXZhN0IyNTdqTjM4RkhBZFJ0b1RvZnhLUGd0aXlSSFdfWEoxc29B?oc=5",
           "source": "La Verità",
@@ -316,12 +322,6 @@
           "title": "Btp, spread alle stelle. I gestori: premio eccessivo, ma occhio alla parte lunga della curva",
           "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBJd0pLZVJTMk4tOWRHNVE1dENkN1gyTG1hTDZFOEhhM1JOSG5iRkZ5dGdjNTg4UVNLU3hJLW1IWmtUMV9pSTlnVVBYT056TDk1SzZnbUxTbmlfM0NPYm1STVMxbjU?oc=5",
           "source": "FocusRisparmio",
-          "publishedAt": "2026-10-01T07:00:00.000Z"
-        },
-        {
-          "title": "Btp, come comportarsi con i rendimenti in rialzo?",
-          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxObmt2clN3XzhPcTZVTEZQOWhldURtNUVialRHQ1VFM0ppekR2aW5lSE5RdXh3MzkzMEVkcUY1NEhVSmRiR2N0MU1ScUtQbEIzNFhtSW83NE85NC1kamhqRWI4bGhCdFhkYm10WFRabk5rYThaekJLQjVRdjlsYzJWTGp4N1hoLXZSZ25OY0kzOWtDajVQ?oc=5",
-          "source": "SoldiOnline.it",
           "publishedAt": "2026-10-01T07:00:00.000Z"
         }
       ]
