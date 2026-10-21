@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T17:06:55.467Z",
+  "generatedAt": "2026-10-21T21:36:37.609Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -134,6 +134,12 @@
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBlUzNtdEpDSENFbzFTQ0txT3ZQb3V3aHBoTTRRSy00MlJRbXpIQmlVOUVuOTJoVFRCc2tzck1fTzZFclZJRWRZT2JCR1NNWHZ4Nk1abWRqWVh3VmhabXBiSk1SaDg2QQ?oc=5",
+          "source": "Staffetta Quotidiana",
+          "publishedAt": "2026-10-07T09:46:05.000Z"
+        },
+        {
+          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4xaWd2UG1QR0FTU1hFQlNNMWZ0bXRSaEpfMy1nNDR2TDJ6RzZISW9uRVpSVWZ5cnF0dzRQRm5FOUE1SElCQ1RSWVFIZWZLTXJ1NU1HazBqUWItS0xQSzZVZkhMRERsdw?oc=5",
           "source": "Staffetta Quotidiana",
           "publishedAt": "2026-10-05T07:00:00.000Z"
@@ -155,12 +161,6 @@
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1LeWw5QTJjRXpUNDBhSC1ZTnlIM0xHZXVvLWNwd3BkcVVYdHRHcFBrWGpkcnYzRTRGSVB1ajFQb2hDSk8yYVhwenE3ZHQwTURZUWpwNkc5T1RDdS14ZlFaSmtldk1PQQ?oc=5",
           "source": "Staffetta Quotidiana",
           "publishedAt": "2026-09-21T07:00:00.000Z"
-        },
-        {
-          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE41U3dIdmhna2VYM3BDMm5VVFpETFBFTElvMHNUbUJNOWJMLXNRLUJtMmg2MnVHOUx0R2FWaU5OWWplTW1XQ2VvUkE5bkxCSHFXR2ZDWDBPVkRGN2o5RFNGSzREWHpHdw?oc=5",
-          "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-09-02T07:00:00.000Z"
         }
       ]
     },
@@ -169,21 +169,15 @@
       "label": "Saipem",
       "items": [
         {
-          "title": "Saipem si aggiudica nuovo contratto offshore da 350 million $ in Angola",
-          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRlViNFNiQTRybHpmdzZCdURVZ3lFRlpaS01GeHQ3enpnNEhfcHlNd2RfSlo5M3paSmx2X2dnb25MVXpqOHl5U3F2M3EteXJoTXJXNlgzQmVpaklqUkgxOU5NVHc1R0VFZXg2X2c3Q0NBZHo5cUVEbmtwSTJ4T0JpRmkyTGVFTW9DRGlTSWZpM0ZlaE1JZTBuRjh2X0dwTnNiRWtvZmZlX2l2c2s1VVVRMUJmd1NoaHByRnRNSWtoMnZ0dw?oc=5",
-          "source": "MarketScreener Italia",
-          "publishedAt": "2026-09-14T09:18:09.000Z"
+          "title": "Saipem selezionata per il progetto di espansione di Profertil in Argentina",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVHU4VWFLdGo0WjR5Und1TjdUbzlQSzh1VGpfY01uQkhJVG00Z0V6T3N3cVREWTRvOXdzYzdQNW5SdzJRcm1TMjNnWnk0SmtjUElUdWEtTFRlV3lWdU56M3ZPcmN3TmtTZ01TMUxXd05EaElQVlNOSUFuV1dab2JWQXVYb1BBd19pTUVNUFM1bw?oc=5",
+          "source": "Yahoo Finanza",
+          "publishedAt": "2026-09-29T07:00:00.000Z"
         },
         {
           "title": "Saipem ottiene un contratto offshore da 350 milioni di dollari in Angola",
           "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQOWkwMjF1VnNvcTBwSTZxYWxvZlRBeUM5T0I2ZHc1QndnSFBBRVVzUHFGY2Vvak1qQmxkbnBrZE9NSEFlRVFMX2luZ1FwUVFucjZIUTlZc1lQQk1YRGZ4bVctRFMyTlJTQkp5amZnbUI1ZFVZa3Fxemd3UHM1S3JWYnFuWGN4V0tOc0I2WDU3dC1NUQ?oc=5",
           "source": "Yahoo Finanza",
-          "publishedAt": "2026-09-14T07:00:00.000Z"
-        },
-        {
-          "title": "Saipem si aggiudica un nuovo contratto offshore in Angola",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQYXpZQUk0TWRqTmgzQXFyVWhuLVVlVl9xelVIbWtvY1RpOGxvSUZKeDU3VFgtQXcxWE9CXy1seGM5ak9udi1SNlRHOHZia0g4YTdWejBZeHM0SDNaYnNjcm91RWJwbzNBNkd2dVNOYUNPS2FTX3hzTllnRl83bTJoTzhCSDBuTEtKS0ZLdTVXZDFIc01IXzhjelliSkU0ZlFl?oc=5",
-          "source": "SoldiOnline.it",
           "publishedAt": "2026-09-14T07:00:00.000Z"
         },
         {
@@ -193,28 +187,34 @@
           "publishedAt": "2026-09-14T07:00:00.000Z"
         },
         {
-          "title": "Saipem, maxi-contratto offshore in Medio Oriente da 1,8 miliardi",
-          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObk9QcnV5WWdhT1RkZ0hoVmtreklfSGpibzlYS0lDdVFEVTVHTXpLdWF5bmtHREtwODhwdUNkZnJ0UGVGNm9oSk50cjgzQ2UtUG1Vd2lka3hFUkI1M05laWxZbnpTNlBzczhFb0dHRGstaTZ4RWJSMEhzVFlYQ2ZQd19SMDRhdW9Lb0wwZzRSd1RUQzNYX3dRWmhxeTBpSnZ0UUdGektuTHBjSG1GWDVLLQ?oc=5",
+          "title": "Saipem si aggiudica nuovo contratto offshore in Angola per un valore di circa 350 milioni di dollari",
+          "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOUjZZcDB5Y1oyUUJRNWlQRWUzWS1MT0lTbHZ3NTZFM21IYkZaOHJla2RzTVUzSkt6bFBmbkh2N0RUMWZSbzkteEFVS0FpaVU3ZkdibzY4bjBnYUtfUXNqc3pHcDJmcS1pZFAwRUVxZ1VyajU2S2dKZEs0OS1xWGZzSkxBUThQWlRGbnU0T0JGSVFILURMQS14QVl5Um1Jbk1FV3pyM0J1bkZEY3JEYkthWWhFNUx6TGttd0cxTlkxeTlpSHRoQXFsakdfVTZjN29LbXFkcloyVjgxUzJKYnhRbl93?oc=5",
+          "source": "Corriere dell'Economia",
+          "publishedAt": "2026-09-14T07:00:00.000Z"
+        },
+        {
+          "title": "Saipem si aggiudica un nuovo contratto offshore in Angola",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQYXpZQUk0TWRqTmgzQXFyVWhuLVVlVl9xelVIbWtvY1RpOGxvSUZKeDU3VFgtQXcxWE9CXy1seGM5ak9udi1SNlRHOHZia0g4YTdWejBZeHM0SDNaYnNjcm91RWJwbzNBNkd2dVNOYUNPS2FTX3hzTllnRl83bTJoTzhCSDBuTEtKS0ZLdTVXZDFIc01IXzhjelliSkU0ZlFl?oc=5",
           "source": "SoldiOnline.it",
-          "publishedAt": "2026-08-12T07:00:00.000Z"
+          "publishedAt": "2026-09-14T07:00:00.000Z"
         },
         {
-          "title": "A Saipem contratto offshore in Medio Oriente da 1,8 miliardi di dollari",
-          "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPMTR4X3RSNlkyMDNZU2VnSzBLS2RKU2V4d1lYN3dlZk5TTnhwejUzeTlfMkljQ0ZHUWRMaWpFRFpkdHYxQm9DZjJSVXVxc0FHUlZDZEpxN3ZqdFoxTF8yU2Vad1lqSHdCaFdBd1NiOGJpRlBkOUtsemNOd2k3bzhuNGVFNmRLRjEzQVVrZ0UySFRNYTRzNzg3TFRUdk1wc0pKOVJaRlE5UEU3VmFzell6UFc3TmZtVEs0MlcwaV9mamlKU241X2xncFppTFNLWC1xN0w0aVBUS3Z5NXVOZkRWWVZtM0kzN0ZvUFJLbF9vLU95SFJ4Vl9TVdIB_gFBVV95cUxPZGd5VzNqUFVIR0dCVEZqNWRBMGpsbFB3N3BpaG12RldFc1pVQ19XeFVwblFDX2I1NGNYZXdzQjhpRDVObWRDNDJHemNhTVFvWWR2TzRJU2E4UTl5cXkxMThhZjRQbGFTM2hoYklhSE1xU3NSVzFBVHRXLTNyNmZQVldmckVBTDFmaDJ3aU5hX2NUSjBCT2t5cWhQY2E5MzBFVUR3NXF2cG1IdlQtM05VTndlakUzamFTaXdPRjVDdXJiclpnY0t0cFRhYWtRTlowclE1SzJfTWd1SGFrRGlYZ2xnNHVRaFpYR3c4eXJGU1k1cklYT3QwRlpEM0Fudw?oc=5",
-          "source": "ANSA",
-          "publishedAt": "2026-08-12T07:00:00.000Z"
+          "title": "Saipem ottiene un contratto di ingegneria per un impianto di carburanti sintetici in Germania",
+          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUVM0RGR2c1hwVVNPR1ltcGVhTGxpS0l3Nm1MYndIV1V6LVpnX21wMFFKMGtZTm1NanFWWFpqcGc3S0kyaWdzRTJzZGpaTmNfMXlyTjZPLVZabjVhcHNyZlRaZ1JIVGx4MVVxZXFxYm5IQUZndVoyZmQyNGRDVmllVGVBTGM2ZlY4T1E?oc=5",
+          "source": "Yahoo Finanza",
+          "publishedAt": "2026-09-01T07:00:00.000Z"
         },
         {
-          "title": "Saipem, contratto offshore in Medio Oriente da quasi 2 miliardi di dollari",
-          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVUpWOVNXSE9vZkVSdERWS1lpbmtfU2pMZERFc2ZGR2xJZFVrWjVuZzRNbFJKTFBtbmlrZC1JZjBZdHNKbWtJTGpvUE5GclJ5SFZOci1aVWMwZXg3bDhTQjhCTnF4ZGs0cVVseWpqcDBPT1JvYmxKVWYxS2NQR2JEdVljNlBYX3ZyMHh5b1E1S0FpMkZLTVc1SkZNVmxQdmpmVlNmb2VCX0RNcnJPb1daSS1wcGdaRXZhOEJIbWxpLVg?oc=5",
-          "source": "Teleborsa",
-          "publishedAt": "2026-08-12T07:00:00.000Z"
+          "title": "Azioni Saipem e nuovi contratti: dove possono arrivare?",
+          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOVFdMOXhsMTc5cldRV3RERzFtODNobXlabk9Jd01POHh3eGtFWm04TVJsM1Q5UjRSVjFGVnVBd3FxRWMtODY1eUlJMmE3aHJ5VWxxMWNOMVFMTFZHSm9NY1dsSDFlR3BfbmloX1dBQ044aXpvak40UWcwQ2lDTXEwd3M3YXBfeG05X3c?oc=5",
+          "source": "RisparmiOggi",
+          "publishedAt": "2026-08-13T08:50:08.000Z"
         },
         {
-          "title": "Saipem ottiene contratto offshore da USD1,8 miliardi in Medio Oriente",
-          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNSlRObVJGNExKdkRZN0dOc0Z4SnU0ZnBnY0djRExEXzdGYllfdHV0T21sN0NaTkJ4QnJWRHpya2k5QTR6b3B5UW1zbmVrM3puSHZPVGpod1A2VlRDc3R5ckpqU1NQWHhzdkNFR0Vrem5LZlJhNW44a2t0UkdwT0swb3Q2SHlGeWVGOXk2ZEJ5TWVvR1UzZmFZek9kVkhTOVRxMWdRdWhmNHhTdDdNTjFxSTloY3dlY0xkSXdOQ2pyUzc0Zw?oc=5",
-          "source": "MarketScreener Italia",
-          "publishedAt": "2026-08-12T07:00:00.000Z"
+          "title": "Saipem e le nuove commesse. Analisti vedono ancora potenziale upside di oltre il 10%",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNd0h5RllENHlqZkdTM0x5dUZiWTdBajhndWtqU3hCRnYwVnBncFZMaFd4YzZSNkYwMmFqNDJ5cmsyYnYtTzQ2NEJlYkdnY0VXT0xJSzdFR3F6Y25TS3pGSUV4VzZ6WEVqb05qTXl6T2FDd1VhM1ZyVjNpellRUlpSRlFrc3pkVWtwY01mc0trNXhTaHV3aHJMcUJKMl9GZlhySVlYV3dtbWxURXJYd1pVdnk5cFFBOGxSQ2VYUA?oc=5",
+          "source": "FinanzaOnline",
+          "publishedAt": "2026-08-13T07:00:00.000Z"
         }
       ]
     },
