@@ -1,11 +1,17 @@
 {
-  "generatedAt": "2026-10-27T17:57:08.765Z",
+  "generatedAt": "2026-10-27T22:08:52.247Z",
   "source": "Google News RSS",
   "topics": [
     {
       "id": "eni",
       "label": "ENI",
       "items": [
+        {
+          "title": "Oltre il +37% da maggio: l’azione italiana della nostra lista AI continua a salire",
+          "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPTVZpTjdhWk5lbFpDdzA5MzRTZFRjMWNjbC1QcmxrTmh0U0ppb1hOTWNwQWEtOEhMN2VQSWFfQUhxdXlwSGpVM0E1aE9DZk1oamI5N0R1anhQX3h4NnBVU0d0ajRGMDF4TWFzWFRhcHlKR0RfRUc2d1RNSW1VMlFQZGh4Nk1OVVJBYWVTYWdWVzQ4dWt5cmwzbnpiNFlsOFE5b1lSVDZTSUlIOG11MmFBNzItbld0NXF4MkVGR2JhNXhMbUJkNmJSbHVRSUtQSFU?oc=5",
+          "source": "Investing.com",
+          "publishedAt": "2026-10-27T11:40:00.000Z"
+        },
         {
           "title": "Azioni Eni 27 ottobre: novità, quotazione e dividendo",
           "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE04YkZZRS0xMWptRWtnWTF3NU1Yb2RfMlBsaFE5c0JvbWprd0E1Qm5zQ2FhMUVEY3VRVm9pWDU4STNsQnlXUGp6eEF0dUFUOVdTckRJWUFCQzZ1akhtLTFtOWZXWEdpc2ZFYW94Ymc3dw?oc=5",
@@ -37,22 +43,16 @@
           "publishedAt": "2026-10-26T14:20:54.000Z"
         },
         {
+          "title": "Eni avvia la fase esecutiva del progetto Cronos a Cipro",
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOZW1sdklHVm94VGFaVTVGM3ZIZTVvQmExdWU0amtyVWlRcGZZLXB6UE5wVXBhUnRMYm5mZTJfXzdQRndhT2JsY0l1OGV5TjJnS2FXTTk2ZE9fUGdfWks1SFZZazFZVW1fQy05a01Sb0dHREFDQlhIRlpvSGxuWEZWcjZFbW9oVWVWanhyTFZfOTVjNEtRZWgyTUllMTEySE9sWHJDS2MwSEdCZGFIM3hJ?oc=5",
+          "source": "MarketScreener Italia",
+          "publishedAt": "2026-10-26T14:01:25.000Z"
+        },
+        {
           "title": "Eni, novità in Nigeria e a Cipro",
           "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAyRnBtcm9fMVE4elljc1BxaHVLTkV1bGxwbjk0a2FNQWFnYUtiZTNaUEg2V2hDV2IwVEJQeEdIMlZsTkpGc2NPSE5IZDBxZkdGZ0owWjZzTkJHSGhMUm02cVRETS1VVEhsaWpMaFNhaE51OU9NcF9FSkJSb3dpZw?oc=5",
           "source": "SoldiOnline.it",
           "publishedAt": "2026-10-26T13:22:00.000Z"
-        },
-        {
-          "title": "Borsa Milano estende il rialzo, attesa per sviluppo Ucraina, bene le banche, giù Eni e oil Da Reuters",
-          "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPdXhxaDRpMmZLZFFMeFNBeWhzQ2g1aU9hazM5YVk5MEpScktxSkpPdDFYc3hVWTM3NnFPRmNjaWhyOV9NYmpGZHV0OUQyVG5HTFdlTU5fQVJQMnBSUEZiNHl0am1MSjJmQ1hPQ0JnVnp5MlF4VE5yNlBSNVltbkRuQVhwUTZ0X1hNNFR3dWw5VjRiLTlSY1lrSWktNW53YVNvRTk0d0piYlloODZzMmh5WFdib0lkcUJTMVEzM3lQampFYUxwY0RrX1NUbzZxdzBYLUt5NGdxWmNDWWs?oc=5",
-          "source": "Investing.com",
-          "publishedAt": "2026-10-26T12:29:00.000Z"
-        },
-        {
-          "title": "Eni S.p.A.: Goldman Sachs è per il Buy",
-          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOZmplYjlfdnZ1RmlNMUxNRVAtR3FENjVtbHNscV81M0stOUFGMUpPUHp5RTkwWmtrLVZaeTUzaHdCZ1d2ZWhMcXZQVjV1RWo1RDUwTmQ3VV90NE1vR3ZjaWVJNjRLbHVuWXhPLUlDRXVXUWo3SWg3OG1LS1IzMGVIY0xhcTJlRGdxTDNOWUg3cUI2cXVod0E?oc=5",
-          "source": "MarketScreener Italia",
-          "publishedAt": "2026-10-26T11:58:29.000Z"
         }
       ]
     },
@@ -103,10 +103,10 @@
           "publishedAt": "2026-10-19T19:47:01.000Z"
         },
         {
-          "title": "Cosa c'è dietro l'ultimo calo del titolo Eversource Energy?",
-          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQa2U1UDJmTTVwdnUzMDdYMU10U2xWVUNmT3pyUURIT29TVnctNFBEQU80dTVHOFMyVHBtNDFxcG1JWlk1WnpuVVczV1VYc0NCcmM4b3Zyblg3bE5yeFpzMTVBRWEydDFvOWVnaTBxYmszU2lvVC1qbi1ZWTMxejZPX2lqRVFzdlVqUmRMZGsyb0lFVzNaOFpoM2pyR2s?oc=5",
-          "source": "Traders Union",
-          "publishedAt": "2026-10-19T15:17:40.000Z"
+          "title": "Enel, le utility tengono nel sell-off tecnologico",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOREZINXRSZ04wR05CNHU5d2ZSRUZuOEtkek1fdFpyR1JiOHdXb09jWm50cXJ4eVp4NFVSLVRSbzFBc2xXclBzSkx0d2Q5UkZFWEpHaTd1ZWRHQVNhMzZSdmhmaEl3dkQwN3l0Q2pjaDZ2YUNENnF3bU9UdnJBMW11RGZvdXI2em8zQ1EycmpkQVhLd2lVcVZWbG9GTktmUW94ZnpybDNQcXVJZmdSQ0dIdGhrYTNfU1lPU3NMWWtuLWRWX2s?oc=5",
+          "source": "Websim",
+          "publishedAt": "2026-10-15T07:00:00.000Z"
         }
       ]
     },
@@ -118,7 +118,7 @@
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB1eExTZGd0bWh5bEVCM1BXS2tCNUVRdERlVzRrRHkyRTBvV2JzaTBlS0tlckNSWml2ZzJwTkxDUmRuX2JVU213Q20yMkFBUlJib053SWhoZ2tYVVVsN3pjeTJUSWFiZw?oc=5",
           "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-10-27T10:24:36.000Z"
+          "publishedAt": "2026-10-27T10:23:46.000Z"
         },
         {
           "title": "Prezzi Azionario FtseMIB: Snam Rete Gas In Controtendenza, +9.63% Da Settembre",
@@ -169,28 +169,22 @@
       "label": "Saipem",
       "items": [
         {
-          "title": "Saipem selezionata per il progetto di espansione di Profertil in Argentina",
-          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVHU4VWFLdGo0WjR5Und1TjdUbzlQSzh1VGpfY01uQkhJVG00Z0V6T3N3cVREWTRvOXdzYzdQNW5SdzJRcm1TMjNnWnk0SmtjUElUdWEtTFRlV3lWdU56M3ZPcmN3TmtTZ01TMUxXd05EaElQVlNOSUFuV1dab2JWQXVYb1BBd19pTUVNUFM1bw?oc=5",
-          "source": "Yahoo Finanza",
-          "publishedAt": "2026-09-29T07:00:00.000Z"
+          "title": "Saipem, nuovi contratti di perforazione offshore per 121 milioni di dollari",
+          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPUjdRdzB2NUJETDFiMUxsRUtxVl95U0VWWXM5QUx2bUllb0hNQU90UDlLNE9oQ3hZdk1PY3M0aW12cUtfb2xtNmhxN1BjVlgzaDY3X1NsYnE0RVJFU1A3UzA3SXAxTXlWLXo1RkVKN0tUUVBmMW80c0lzY3pjdW9zVWFZb183SzJqdndMUU1yUEZWSW9zNzZzZWFXTUpWLTdHM1drR2NQbGZzUVJmanlsdHViZjE1VUJjdGhNeHJNNHJvdw?oc=5",
+          "source": "Teleborsa",
+          "publishedAt": "2026-10-27T18:40:37.000Z"
         },
         {
-          "title": "Eni e bp assegnano a Saipem un nuovo contratto offshore in Angola",
-          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNY2JiMWlScHZJdzlza3JKM2tWOU1UTk50WDdNSzBKaEJGeTA2YjMwcHFYVERvMVZjRC0wT1J6NE1JRFJtWlZqOEFxaUlRMzRaWk05aTdkb1dkM01qeFhyY2lLREkxOGNZOExnamJzdWNxVlFhMjlVT3k0X1J4Y3hlaFIzODJ0MVdUQjk3QVUwWGw1bUlWYmdVQWRR?oc=5",
-          "source": "Ship2Shore",
-          "publishedAt": "2026-09-14T08:55:00.000Z"
+          "title": "Saipem, nuovi contratti di perforazione offshore per 121 milioni di dollari",
+          "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNZWNiS1ZwWXcyMmJqaXF3TmRNejVleEtlakwzaDF2X3ZyN0FmYWZmeXlocnhMalZUbGhsZzN1UFI0d0lKaVNDbmNDSElfbjVqVkZrMjZBZHNOcWVfWjgyRjNKZEFkc01Ub2x3SVBtSmo0Ykt6ZVowWFJkRGZSek1lb21pSGtRdll3MmdKSk9mLTJ3ZDZTZXhFeHlkekFnWlBTOUVFUXo0bi1uUDQ0RU4xTW1lUFVOcng1TDRONUdyTWVHNnBubFRNbnp5LUhZbENOYlNPNlRJSGhzUXhoN2czZFVLVld4TjVlOE1zbktJaFFnSVhSckNmZktucw?oc=5",
+          "source": "Borsa Italiana",
+          "publishedAt": "2026-10-27T18:40:00.000Z"
         },
         {
-          "title": "Saipem ottiene contratto offshore da USD350 milioni in Angola",
-          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOM1o1ZzhXQWs1VWFkUlE0eHBVcmpYTHpqemYtVGtGUFAxaEFzMXVZcWJNVWN0NHZiTi0xcmRDb2pCTHF3QXNvYnZpQjhFMUZDR0tMYXhQV1NtSzRUUTdRMUM2cGtteTNweW1TcGxhUnN2MEZyeWM4NUgzcHpsTHZFaW1Jc0tKVFlWMXJTNWhBSnZEM0l1VXJBci1aYkdNZjE2WHB3UnA3V0FHelM3UzhuSHRoaUcyOVk?oc=5",
+          "title": "Saipem si aggiudica nuovo contratto offshore da 350 million $ in Angola",
+          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRlViNFNiQTRybHpmdzZCdURVZ3lFRlpaS01GeHQ3enpnNEhfcHlNd2RfSlo5M3paSmx2X2dnb25MVXpqOHl5U3F2M3EteXJoTXJXNlgzQmVpaklqUkgxOU5NVHc1R0VFZXg2X2c3Q0NBZHo5cUVEbmtwSTJ4T0JpRmkyTGVFTW9DRGlTSWZpM0ZlaE1JZTBuRjh2X0dwTnNiRWtvZmZlX2l2c2s1VVVRMUJmd1NoaHByRnRNSWtoMnZ0dw?oc=5",
           "source": "MarketScreener Italia",
-          "publishedAt": "2026-09-14T07:00:00.000Z"
-        },
-        {
-          "title": "Saipem si aggiudica nuovo contratto offshore in Angola per un valore di circa 350 milioni di dollari",
-          "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOUjZZcDB5Y1oyUUJRNWlQRWUzWS1MT0lTbHZ3NTZFM21IYkZaOHJla2RzTVUzSkt6bFBmbkh2N0RUMWZSbzkteEFVS0FpaVU3ZkdibzY4bjBnYUtfUXNqc3pHcDJmcS1pZFAwRUVxZ1VyajU2S2dKZEs0OS1xWGZzSkxBUThQWlRGbnU0T0JGSVFILURMQS14QVl5Um1Jbk1FV3pyM0J1bkZEY3JEYkthWWhFNUx6TGttd0cxTlkxeTlpSHRoQXFsakdfVTZjN29LbXFkcloyVjgxUzJKYnhRbl93?oc=5",
-          "source": "Corriere dell'Economia",
-          "publishedAt": "2026-09-14T07:00:00.000Z"
+          "publishedAt": "2026-09-14T09:18:09.000Z"
         },
         {
           "title": "Saipem si aggiudica un nuovo contratto offshore in Angola",
@@ -199,22 +193,28 @@
           "publishedAt": "2026-09-14T07:00:00.000Z"
         },
         {
-          "title": "Saipem ottiene un contratto di ingegneria per un impianto di carburanti sintetici in Germania",
-          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUVM0RGR2c1hwVVNPR1ltcGVhTGxpS0l3Nm1MYndIV1V6LVpnX21wMFFKMGtZTm1NanFWWFpqcGc3S0kyaWdzRTJzZGpaTmNfMXlyTjZPLVZabjVhcHNyZlRaZ1JIVGx4MVVxZXFxYm5IQUZndVoyZmQyNGRDVmllVGVBTGM2ZlY4T1E?oc=5",
+          "title": "Saipem, maxi-contratto offshore in Medio Oriente da 1,8 miliardi",
+          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObk9QcnV5WWdhT1RkZ0hoVmtreklfSGpibzlYS0lDdVFEVTVHTXpLdWF5bmtHREtwODhwdUNkZnJ0UGVGNm9oSk50cjgzQ2UtUG1Vd2lka3hFUkI1M05laWxZbnpTNlBzczhFb0dHRGstaTZ4RWJSMEhzVFlYQ2ZQd19SMDRhdW9Lb0wwZzRSd1RUQzNYX3dRWmhxeTBpSnZ0UUdGektuTHBjSG1GWDVLLQ?oc=5",
+          "source": "SoldiOnline.it",
+          "publishedAt": "2026-08-12T07:00:00.000Z"
+        },
+        {
+          "title": "A Saipem contratto offshore in Medio Oriente da 1,8 miliardi di dollari",
+          "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPMTR4X3RSNlkyMDNZU2VnSzBLS2RKU2V4d1lYN3dlZk5TTnhwejUzeTlfMkljQ0ZHUWRMaWpFRFpkdHYxQm9DZjJSVXVxc0FHUlZDZEpxN3ZqdFoxTF8yU2Vad1lqSHdCaFdBd1NiOGJpRlBkOUtsemNOd2k3bzhuNGVFNmRLRjEzQVVrZ0UySFRNYTRzNzg3TFRUdk1wc0pKOVJaRlE5UEU3VmFzell6UFc3TmZtVEs0MlcwaV9mamlKU241X2xncFppTFNLWC1xN0w0aVBUS3Z5NXVOZkRWWVZtM0kzN0ZvUFJLbF9vLU95SFJ4Vl9TVdIB_gFBVV95cUxPZGd5VzNqUFVIR0dCVEZqNWRBMGpsbFB3N3BpaG12RldFc1pVQ19XeFVwblFDX2I1NGNYZXdzQjhpRDVObWRDNDJHemNhTVFvWWR2TzRJU2E4UTl5cXkxMThhZjRQbGFTM2hoYklhSE1xU3NSVzFBVHRXLTNyNmZQVldmckVBTDFmaDJ3aU5hX2NUSjBCT2t5cWhQY2E5MzBFVUR3NXF2cG1IdlQtM05VTndlakUzamFTaXdPRjVDdXJiclpnY0t0cFRhYWtRTlowclE1SzJfTWd1SGFrRGlYZ2xnNHVRaFpYR3c4eXJGU1k1cklYT3QwRlpEM0Fudw?oc=5",
+          "source": "ANSA",
+          "publishedAt": "2026-08-12T07:00:00.000Z"
+        },
+        {
+          "title": "Saipem, contratto offshore in Medio Oriente da quasi 2 miliardi di dollari",
+          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVUpWOVNXSE9vZkVSdERWS1lpbmtfU2pMZERFc2ZGR2xJZFVrWjVuZzRNbFJKTFBtbmlrZC1JZjBZdHNKbWtJTGpvUE5GclJ5SFZOci1aVWMwZXg3bDhTQjhCTnF4ZGs0cVVseWpqcDBPT1JvYmxKVWYxS2NQR2JEdVljNlBYX3ZyMHh5b1E1S0FpMkZLTVc1SkZNVmxQdmpmVlNmb2VCX0RNcnJPb1daSS1wcGdaRXZhOEJIbWxpLVg?oc=5",
+          "source": "Teleborsa",
+          "publishedAt": "2026-08-12T07:00:00.000Z"
+        },
+        {
+          "title": "Saipem conquista contratti per 800 milioni di euro da Eni ed Enilive",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOMnp1Q3pVZ0lYUlBoQ0lIWUhEN2pxQmtYOWl3UUFNbWk1YUNhX2pGMWhfSlhyYnZ1OUY4RDRyVkdTdkJTUkJmMGpvclVESkhNdEpWMWpQVXA4c0U0U2Zhd21rYzFYUTV4LTNKRTNnNEJqMUE0XzgzbTZONktkVkM1RGVkMC0zZWhZbGpCdmVuVQ?oc=5",
           "source": "Yahoo Finanza",
-          "publishedAt": "2026-09-01T07:00:00.000Z"
-        },
-        {
-          "title": "Azioni Saipem e nuovi contratti: dove possono arrivare?",
-          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOVFdMOXhsMTc5cldRV3RERzFtODNobXlabk9Jd01POHh3eGtFWm04TVJsM1Q5UjRSVjFGVnVBd3FxRWMtODY1eUlJMmE3aHJ5VWxxMWNOMVFMTFZHSm9NY1dsSDFlR3BfbmloX1dBQ044aXpvak40UWcwQ2lDTXEwd3M3YXBfeG05X3c?oc=5",
-          "source": "RisparmiOggi",
-          "publishedAt": "2026-08-13T08:50:08.000Z"
-        },
-        {
-          "title": "Saipem e le nuove commesse. Analisti vedono ancora potenziale upside di oltre il 10%",
-          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNd0h5RllENHlqZkdTM0x5dUZiWTdBajhndWtqU3hCRnYwVnBncFZMaFd4YzZSNkYwMmFqNDJ5cmsyYnYtTzQ2NEJlYkdnY0VXT0xJSzdFR3F6Y25TS3pGSUV4VzZ6WEVqb05qTXl6T2FDd1VhM1ZyVjNpellRUlpSRlFrc3pkVWtwY01mc0trNXhTaHV3aHJMcUJKMl9GZlhySVlYV3dtbWxURXJYd1pVdnk5cFFBOGxSQ2VYUA?oc=5",
-          "source": "FinanzaOnline",
-          "publishedAt": "2026-08-13T07:00:00.000Z"
+          "publishedAt": "2026-07-27T07:00:00.000Z"
         }
       ]
     },
