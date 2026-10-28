@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T19:30:47.782Z",
+  "generatedAt": "2026-10-28T23:59:20.283Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -49,10 +49,10 @@
           "publishedAt": "2026-10-27T06:41:00.000Z"
         },
         {
-          "title": "Borsa Milano estende il rialzo, attesa per sviluppo Ucraina, bene le banche, giù Eni e oil Da Reuters",
-          "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPdXhxaDRpMmZLZFFMeFNBeWhzQ2g1aU9hazM5YVk5MEpScktxSkpPdDFYc3hVWTM3NnFPRmNjaWhyOV9NYmpGZHV0OUQyVG5HTFdlTU5fQVJQMnBSUEZiNHl0am1MSjJmQ1hPQ0JnVnp5MlF4VE5yNlBSNVltbkRuQVhwUTZ0X1hNNFR3dWw5VjRiLTlSY1lrSWktNW53YVNvRTk0d0piYlloODZzMmh5WFdib0lkcUJTMVEzM3lQampFYUxwY0RrX1NUbzZxdzBYLUt5NGdxWmNDWWs?oc=5",
-          "source": "Investing.com",
-          "publishedAt": "2026-10-26T12:29:00.000Z"
+          "title": "UBS alza il target price su Eni e migliora le stime per il 2027-2028",
+          "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNWE1WSC1TUVVQNXN2MUJpXzRTVzNBVG11dEFTTks3S3VnWU55OVBhVWN0bktfXzF3VUJKNFZrdVJwQ2pDWlJMZU1ocEhMZTVBZE5Wd1RIZjFKMGhsNFAwREozbmwxUFJuZ25pdjNpMzFoMVpZSkxGOThTVEwxd2NlQ210M1BmX1FhN2FnbFB2TWp6MTdfVXNxVFc0THU0Tk1OR0FwRERnSjROR3FLMjI0dlpzWHhGMWNuQkluYTJ4MnVUTlpIcFJ6V3RzN0VEeVM0bHF1UFdVWVNkVnhZSHRkbkF6MkpTZExk?oc=5",
+          "source": "MarketScreener Italia",
+          "publishedAt": "2026-10-26T14:20:54.000Z"
         }
       ]
     },
@@ -61,22 +61,10 @@
       "label": "ENEL",
       "items": [
         {
-          "title": "Azioni Enel 28 ottobre, novità quotazione e target price",
-          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAwZFFkRDFreURpQ0RKQ1FxOUNkZXliVm5rd0QxRl9EUy0yOUN0VklYeUxDdGN2RGRYNUNsT2d4Y2xJSzZvZUJPQ2dDTU9kZnRiX0Q0V3V5MElsMlFPd01jSE53dFlfM3RzcXZNNlVSZ0w?oc=5",
-          "source": "Finanza Italiacom",
-          "publishedAt": "2026-10-28T16:28:40.000Z"
-        },
-        {
-          "title": "Endesa conferma le previsioni dopo l'aumento del 15% degli utili",
-          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOVTdiUWFKQ3poZnNObWxUVXY5TERMZG5CLWtkdi1hQmJXYUhmUnA1dlZjNG50R0dSZkRsOWt6cjZpYm5rc2VjY1VSSHVWYnVYc3JOMzVFVm1Cb2FUVDc1eHFkOTdBZWNpMTd0YWhqQkNRZUxia0pGS2dZYndJM1EtbkJ2UFlmOF9OTmgtVkdWR0ltS3dldFhuaFd6VHh6SlZIR2lHRHU3bE1rNGZKU0tqQ2pybVppZUp6Tmc?oc=5",
-          "source": "MarketScreener Italia",
-          "publishedAt": "2026-10-28T08:42:42.000Z"
-        },
-        {
-          "title": "Gli utili di Endesa aumentano del 15% nei primi nove mesi",
-          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTUkxeEdvM1M0V2VnYkpaOUdHYjdfajdXRkdGamljSTF6MlN2VFZ4UWpuclZxTkl3QXAybF9veTdEcmk2cFBlOV85UWJPTE54QXJCYlNVMi1PTmFBZ2FRS3ZPTlJnUU1mcFFQT0IxX0t3QW5oSUFHVER6ZFdsejBPa3lWSnFPejFGc285R0s4TDlnZ1VNZDRLUTVMeGVicGdsbGhxSV9RbVVJZVNXUzY3cA?oc=5",
-          "source": "MarketScreener Italia",
-          "publishedAt": "2026-10-28T07:11:37.000Z"
+          "title": "Le azioni di Advanced Energy salgono di circa il 3,5% dopo segnali di ipervenduto estremo che innescano un rimbalzo contenuto",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNT0FQR0l2cHdXcy1tdzhzMGQ5d3JXeENMSWVlOENIeTR0OWY1aG1NSG9WekVMSlZacmozTXNFdlBlWTFFczI0SU9QV08xVHZSa2dZb0I0UzRvQ2tzTi1LSTloZjQ0SzFfbjZYdEh3dTlQdHdOT3I4Z3JpR3c5eFRNV0kzckJwRXpiSzg2eXIyUk1pc0M0QVNFVQ?oc=5",
+          "source": "Traders Union",
+          "publishedAt": "2026-10-26T15:14:33.000Z"
         },
         {
           "title": "Azioni Enel 26 ottobre: bollette, PUN e quotazione",
@@ -85,28 +73,40 @@
           "publishedAt": "2026-10-26T04:07:50.000Z"
         },
         {
+          "title": "Il titolo Constellation Energy guadagna dopo la conferma dell’inclusione nel modello quantitativo istituzionale: CEG registra un rialzo",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSmJJVlhHNlR1dUREXy13V2N5SUpKQlhWWXo0b0k5dVFvVF9LbVd5TEdSWEQ3cjhtVVNGcmthWEJiVnZhSjJEbjdrUml5SWFhMmxPMzNhV2dyMm5rdnZUT0I5cXhKdGNYQnBjbUxGdzc2VHd0d0pKSGZOM2YyVXpqRkNQa3JWRTFLSkdjSDdQZVhsdVdzOE1fZnZzdDBDR28?oc=5",
+          "source": "Traders Union",
+          "publishedAt": "2026-10-21T17:47:43.000Z"
+        },
+        {
+          "title": "Europa in rosso a meta' seduta, a Milano (-1%) si salvano oil e utility",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNdnBxdW5fVzg1eDlxYU5wYkpSem9jNEg5ZnlJZndjS2hVTmlpTmY3VjU4UlZhb3BpMGFoYjYwc1lDUldfY0Z4OGNZeEFrYjRNRXdJb251eENvdEdkZnRocjBpMW01T2o4RkVmYmJESWFkbUlaUzRNQkRwNnctWk96bDJVSUR2RVZoaGtqeEpmUU5pWDZfZ21YTXc1b3QwZ0lock1QR2tUS1Rma0Vjc0NIMGc5SElsdzYzQ3QyOQ?oc=5",
+          "source": "MarketScreener Italia",
+          "publishedAt": "2026-10-20T11:12:34.000Z"
+        },
+        {
           "title": "Borsa Milano, Enel in testa al Ftse Mib con utility e attese su trimestrale",
           "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOaTdveFF1bTFvckR0djhWLXZfSXIyVk5acDVJeGlJOEs3N3lpR2xWNGp5NjJrd25pQlZRX1FCNVVhelhCeU1SMzg5Z1B2enYya21keG5HbEIzZl9zY29hNnZYdGdTalRhMUdDVVBWeXBVTV9UM3hkWXZpR2IxcjQxUEZQblpjeVFGVGJRd0JSZkJFWHFuZVJISzlET3hLdVh6N25nTFlrLUFFRzNQamx0d3diU0MxVVhzZmh3VmlGblpwa25nQ2lVZQ?oc=5",
           "source": "MarketScreener Italia",
-          "publishedAt": "2026-10-20T09:54:23.000Z"
+          "publishedAt": "2026-10-20T07:00:00.000Z"
         },
         {
-          "title": "Azioni Enel: previsioni 2026-2027, target price e quotazione oggi",
-          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBlbWdPbE0wVzM1dE5QZkNQdTBRNmd6RTBBeWpVb2YxQXpXUmFfWFlHUXdLV05EVXVadjljekJobnAyYkFMRmRTMVIwTzZFUWFGRVlz?oc=5",
-          "source": "Rankia IT",
-          "publishedAt": "2026-10-17T07:00:00.000Z"
+          "title": "Le azioni Constellation Energy scendono mentre la pressione dei venditori domina le contrattazioni intraday",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOcktYSTdac0NQSG1EWmhxYlROSkh2WTlJTVRIRlNHMjVlM3VTR1BUOWUtdHRHNjlEMkJQUjlFdklNOF9zRkcycmI1UGtoNnp3Z291LXI1andYSGEzUDdLNjF1VDB4VWVtWTFDQ011Tk9qVEZPWUV0Rmp3MXNySEtPSk9vTGE3cW9wR0wxSDdna0ZYem1uMFJJY1VkYVVIOEU?oc=5",
+          "source": "Traders Union",
+          "publishedAt": "2026-10-19T19:47:01.000Z"
         },
         {
-          "title": "Affari da old economy: da Enel a Leonardo e Prysmian. Ecco quali azioni dell’economia reale hanno maggiori potenzialità di rialzo in borsa",
-          "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOR2JUV0FCS2pjZ2lSX1I4eWJfTWQ5cGVzNElfVzB1S3lpOU54dWFOTGc3Vk5ib3NvN1ZJN2lpS191TVExMjJyMjJIX3FfYWh4eUw0cDFnT2ZhQWRTYS1wMlVPWEVocUxzTUpsSlBWX2o3QXpxSTZacXdMU2JONnUxbkViS1ktRDBhcVcxTHJZazlLenBIcTdjaFFjX19kUmtNOHNNblRaTHl0Y0Y4cHpmWWtMd2ZyNnlWd3Z6SjJuTmd3YlJFWi1ST0I1UjBGNWVEZzRXWUFkOTVjVXpySE5HZ3FRUEtxRjVvZ1MyZHd3?oc=5",
-          "source": "Milano Finanza",
-          "publishedAt": "2026-10-02T07:00:00.000Z"
+          "title": "Il titolo NRG Energy scende mentre i venditori dominano e la resistenza immediata limita i tentativi di rimbalzo",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPNWtDQW1kZklPczRWWllRU3JySjhYYTRteFFWNWRubFpueEhNMFBDQlN3T1ExMFdDSExYVHBXYWZRd3NZUEEwb2Roc05IeHZQamY1QmxxMTcxeUNtUmN3R3pDdnhRV0NwMGNEM2RwZ3BscE5RX00tMWdFMVZNY2h5VEliV3dIWTZMZHBQTXhR?oc=5",
+          "source": "Traders Union",
+          "publishedAt": "2026-10-19T19:46:57.000Z"
         },
         {
-          "title": "Utility, cresce il valore dei brand italiani nel mondo. Enel al terzo post nella top 50",
-          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNSk9KUmZPMC13SFVMT0RVZmtOQUdOR2lQeHhTbm9fbTdOT29ZeDQ3SDQ2aGMtVjY0VmJlREZTcHBLeWJ4a25XWERWdWhrdGZGQlkxRlFTa3ZCUl8tU1Q5anR0T3puWWZDNDFrQVZlZTRsSVlveTF0RXVkYURKUzBITWFfR1pBYWJ3WXcyNUh5cDYwRUQ4bUpCSDl3WTkyYUNxZ0NRRkpTeEQ0azBNRktXVW9NSkxPaldzYTVpRnZsZ0hLa3dvZk5zd200dXlPVWlkb3pNLQ?oc=5",
-          "source": "Milano Finanza",
-          "publishedAt": "2026-09-01T07:00:00.000Z"
+          "title": "Cosa c’è dietro l’ultimo calo del 4,3% delle azioni NRG Energy?",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQbjFyaEZNU0NkTlpfU0tUdmNNXy10MFBQcUVXaDVUcDNNcVZvaFpsTkZzbjdaUGJyeWdBa0dWQ21qR190dUU0QU04WVNieXBHSkVxSEMwVklIX1lCY1F1ODkxdWZCMl94aHJ2aW1lR0FfNkl1S2dTTEhHUHJlQUFmTE9JamhpZk9LVG5fYmdoVEVmTU0?oc=5",
+          "source": "Traders Union",
+          "publishedAt": "2026-10-19T17:03:48.000Z"
         }
       ]
     },
@@ -241,16 +241,16 @@
           "publishedAt": "2026-10-26T10:20:00.000Z"
         },
         {
-          "title": "Intesa verso la conquista di Mps | cosa cambia davvero per Banco Bpm e Unicredit",
-          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOWEtFbzVoYmVUdXN5UWxrQUJod2pPelJUM2ZIUFhNVzdqaXd4dFFkNjNCRS1EYzh1UE1uS1ZJa25vbnc5SFBCb09mQjQ5ODh1d1BUbUFLb0RtV3phSExGd0cwdzNLdGhCM2lBLXJLYW1WRlV4ZC1oSm5HVjBvV3NqSnV5ZXVzSmtiMXVnMXB4U3lfRzFBTS1jN2kxSGJMZ0g2RUlpVm9OOHRJdlBFYlhTcmh0clQ0dkNKTUx3NFhR?oc=5",
-          "source": "Zazoom Social News",
-          "publishedAt": "2026-10-26T08:29:42.000Z"
-        },
-        {
           "title": "Intesa verso la conquista di Mps: cosa cambia (davvero) per Banco Bpm e Unicredit",
           "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNV25wOHJFYTA3Vy1tcXRfRnQybGRpaFR6RjBQWldyNFQ0RmFoUGdsczlWWjJkNWRwX0JQSlpPTzdkUnFsSjBMYWpCSzhaRnNkcTdDYU94Z0RncWkzU2dBVG1uUW02R1lpYU9MTDZfRDdlRlI5R2hOc1pLdFVqT2hwRXhBZjJpOEFXYTFXZdIBjAFBVV95cUxQdmROY29aeTl1RGpLd294ZnpVYzdTVmo4czBqTWdmek8tTW9oVFJfcWRCUElJRkwxZkc2d2g0aVZreW1BSnpkcFptZDNSMjJxTDI3TkxydG9WZHMtM1NMMlFHVEpJUTdGSjNpRWh3UC1rRWFkYlJsTWZwSWd1TGdFRWQ2ZDlXZjg3bDBqTQ?oc=5",
           "source": "Today",
           "publishedAt": "2026-10-26T07:59:52.000Z"
+        },
+        {
+          "title": "Intesa Sanpaolo, game over per Mps: cosa manca ancora a Messina per tagliare il traguardo e cosa succederà dopo. Parla Rony Hamaui",
+          "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQeUVfZDFqTVlSbTlockhXaEdHS3ZLN2hBQ3NEZnNyT2tYSTRsUmZlOGtmeFJVLXhaem83STl3Ny1DWHlFLUc2cDhTaV9idGo4T210aGgycVdjREIteFNGbW5TZGhOSHFJV21wUEtGMkpZcEpjdGFkeklRd1hVbWxNQUxJcmdKclVIdFpYM3ZNZ1BCQXphNFFEbUdJUlBDRWwzZ0dYSG5rMnRWdGU5OFpwTXdmY1J6VzdYQm1UYlRRVDFpOWtFOXcxenR6Ry1WSTNFcTQ4WmVZNDNRc19GejBDUXhxVURCUXVjVUg0SzBB?oc=5",
+          "source": "FIRSTonline",
+          "publishedAt": "2026-10-24T04:36:00.000Z"
         },
         {
           "title": "Mps, il risiko non si ferma a Siena. Da Banco Bpm a Generali ecco tutte le prossime partite",
@@ -260,15 +260,15 @@
         },
         {
           "title": "Banca d'Italia, per il 2027 individuati sei gruppi bancari a rilevanza sistemica",
-          "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxONXFjRG1YdzhNa19OWUNILUw2S3c3R0VvUzlfSW1wcmdTODA0cEZNU3pvd3IyckMyN3FuZ2RmSlFzRjVkTWVYX0RSQ0t3TjlUQnFXTkNwMUNUNUtzNVd0RF9aQmF6T0ZhM2F1T3g2T3FlYjlxVXQyaTN5bktmWFU0ZF8xWDNiSmdyRXBMR3lCRXVkUlA0Skh6dWRTY2Y4am5nTVQzQXdvUU5HeVRGR0NkUHk1TjAya1ZtTy1aTVI1bzhSeTdOaTg2d253SXJ4VlB2U1UwU0h1ZjI2WVlTN3N4aUhENVB4RG5yOVRYYW9ER3FmQkR6d0k4VDM0czZwUUpZcUE?oc=5",
-          "source": "Borsa Italiana",
-          "publishedAt": "2026-10-23T16:49:00.000Z"
+          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNRVZxU2JYMmxkOFFjaVBnODA0SVkzSTRFQTF1dEI0Y2FzMjgzTWlmSk1MeTJ0Q05zLWxHbXlTb0FPZmdYSHlnOTl1OW5SbjJEallKTmFwN245RzhHSXhaOVdPY0VxTHdzaGdDTFRHZ2FpQnRpT3BJOGhQMXoxN3pPa2xjeTlYNXFsTUxsWDM4Z0liajBzdVdKMkZSOXR4eWFFN1hBNmJWb0EyVlJwY2tWT1BzWEtkUnA5YUF6LUpsOTI0eEJuWlNuWA?oc=5",
+          "source": "Teleborsa",
+          "publishedAt": "2026-10-23T16:49:28.000Z"
         },
         {
-          "title": "Le banche preparano i conti, ma il mercato guarda alle fusioni: tutte le attese sui risultati",
-          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQRWxRNXNtYkxKRkYyR2dTY3IwRFZ5cFRFdlVBdVlvVDYtX0lyZTFrX0doTXYtOGQ5ZWJLV0JwSWUxNGZOTVZjdG9zZUlQQ2dyT0dCdGhNVnhMLW9WbWFyVUFsQWJsRWlzVTdLUjNodzdDMmZ2UnBRYjNRci15WjVIZVRR?oc=5",
-          "source": "Forbes Italia",
-          "publishedAt": "2026-10-19T07:00:00.000Z"
+          "title": "Bankitalia, in lista 2027 banche sistemiche entrano Mps e Bper, esce Bnl",
+          "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQNlViUExaUzFtVGcyNjBMQTZMOTJaTkJCVTF5NEpfSnRpaW1JS0Nxemx5eWl2UGl5MGR0cnNPUEVPTUVmRTk5M3VJbThnRFhMXzNYSEllYTVyLTdncXFCWmpESUZtRjRkaTdIRWhlSktqc01XV3BsNnZPZm05MmN3aTNkaFdBVWh4TDJlWWg0c2UyMHhFQ3JwNWNTLUlTNlNfNC0xMmRLTnJpdm1rMlY4WWhITHVleEc5RFotQ2tmblNJN0d2RGk5R0lXd09kQzlZYTkyeDdDRHRTNl9hYlk1cTVKMEV3eXRIaUxnVVpDbjhjaTFBT1l4a9IB_gFBVV95cUxQZlZfcVdNRDJfSzRJWldtOWVCdWRHMXBJWE05VGpJUTVDRTk5M2djZVpzN2JJZllXZHBlbUpOVHBLMnRGU21TbDlvRi1QQ3F3OG8zdlZOdFY0alQ0VmZsMC1UZHFiZUxIUUZuOVE3QXhTV19jVHh3dTd6YUpLMDBUdjhwSk5neXhnUE9YT2Rpek8xODhZNU9NcDQwWmF0S1QtX3RLVVFCc3BOSDZGQncwQ25BWThEZFBqeTBqTkdtV2VndmVER2RyQnJmbTVMREtZVksxVVI4ME1wcFFEUHItX3hvV0ZUQmt0X05CcXpiajM2UHduSFB5THA3UEJVQQ?oc=5",
+          "source": "ANSA",
+          "publishedAt": "2026-10-23T16:13:00.000Z"
         }
       ]
     },
@@ -277,52 +277,52 @@
       "label": "Geopolitica & Macro",
       "items": [
         {
-          "title": "Perché i titoli di Stato italiani sono ok",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNMVRGMWlNMDd4TzlzYURKSTdrZHVoM0Fzc1NGazhybkp5cUlPSEtJRGozVGdhWnhJSDdyRU1Oc2NwbmFhV01kZWNzMlowZUl2bnc0czRGTmgyOTZkYmtmbi1IVm9lVGlUMW5tZUlVTDNaMWZKTzUxVkxEeDFuUlN1WQ?oc=5",
-          "source": "Startmag",
-          "publishedAt": "2026-10-03T07:00:00.000Z"
-        },
-        {
-          "title": "Spread torna a salire con tensioni Iran. Generali AM resta long su Btp",
-          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOakQ5MVhpWG54RU5pRElsbmFudjh0ZmpucWF4NmpDWWVyTE1fTVB0TndLdXVZd2RIRVdsSkZkRXpNdjUtanNwUzBxSUVfX2NYOFR5cUF5WEJ2S3NZRnBXRFM1a0IzQjQyTnQyMlNqT19uOU8yZllpTkZBNVVkNl9pUE10VFVFZ1JVcWdiYmFQUlhYeHZpd1RWUldlVnpLdl94NXlYUHRvUl9qYjJhNkxKNFVVclQ?oc=5",
-          "source": "Borse.it",
-          "publishedAt": "2026-09-30T07:00:00.000Z"
-        },
-        {
-          "title": "Borse oggi in diretta | Il Ftse Mib chiude sotto la parità (-0,1%). Sprint di Lottomatica, male Moncler",
-          "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNQzJIU2liMm5EU3BoUzMzSmU1bUZieWs5cklYVW93VE1pRU9MamZLYnJpeUhPaklrcGYxYXFJaVBGSzRSRWg0NlVSbjJsRXRHQ0UyWUlhT1BSY1B6VmRYQ0tiX1d4SUhzbTJ4S1gzSEg5ZUMxeW5yMkdCOVZwOGtVemxDM2RwYUhjNkVLRW9PUHZfckJDcy1LdWpnV0Y0V1RnZnVhaE1ockNNMGJ3bW9UUElpeVNQS2pxeUVyRS1sWUNTRGpLNThSNjRmdER2WnFQbGFvQV9NdUFqMGc5N1JzN0FmWl9NUQ?oc=5",
-          "source": "Milano Finanza",
-          "publishedAt": "2026-09-10T07:00:00.000Z"
-        },
-        {
-          "title": "La Fed verso un rialzo tassi?",
-          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNNnZGVGtFdnM4TFhVa25TTVRoM2FEVlhWdGpybzRpRGJVSWZsbDYzMmZzTktaTG5oaVc1MkhWaGZ2WEtDcUxhQWFFRTF2THVLbnk1bXkwYXhzTGdrMGJlNEE5ZkZNN1dtUlVfUVctVjNrX2xSUk5fN0QyUnNGUXVJajh5OTFHbS1YNWxvOVpZSEJCcm1HaVdfQlYtZXJyRU5FdTR1dw?oc=5",
+          "title": "Geopolitica, Big Tech e banche centrali: i temi chiave dei mercati",
+          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQd2tBSHo1T1V4UER5UUhneFdvMEhsN1ZzaWJiVFlnV0JMVGtnZkItVWQ5UUJXZzB3bnBaZ19aXzYwdzNlSWZyYWRST1NWczlIZ3VFRHB6WEVfQ1ptTUxkS0pNcG5lQkFPcXktVUlSUmpaMzRxS0lKWGxyWkYxZ1U2UFk0al85UXh4MUtiSVVhVkFTMERHMVYybFBsMi1NLWR4dzRfMllTRS13aHU1TVZndkJUMXRfb1Y1ZnRZVF9NaDY2RmZrTlE?oc=5",
           "source": "Websim",
-          "publishedAt": "2026-08-31T07:00:00.000Z"
+          "publishedAt": "2026-10-27T09:42:34.000Z"
         },
         {
-          "title": "Bond sotto attacco, tremano anche i Btp. Due grandi paure inquietano gli investitori",
-          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNdGpaR1QwTFBVN3pzX0hNQ3dvU1lJbURQRXp2MXpBblVUQXVCWVpocDVYZ2hxUFpTR0xSd3FZVG5Uc2YyNkVoYXJyNm1MRUYxVVh2WURIMVJlRVNQdmtVTzZtRHBoRGNaUDUtSlZ0clBHa0lvUlZWX3BCeE1VYWdPVl9UQ2x4UnptUVpMN3p1YzFLcDBGaUl4WWI4YnlsS1NkX3pDTThMOUE3TGZybXlraFV5a2lUQ3FoUmUzSA?oc=5",
-          "source": "FinanzaOnline",
-          "publishedAt": "2026-08-19T07:00:00.000Z"
+          "title": "Banche in Borsa: perché vendono nonostante i tassi più alti",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNWllTV2U3alg4MU9UUEtZWjZva2dRc2dOcUlNOE9icS02YkFZS0ZxSmZrSzNlWm1OY2pnREFYb0JNZjJPbDlndmI0TWd6VTFKZlNVVDI1YnVwcXBQTUJMZXdYbjMwbHpFVXJ2M3JrUU5aY2UwVnFTa0tNOWMtTUxkTnRRVXBmOUFjaWVQOGJud29hc1ZRVFl4RDhHTQ?oc=5",
+          "source": "Dove Investire",
+          "publishedAt": "2026-10-24T16:54:54.000Z"
         },
         {
-          "title": "Borse e titoli di Stato tornano a fare i conti con lo spettro della stagflazione globale",
-          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNZ0lNYzU2d3I3SFQteVRUOFBhYkdTS1d6bkYwZmRjQmRzNFYxNVd5NG9MR0JUWnVtRGF6Y0lzV1J1dC1nT0lHVzNvU084TmJBazAtX2d1bEhnUUFnX3lmVWJTbzB5bTVXNUIwZXBya0hGMXZEXzJtdFFzbDI2cXBMdElNUHZMaVVVbmFGOVNuTG9NeHRaUnV0aEdkZklHWllJMU9WMUE5LW1PUEo2M1l6Y2Jn?oc=5",
-          "source": "Il Sole 24 ORE",
-          "publishedAt": "2026-04-05T07:00:00.000Z"
+          "title": "Borse in calo e spread in tensione, cos’è il rischio Paese che preoccupa improvvisamente gli investitori",
+          "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOeUozcVlWZEFBZGo5M0l1a0dpTDJGQ3ZKekJnVVcxeTIyV3c3MUp1c1VSTUZGRi1ueTVmYXBxcE9MQ3lud0NINk1NRmFHS3p5ZHRTWVIxY1JqVV9qbkZKdEtGT1RYR0hpX0djYzhFaV90MVZlRkpuNU1xZ20zYzFBTWdlX0xhNmd3dlVwOVlERHBfT3hUYWVPSm5ra0phRERac2tMWU5BeElFX2ZoMW1rVmNNLVBOa1liOTVYVFhUN0tXM3BSTGdfNWxzM2VKU21uTDR4eFlLU2VBUjZKV3l5M08yNkhxTnNJLWFF?oc=5",
+          "source": "Milano Finanza",
+          "publishedAt": "2026-10-19T07:00:00.000Z"
         },
         {
-          "title": "Lo spread torna sopra quota 100: i mercati temono uno shock sistemico",
-          "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOMVF6TzM5czhPV0JQT1R5THZJckhEMFRydklYamdPNmV6UWJpaWJBRHFIbkVLNy0zamp2VlhTSW5UOWx1X0hqdU9lRzd5QkRWWGoyQnNScEZ1dDBRTGxDMXZVUUZOX25oS0VyeHBFaU9oSXBSNGFjUjNOVkI4QlBsSWUzV3lLWWlYdVQ1SkdYYnJQMy1OQzhpQ21tS2dfY1FXZ011M0h0X3BLQVYzSWtoSTBhY0lxQVRRWTNYaVhXb3RDdVpjbGd2ZlFIS25rbXhEaENhS0NaYTBzY0YzRkR6QlFiVWHSAeoBQVVfeXFMT2ZFem1DOHNNYXc3NDRtUW1KbVlMVkhKU1Z1Q18tYzVHc2tQUG5hVzBOQ1pjOWNuUllCdWJLSmVGbThubnE5UVg1aWhUSTRvTERkTThJMzRDM3BrTDdCSHVOdGwxTWxQN2JkUlZGRDdyQ1poTWxvbENILXZxVEJlMHhER2pqLXc5a1FVZjQ5QzJwdlV2Z1BuclpJdnZNSExvNkNNbWNieEg4X3NOUE9BNjE0cmJZdmVQTmEzNWhvTW5aQ2QzRGpOd3plYXhsR0hSQmpGLUFIcmwtVTlXQnFGbXJ0ajR2bXdHS2NR?oc=5",
-          "source": "RaiNews",
-          "publishedAt": "2026-03-23T07:00:00.000Z"
+          "title": "Come andrà lo spread e cosa succederà ai Btp",
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOUHYxZ1dzVmIyM3hwT3NLRmRzRjVWZjE1MVdZd1MzZHIxaTlHM3VkakVFT2MxSmNwS01fdEJpdFdEVC1acTRsc25GMUN2N0VZS0x6a2YxTXYxUWNrMGJCWDlsbEM3OGxuZHlRdkF4Sl80SkxfaTFPQnFmelFqSktBQ1B1M2k?oc=5",
+          "source": "Startmag",
+          "publishedAt": "2026-10-18T07:00:00.000Z"
         },
         {
-          "title": "BTP 4.3% ottobre 2054: perché la guerra fa scendere il prezzo",
-          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE50UXowVjFvX0RFQ2JGQUU3T2tES0hlQ0Z0U0hiVUlNc2JTYUtmeHhkYXFpSkNydnlMMnJydHd6a2cyQm5oU2NRcDRzc2JvMDFzSEF2UkVDUk53dEt2?oc=5",
-          "source": "Truenumbers",
-          "publishedAt": "2026-03-10T07:00:00.000Z"
+          "title": "Panetta: perché gli spread europei risentono dei tassi Usa",
+          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPQ2xoYV9iM1FBdjB1SUxUSTRPTHA1MkpfeU5wOXNSRXlzZjNKR2FxS2lzUEVyeHNQQjZOY0dPSnZPeFdBSmxkU3pqcGRjRGRZSE4tV2RoS01WY3U3TWJzclAwdVFGUzR0Nzg1QkJ0Z1dQcEJoMzdPcTVESWtoZHZ5T2picG9pdFl2WkxaR05UQ01rQVFkYXlrOTdGWDRjYkIzV0c0dkdnMXRkUQ?oc=5",
+          "source": "SoldiOnline.it",
+          "publishedAt": "2026-10-16T07:00:00.000Z"
+        },
+        {
+          "title": "Tensioni energetiche, attesa per i tassi Fed e spread in Europa: il punto sui mercati",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV0JqRDc0SDBHNGR0THQ3alBNMnYyTzFWZk13a2RKWmYxZUFkVE5nY1FkRkJNUG8xeFZ4aGhJT2dIU3RJMEUyd3pkMkF2SEpqQXUyOHdocXFub29LcFB6cXptbUNmc2Z6MFF0XzBtZzByS1I4NU1TZG5NWDRoXzZtVEQtZzcweWM0X1FLSDQ2UlNjeDFMd2kyWUVFdVc1VDR0UTJ1RmpnM3E0Tnc?oc=5",
+          "source": "Websim",
+          "publishedAt": "2026-10-13T07:00:00.000Z"
+        },
+        {
+          "title": "C’è una manina che allarga gli spread per costringere la Bce a intervenire",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAtNHhpOHNtSTBpTy1OdjhjTGh4bGg2VW5tTVU1cElXV3NOSmJON1ExcXF3TnlyalNwSHo4TXQ1NlVSUHltT3BaMThVT1M1NnRSaFE1XzZZMjNuWlVLTllyVzBxY3J0cmhid01HNA?oc=5",
+          "source": "La Verità",
+          "publishedAt": "2026-10-09T17:00:00.000Z"
+        },
+        {
+          "title": "Spread BTP-Bund oggi: BTP al 4,7%, cosa succede",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBseS1DaTNSUWxTYmpnMFR0OENjN3hxaWtTendRcVdiRmNiQldwRXhKNFpDbkNvSFN2bi1RNDB4cXJNblNwTkdMdDQ4VmpLMEJk?oc=5",
+          "source": "Rankia IT",
+          "publishedAt": "2026-10-08T18:56:01.000Z"
         }
       ]
     }
