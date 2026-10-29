@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T19:35:38.044Z",
+  "generatedAt": "2026-10-29T23:55:12.312Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -67,12 +67,6 @@
           "publishedAt": "2026-10-28T16:28:40.000Z"
         },
         {
-          "title": "Endesa conferma le previsioni dopo l'aumento del 15% degli utili",
-          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOVTdiUWFKQ3poZnNObWxUVXY5TERMZG5CLWtkdi1hQmJXYUhmUnA1dlZjNG50R0dSZkRsOWt6cjZpYm5rc2VjY1VSSHVWYnVYc3JOMzVFVm1Cb2FUVDc1eHFkOTdBZWNpMTd0YWhqQkNRZUxia0pGS2dZYndJM1EtbkJ2UFlmOF9OTmgtVkdWR0ltS3dldFhuaFd6VHh6SlZIR2lHRHU3bE1rNGZKU0tqQ2pybVppZUp6Tmc?oc=5",
-          "source": "MarketScreener Italia",
-          "publishedAt": "2026-10-28T08:42:42.000Z"
-        },
-        {
           "title": "Borsa Milano, Enel in testa al Ftse Mib con utility e attese su trimestrale",
           "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOaTdveFF1bTFvckR0djhWLXZfSXIyVk5acDVJeGlJOEs3N3lpR2xWNGp5NjJrd25pQlZRX1FCNVVhelhCeU1SMzg5Z1B2enYya21keG5HbEIzZl9zY29hNnZYdGdTalRhMUdDVVBWeXBVTV9UM3hkWXZpR2IxcjQxUEZQblpjeVFGVGJRd0JSZkJFWHFuZVJISzlET3hLdVh6N25nTFlrLUFFRzNQamx0d3diU0MxVVhzZmh3VmlGblpwa25nQ2lVZQ?oc=5",
           "source": "MarketScreener Italia",
@@ -91,12 +85,6 @@
           "publishedAt": "2026-10-02T07:00:00.000Z"
         },
         {
-          "title": "Utility, cresce il valore dei brand italiani nel mondo. Enel al terzo post nella top 50",
-          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNSk9KUmZPMC13SFVMT0RVZmtOQUdOR2lQeHhTbm9fbTdOT29ZeDQ3SDQ2aGMtVjY0VmJlREZTcHBLeWJ4a25XWERWdWhrdGZGQlkxRlFTa3ZCUl8tU1Q5anR0T3puWWZDNDFrQVZlZTRsSVlveTF0RXVkYURKUzBITWFfR1pBYWJ3WXcyNUh5cDYwRUQ4bUpCSDl3WTkyYUNxZ0NRRkpTeEQ0azBNRktXVW9NSkxPaldzYTVpRnZsZ0hLa3dvZk5zd200dXlPVWlkb3pNLQ?oc=5",
-          "source": "Milano Finanza",
-          "publishedAt": "2026-09-01T07:00:00.000Z"
-        },
-        {
           "title": "Enel, Barclays alza le stime sugli utili dei prossimi 3 anni: c’è spazio per battere ancora il settore utility",
           "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQZ190SGM0T2RDc2pCNWtuaUZKZWtvQTVBS3VNUVAyQUhBUVdLWUM3VzdDZUpSZ3BjcE9CM0xWZGZac1AxMXRxVG9TbEJfSFNqTVlJZDU1YTlxVmo3ZFpSWDdBM19RdVplb09ZSUhBNllhMUJWQ3RkeGtJd2t2SVZMOXpHd1BUeDJUZEdEUDRQcUQ5cWJpeVcyRTFkQ0lGWFJZaXRiZlphNFpxaWRtOVhnbXdOXzcxdjIwSW1pMnB3SzFTUG1PeEpsX0d0U0NkUmhJTkNVN09JN3Y?oc=5",
           "source": "Milano Finanza",
@@ -107,6 +95,18 @@
           "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQR3pqVzRHVFhMZ0NiRlNQRHVoZ1Bva3BRZjhlbE1FajdHLWIxaDFJUGNqbGFtdDhZemRKcjY4WEloaUN5dVFuS0szSVhQNDJvWDY4NEVqbVhmX3JDV3lzaTNQelZVT3hpblFSM0FTUlV6X0JUanlBLTZLQlpiZnBlOHRWNHp2c25IY25YNWw1VDRtQUVFOGppLTYtQkh0RWc?oc=5",
           "source": "Morningstar",
           "publishedAt": "2026-07-24T07:00:00.000Z"
+        },
+        {
+          "title": "Energia, utili giù ma investimenti e Borsa in rialzo: i numeri 2025",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcjZOaFJYRjg1SkhKR0o5TEp5TWZ4WVl6TXM5VE1IMlVCS1ZVbjBZMVVqN1g4bTlyMlZ1ajZFZnlHLUphZ3dUQVJQa1JQYk16TXpERXhfNmJjMXQ0Z2FFa2I5b3JVbUNPUHdWV2c2UkxuMjgyMWpmQXJOSnpybkU2RTN5V1Z1Z1lrZ1BTdXhJSHFaOFo1YWhvc2lvSHdPWDQ4UjVaNC02cjlqMlN4c3dwNml2bDI?oc=5",
+          "source": "SoldiOnline.it",
+          "publishedAt": "2026-07-22T07:00:00.000Z"
+        },
+        {
+          "title": "Dividendo Enel 2026 (saldo): calendario, ammontare e rendimento",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTU81XzhCd2taVkUweDlYeU5lVm9LYV9JTjhNSFlaVmRGeVZuRzhaSWJRU25ocGNfbnRlMEFKUXZCQWtQSkxQdnVIRXI3MGs4eHFsX2hWUXh2TTJUUkI2LTcwTVhVc2tpaW1mWS0xUjJTa21rVWozbjNzSWZPNjlSNzdoQW83TjFmRG45QXZPMWNDRE41NnFwRzNyRQ?oc=5",
+          "source": "SoldiOnline.it",
+          "publishedAt": "2026-07-20T07:00:00.000Z"
         }
       ]
     },
@@ -277,10 +277,10 @@
       "label": "Geopolitica & Macro",
       "items": [
         {
-          "title": "Borse europee negative con la tempesta sui bond, Milano maglia nera. Wall Street in lieve rialzo",
-          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNUVpGWndKdjRjRFF0R000QlBNdEZvZVgwQkhEQUxsOWRIQV9ieE16bTBNVDJwREtPbFBIYlF6WjNVMmZILXUtTHdXUEJyOTI4NHQzUFkwTXd4SndIc2o1THFzcWlaWjQtR0EtOU5tVVBmdzZ2RUU0elVZb3VTeWg1Rmt1emw3SDhRU21IQzlDbmhnbjRDaDhVQmk4R0NUTDJWdjZIa29Wa2Z0LU9FVU55YndsZnV2dw?oc=5",
-          "source": "Il Sole 24 ORE",
-          "publishedAt": "2026-09-30T07:00:00.000Z"
+          "title": "Perché i titoli di Stato italiani sono ok",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNMVRGMWlNMDd4TzlzYURKSTdrZHVoM0Fzc1NGazhybkp5cUlPSEtJRGozVGdhWnhJSDdyRU1Oc2NwbmFhV01kZWNzMlowZUl2bnc0czRGTmgyOTZkYmtmbi1IVm9lVGlUMW5tZUlVTDNaMWZKTzUxVkxEeDFuUlN1WQ?oc=5",
+          "source": "Startmag",
+          "publishedAt": "2026-10-03T07:00:00.000Z"
         },
         {
           "title": "Borse oggi in diretta | Il Ftse Mib chiude sotto la parità (-0,1%). Sprint di Lottomatica, male Moncler",
