@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T14:33:31.409Z",
+  "generatedAt": "2026-11-05T21:57:55.189Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -11,12 +11,6 @@
           "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBtRjN4eWVlLVREQWtQa211UmlSczFRRUpHS1FERXF0ZllubXVub3ZadVRmU3dOQTMyRUlvWTdpdWRzelViWURJQ1U0YmM5UUpvYlZvOEp2Wl9EVGRwWU9ROXhJM2x2LTZIdGlOZGVpbw?oc=5",
           "source": "Finanza Italiacom",
           "publishedAt": "2026-11-04T17:15:40.000Z"
-        },
-        {
-          "title": "Eni S.p.A.: DZ Bank ancora positivo",
-          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPaHVlTEZEYlY1LVdKcHVPMF81djljUDVGNmJWdEF1bFIxTEMycTgwWXg1R0FwWjZXUXkyTko2eENJZEo4QndsUnNXbzY2UkZ3YUpLUjFCSTVIOWxGV3RSZ3lBMGJYSnNFZlNRcTJSOHdjYzlseVJ3V2RIN29QN2lKakhwNUdPbDJaT0FremR4RmY4QQ?oc=5",
-          "source": "MarketScreener Italia",
-          "publishedAt": "2026-11-04T14:01:36.000Z"
         },
         {
           "title": "Azioni Eni: dopo il forte rialzo, conviene ancora investire?",
@@ -37,10 +31,16 @@
           "publishedAt": "2026-11-04T12:18:18.000Z"
         },
         {
-          "title": "Eni S p A : 3F Attachment - Model disclosure for transactions in the issuer’s securities October 2026",
-          "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOa0ctTUluTnN6TV94SU5jdnVBaVFWMmJ1dDlYdnBNUjF0emlHS3VYdzZGTzRGRDBhSlRFa01obEZqelFZdWlFNkk5aWhCY0c2VFRwSlpxV0pOZHBwRDNKcFo1bFpZNTVDWHNISjh5VnFONUw3cW03clNYNy0yNkNHamQzdDR0U1BwOWwzcEdTcGtTcEZHcUY3blhwT1dDZlRCeUpOcVZ0WFV2OExGYVBYQmdVWlJzVUJCaHNZMzRnTlIxNTlCNXdUNS0wT1JhMGdneXZEVzJEUVVtNGdTbGFpaUI4XzM?oc=5",
-          "source": "MarketScreener Italia",
-          "publishedAt": "2026-11-04T11:50:14.000Z"
+          "title": "Le azioni Eni perdono oltre il 2%: le vendite proseguono nonostante i risultati positivi e il piano di remunerazione degli azionisti",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNSU8yVzlRMXZlQVY1RHdJREhIaGZQbFpCZHQ2RkxIX2NTbFhJSFM2UHFFNmE5U0U5MzM4a2s3Y21NUHhqSFZ6QmRoRFBaSVJ1ZG5nV3JLQkdYcE1rVUxONUd2UnZQM3kwNlJhX0NKMVlvMGxRVUtXTlZ4bnJYS0M3NG5ycEczTmt1Z1prb2p3?oc=5",
+          "source": "Traders Union",
+          "publishedAt": "2026-11-03T13:54:25.000Z"
+        },
+        {
+          "title": "Trimestrale Eni: confermato il dividendo straordinario",
+          "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQRlhRa3lEV0lyMm5mM1RNQ1FBSU4yY2ZQYXlKaUppNmthWmdnMGU1SmNNU0hxa1JjSklCbjFkVXJabWpGdUJ0TEhWWXFqRWx3bjA1NklHUFZJa1FvdGJoczd4NjBFUnlLN1RUZHMxaXJielR0cUVuOXg1Mzk4XzF4emRqWHRVeTBCb0NzQ3NZNWtFclQ1ZE5yeVlfY1pxNVVRZmVYZ2t2UjE1aFBNVTlkZWE3cjNHcFBwbmIySEJJN0U5Szh3SDJoTUxSS2ltRXV6S0czT3BlZTBnX2VPc183TUVqcw?oc=5",
+          "source": "Morningstar",
+          "publishedAt": "2026-10-23T07:00:00.000Z"
         },
         {
           "title": "Eni, deliberata la seconda tranche del dividendo da 0,27 euro per azione",
@@ -115,16 +115,22 @@
       "label": "SNAM",
       "items": [
         {
+          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9OMlF4Zk9kc21udHB0N3h4bFpJZG5MNGdIRHhyLVpDalVyWlJpSzU5SFREekpCeVAzZkxjbElTaXp5d2NqVVBDblhmWkVCRVVEME15bWxhcS10b2w3NGxMeS1lb2dWQQ?oc=5",
+          "source": "Staffetta Quotidiana",
+          "publishedAt": "2026-11-05T10:39:37.000Z"
+        },
+        {
           "title": "Il biometano entra nella rete nazionale del gas Montespertoli, completato il collegamento del biodigestore di Casa Sartori",
           "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPZV9XcjNWRmZ1QWt5QWRpMGUzcDc0TzdvUE1vWmNoaEFVbVhsTHNjRHNSeXBpekNUekt5cUxCVmFSM3hIUXJ0X29uN0ZNMzg3RzBYVDBEdE1Ib0J3QVlJanpZQ3o5OEwxckZhaElqcDNyTmJpZzdfa0VqUUVUaGFuT2ZldTBvS2lBWGtRdDItRVVpTU1KRVE3a2dyNXlQaDFqYXFuRlJGd1BvYTlSVmxuN24wUnZIR1pyQTRJWTZsckVwUTRHTXMzazdXWHlGZGdkM1Axd09RREhWazhfYmhuUGI4MA?oc=5",
           "source": "ToscanaOggi",
           "publishedAt": "2026-11-04T16:17:00.000Z"
         },
         {
-          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE8xSGhwTU5ZT2h3V09BNEx1Y2t5UERoMHgzOVJPRlJtR216YmZBUnJLazdGMDI1c3pLRVVOV2dQMVc2OUdEWkdpR291UWpxVzRUdUV0bnhCM1lzWkNfSEVGVERXYXZ1QQ?oc=5",
-          "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-11-04T11:45:49.000Z"
+          "title": "Il futuro della rete gas non può essere il passato. Quale sistema energetico vogliamo costruire nei prossimi vent’anni? Le (non) risposte nel piano investimenti Snam e il ruolo dell’Arera",
+          "link": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxPYW4yamJib1VSd1JlWUtDcW5JYXZLOHR5Znlsc1RURTRJMjc2VDZvXzluN24wbXFZNzVRVXZ5Rk43bWNJaXktdDd3NXpZUV9mbmFrTHp6aUNDa05sM0JJMXRkVHowaHNWTkk4VHh1MDdjV2R0a1ZZaXQ4REFUR3ZhZlk0QmpsWFFmRXVERVA4NUVqeXpIUnZzLVhLZ3JpTTA3djNiazRWSnlhVXR3NW9QU0t4VkQzdm9oU1BYM1pmV05sTEhxc2UxTXloQmgyTDMwNnkzWnM3UTNpeGV3ZjJ1a0JKODlERE9YYk9VcXNRRVR6azZPeW84bVNfNWtqUDdKVHU4OHRGSTg3VHVxbDlPYW4zS1FXRGlYbFJwOEZuM2ZOQ2VGR0txTDBxRmQxTXljdW1NNU13QXhzSlF6dWRkdndHd0pwSE9U?oc=5",
+          "source": "Greenreport.it",
+          "publishedAt": "2026-10-30T11:05:50.000Z"
         },
         {
           "title": "Prezzi Azionario FtseMIB: Snam Rete Gas, Serie Di Resistenze A 6.162, 6.220 E 6.274",
@@ -143,12 +149,6 @@
           "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNUS1TU2gwTkJmTEVmSHhGZDhHa3A0OVlKS0ZXSEwyb2xHNDhNOTgyR21rQVplejJPOVRsbzV5WEY1UERXeUM3OVIwX0JmUUgxcXVOdGFwSjFDLW9ra0lsZjAtQmg0OWc5amRyU0ZwUlZ6aGlaYUUzZVdhU1RLRGZGOTVnT2hLTXZjTFNGYXJINGRqaUQxUUpQLU1hbVFreXZYRkhRVHpFM1B6X3haaHozQi0zWktOYmFNem1sM3VZMnN1aHRzaGloWWhtU3RrMVRZajRvdl9Bei1XaHBQUVNMVE56a0NjUVk?oc=5",
           "source": "ANSA",
           "publishedAt": "2026-07-27T07:00:00.000Z"
-        },
-        {
-          "title": "A giugno più gas in rete: ecco da dove arriva e perché non siamo a rischio",
-          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSXg0WlI3UGo5eG1aLXcweTVpSzdSUExuOUpzQkh4Y0U4Ynd5c05ydEYwVmRxWTlGd2dlWGNiMjR5WGVpVi1FcHhsOGwxODdjdi1nX2tuVzdQcHQ1R0JZWmtkQmt2Mzh2anF6U25pUS0tN0lVeHdzbHdWTVhRU2dMVmZlcVh4VHVlem5HX1h6LUNqaVV5LVU5OHIwb193WEhxU3JoWWF1Wl8?oc=5",
-          "source": "Il Sole 24 ORE",
-          "publishedAt": "2026-07-09T07:00:00.000Z"
         },
         {
           "title": "Eni-Snam, c’è l’ok del governo alla rete per trasportare la Co2",
@@ -289,12 +289,6 @@
           "publishedAt": "2026-09-10T07:00:00.000Z"
         },
         {
-          "title": "Spread Btp-Bund fermo a 81, ma i rendimenti salgono: cosa succede",
-          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPVEJzT01sRzJjdWFnUWtQQUJBTXZTcEJJUEhtWWNQdjdWZXo2VXBnWkZuVEZNNUZrdWM0VGlUQ09UaGstSWkxRTA0WjFOd0h1S1BlUXYxbm9MT3hoeHc3Ylh5Vy1lMmN5UEhtX2ZWaEhwRFpDM0x4NHFQdi1YRjhzM282Q0xfRm1heUlzQmFtaHRodVJVSXA0Q1FHUjZiR2QyYUNIZ3RueG1uc2ZPSGNpRHZ6NTdJb0oxcnc?oc=5",
-          "source": "SoldiOnline.it",
-          "publishedAt": "2026-09-07T07:00:00.000Z"
-        },
-        {
           "title": "La Fed verso un rialzo tassi?",
           "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNNnZGVGtFdnM4TFhVa25TTVRoM2FEVlhWdGpybzRpRGJVSWZsbDYzMmZzTktaTG5oaVc1MkhWaGZ2WEtDcUxhQWFFRTF2THVLbnk1bXkwYXhzTGdrMGJlNEE5ZkZNN1dtUlVfUVctVjNrX2xSUk5fN0QyUnNGUXVJajh5OTFHbS1YNWxvOVpZSEJCcm1HaVdfQlYtZXJyRU5FdTR1dw?oc=5",
           "source": "Websim",
@@ -305,6 +299,12 @@
           "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNdGpaR1QwTFBVN3pzX0hNQ3dvU1lJbURQRXp2MXpBblVUQXVCWVpocDVYZ2hxUFpTR0xSd3FZVG5Uc2YyNkVoYXJyNm1MRUYxVVh2WURIMVJlRVNQdmtVTzZtRHBoRGNaUDUtSlZ0clBHa0lvUlZWX3BCeE1VYWdPVl9UQ2x4UnptUVpMN3p1YzFLcDBGaUl4WWI4YnlsS1NkX3pDTThMOUE3TGZybXlraFV5a2lUQ3FoUmUzSA?oc=5",
           "source": "FinanzaOnline",
           "publishedAt": "2026-08-19T07:00:00.000Z"
+        },
+        {
+          "title": "Spread Btp-Bund giù a 79,6 punti: cosa segnala ai risparmiatori",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNVmhkX3ZRSjRQNFdRQ2pBX1AzRnZSa2twdG9LVFpNaE53bGRzWkVUczREVmhIazItcmVsdWdMSGRvRXVMS2dWQjVlTnd6TGVJd1kxN0RGeHZyU2hGTUVLYVd3Ul9sQW5EWmR4YUNNOFNYTlBxWG9LcmVfR3htbzR5dUZoSGtFV3ptaEg0YXlzWEhiSGp3SGR0VUEtS0FUMUItMFBWekhBZ3BaVmlJZHcweXk0RkpGZHM?oc=5",
+          "source": "SoldiOnline.it",
+          "publishedAt": "2026-08-03T07:00:00.000Z"
         },
         {
           "title": "Spread Btp-Bund a 73 punti base, oltre 25 miliardi di euro dalle aste di fine maggio",
