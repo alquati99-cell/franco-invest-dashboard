@@ -1,11 +1,17 @@
 {
-  "generatedAt": "2026-11-06T14:11:03.087Z",
+  "generatedAt": "2026-11-06T20:25:51.650Z",
   "source": "Google News RSS",
   "topics": [
     {
       "id": "eni",
       "label": "ENI",
       "items": [
+        {
+          "title": "Migliori azioni energia 2027: 10 titoli dal petrolio al nucleare, chi comprare ora",
+          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1Zb0N2NWIycnp3SDVvZGN5Y25QT1MyeVZobDhqa3FBNi16Y0ltVFlGMEJUV2wtd2g3QVY1cTljZ1BjbEptblRDd21fQTlYLTh2bTlsSTJiWXJ5b3A3X1RueVY4ODJLYTdDYVBhcU0zeFBuQQ?oc=5",
+          "source": "Finanza Italiacom",
+          "publishedAt": "2026-11-06T17:00:45.000Z"
+        },
         {
           "title": "Eni S.p.A.: da UBS è Buy",
           "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQWk9KRnJ1LTc1a3dXbG4zUFBRdVNVWm9BNXZ6amFSeWFDZGV6NThoZk5CdXhYeV9PcEpTclB3MlNIYmJzZ3BqODQ0WEZpNWFwQUlMY1Y0NEVUcnBac1RGMm03Ul9XdTVMaUVXT2w2Zks0THl6UlQ0Y3M3cGh2a3AyUkxPUQ?oc=5",
@@ -22,7 +28,13 @@
           "title": "Azioni Eni: dopo il forte rialzo, conviene ancora investire?",
           "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOWFl2VFR4TTc2UWEtclo1MVZLd0xOcnE1VGFiVGZzTThRZl9vUGR2cmpxTThVSFlEbWdoWnlCalFILWtWWFRudENJdk51UVN4SDJJeVlValdCWTNQeFJZbTJkX3M3aTU0MW9RZmhYYkdaMVd5X1NDdzdOMW5BY0NFRUhDbWMzU21tN1hGeTVrTzMwRlJ0SWhrUXdlLUlxVjJ1ZkRYb2s4R1RBRTVZUWhDcEJlRQ?oc=5",
           "source": "Investing.com",
-          "publishedAt": "2026-11-04T12:48:00.000Z"
+          "publishedAt": "2026-11-04T15:28:07.000Z"
+        },
+        {
+          "title": "Eni S.p.A.: DZ Bank ancora positivo",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPaHVlTEZEYlY1LVdKcHVPMF81djljUDVGNmJWdEF1bFIxTEMycTgwWXg1R0FwWjZXUXkyTko2eENJZEo4QndsUnNXbzY2UkZ3YUpLUjFCSTVIOWxGV3RSZ3lBMGJYSnNFZlNRcTJSOHdjYzlseVJ3V2RIN29QN2lKakhwNUdPbDJaT0FremR4RmY4QQ?oc=5",
+          "source": "MarketScreener Italia",
+          "publishedAt": "2026-11-04T14:01:36.000Z"
         },
         {
           "title": "ENI, acquistate 4.278.035 azioni proprie tra il 26 e il 30 ottobre 2026",
@@ -41,18 +53,6 @@
           "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQRlhRa3lEV0lyMm5mM1RNQ1FBSU4yY2ZQYXlKaUppNmthWmdnMGU1SmNNU0hxa1JjSklCbjFkVXJabWpGdUJ0TEhWWXFqRWx3bjA1NklHUFZJa1FvdGJoczd4NjBFUnlLN1RUZHMxaXJielR0cUVuOXg1Mzk4XzF4emRqWHRVeTBCb0NzQ3NZNWtFclQ1ZE5yeVlfY1pxNVVRZmVYZ2t2UjE1aFBNVTlkZWE3cjNHcFBwbmIySEJJN0U5Szh3SDJoTUxSS2ltRXV6S0czT3BlZTBnX2VPc183TUVqcw?oc=5",
           "source": "Morningstar",
           "publishedAt": "2026-10-23T07:00:00.000Z"
-        },
-        {
-          "title": "Eni, deliberata la seconda tranche del dividendo da 0,27 euro per azione",
-          "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQTGh5c0t5bXB4VmtrZVpTQUt3aktvVHZacmpjaDM0b0duX0YzOXBqb2FVNjk3ZnJRM2p5cVpXOU1Qam5Pc2dkWkJ0VUtCX3c3UDFNOE5rMzBpUlNlaDEyS1c4QVlPVHFNTWNPZ3U4TDFyLTJ1ZXdLUEY5NS1jTHJVdHduSWw5Tkw1NTliYkZWSl9KdVgxcmxETnpPUWdabGdSWFczbzc4VVIxSDFWOWhZcDdVLWNUc0dmT3RtaGZJVlV1NUdvMWFIUjZqdEhjY2FtRTNiVFdtaDFrNGtPWGdFYTdsMUk2OXRlNURn?oc=5",
-          "source": "Borsa Italiana",
-          "publishedAt": "2026-10-22T07:00:00.000Z"
-        },
-        {
-          "title": "Eni, nuovi acquisti di azioni proprie per 100 milioni di euro",
-          "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxONWlxMUFJNlp2WDZsTFNhaHVXcjNFb3RHY2FPaFJWMzFxQmRXNkdCR2ZkV25hTWtIWmdFaTBjR2VxVzJ2NnZGdS01MjNZZWlrcUZFNnR0Q0gtMFdkVEp1ZW4yRDNkODRuUGFqUjIxUnUzaUJ6TXBWaHVxcHNSM2oybVRScmMxeEhGS0RZMmFDZ3Y4TERLM19vUEhhZktyd3lIcWdmcUczM3Nyel9pV1hTSnNwWnh6eFRiUHdKTVZpMHJyWjc5YnZKTlVPWkR1UHdVbHowLThLMmEyUlF0cXc?oc=5",
-          "source": "Borsa Italiana",
-          "publishedAt": "2026-10-21T07:00:00.000Z"
         }
       ]
     },
@@ -60,6 +60,12 @@
       "id": "enel",
       "label": "ENEL",
       "items": [
+        {
+          "title": "Migliori azioni energia 2027: 10 titoli dal petrolio al nucleare, chi comprare ora",
+          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1Zb0N2NWIycnp3SDVvZGN5Y25QT1MyeVZobDhqa3FBNi16Y0ltVFlGMEJUV2wtd2g3QVY1cTljZ1BjbEptblRDd21fQTlYLTh2bTlsSTJiWXJ5b3A3X1RueVY4ODJLYTdDYVBhcU0zeFBuQQ?oc=5",
+          "source": "Finanza Italiacom",
+          "publishedAt": "2026-11-06T17:00:45.000Z"
+        },
         {
           "title": "Azioni Enel novità 6 novembre: crolla e rimbalza, perché",
           "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5CVDJJWndaaDBoREgzSm8zNHNkMnRYUzZmbXptaGVnZk16MHA1WHVjWlRYeEJvNnE3Rk5jQS1yY1dmZThrajU3Tzl4T2dXNnNTbjNZUlpQSHlveHdRTU04NXFSMHpfenNrcXJSa1Y2OUc?oc=5",
@@ -82,12 +88,6 @@
           "title": "Borsa Milano, Enel in testa al Ftse Mib con utility e attese su trimestrale",
           "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOaTdveFF1bTFvckR0djhWLXZfSXIyVk5acDVJeGlJOEs3N3lpR2xWNGp5NjJrd25pQlZRX1FCNVVhelhCeU1SMzg5Z1B2enYya21keG5HbEIzZl9zY29hNnZYdGdTalRhMUdDVVBWeXBVTV9UM3hkWXZpR2IxcjQxUEZQblpjeVFGVGJRd0JSZkJFWHFuZVJISzlET3hLdVh6N25nTFlrLUFFRzNQamx0d3diU0MxVVhzZmh3VmlGblpwa25nQ2lVZQ?oc=5",
           "source": "MarketScreener Italia",
-          "publishedAt": "2026-10-20T07:00:00.000Z"
-        },
-        {
-          "title": "Azioni Enel 20 ottobre 2026: quotazione e target price",
-          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1WTWRUcDVDUzRHTWQtTHlKNnljOGRGaldMd3pua3p6T1NURTEyTjNtVEhfMTJPcnBSdFdVclJQYTZNbE5GTHB2UlA1TTl5WFh6VzVlYWpqVkxwdzVhdHNuSUkwUWZnZ080cC1tWDBlb04?oc=5",
-          "source": "Finanza Italiacom",
           "publishedAt": "2026-10-20T07:00:00.000Z"
         },
         {
@@ -116,9 +116,9 @@
       "items": [
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9OMlF4Zk9kc21udHB0N3h4bFpJZG5MNGdIRHhyLVpDalVyWlJpSzU5SFREekpCeVAzZkxjbElTaXp5d2NqVVBDblhmWkVCRVVEME15bWxhcS10b2w3NGxMeS1lb2dWQQ?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1IV0NaRWJiNDh5NkRJRW85ZURUY0E2eldFY3pTazh4WUhWcVUwWDNkVmJFb1YzMVZCYXhjRE5QNV85RFBFMnNpbkpuYmZUQm0wWjBLZGdwZll3TS1WczJGUVZFQ3FLUQ?oc=5",
           "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-11-05T10:39:37.000Z"
+          "publishedAt": "2026-11-06T10:20:40.000Z"
         },
         {
           "title": "Il biometano entra nella rete nazionale del gas Montespertoli, completato il collegamento del biodigestore di Casa Sartori",
@@ -277,12 +277,6 @@
       "label": "Geopolitica & Macro",
       "items": [
         {
-          "title": "Perché i titoli di Stato italiani sono ok",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNMVRGMWlNMDd4TzlzYURKSTdrZHVoM0Fzc1NGazhybkp5cUlPSEtJRGozVGdhWnhJSDdyRU1Oc2NwbmFhV01kZWNzMlowZUl2bnc0czRGTmgyOTZkYmtmbi1IVm9lVGlUMW5tZUlVTDNaMWZKTzUxVkxEeDFuUlN1WQ?oc=5",
-          "source": "Startmag",
-          "publishedAt": "2026-10-03T07:00:00.000Z"
-        },
-        {
           "title": "Borse oggi in diretta | Il Ftse Mib chiude sotto la parità (-0,1%). Sprint di Lottomatica, male Moncler",
           "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNQzJIU2liMm5EU3BoUzMzSmU1bUZieWs5cklYVW93VE1pRU9MamZLYnJpeUhPaklrcGYxYXFJaVBGSzRSRWg0NlVSbjJsRXRHQ0UyWUlhT1BSY1B6VmRYQ0tiX1d4SUhzbTJ4S1gzSEg5ZUMxeW5yMkdCOVZwOGtVemxDM2RwYUhjNkVLRW9PUHZfckJDcy1LdWpnV0Y0V1RnZnVhaE1ockNNMGJ3bW9UUElpeVNQS2pxeUVyRS1sWUNTRGpLNThSNjRmdER2WnFQbGFvQV9NdUFqMGc5N1JzN0FmWl9NUQ?oc=5",
           "source": "Milano Finanza",
@@ -323,6 +317,12 @@
           "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE50UXowVjFvX0RFQ2JGQUU3T2tES0hlQ0Z0U0hiVUlNc2JTYUtmeHhkYXFpSkNydnlMMnJydHd6a2cyQm5oU2NRcDRzc2JvMDFzSEF2UkVDUk53dEt2?oc=5",
           "source": "Truenumbers",
           "publishedAt": "2026-03-10T07:00:00.000Z"
+        },
+        {
+          "title": "BTP, rendimenti in calo e spread ridotti per i titoli di Stato italiani",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNWnNpLW54OVl2b0dfSS1tSlpWMi0tUTRxRUtyV1ZOWi1UR29OcUtYSHV2ZU1uVTJzMWFScDFIQ1kyTFBVR3RCQlVlSDR1Yzlzb0g4NkItaXdXeDNROWRBMXpaZEJ6M2VUZkQ4YS1fNHFBOThuYUJGUW5qbWowNVJ6RW5MV2RyYWFvT3ZRTWJOWWl2azZfSk5UeTg3VWdEUQ?oc=5",
+          "source": "PMI.it",
+          "publishedAt": "2026-01-27T08:00:00.000Z"
         }
       ]
     }
