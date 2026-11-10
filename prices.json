@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T17:27:51.128Z",
+  "generatedAt": "2026-11-10T00:25:20.425Z",
   "base": "EUR",
   "fx": {
     "EUR": 1,
@@ -19,7 +19,7 @@
       "currency": "EUR",
       "changePct": 0.24,
       "name": "Btp Tf 1,8%",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:obbligazioni"
     },
     "IT0005680753": {
@@ -27,7 +27,7 @@
       "currency": "EUR",
       "changePct": 0.15,
       "name": "Cct-Eu Fr Eur6m+0,8% APR. 2035",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:obbligazioni"
     },
     "IT0005491250": {
@@ -35,7 +35,7 @@
       "currency": "EUR",
       "changePct": 0.03,
       "name": "Cct-Eu Tv Eur6m+0,75% ot30",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:obbligazioni"
     },
     "IT0005554982": {
@@ -43,7 +43,7 @@
       "currency": "EUR",
       "changePct": 0.1,
       "name": "CCT-EU-TVEU6M-15-OT-31",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:obbligazioni"
     },
     "CCT-EU-TVEU6M-15-OT-31": {
@@ -51,15 +51,15 @@
       "currency": "EUR",
       "changePct": 0.1,
       "name": "CCT-EU-TVEU6M-15-OT-31",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:obbligazioni"
     },
     "LU0109666635": {
-      "price": 14.4916,
+      "price": 14.4867,
       "currency": "EUR",
-      "changePct": 0.398,
+      "changePct": -0.599,
       "name": "FONDITALIA BOND GL. E.M.",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P00000UCO.F"
     },
     "IT0005365165": {
@@ -67,7 +67,7 @@
       "currency": "EUR",
       "changePct": -0.01,
       "name": "Btp Tf 3,00% Ag29 Eur",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:obbligazioni"
     },
     "BTP-TF-3-00-AG29-EUR": {
@@ -75,7 +75,7 @@
       "currency": "EUR",
       "changePct": -0.01,
       "name": "Btp Tf 3,00% Ag29 Eur",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:obbligazioni"
     },
     "IT0005707689": {
@@ -83,39 +83,39 @@
       "currency": "EUR",
       "changePct": 0.22,
       "name": "CCT 15 APRILE 2036",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:obbligazioni"
     },
     "LU0771412946": {
-      "price": 9.142,
+      "price": 9.194,
       "currency": "EUR",
-      "changePct": 0.473,
+      "changePct": 1.044,
       "name": "FONDI ITALIA BOND US S",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P0000W2AJ.F"
     },
     "LU0814405493": {
-      "price": 8.713,
+      "price": 8.71,
       "currency": "EUR",
-      "changePct": 0.403,
+      "changePct": 0.369,
       "name": "FONDI ITALIA BOND GLOBAL EMERGIN MARKET S",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P0000XP0S.F"
     },
     "LU1422817830": {
-      "price": 9.358,
+      "price": 9.353,
       "currency": "EUR",
-      "changePct": 0.505,
+      "changePct": 0.451,
       "name": "FONDI ITALIA FINANCIAL CREDIT BOND S",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P00018BDG.F"
     },
     "LU0553726596": {
-      "price": 8.398,
+      "price": 8.393,
       "currency": "EUR",
-      "changePct": 0.455,
+      "changePct": 0.395,
       "name": "FONDI ITALIA EURO CORPORATE BOND S",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P0000S2QO.F"
     },
     "IT0003128367": {
@@ -123,7 +123,7 @@
       "currency": "EUR",
       "changePct": 1.73,
       "name": "ENEL",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "ENEL.MI": {
@@ -131,7 +131,7 @@
       "currency": "EUR",
       "changePct": 1.73,
       "name": "ENEL",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "FR0000121667": {
@@ -139,7 +139,7 @@
       "currency": "EUR",
       "changePct": 3.446,
       "name": "ESSILORLUXOTTICA",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:EL.PA"
     },
     "EL.PA": {
@@ -147,87 +147,87 @@
       "currency": "EUR",
       "changePct": 3.446,
       "name": "ESSILORLUXOTTICA",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:EL.PA"
     },
     "IE00B4BNMY34": {
-      "price": 257.92,
+      "price": 254.37,
       "currency": "USD",
-      "changePct": -1.157,
+      "changePct": -2.518,
       "name": "Accenture plc",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:ACN"
     },
     "ACN": {
-      "price": 257.92,
+      "price": 254.37,
       "currency": "USD",
-      "changePct": -1.157,
+      "changePct": -2.518,
       "name": "Accenture plc",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:ACN"
     },
     "US0846707026": {
-      "price": 569.4,
+      "price": 575.25,
       "currency": "USD",
-      "changePct": 2.39,
+      "changePct": 3.442,
       "name": "Berkshire Hathaway Inc. New",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:BRK-B"
     },
     "BRK-B": {
-      "price": 569.4,
+      "price": 575.25,
       "currency": "USD",
-      "changePct": 2.39,
+      "changePct": 3.442,
       "name": "Berkshire Hathaway Inc. New",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:BRK-B"
     },
     "US67066G1040": {
-      "price": 177.755,
+      "price": 178.67,
       "currency": "USD",
-      "changePct": -12.029,
+      "changePct": -11.576,
       "name": "NVIDIA Corporation",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:NVDA"
     },
     "NVDA": {
-      "price": 177.755,
+      "price": 178.67,
       "currency": "USD",
-      "changePct": -12.029,
+      "changePct": -11.576,
       "name": "NVIDIA Corporation",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:NVDA"
     },
     "US6745991058": {
-      "price": 56.055,
+      "price": 55.76,
       "currency": "USD",
-      "changePct": -7.683,
+      "changePct": -8.169,
       "name": "Occidental Petroleum Corporatio",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:OXY"
     },
     "OXY": {
-      "price": 56.055,
+      "price": 55.76,
       "currency": "USD",
-      "changePct": -7.683,
+      "changePct": -8.169,
       "name": "Occidental Petroleum Corporatio",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:OXY"
     },
     "US5949181045": {
-      "price": 544.26,
+      "price": 545.18,
       "currency": "USD",
-      "changePct": 7.324,
+      "changePct": 7.505,
       "name": "Microsoft Corporation",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:MSFT"
     },
     "MSFT": {
-      "price": 544.26,
+      "price": 545.18,
       "currency": "USD",
-      "changePct": 7.324,
+      "changePct": 7.505,
       "name": "Microsoft Corporation",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:MSFT"
     },
     "DE0008404005": {
@@ -235,7 +235,7 @@
       "currency": "EUR",
       "changePct": 3.769,
       "name": "Allianz SE                    v",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:ALV.DE"
     },
     "ALV.DE": {
@@ -243,7 +243,7 @@
       "currency": "EUR",
       "changePct": 3.769,
       "name": "Allianz SE                    v",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:ALV.DE"
     },
     "IT0003153415": {
@@ -251,7 +251,7 @@
       "currency": "EUR",
       "changePct": -0.58,
       "name": "SNAM",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "SRG.MI": {
@@ -259,7 +259,7 @@
       "currency": "EUR",
       "changePct": -0.58,
       "name": "SNAM",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "IT0001233417": {
@@ -267,7 +267,7 @@
       "currency": "EUR",
       "changePct": 0.33,
       "name": "A2A",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "A2A.MI": {
@@ -275,55 +275,55 @@
       "currency": "EUR",
       "changePct": 0.33,
       "name": "A2A",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "US0304201033": {
-      "price": 149.42,
+      "price": 149.22,
       "currency": "USD",
-      "changePct": 1.35,
+      "changePct": 1.214,
       "name": "American Water Works Company, I",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:AWK"
     },
     "AWK": {
-      "price": 149.42,
+      "price": 149.22,
       "currency": "USD",
-      "changePct": 1.35,
+      "changePct": 1.214,
       "name": "American Water Works Company, I",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:AWK"
     },
     "US02079K3059": {
-      "price": 289.52,
+      "price": 286.01,
       "currency": "USD",
-      "changePct": 4.129,
+      "changePct": 2.866,
       "name": "Alphabet Inc. Class C",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:GOOG"
     },
     "GOOG": {
-      "price": 289.52,
+      "price": 286.01,
       "currency": "USD",
-      "changePct": 4.129,
+      "changePct": 2.866,
       "name": "Alphabet Inc. Class C",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:GOOG"
     },
     "US68389X1054": {
-      "price": 119.17,
+      "price": 119.79,
       "currency": "USD",
-      "changePct": -0.042,
+      "changePct": 0.478,
       "name": "Oracle Corporation",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:ORCL"
     },
     "ORCL": {
-      "price": 119.17,
+      "price": 119.79,
       "currency": "USD",
-      "changePct": -0.042,
+      "changePct": 0.478,
       "name": "Oracle Corporation",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:ORCL"
     },
     "FR0000121014": {
@@ -331,7 +331,7 @@
       "currency": "EUR",
       "changePct": 0.237,
       "name": "LVMH",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:MC.PA"
     },
     "MC.PA": {
@@ -339,23 +339,23 @@
       "currency": "EUR",
       "changePct": 0.237,
       "name": "LVMH",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:MC.PA"
     },
     "US0378331005": {
-      "price": 349.93,
+      "price": 350.69,
       "currency": "USD",
-      "changePct": 3.432,
+      "changePct": 3.656,
       "name": "Apple Inc.",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:AAPL"
     },
     "AAPL": {
-      "price": 349.93,
+      "price": 350.69,
       "currency": "USD",
-      "changePct": 3.432,
+      "changePct": 3.656,
       "name": "Apple Inc.",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:AAPL"
     },
     "IT0005239360": {
@@ -363,7 +363,7 @@
       "currency": "EUR",
       "changePct": 6.28,
       "name": "UNICREDIT",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "UCG.MI": {
@@ -371,7 +371,7 @@
       "currency": "EUR",
       "changePct": 6.28,
       "name": "UNICREDIT",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "LU0533033238": {
@@ -379,7 +379,7 @@
       "currency": "EUR",
       "changePct": 0.75,
       "name": "Amundi MSCI Wld H Care UCITS ET",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:etf"
     },
     "HLTW.MI": {
@@ -387,7 +387,7 @@
       "currency": "EUR",
       "changePct": 0.75,
       "name": "Amundi MSCI Wld H Care UCITS ET",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:etf"
     },
     "IT0001250932": {
@@ -395,7 +395,7 @@
       "currency": "EUR",
       "changePct": 1.18,
       "name": "HERA",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "HER.MI": {
@@ -403,7 +403,7 @@
       "currency": "EUR",
       "changePct": 1.18,
       "name": "HERA",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "IT0000072618": {
@@ -411,7 +411,7 @@
       "currency": "EUR",
       "changePct": 2.85,
       "name": "INTESA SANPAOLO",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "ISP.MI": {
@@ -419,7 +419,7 @@
       "currency": "EUR",
       "changePct": 2.85,
       "name": "INTESA SANPAOLO",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "IT0003796171": {
@@ -427,7 +427,7 @@
       "currency": "EUR",
       "changePct": 2.32,
       "name": "POSTE ITALIANE",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "PST.MI": {
@@ -435,7 +435,7 @@
       "currency": "EUR",
       "changePct": 2.32,
       "name": "POSTE ITALIANE",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "IT0003132476": {
@@ -443,7 +443,7 @@
       "currency": "EUR",
       "changePct": -0.26,
       "name": "ENI",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "ENI.MI": {
@@ -451,7 +451,7 @@
       "currency": "EUR",
       "changePct": -0.26,
       "name": "ENI",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "IT0005495657": {
@@ -459,7 +459,7 @@
       "currency": "EUR",
       "changePct": 1.86,
       "name": "SAIPEM",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "SPM.MI": {
@@ -467,31 +467,31 @@
       "currency": "EUR",
       "changePct": 1.86,
       "name": "SAIPEM",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "LU0058496836": {
-      "price": 8.54185,
+      "price": 8.35992,
       "currency": "EUR",
-      "changePct": -0.227,
+      "changePct": -5.001,
       "name": "FONDITALIA EQ. PACIFIC EX JAPAN",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P00000UBV.F"
     },
     "LU0109666981": {
-      "price": 21.873,
+      "price": 21.495,
       "currency": "EUR",
-      "changePct": -0.216,
+      "changePct": -8.954,
       "name": "FONDITALIA EQ. GL. E.M.",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P00000UCE.F"
     },
     "LU0072913022": {
-      "price": 407.707,
+      "price": 408.187,
       "currency": "EUR",
-      "changePct": -0.58,
+      "changePct": -0.463,
       "name": "UBS LUX. EQ. GREATER CHINA",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:UBFN.F"
     },
     "IT0005218380": {
@@ -499,7 +499,7 @@
       "currency": "EUR",
       "changePct": 10.67,
       "name": "BANCO BPM",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "BAMI.MI": {
@@ -507,31 +507,31 @@
       "currency": "EUR",
       "changePct": 10.67,
       "name": "BANCO BPM",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "borsaitaliana:azioni"
     },
     "LU0579995191": {
-      "price": 16.18,
+      "price": 16.49,
       "currency": "EUR",
-      "changePct": -0.492,
+      "changePct": 1.415,
       "name": "BLACK ROCK EURO EQUITY EUR DIS",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P0000SB48.F"
     },
     "LU0147408487": {
-      "price": 109.04,
+      "price": 111.37,
       "currency": "USD",
-      "changePct": -8.814,
+      "changePct": -6.866,
       "name": "BALCK ROCK WORLD TECHNOLOGIES E2 USD",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P00000SK7"
     },
     "LU1093290960": {
-      "price": 168.16,
+      "price": 168.3,
       "currency": "EUR",
-      "changePct": -0.744,
+      "changePct": -0.661,
       "name": "KAIROS INTERNATIONAL ITALIA DK",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P000150IX.F"
     },
     "LU0868754382": {
@@ -539,15 +539,15 @@
       "currency": "EUR",
       "changePct": 0.823,
       "name": "MORGAN STANLEY INVESTMENT FOUND GLOBAL INSIGHTS AH EUR",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:MSJL.MU"
     },
     "LU0868753731": {
-      "price": 77.907,
+      "price": 77.937,
       "currency": "EUR",
-      "changePct": 2.852,
+      "changePct": 2.891,
       "name": "MORGAN STANLEY INVESTMEENT FOUDN GLOBAL INSIGHTS A USD",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:MSJ0.F"
     },
     "LU0289215948": {
@@ -555,103 +555,103 @@
       "currency": "EUR",
       "changePct": -0.295,
       "name": "JPM GLOBAL FOCUS ACC A HDG EUR",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:L7F0.MU"
     },
     "IT0001083424": {
-      "price": 23.0287,
+      "price": 23.217,
       "currency": "EUR",
-      "changePct": -3.461,
+      "changePct": -10.632,
       "name": "EURIZON AZIONARIO INTERNATIONAL ETICO",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P00000U1V.F"
     },
     "IE00B83BYG91": {
-      "price": 11.32,
+      "price": 11.33,
       "currency": "EUR",
-      "changePct": -1.48,
+      "changePct": -1.393,
       "name": "Janus Hend. Balanced A Dis EUR Hdg,",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P0000ZND4.F"
     },
     "IT0005508921": {
       "price": 11.496,
       "currency": "EUR",
-      "changePct": 4.795,
+      "changePct": 2.15,
       "name": "BANCA MONTE PASCHI SIENA",
-      "asOf": "2026-11-09",
-      "source": "yahoo:BMPS.MI"
+      "asOf": "2026-11-10",
+      "source": "borsaitaliana:azioni"
     },
     "BMPS.MI": {
       "price": 11.496,
       "currency": "EUR",
-      "changePct": 4.795,
+      "changePct": 2.15,
       "name": "BANCA MONTE PASCHI SIENA",
-      "asOf": "2026-11-09",
-      "source": "yahoo:BMPS.MI"
+      "asOf": "2026-11-10",
+      "source": "borsaitaliana:azioni"
     },
     "LU0937587227": {
-      "price": 13.883,
+      "price": 13.778,
       "currency": "EUR",
-      "changePct": 0.667,
+      "changePct": -0.094,
       "name": "FONDI ITALIA EQUITY GLOBAL S",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P0000Z33J.F"
     },
     "LU0937586252": {
-      "price": 9.926,
+      "price": 9.92,
       "currency": "EUR",
-      "changePct": -1.017,
+      "changePct": -1.077,
       "name": "FONDI ITALIA GLOBAL CONVERTIBLE S",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P0000Z31T.F"
     },
     "LU0615749727": {
-      "price": 6.453,
+      "price": 6.45,
       "currency": "EUR",
-      "changePct": -0.108,
+      "changePct": -0.155,
       "name": "FONDI ITALIA DYNAMIC ASSET ALLOCATION MULTIASSETT DIS",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P0000TFCK.F"
     },
     "LU0937586500": {
-      "price": 7.014,
+      "price": 7.053,
       "currency": "EUR",
-      "changePct": 0.906,
+      "changePct": 1.467,
       "name": "FONDI ITALIA EMERGIN MARKET CURRENCY S",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P0000Z31B.F"
     },
     "LU0731782826": {
-      "price": 29.947,
+      "price": 30.02,
       "currency": "EUR",
-      "changePct": 0.995,
+      "changePct": 1.241,
       "name": "FIDELITY GLOBAL DIVIDEND S EUR",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:FPGM.F"
     },
     "LU0058496919": {
-      "price": 308.55,
+      "price": 302.706,
       "currency": "EUR",
-      "changePct": 1.015,
+      "changePct": -2.388,
       "name": "FONDI ITALIA GLOBAL R",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P00000UBQ.F"
     },
     "LU1481510169": {
-      "price": 9.388,
+      "price": 9.333,
       "currency": "EUR",
-      "changePct": 0.87,
+      "changePct": 0.279,
       "name": "FONDIITALIA FLEXI STRATEGY S",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:0P000195BT.F"
     },
     "LU0210534227": {
-      "price": 70.75,
+      "price": 70.84,
       "currency": "EUR",
-      "changePct": 0.597,
+      "changePct": 0.725,
       "name": "JPM INVESTEMENT FOUND  GLOBAL FOCUS A EUR",
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "yahoo:LU0210534227.SG"
     }
   }
