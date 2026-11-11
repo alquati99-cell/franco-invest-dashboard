@@ -1,11 +1,41 @@
 {
-  "generatedAt": "2026-11-10T21:47:34.143Z",
+  "generatedAt": "2026-11-11T14:10:14.460Z",
   "source": "Google News RSS",
   "topics": [
     {
       "id": "eni",
       "label": "ENI",
       "items": [
+        {
+          "title": "ENI, acquistate 4.455.629 azioni proprie tra il 2 e il 6 novembre 2026",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQktPSjg0ekM1YkMxRE5wVHBUNnlYN0NXMTE2Y1VJVTBlckZrQzFNWmdEUndXdzJYcVZwLXBMZkVHUWtBeWpIX2pqZ182SXJzVnlPNVp0YW1CaEtFUUNzc0lUNFhyQTdfWHdEenlDWHNSdG1XdzVPbUVwZ05QUUFRdjBLS19QejFCZ21ZUWdaWDFtWk14Y1M3THdR?oc=5",
+          "source": "SoldiOnline.it",
+          "publishedAt": "2026-11-11T12:27:00.000Z"
+        },
+        {
+          "title": "Borsa Italiana, il commento della seduta dell'11 novembre 2026",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUlNMcjlaZElCWF9IUTJkNjBPYktMdmUzYjVvZW85QlY2Vk1kZU1qbGNMWS1BelJkWlVLQ3BTSldzZHJFenRVd1NFMnJrVUJNb2M2T3l4YUVfdDYwOHAzOWxJSFcxSS1ydkhIaFd2ZU5ScXZ1VC1JNUM3dTlOajBXTjE3Yl9pQUg0RkxQRS1lR1pQNDZoZ3BfTE9CY29JVkU?oc=5",
+          "source": "SoldiOnline.it",
+          "publishedAt": "2026-11-11T12:22:00.000Z"
+        },
+        {
+          "title": "Eni, Fincantieri e RINA presentano outlook su shipping sostenibile",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNX1lQcXA2UUVyVDk1c09YbkI5V0tlRGNEa3hqOGpjVE03UzZmajJ2a1BBbnRlRF8xY252cDhLWU5pLXJZQU5JU0tZSEtGbFJuMEhWV3lydDc0X19NYmd6MTJWNGVUNkhuUzFwQnBhVW8tV0lNMmdGYkJfWERHY2F3a2NFLW03ODZJcHRicnE4amswNEZXM2JLM0hoR2EzaWpqQzFoLXRKa0NhQlRxQzZoRVRNYVpyRjhYSFlheA?oc=5",
+          "source": "MarketScreener Italia",
+          "publishedAt": "2026-11-11T12:11:24.000Z"
+        },
+        {
+          "title": "Eni, azioni proprie al 6,10% del capitale sociale",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOWWdkbkx5dGhmVVNGdkRHS2dhRUN5YUliMGMxTUs3VDJwMkJuNWFreGk5QTBPREUwTTM0ZDlOOHpuMmloTE8tcFRuUHF1UUlkYWxuUnJldVk2ZXgzc2t4YzBMTWptY08teGdzTXAzSkZOaWhUYXZXenNqNjFUN2lCb1NlU0VQMjZpV0ZDMXRyTTNoWERRRFdQZ1FWMHFldlgzYmx4TmlzSQ?oc=5",
+          "source": "Teleborsa",
+          "publishedAt": "2026-11-11T11:52:49.000Z"
+        },
+        {
+          "title": "Eni, petrolio debole ma analisti ottimisti",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQYXlFTXI1aXJKbkFVem10NDlGelZ4WndwNzhTZWhIRzYxekt3V2NPM29aMVlJU1UtWDdMRkF4cjVoVHhZaGJzdXdyVmFaQjdpQXEtQ2pKN3I2ckNyNUdISUtDZzFDWUFQTDNBY1VTNWxhSkp5b2dyemZfQmxTQVVnTjhQd3lSV3pYcnFXaW1ieWZvb1pNMFZSblh6dTVKV2c?oc=5",
+          "source": "Websim",
+          "publishedAt": "2026-11-11T09:41:04.000Z"
+        },
         {
           "title": "Dividendi a Piazza Affari: le cedole in arrivo tra novembre e dicembre",
           "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOUWc0bE5GUFV1bXRSVmtSY3VUWEFGbGxxQ2xZTXRQX0tnRHRjRkstVzhGbi1fMHZMbXVibDB6SVZnUjBBbnl1TmUzR05WdlB4MkVVTkdEZ0RITWs5d1F1YS1hbVo0RXB1Wk4zVEFzU2lvZld4TjdXc05uVjhoWlhram9YWUJfRGJadkJtQXMxTWQzdm9mNFZ4d0Z1cWZGZkZXZ3FZc2FJUWo?oc=5",
@@ -19,40 +49,10 @@
           "publishedAt": "2026-11-10T11:29:33.000Z"
         },
         {
-          "title": "Eni S.p.A.: RBC Capital Markets Neutral sul caso",
-          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZTlCNTNsUGh4M3ZFNkVFbnU4UHFES0V1dlFqMURZRldhVlRGSEJ3QVlldmtsZnZRVEdGSVBsWDJVUlp0N21QSGdqR2YyVFRJTEk5Wk1GZm9MWGVnQjVheEI5X0cwb1JQSFkxN1JmaHluNVI5Sm5YaGFUeExUaXYwQ3RPZHJxVkNjZEc3U0pEbXprNkkwYWdOa0pkNnpmQlo0cl9B?oc=5",
+          "title": "Eni dovrebbe continuare a sovraperformare grazie alla produzione, secondo RBC",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNaUROVk81TmRLQTlCMVBqazlleHFONUc5WTdtSnE1alh3NV9tQUU1SjNYYzVtalNoNjVRYjBfY05adFdfbEVaZEluV1U3SXNVamVqUjA3eXZ3d1o1b19hUVk4NmYyb1lXWFI5WHhsQWZTcm5wcVBFX0huSE45YktpVF8wZlR4YUlkanJ6ckZRZWVXRkxaMjdfN0c2NVFxTDhic1p2ZTVpMUYyaWZReVExVkp6Ql8wMXBYN3BOcl83U2ZKSW5KaDlZdnNHcw?oc=5",
           "source": "MarketScreener Italia",
-          "publishedAt": "2026-11-09T18:35:09.000Z"
-        },
-        {
-          "title": "Le raccomandazioni del 9 novembre 2026",
-          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOUHpnMzNXNjVQM3BLdURnRmEwTUJpa25GM0hUN19NRG9MaHJTZUFIazJDcDBFMWY3T1NhMFEzY3pQX0ZiQzlRMk9MOThxOHpBMS1CblF1Tk5kRDBDOENrY2VibmQ5TlR5X1loM243X0RJU2dRTFotU3pDZXhuMHp5T2tpc0FJYV9aaW1RZ3RHQno?oc=5",
-          "source": "SoldiOnline.it",
-          "publishedAt": "2026-11-09T16:25:00.000Z"
-        },
-        {
-          "title": "Eni S.p.A.: RBC rimane Neutral",
-          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOMGw1RXlweFU3UkoxSjVBa3pyc0RvM1RzbHlmUERhMUVQLVI2Umoxc3lhNTh6d1UxLXZTTnFFTXdqU2dLMU1FWlhSbllMandpNjBWekdDSzljcDhlYzRJWlFJMkFCR2xGN3lQTGtXLTk4RTlxSnc3b0x6WFBxZEtRM2p5b3hVNkhSVE5R?oc=5",
-          "source": "MarketScreener Italia",
-          "publishedAt": "2026-11-09T11:00:25.000Z"
-        },
-        {
-          "title": "Eni, RBC incrementa target price e conferma Sector Perform",
-          "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQcWwtajNTQ2ZhMFdXMDlEVG5Xd2ZtUVlTdzFMVU1ZUEpvd3ZjZ3ZNVjhSNU9RNlphRkpvdWNBaTRQUHc4dHA4Z0I5VUlqbm9lcFFvdS10WUF3X1ExVjJsaXZadzBMMzktOVVlVlIzdC1ndXBhRGhCb3M4S0R2V3gzNmlINFh4Z3hvMEMwYTB5RFFEakdjanFPWnk4UFNJbWtjcTByemNZOVAzekY4bkozY19DMHBDOVZlbnlGNzEtREV5aHA2RWlaVVhteFF2M1A0YkVkQTBqRlg?oc=5",
-          "source": "Borsa Italiana",
-          "publishedAt": "2026-11-09T07:08:00.000Z"
-        },
-        {
-          "title": "Eni, deliberata la seconda tranche del dividendo da 0,27 euro per azione",
-          "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQTGh5c0t5bXB4VmtrZVpTQUt3aktvVHZacmpjaDM0b0duX0YzOXBqb2FVNjk3ZnJRM2p5cVpXOU1Qam5Pc2dkWkJ0VUtCX3c3UDFNOE5rMzBpUlNlaDEyS1c4QVlPVHFNTWNPZ3U4TDFyLTJ1ZXdLUEY5NS1jTHJVdHduSWw5Tkw1NTliYkZWSl9KdVgxcmxETnpPUWdabGdSWFczbzc4VVIxSDFWOWhZcDdVLWNUc0dmT3RtaGZJVlV1NUdvMWFIUjZqdEhjY2FtRTNiVFdtaDFrNGtPWGdFYTdsMUk2OXRlNURn?oc=5",
-          "source": "Borsa Italiana",
-          "publishedAt": "2026-10-22T07:00:00.000Z"
-        },
-        {
-          "title": "Eni, nuovi acquisti di azioni proprie per 100 milioni di euro",
-          "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxONWlxMUFJNlp2WDZsTFNhaHVXcjNFb3RHY2FPaFJWMzFxQmRXNkdCR2ZkV25hTWtIWmdFaTBjR2VxVzJ2NnZGdS01MjNZZWlrcUZFNnR0Q0gtMFdkVEp1ZW4yRDNkODRuUGFqUjIxUnUzaUJ6TXBWaHVxcHNSM2oybVRScmMxeEhGS0RZMmFDZ3Y4TERLM19vUEhhZktyd3lIcWdmcUczM3Nyel9pV1hTSnNwWnh6eFRiUHdKTVZpMHJyWjc5YnZKTlVPWkR1UHdVbHowLThLMmEyUlF0cXc?oc=5",
-          "source": "Borsa Italiana",
-          "publishedAt": "2026-10-21T07:00:00.000Z"
+          "publishedAt": "2026-11-09T17:11:43.000Z"
         }
       ]
     },
@@ -61,10 +61,10 @@
       "label": "ENEL",
       "items": [
         {
-          "title": "Energy Time si aggiudica lavori preliminari per due impianti fotovoltaici in Italia",
-          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQVDNvRUQ1OUozTFRnOWlGWWlVMnBPLTFWaXo5cENydTlwTDZZVWx5RFNNNVlrWkUzVGE2X280UnZYWTVxQ29LVDJndG14cXp1NWZDN3VyLThyYWRoUjRtNDhsVFJjbFplWk9CZVhfNzhwU01hMlpuc2haSmhEMHpIMVltQVlIUkpxeUpSR19sU0YwNklJc2IxN2Jic1VjZw?oc=5",
+          "title": "Banca Generali conferma utili e masse record nei nove mesi",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNLUlwZ0NERVdZMWpjandTdUlkd0lXaDdyNGF1QmJFaTdhUnlBNnREcW1NMFMyeGRYQ0NTeHUwNUpIWVNkeXFwSjVXbnQ0d1A2dDhLNTg1VWR3em56ZGpwQ1c2LTlvUi16dHlXcmRtLU9NS284X1ZLXzBTUmFoM1BleFU2NXZBV3RaVlZtMEhUV2ZoX2tB?oc=5",
           "source": "Traders Union",
-          "publishedAt": "2026-11-09T23:36:03.000Z"
+          "publishedAt": "2026-11-10T12:14:24.000Z"
         },
         {
           "title": "Verso la trimestrale di Enel: attese positive con il rialzo dei prezzi energetici",
@@ -97,16 +97,16 @@
           "publishedAt": "2026-08-18T07:00:00.000Z"
         },
         {
-          "title": "Enel S.p.A.: Performances & Quotazioni, Prezzo ENL Borsa Xetra",
-          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNEhqZ3NxYUxUZ1Y0a211VlFTREZfTHJoRUlSSmk4VlUyZmFBUS1jU2hHSWx4YWNXd2dtOG5JN0FjeUtGeXhxNzlkbDBsODRTTkFwSEJIQ0pESEJjUHJkTmljZXM2azVyZ0YwWmJaWV9LMHBUZ2dNZlM1dnFwd09yV3BTRFRoaWtHM1E?oc=5",
-          "source": "MarketScreener Italia",
-          "publishedAt": "2026-08-14T20:14:03.000Z"
-        },
-        {
           "title": "Borsa di Milano fiacca, salgono i titoli della difesa, male le utility",
           "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOc3dkZXFkVmo4RlBkbG1zNnFZYTFfRC1GbkMxRWptaVVtVS1KcXRCZGRHSlk2X19ibDBLS0llbnlndDFEdUtWaTlteVJVX3RFVDlyZ0M5WFpJQ1U2U0dYLVFWVXFjQVF0NVpyeGZYRVh1RjBTOFhaWUE3Q2d5WDlRWDRGVG96M081RHBWOFN0c2JDM3ZHMzcxM2FJVlBjVkF3dUx6Mk1hems4SlY1TVVNMG1BUG5HWTR5?oc=5",
           "source": "Websim",
           "publishedAt": "2026-08-14T07:00:00.000Z"
+        },
+        {
+          "title": "Verso la trimestrale Enel: quale impatto dalla guerra in Iran?",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQR3pqVzRHVFhMZ0NiRlNQRHVoZ1Bva3BRZjhlbE1FajdHLWIxaDFJUGNqbGFtdDhZemRKcjY4WEloaUN5dVFuS0szSVhQNDJvWDY4NEVqbVhmX3JDV3lzaTNQelZVT3hpblFSM0FTUlV6X0JUanlBLTZLQlpiZnBlOHRWNHp2c25IY25YNWw1VDRtQUVFOGppLTYtQkh0RWc?oc=5",
+          "source": "Morningstar",
+          "publishedAt": "2026-07-24T07:00:00.000Z"
         }
       ]
     },
@@ -121,10 +121,10 @@
           "publishedAt": "2026-11-09T10:23:21.000Z"
         },
         {
-          "title": "Snam, 85 anni di storia e oltre 38mila chilometri di rete: a Milano la mostra \"La forza dell'invisibile\"",
-          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9OcXdRZ3VWMG93UUNvZlNoZVl2b1VuSDl0R2lRQ3FCVlV1bkFUelBWdENFRVNEcFJNazJDVTd3ZnpTeFJOVGVtdk5Ha1c5VnhzZUI3MzdLYm0?oc=5",
-          "source": "Euroborsa",
-          "publishedAt": "2026-11-09T04:53:00.000Z"
+          "title": "33mila km sotto i nostri piedi: viaggio nella rete del gas",
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQY3hzQU5MejhMNzAwVUd5SllWY3hQWG9YNXplWkoxaHhrbnNqc1psVGVRbjh5VkxibEUzeDlHNU84QXhueC1SeVMySUJlbjBNVHROdE05YXJzbnd4X0g4aDFOOE9DZjN6ZkZ6LW10YkZhR1B5YkJaaWpxc2NjdkJYU1JSNjZEbjlFTGRRc0ljS1dwNnU3cjVuRVdsckVXQkdQRktIZGVmcDZsaWU2UWpERDlMYmZyOXRXblh0Q3VB0gFoQVVfeXFMTko2ZGxhYk9NekN3aW43Nk1MYWdoMnBZRG4zRWtoMjlZWHpEcGZ0UWZiNU9tdG9YWVpyWndTU2ctUkZpVUJ2ZHNfMkU3NTdHdC1tREpnWXBfQUV4bnptdjNzc1kzRWJPTEk?oc=5",
+          "source": "Tgcom24",
+          "publishedAt": "2026-11-07T07:15:21.000Z"
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
@@ -235,6 +235,12 @@
           "publishedAt": "2026-11-09T14:21:15.000Z"
         },
         {
+          "title": "Banche, riparte il risiko con la mossa di Credit Agricole su Banco Bpm. Tutto il settore è in rialzo a Piazza Affari e Piazza Meda brilla con un +9%",
+          "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOLU1DYzk5ZTdIelVfRVloNEZQVU85SWVISTNadkxYek9JS2xra3dsZmJSTGxxcU5CVnhNRlhVY3Z0djN3ZjA2Q0c0ZjI2OFJZNW1rVmphWnR3QTBNeUNpT2VEMEtOZktOVnRxOWJiRDNRZEVWTWQ4cFRDV2RiaS1WbXhwc0QxcXVaZkRmbTk0OGJtMGtCNjloRl9NdWFxekhPeURxQi04ZjRqUlh4c2c2THo3ai1BT2tXOGkyWldPb1lHTFFqeW16elJDUGFWQkVNWWY0V0g2WUtVSks4akJJUHpnWFQ2VmtfWnNXSEtkYzZVbFdEVEl6MHprZ2JQVl9KUEZhOA?oc=5",
+          "source": "FIRSTonline",
+          "publishedAt": "2026-11-09T08:37:50.000Z"
+        },
+        {
           "title": "Il risiko bancario finisce qui? Dopo Intesa Sanpaolo, Mps e Banco Bpm cosa può succedere adesso",
           "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPLTRRQUZPLTdKWE1ZN241SEF2YVJ4b2pDRE9MTUZ6RzVnQ1pOWndPcWlBeGR5WVM0Q1NiVWVSTXR1ZnRvQXdrUG5OSGRIUXo1TUM0RkNSUm1PZi1TcXN2dDVmWXRibUk2UE9UWnhFeEJOQ3JNb3loUlN6NkFSOHo0LV9oS1MzaXlFY1F6U2R0U1ZSMXZaNFBnWV9vNm9HeGdodkFMVlgtaENjdVZ0RFVrUEtTdzFXOWtPQ1ZRNi1IUHU3SkhfUUl2T3JEa093UQ?oc=5",
           "source": "Milano Finanza",
@@ -247,6 +253,12 @@
           "publishedAt": "2026-11-09T05:00:00.000Z"
         },
         {
+          "title": "Mps, il risiko non si ferma a Siena. Da Banco Bpm a Generali ecco tutte le prossime partite",
+          "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQZ01CUGpDTE1GR2ZiNk9zQzVqT2pid1VKcElCZm4wLWdNSkF0aEFNMDZ0Y3dhLXZTOVZ4WXZ2MUZfdWhPcUFiYlJGN2lXY1ZGVU1hSnJoUDh2MjgxamdOc2FNYng0bWlxaUswUFlmTHF2Mmw1VjYyQ0ZvcDY3cW80WV9RQWxBaFV0QWxWMVNCRGpibHhVeF84am5IeUo3YXRjVGpFbkMxR010WjFZc01rbTg5YTdQWmlRWlM2eFJkYU1PYzZpU0o3N3dTRXhPNkFlRnUyUThFbUtWUQ?oc=5",
+          "source": "Milano Finanza",
+          "publishedAt": "2026-10-23T07:00:00.000Z"
+        },
+        {
           "title": "Banca MPS, perché il 29 ottobre non segnerà la fine del risiko bancario",
           "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOUUQ2cm5XNlZ5ODBmY2RHNHd2bE1PSzl1bFhqRzBmcHJaS256RjY3TzdvQ2c1UDZpUmxVT3BucWhsMGZZcUNHRHVEcDZUNmYxNTNXcUdnbnhscmJfVTlUdl85clh5MFFfVHczLVZqTmtfTjVfZ2YzX0VpVUlvVHdRUVhvTDM2ZGdEY25MZFpVZmJlZVdrLVVYNk5lSjdCR1B0eWxwdlg2d0lxSjY1SEE?oc=5",
           "source": "Morningstar",
@@ -257,18 +269,6 @@
           "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQRWxRNXNtYkxKRkYyR2dTY3IwRFZ5cFRFdlVBdVlvVDYtX0lyZTFrX0doTXYtOGQ5ZWJLV0JwSWUxNGZOTVZjdG9zZUlQQ2dyT0dCdGhNVnhMLW9WbWFyVUFsQWJsRWlzVTdLUjNodzdDMmZ2UnBRYjNRci15WjVIZVRR?oc=5",
           "source": "Forbes Italia",
           "publishedAt": "2026-10-19T07:00:00.000Z"
-        },
-        {
-          "title": "Risiko Bancario e Trimestrali: Intesa, UniCredit, MPS o Banco BPM?",
-          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdlVfa2ZNUzA5dU1vX2VmeEktNS1jLUdETmk1b1hHdTRpR3lUMG5CRGVxM1I5RkNrTElpU1NQQmlSeVFEcnVPWkdZTHN5LUdHRmd3RUJ5aTh1Y3pKamxzLVQ4a1pCM09ubmpzRnNTZFNmVlJGUDZqWWVEdGRoMjNBMnVqSk9PQkgtbzJhWmMxT2lDMERhbkpfUFhaSkpYVk1lYXd0Yk41V3BIdw?oc=5",
-          "source": "Investing.com",
-          "publishedAt": "2026-10-09T07:00:00.000Z"
-        },
-        {
-          "title": "Mps, Intesa Sanpaolo vede il traguardo e la partita si sposta su Generali: come cambia adesso il risiko della finanza",
-          "link": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOV3JPd3BaQ2l4d2tTSW9NalZJOVFMNmpPVGxBNzd3M3J1QVZvUVk1OTZuZlp2Z3B0YmpQREE2b0J6RlkzdE5zOUthM2JOOHowS1R6SGRjMlNiVHVtal9xWUNVdWFLMXU5aEVvQ0xlQmhDOExrS3JyRGxuOHMzaWUwSjY0dXZnU1VNWEh6ZXVlenVvNmFQMXlBREdmN25xTFNld2RmMlpOaXd4SUM5RGZNTmlzU3Z3Nlk1VFZKbmZIa0hKV3ZzZm5WclVQb01XSG9wQl9Mak55S0xSXzhuQVF3a2JXTUh4cnhuYjE3QjhpR19RWll0eFpUVXBZN0s0a1NQT3lJRXVvRmxmdlpENFdmLXF5Y1BtQ0JScDdpTHMtbUxydWxYa2cyMmhtWjVKcW1Kdkc2clBIZUHSAb4CQVVfeXFMTUY5WlQzZ3dJcFVzQjBVOXRkLWVWdDZQMlMtMTNuVWxRWXVVSzhpU0pTUjgxay1XU0FiM0czMFlianlsUWRCaXJQcnpwZW1WQzFCZmRBN2NnZEtKQnYxVUEwU1ZXQzFZLXktbmhJZDdGMktlMDRzV2dtbGlhWEJKQUhwdjJpeTVuOG9QWTRvaGZIaFc0R3p0WGRTQmxTZmVndFNpQTNSVGY4LUtqeWNPc2FmTV94eHR2bWdnZVhfdmJpLXdwcnhSYV9Ca2pfOERtZmpBMlYyVFNIdm5xaUdHaWhScm5BYWVqN0VZS3B4R0haRm1KbHdpQWU1cFE5RlAxdUduUGFseHdCekdONzhvMWg5ekMzcDhQZXNiZVlwd19YVWFtVlhTY29jM0FRaE1mMlZBMGFqc0ZUWmY1eGVB?oc=5",
-          "source": "Corriere della Sera",
-          "publishedAt": "2026-10-09T07:00:00.000Z"
         }
       ]
     },
