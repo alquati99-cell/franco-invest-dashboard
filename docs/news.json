@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T15:21:04.107Z",
+  "generatedAt": "2026-11-20T22:38:41.557Z",
   "source": "Google News RSS",
   "topics": [
     {
@@ -7,16 +7,22 @@
       "label": "ENI",
       "items": [
         {
+          "title": "Dividendi Piazza Affari: pioggia di cedole in arrivo, anche da 5 banche. C’è chi raddoppia",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5YYlRSWE0xdkJScWo3bk16ZnpJSjJocnh6ZktOVXpwMjBLN1hjTkIxdnQwVkt2bmxVOUFmV1p3UGo0YmFUb0xadTJ6b2ZRRTFkbE5oZ2Y4YzZkOFRpNzdSZkJKcGVWNDVZWFlXaC1ZbEdocmQzLXc?oc=5",
+          "source": "Forbes Italia",
+          "publishedAt": "2026-11-20T14:30:11.000Z"
+        },
+        {
           "title": "A Eni cedola più ricca dalla partecipata inglese Ithaca",
           "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWC1zT1RpdzZPdG96UDZZakdoUkxiMVJoYk8xR0U1bXFQVHJBUlRNVGZmeVJQdWdiRURfOER5b1Z5akkxa1VRME5lSWRkYTJhQk94WEp4MmVLTWQySHhNZGwxcUtQb1dqT01JeWllTHZ6eklFc3podW01Sm5yd19yWDllOU1LelZrRGIxMkFsUDhrZUNjRkVWNHdsNjRnZnk4V29fT0otLU5KOU9NZjBZ?oc=5",
           "source": "MarketScreener Italia",
-          "publishedAt": "2026-11-20T06:24:30.000Z"
+          "publishedAt": "2026-11-20T06:21:44.000Z"
         },
         {
-          "title": "ENI, acquistate 4.564.541 azioni proprie tra il 9 e il 13 novembre 2026",
-          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQeEJtYTBKRHFEekhFeHlheTlreFhHWnBIN0NUWXVMcWVoeXg1aDR1NzZOUnhrak9DdVFyb3k2MjEwaXg0dTZmRkFWV211VmwwbEFsRUJOS3lYbWFfcV9BMURkdHVScjdHRzJMQzdIWlR2bDZvXzAzYVQ2VnFsLTZUT1J6MHpFYTZRYm1YOGxKcUc2N3FKNG54Qk9QYw?oc=5",
-          "source": "SoldiOnline.it",
-          "publishedAt": "2026-11-18T12:52:00.000Z"
+          "title": "Eni, acquistate azioni proprie per 115 milioni di euro tra il 9 e il 13 novembre 2026",
+          "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPT012bEQ3X3BEVWE1MXJGeXhONnhWVmZsclZESWRVaXlZLVNlT3MwM1huUHdQNUZ1YjJnLVF2TThOekZHdUlwbDlWcGo0LWZta2lSUVYtamY2TjM3YlUzOUxaOHB4b0hWek5wZFl2bndFa2NoYWxyUTk1ZHZTTE8zbW9ZbHhPeTZIaWZORXdaa2RSS21MX0h1SnRUZEVSRUNFdFVselJMNHA3OGd1Q25lWkpFdjJkRm8yWE03dXA2VkQ2UkRjNklmdzhlT1lxbUFyRGF5MC13OHVNQlRwRzVVSjhLTHVoVEt5NXJUQVdCY1JsSjJydlBhUGI3RFhFT0QyT0pzbkhCdU8?oc=5",
+          "source": "Borsa Italiana",
+          "publishedAt": "2026-11-18T14:30:00.000Z"
         },
         {
           "title": "Eni, azioni proprie al 6,10% del capitale sociale",
@@ -47,12 +53,6 @@
           "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5oN1BJTEJISDdKbnlVeWcxRUtabWd5MUFLU1habUFuWUZHZVJKN2VCdTN3TjBpVmtqNDFKcW9aSXRsbnpNYWQ3U0tRbFlxcFZaTVdxVXItVlV2Nm50c29kdFZOdw?oc=5",
           "source": "Capital.com",
           "publishedAt": "2026-01-28T12:28:14.000Z"
-        },
-        {
-          "title": "Qual è il fair value delle azioni ENI? Ecco i target degli analisti",
-          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNUE5pNEozd1Zublg5S3J3WC1BRmhqdGlVaUxxTmZsWTlpYmZ0SnEwdmFVbjE2UWU0Wl83QmlYXzZrOExHaEMzdEFhZDVTcm1SXzFfTmNnWFBWRkRnbEdzN0ZONXZsWHJoc0d5NW54SVZyMkxEczR1UVRXWkY0S3laazVMc3c4azlSSHp5YUxJQzBPLXpCNHhFcTlzQzBiTks2WWN4b1N5RQ?oc=5",
-          "source": "Investire-Certificati.it",
-          "publishedAt": "2026-01-15T08:00:00.000Z"
         }
       ]
     },
@@ -116,9 +116,9 @@
       "items": [
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1icnlwNzY1UnkySzFvc3lZbi13NDlqd21JYUs5SGhwLTRvd1haU2RMY1pGZjBHa2k0Vm5aUkllbDJadlhDYng1T09YY0tlcWZxaUgtYkZaTkJwdmxCSXgwTm94cEloa1hmanZnOUkwcklwNEpsNHU2RVF3?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBtVnp3aUphaTF6X2FZWmVJZWNBX2pRYXBMM0hRUmYyeVR1Nm82QmR5ZzhMOHRWVlFZMUJ4b05pYTFtZ2pQWERQYmNsYkNMR1g5aG9kbDVsRUR2Z2RKVlZqSnZLemFUQQ?oc=5",
           "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-11-20T11:02:38.000Z"
+          "publishedAt": "2026-11-20T11:01:53.000Z"
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
@@ -223,7 +223,7 @@
       "label": "Banche ITA",
       "items": [
         {
-          "title": "La tua banca è abbastanza «solida»? I risultati dei test Bce per il 2027: da Credem a Intesa, UniCredit e Mps, tutti i dati",
+          "title": "La tua banca è abbastanza «solida»? I risultati dei test Bce per il 2027: da Credem a Intesa, da UniCredit a Mps e Mediolanum, tutti i dati",
           "link": "https://news.google.com/rss/articles/CBMivAJBVV95cUxQUEFoUWlCWVE0aEZiTk9OUTZkOU4wNzMyd0hGX1BDSGZHRzdtc2pocjZhSHdDRmxoa3dpUHU4WkxJa1l4VUxZMDFPMXVHY3RVeFRaQ2lTQ1JDM0hpMDFZeTRUczZvQVRqWmhOWWRxVUpSTy11aHRvNWhaVUVFbW82enc1d09WLWNQNEd0UmF0dm5xQ3RlNG13U2hfQXQyUDBRTWtVUkgyM2lnX2Ezc0VKSFZmQzR2M0lRTVlFUWJ1MWtaTmQxcmlxcGQ2N2FPS1BjZmszQ0o0R0pzTjBGWng4b2xyT3hieVcxVHN3M1VvOFVKUkJOTnlVSWhqQndQeE5XTGhCSG9La25UbUpRQ3dseFFQamdQSHE2cEp1UDF4V2NKaTBsTHhObXVjZENtdDNnR0JodEFLLWpNMjJD0gHCAkFVX3lxTE5rUFJzM0xXeW53ajRDdm5udjAtT3g3aVcyUWNmZnJUQXQwczJoS1FMWWVuc1o2ckVHLUE4S1NIRTBUVE5nRWp1bWp1aG80RHNsVmpoWE5CaHpsWE5oTkVKRnlGd3ViLWdjN3dGTkpTQUNXdzIxem42WGFyeFdpMzhqZy1RSEtnQ3VVOVg5YkZKWHNNcllUYlhYcW9Rdm1QWmVQTGF4cm5IbkF1eGdMU3JkNXp0cW0tLVZrX3Z5SlNTYVVtbUxpZzA0NVV5YXBub1hjdF9aVHFVNGsydzJBM2x6b3IyQzVpak9DeEJfUXgyTTFXX0k4RXdRUmh6LW5ZSG43RGo3alh2TlVGRHJUYjVKVGFQOVZvUUdjZ09EY0RzdG1pOXlFc1JJbXVWbjVCSjVabnZKR1FzTEZJZXVpd3llc3c?oc=5",
           "source": "Corriere della Sera",
           "publishedAt": "2026-11-19T11:17:00.000Z"
@@ -295,6 +295,12 @@
           "publishedAt": "2026-09-10T07:00:00.000Z"
         },
         {
+          "title": "Spread Btp-Bund fermo a 81, ma i rendimenti salgono: cosa succede",
+          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPVEJzT01sRzJjdWFnUWtQQUJBTXZTcEJJUEhtWWNQdjdWZXo2VXBnWkZuVEZNNUZrdWM0VGlUQ09UaGstSWkxRTA0WjFOd0h1S1BlUXYxbm9MT3hoeHc3Ylh5Vy1lMmN5UEhtX2ZWaEhwRFpDM0x4NHFQdi1YRjhzM282Q0xfRm1heUlzQmFtaHRodVJVSXA0Q1FHUjZiR2QyYUNIZ3RueG1uc2ZPSGNpRHZ6NTdJb0oxcnc?oc=5",
+          "source": "SoldiOnline.it",
+          "publishedAt": "2026-09-07T07:00:00.000Z"
+        },
+        {
           "title": "Bond sotto attacco, tremano anche i Btp. Due grandi paure inquietano gli investitori",
           "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNdGpaR1QwTFBVN3pzX0hNQ3dvU1lJbURQRXp2MXpBblVUQXVCWVpocDVYZ2hxUFpTR0xSd3FZVG5Uc2YyNkVoYXJyNm1MRUYxVVh2WURIMVJlRVNQdmtVTzZtRHBoRGNaUDUtSlZ0clBHa0lvUlZWX3BCeE1VYWdPVl9UQ2x4UnptUVpMN3p1YzFLcDBGaUl4WWI4YnlsS1NkX3pDTThMOUE3TGZybXlraFV5a2lUQ3FoUmUzSA?oc=5",
           "source": "FinanzaOnline",
@@ -311,12 +317,6 @@
           "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOZTM5TDVuaGZ0TVAyUHdCdVFVMHBLbTYwT1dzNWNNWFlRUkxfV2NOY09QYjdDT3BJNVBSczhGbkppNDQ5dF96czVyVkNDRHBZcU5vNGVqOTFvNTVIWUI2NVN1b0l4cHo0ZWtac0FvV1h1X05KNGY0YVNqakZtbWlrbjBDY9IBiAFBVV95cUxOS2xWdVRIOG1IZGJ6WlZScFZIRGN4QkJCWU43c2hPSFpmYmt4c2NCVXI2ZGY5eS1LVndIXzhBMF80X3dvbm9kdXROV1cwcDlIeXFFbDI2X1ZkTzFuQTRoaTNNZnR5WlR5dklYSVFiRlNTUHBacFl6aDdVSjlTV3VhRXg0bFFjeTBK?oc=5",
           "source": "QuiFinanza",
           "publishedAt": "2026-05-29T07:00:00.000Z"
-        },
-        {
-          "title": "Lo spread torna sopra quota 100: i mercati temono uno shock sistemico",
-          "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOMVF6TzM5czhPV0JQT1R5THZJckhEMFRydklYamdPNmV6UWJpaWJBRHFIbkVLNy0zamp2VlhTSW5UOWx1X0hqdU9lRzd5QkRWWGoyQnNScEZ1dDBRTGxDMXZVUUZOX25oS0VyeHBFaU9oSXBSNGFjUjNOVkI4QlBsSWUzV3lLWWlYdVQ1SkdYYnJQMy1OQzhpQ21tS2dfY1FXZ011M0h0X3BLQVYzSWtoSTBhY0lxQVRRWTNYaVhXb3RDdVpjbGd2ZlFIS25rbXhEaENhS0NaYTBzY0YzRkR6QlFiVWHSAeoBQVVfeXFMT2ZFem1DOHNNYXc3NDRtUW1KbVlMVkhKU1Z1Q18tYzVHc2tQUG5hVzBOQ1pjOWNuUllCdWJLSmVGbThubnE5UVg1aWhUSTRvTERkTThJMzRDM3BrTDdCSHVOdGwxTWxQN2JkUlZGRDdyQ1poTWxvbENILXZxVEJlMHhER2pqLXc5a1FVZjQ5QzJwdlV2Z1BuclpJdnZNSExvNkNNbWNieEg4X3NOUE9BNjE0cmJZdmVQTmEzNWhvTW5aQ2QzRGpOd3plYXhsR0hSQmpGLUFIcmwtVTlXQnFGbXJ0ajR2bXdHS2NR?oc=5",
-          "source": "RaiNews",
-          "publishedAt": "2026-03-23T07:00:00.000Z"
         },
         {
           "title": "BTP 4.3% ottobre 2054: perché la guerra fa scendere il prezzo",
