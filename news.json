@@ -1,11 +1,23 @@
 {
-  "generatedAt": "2026-11-26T16:47:51.371Z",
+  "generatedAt": "2026-11-27T01:41:32.961Z",
   "source": "Google News RSS",
   "topics": [
     {
       "id": "eni",
       "label": "ENI",
       "items": [
+        {
+          "title": "GreenIT, sostenuta da Eni, avvia la costruzione di una centrale solare in Italia",
+          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPZGtoN09XNnhNaXlNZ2F2UUhxSFgyRExRZWlNeWJROVpZUDEzczlaczdMWGtRaFE0ZkFTSmRic0VNZ09OT3dRWFVJaEt5LXJWd3A1amp4RXhLVFBydHgwT01aYmhXOFZoVmUtTXhHSUJYbDRDZkN5LWpMdU5qd0dETmM2VTBiM3NPUlpUV3RENXozTWtkT1BIOEt3MEdYSV9wX1Z3MG9jU0pQbVBHMVBKaXpCS0luOEo5T2NNLVNhR2lmWGh6QVVqUk1fdXJQUQ?oc=5",
+          "source": "MarketScreener Italia",
+          "publishedAt": "2026-11-26T10:21:10.000Z"
+        },
+        {
+          "title": "La joint venture di Eni nelle rinnovabili GreenIT avvia i lavori per un impianto solare da 131 MW in Sicilia",
+          "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQZUlUTElMd0IzdGhhQzdkTGM4bGFWdUpaeVFGMTdmUFVuTXp4NnM4ZGlac2hHRXdlUHFmZ0pfSzFzd2lFTFZpWVlNZlktcW83ZGNCZWRBUjNKUHd1NjJVUE80VnpyS18xX1VyRER2RENSU2xZV0NWWmJJZTQ0TVVxSmFTcl9Lc1Zuejh2RzduR0NxZjZuWWdYbXFKaXNwQWtDZVEyMTNMb3BkRHI3VTc2UmV6S2tvZUZ3Vnc1aTZJVUVtRWdoQW96UzdrX2RsOW11Y2cwN2lESTN3a3RJTkNPVDl5QnI3SVJybUpV?oc=5",
+          "source": "MarketScreener Italia",
+          "publishedAt": "2026-11-26T09:48:41.000Z"
+        },
         {
           "title": "Azioni Eni, 26 Nov: in Arrivo il Superdividendo, Ecco Quando",
           "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMlg2cnNBWUFhU0xkbjZaTVRZU2JrM1JLTkZWdWtfU0xNamhJSWo1YXk2VnoxeDd6S2d4RkRwbkNkT2NRcDNQYXN3cXkyM1ZuQUdGamJ4MXRjSVc3Wlg4TWRKZ25PaGhtd09qLUFhekJzaTdQZW5FQVVYRlpPV2dvQWdab19obE9EQVhXWGFYXzhlYXkwYUZxQmRXVzQ?oc=5",
@@ -17,12 +29,6 @@
           "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNN1oyN1g5VTlndVhWT3FQMDQyZEhVaF9EM2VrRjhHbTgtVW1TN0YwRmg0WG1xdlhqekp2ZmFZTHY2SnB0clJqSDBmZTl0RkZNMEJmLW9mMWtHUzk3M1VpRzY1eHVrZmxaNUMyaHNra0RyMURDLTVzTzVPc1dMNmZ2VGFTN25YTEw5Q1pGMUpNdUFoV01RMTk3VzBSUlQ2YUhXUElRM0VVTl9xRTkwelYzZ013NUo?oc=5",
           "source": "OraFinanza.it",
           "publishedAt": "2026-11-26T01:15:00.000Z"
-        },
-        {
-          "title": "Eni e Repsol si impegnano a investire 2 mld $ con Jv in Venezuela",
-          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPcGgzVnBHTkMtRjhPVF8zbk5sdWg1cE55MHVQRDBOdFc3bEdrOFBtR2I5TllmQ1RFTHg3M21sTzJuNngxb0ttTEpYU1dVTW1SUll2OEEwOU1ZdFFnODB5X0NlSDdsRFQ4Y29mdjlQcXhGU0tabmJOendaelVCUHozUGpyaktuSTJXLWtHZUppUkM2SGl0RUJFX3JJZTlmX1lMelIwNXV6S2xQamE2TGVnb0w1X2sxYlo4dXc?oc=5",
-          "source": "MarketScreener Italia",
-          "publishedAt": "2026-11-25T16:05:30.000Z"
         },
         {
           "title": "Eni e Repsol si impegnano a investire 2 Mrd USD nelle joint venture in Venezuela",
@@ -43,12 +49,6 @@
           "publishedAt": "2026-11-25T12:44:00.000Z"
         },
         {
-          "title": "Eni S.p.A.: UBS mantiene la raccomandazione Buy",
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZi15TGI1Y04wZXc5T2xiNkg0UklhSl9XU2xaT24tX3JtRF9fdXJtTkFIVDdQalI1bHl1N1JORUkwVXQ5NE0zS3QxSzdjWDdWZUctUDZjTk5QLXN5VWhoZXQyaG5UWVNxMXI0MEJCSWxrV1RMMFZZTkd4dEVnVTBPUzNhcVgyNmt0eFFFZUdSVHVpNlZBUlNyeVd0N2dGUGk5blE?oc=5",
-          "source": "MarketScreener Italia",
-          "publishedAt": "2026-11-25T12:40:33.000Z"
-        },
-        {
           "title": "Eni accelera sul riacquisto di azioni proprie: investiti 23 milioni di euro il 16 novembre",
           "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQdFV6Rkk4Rlg4b3ZUSzRXYkhSTGJFQ29qQUVWRjBESnpwZkJ3eDl4b1dfNzVBNTE2ZE1HSlRyQVEycWFyTnYzV0VkczRxeGpEMF9HOXNIelEtd0d3ZW1zUm04LXVmX3Nia08za1Ayd0ZqOVZUYnFfUnljenZHdzVqVzNwUHJWd3JXVjBUcnBRM19PQm9HVXRYNGRLUG9HNk9mcUdvQ1FjaFItTm90WXFHd18yNmoxYmlFWWgyUTEzeXRZaFZEaV9aUDRKTGxlbU84aHQyZXhNRQ?oc=5",
           "source": "la Repubblica",
@@ -61,10 +61,10 @@
       "label": "ENEL",
       "items": [
         {
-          "title": "NRG scende di quasi il 6% mentre il prezzo resta sotto le resistenze chiave nonostante i solidi risultati",
-          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQREU2OGxkR2ZNekYyTWJjM0ZQZHZwYnFCa2ZnUDc3SUZLUGRrR0w1dWh2VFJnMHdXNmhlTm8xU0JBS3BGc3JETWE3MFAwX3U5Zk5iNnd5Q2plakJHcFQ3TnFqdWx2UUJhSWw2QXYxcUQ2X2RsWTZKajhzSnJ4SHN6OGQxQnhnNFo3aWxSS2ZKWXE?oc=5",
-          "source": "Traders Union",
-          "publishedAt": "2026-11-24T19:38:36.000Z"
+          "title": "Enel e A2A: asta batterie Terna, chi ci guadagna di più",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5aZ0plcjl4UkVncVd1SlE3SjZSblpzR1djNGluM1ZMWl9NdE13ckxVNVNHVXV3YW5ITl9pUl9pbndTRko4Yk5FTzVLQVROZmdBN2trV2xybWo0OXoxdUxUM3RDVFJSWWNoUUlTTmtKbW5hNFpuVWRj?oc=5",
+          "source": "Finanza Italiacom",
+          "publishedAt": "2026-11-26T11:43:55.000Z"
         },
         {
           "title": "Previsioni azioni Enel: fino a 11 euro? Il calcolo",
@@ -73,40 +73,40 @@
           "publishedAt": "2026-11-24T06:36:43.000Z"
         },
         {
-          "title": "Le azioni di Enphase Energy perdono oltre il 7% dopo la vendita di 1.000.000 di azioni da parte del direttore Rodgers",
-          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSVU5c1lzeEUyTEFGaXFTZ3JJb1pfblRFYnhkeFhVU29jclFwaExhYnVzOHdySFRzckR4VkZ5eTVydTcwVTNrTmQ2dlNFSXliM0FFcEdXb1lSdlltMEg1YVlEOTliYUxkak44ZTU3SVFJWWstaDIyLS1JczV5TS1sdWtRZ2pTVDc4ZnptSjRsaDVDS1pWZ0w3Vw?oc=5",
-          "source": "Traders Union",
-          "publishedAt": "2026-11-20T17:19:40.000Z"
+          "title": "Dividendo Enel 2027: Acconto, saldo e date stacco",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9DekFTTmJrRGk1dUlRWHlmSGJHOWsxMVNYNzl0YjZaSk90d0NqUDhQV2o5c0JDVWhmNDRIa1lzM0RhQUhjR05GM2lhREhFZkJVUml3RFRCdVBxZTFkNnNUOTlFOEpONW9RNW44aXp2U1VEV1B0bzlFSlNfamk?oc=5",
+          "source": "OraFinanza.it",
+          "publishedAt": "2026-11-18T08:00:00.000Z"
         },
         {
-          "title": "Azioni energie rinnovabili: le migliori da comprare nel 2026",
-          "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0zeEdsQUFfTUxncWlDY2tOLVVTcExqSE9CQVZnaHZKOWJ4TFVfZVFqLWNZTmZwR1FTZWk0VkNzdWZoeXUweEZMZ2RyRmc1eks2U2ROMV9Raml6MGprcDJYbmZlcHNEX1hq?oc=5",
-          "source": "Rankia IT",
-          "publishedAt": "2026-11-19T11:50:03.000Z"
+          "title": "Enel, Barclays conferma Overweight: attesa una sovraperformance sul settore",
+          "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNU0NCVEVyTmlzbWY5YjFjYmlqa0dCck5TLVhKU1VZN0s5S2U4N1NnM01uX0JBZEZ3VWt2OGcyUEtoRXVzdUxqdVlvXzdadjVHOVNpLUdlQVZZS2ZQZHF6dGZEa0F4LUxVNVVTRzdqNXFUZzhQR1NNNnZkcnV6M3M1YjdZV3BYelczckQydVZzX2VGekttUWViUlE5cDk0WjFRbHlqclBkQV80U0NsejFic19mSlhldkhKaXkyQ19lcHRocnpFd2hpSVcxOGNwajVza3hpdi1DdUNuRVFCbnFqbGhhaFp0X0tuZmI5RTVnQUxNRS1DTzJDbg?oc=5",
+          "source": "Borsa Italiana",
+          "publishedAt": "2026-11-13T08:00:00.000Z"
         },
         {
-          "title": "Le azioni Devon Energy perdono quasi il 4% mentre le pressioni tecniche persistono sotto i principali livelli di resistenza",
-          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQX09KeEZLQUxkQU5SLXJ1SG5jaTNLNVZqZ3cwTXpGbkVuQThtWkRkVHJHMkRncmVOdDB6Q2N0cFptX3ZVUGcwT2JtLVptME8yeVRjMXJEQ01NOGRmOHVhejFHVzN0QUpheENmOFR0Z09fNGxIVXN3eE5uQVQ3enJXdEt1VE0yYUxXb2NBaUxGaWstQ2R2bnc?oc=5",
-          "source": "Traders Union",
-          "publishedAt": "2026-11-16T19:06:38.000Z"
+          "title": "Enel, i conti dei primi nove mesi del 2026. Fissato l’acconto sul dividendo",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQWmYzeXVVSXpYZFlNLXp0RnpTb0lTbHdJckdrNjFURTJlTEQwSjc1VllEa2o5b2tjRzI3Mm95eUxJb2R4TDE5MUlkY0VFc2p6LVhHUHMwemwwQ2lNVHR5Yml4cHZlRTZWUkM4NlRDTW9naFZzRjlwSUd1U2NNZnRqZnRuQlA2aXItSGlyZlR3ODlhMmxmVDZwM0VjdGhoOW5SSXI0VXlGOVV3Vm1SVVE?oc=5",
+          "source": "SoldiOnline.it",
+          "publishedAt": "2026-11-12T08:00:00.000Z"
         },
         {
-          "title": "Azioni Enel: Grafico e Quotazione",
-          "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFA0cVRiVTduQVNIVnExQVJjUWk4bnJhbE9Rbl9vTF9YZ2dFcWcwUC1tM3ZGUjdxazNYUVExMXNpdmhRUnh4bU14NGY0UmFidXZPOC1UdmFSZw?oc=5",
-          "source": "TradingView",
-          "publishedAt": "2026-11-16T08:00:00.000Z"
+          "title": "Verso la trimestrale di Enel: attese positive con il rialzo dei prezzi energetici",
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNRGZKRkwxX1BReWlvTUYydTJMYTJjUUVDVUVNX2l2ZkR6Y0JXYUNpRTlWRklNX1JiSE8wRk5McTJpU3VVM18tUEIyOVg1VENXNFFzLTliblZQMlgwQ2JwNGpMTGJPYnZEX2hzMHBOTXh4UEZHdUJPbzFrNkwyWDMzbWNkdmUxcnNqNGY2ZDd1N1F1a0tiTndaUjZkUnhsT3A2ZUFEelgwbkhvaWJabGFGVUFKMzludmFOdXE2MnF3?oc=5",
+          "source": "Morningstar",
+          "publishedAt": "2026-11-04T08:00:00.000Z"
         },
         {
-          "title": "Le azioni Devon Energy salgono mentre gli acquirenti mantengono lo slancio sopra le medie chiave",
-          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPTFZnSGI2dk9PUzQtaXhKcUhEUmRjeENILXVCUzBVVWZ3U01MUEkyYThpeXcweDgtbDg5LUZIRlBLRk8tOF9zWG9STjN5eVN5WkNGRXpES2pGdTQ4UmJtaFRkV0ZtTjhtT1JfazZPaFZZX2Zpd29pOVc2S1RsS3dpczdCeFV5NXVqS1NZRTRRRQ?oc=5",
-          "source": "Traders Union",
-          "publishedAt": "2026-11-13T07:25:51.000Z"
+          "title": "Borsa Milano, Enel in testa al Ftse Mib con utility e attese su trimestrale",
+          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOaTdveFF1bTFvckR0djhWLXZfSXIyVk5acDVJeGlJOEs3N3lpR2xWNGp5NjJrd25pQlZRX1FCNVVhelhCeU1SMzg5Z1B2enYya21keG5HbEIzZl9zY29hNnZYdGdTalRhMUdDVVBWeXBVTV9UM3hkWXZpR2IxcjQxUEZQblpjeVFGVGJRd0JSZkJFWHFuZVJISzlET3hLdVh6N25nTFlrLUFFRzNQamx0d3diU0MxVVhzZmh3VmlGblpwa25nQ2lVZQ?oc=5",
+          "source": "MarketScreener Italia",
+          "publishedAt": "2026-10-20T07:00:00.000Z"
         },
         {
-          "title": "Azioni Enel novità 3 Novembre: IRAP al 5%, target price",
-          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE53MGIzM2dVWm5oVW5VNGthNTVWd0ZyYVFDVE5hSkp6bUxlQjZyb3FYUVc2MkpGLVNNalZMTDN1OHpZMnE4bFI2bWZIdXRmNlJfd1B2VGpCZ1hzaXotQ3A2eXdvc3B0c1B3dWZpVGZ4b1k?oc=5",
-          "source": "Finanza Italiacom",
-          "publishedAt": "2026-11-10T08:00:00.000Z"
+          "title": "Affari da old economy: da Enel a Leonardo e Prysmian. Ecco quali azioni dell’economia reale hanno maggiori potenzialità di rialzo in borsa",
+          "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOR2JUV0FCS2pjZ2lSX1I4eWJfTWQ5cGVzNElfVzB1S3lpOU54dWFOTGc3Vk5ib3NvN1ZJN2lpS191TVExMjJyMjJIX3FfYWh4eUw0cDFnT2ZhQWRTYS1wMlVPWEVocUxzTUpsSlBWX2o3QXpxSTZacXdMU2JONnUxbkViS1ktRDBhcVcxTHJZazlLenBIcTdjaFFjX19kUmtNOHNNblRaTHl0Y0Y4cHpmWWtMd2ZyNnlWd3Z6SjJuTmd3YlJFWi1ST0I1UjBGNWVEZzRXWUFkOTVjVXpySE5HZ3FRUEtxRjVvZ1MyZHd3?oc=5",
+          "source": "Milano Finanza",
+          "publishedAt": "2026-10-02T07:00:00.000Z"
         }
       ]
     },
@@ -122,33 +122,9 @@
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1zaEhzNDBqWk1HaldlREhyNHduOUlHRlBXOXE2d2piU2twdS1ZSFlCQUtqTmo1R0hINUh6eUMzMzU3akNMOHRQcDRBZ3A3VUdIOFB2SEdxNk13TlBEclU3YTlIVlBHMG1fM2JadV9aTzNsZFFlTmtINTYxSGVudw?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1UOTA2TzEtT19ZcElqOHlUUHdINmxGVEVXcW1pQ0w2NHp4Tk1FaUdqMGhnUmMtV3dCLUJoaV9qbVBldWpwV3p6aGFHdXJ3TXNIRFhVNW1FdUZjWXZ6MnEtX013OUdqUQ?oc=5",
           "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-11-11T13:07:01.000Z"
-        },
-        {
-          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE45NWN5cWlBNG0yM0hodUk0ZDlEam9PWDg4MGNxZHBUQzhvN09ya1UzbWVJcTA4WEo0T3VCMkVIdjFTOHlEQXR4NjVscjRDeFRPYlR5RmsyUTV0MXc3cXZrNS1BQVVtdw?oc=5",
-          "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-11-10T08:00:00.000Z"
-        },
-        {
-          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1IV0NaRWJiNDh5NkRJRW85ZURUY0E2eldFY3pTazh4WUhWcVUwWDNkVmJFb1YzMVZCYXhjRE5QNV85RFBFMnNpbkpuYmZUQm0wWjBLZGdwZll3TS1WczJGUVZFQ3FLUQ?oc=5",
-          "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-11-06T10:17:39.000Z"
-        },
-        {
-          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE8zOFptTWhqaTdDUmFjd0FPREcyZ3FNVGgxRXRzUEJwdFI4elMzYXdRS20yZGxXQTVXR0Z4NW1JNkVUMTJUYU9lWkZTNlFJbE9rM2tja1p4YWVWLUprdzQzenRFaURCUQ?oc=5",
-          "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-11-03T08:00:00.000Z"
-        },
-        {
-          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9UYXBIS2h6ajVQS2tYU0JqU2swY1VyS05tcE9XWjVNZFlsZXpCWFA0WXdzWWZzZzJiWjNtLW1UV3NSdk9pLVFWSElidlpUYmdYNFN0b2JtYzNZdWpZbkFPVUxsMWlKZw?oc=5",
-          "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-11-02T08:00:00.000Z"
+          "publishedAt": "2026-10-30T10:28:42.000Z"
         },
         {
           "title": "Prezzi Azionario FtseMIB: Snam Rete Gas In Controtendenza, +9.63% Da Settembre",
@@ -158,9 +134,33 @@
         },
         {
           "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE53a3Zfa0RNSDFSMDltRHRkbnFqazd6QWt4emhkNzJXNFJvRmt5amxIRl9uWkhKVm5PbUFSenFpYjAxVU5nbFhmOG1fWWpvcTV4b085SzVtNmJtZDBaYVN5OGlBM1hSUQ?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5XSVkxWWpIa0gtb1phbUJxUTJGSjZPcW1aT1hXT2V3bjdqZzVmR21ORXhBcXpEazhxQ0JHRU5aUmJ1bU5HSHRyaDRwb3JOalFNRktYaHlqVFNJalJsR283c0d1UTdiQQ?oc=5",
           "source": "Staffetta Quotidiana",
-          "publishedAt": "2026-10-22T09:31:30.000Z"
+          "publishedAt": "2026-10-13T07:00:00.000Z"
+        },
+        {
+          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE41U3dIdmhna2VYM3BDMm5VVFpETFBFTElvMHNUbUJNOWJMLXNRLUJtMmg2MnVHOUx0R2FWaU5OWWplTW1XQ2VvUkE5bkxCSHFXR2ZDWDBPVkRGN2o5RFNGSzREWHpHdw?oc=5",
+          "source": "Staffetta Quotidiana",
+          "publishedAt": "2026-09-02T07:00:00.000Z"
+        },
+        {
+          "title": "Bilancio quotidiano del gas trasportato da Snam Rete Gas",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE91dDJGWTl5MHA3SFRIdTNZVHJ2UmNNV2JEdkVrV2FIaXB4dXNvZC1qMFVDaEJYSXBXZWtrWmFGVGZXdHRtYjAyUHZ2NW45T2FlNHVYRXIyMUFHWmtsM2o3d3U5ZWN5dw?oc=5",
+          "source": "Staffetta Quotidiana",
+          "publishedAt": "2026-08-31T09:11:54.000Z"
+        },
+        {
+          "title": "Snam Rete Gas sceglie la fibra ottica di Retelit",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOQTZ1RDNqYW4tejBVMEZYMmpGZTFXUUR3VW5lcEpNallYTmV2YUxRX3dMelROa0xxZlZTNHNHMzFXSlNOMmdpTzJ4UHNZRjdOaWhCbTRhZFVINWVvRXhQVmJUR1dRRnN4VnlWZmNhc2s5dTJEYTJZZXI2anc0ZGtvV3pLaW1TdUF5SnlqVDZRcm4?oc=5",
+          "source": "ZeroUno",
+          "publishedAt": "2026-03-23T20:51:01.000Z"
+        },
+        {
+          "title": "Snam, la rete del gas diventa intelligente: AI, sensori e digital twin per il monitoraggio predittivo",
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNeC1uWGkyS1ZrUnhEdWxxSFhic0hSTzRKOWVjMFdnZ015eHJOUnhSeE9oYkNXd25sZmVxRjFEMWVoQmVSRnh6NWIyUTdwajJlckEyZDlKcUZWN1JwWHFIQmkzcW1lNlgxSE1ReUhGeWkzY0tKOW1hWTlrMjAzaEszNnJRUW5QSHBoUXpiM1dqZHZBM2lj?oc=5",
+          "source": "Industria Italiana",
+          "publishedAt": "2025-08-25T07:00:00.000Z"
         }
       ]
     },
@@ -168,6 +168,12 @@
       "id": "saipem",
       "label": "Saipem",
       "items": [
+        {
+          "title": "Saipem, nuovi contratti di perforazione offshore per 181 milioni di dollari",
+          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNTUJEVm4zaFB6ZEtNYzFtWXZ2a0R2dzlmdVd3aEJTZUZVSUQ5UmRVLS13XzhlazhwRUNxdHdPUVVmeTQxSTlnYWxWOEZOVDRXYURaTWJ3M3VmZ0hoT0dDbzhRVzdsdEthM2hmNnhzQi1jZmVxNTNEenc1OEs4VHdtaGlrZ2RnMmpwNVZXMDUzUVZCbmg3VnVIbjZYOWNrRjhsUDJiLUFEVU1RbGhZYjJaSQ?oc=5",
+          "source": "LaChirico.it",
+          "publishedAt": "2026-11-26T20:32:19.000Z"
+        },
         {
           "title": "Saipem si aggiudica due nuovi contratti offshore da Aramco per 650 milioni di dollari",
           "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNeTNNVmpWSWdmb1dZbGVXOWZrZFN5UU10MUZwX0c4RERIYWlHRmZ4TmQ0RENCei1DcXdyYjhNSTMtaDlTTVdjYU1BLWZORWJuSldGQjlIR2l5eTdTYVR2Z1g0N1g4WlpIdWJvOEExM0c2V0ZyTVVqWllzYmdRU211X0JRNUhtVFpPRDRIRUJrelZmYkNpa3c0bk1TaHBGNlc2T19Ld3JTc3dhaDg3NlE?oc=5",
@@ -181,6 +187,12 @@
           "publishedAt": "2026-11-26T07:55:37.000Z"
         },
         {
+          "title": "Saipem ottiene nuovi contratti offshore in Arabia Saudita",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQRWR3RXMxYXRhcm1Td3VXTGM5WUo1WUFuY2pEbmdPNmZPb1pBUmpuRXpwM1QzdE4yMnI0WmZpMjktMmRiVmNoT3I4bUtNc3EzZ24tRnJCaWVKUTFfQ2duZm51YzdNeThNMFF5MU5RT3BmaGM2U0hKS3R0cHRBUHk3dlNORTF5V0JFaktQSmRJQQ?oc=5",
+          "source": "Ship2Shore",
+          "publishedAt": "2026-11-25T15:41:00.000Z"
+        },
+        {
           "title": "Azioni Saipem: commesse Aramco da 650 milioni di dollari, ma il titolo perde l'1,5% (25 novembre 2026)",
           "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNd3V2YTlsUG9HOG8wb3JaTExMQjBnMGtrUVJhV3lMbXdjVkxsSkVlUV93eVJRbUswNWd3VFBxeHNjWmxfWFZqbnpjeU00VmUwUVBadEU3c2hoUmVrYmhEM3hKZFRVZWx2aHNlUlhRUGpYandPVlhWZnowaElBQ016OEFDV2hFMmotclUwQ0JFLWgweUNHbGc3SC1oTQ?oc=5",
           "source": "Finanza Report",
@@ -188,33 +200,21 @@
         },
         {
           "title": "Saipem, due contratti offshore per 650 mln $ in Arabia Saudita",
-          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA4ejY2YlppbDNMdV9ZOV82MGZhTWRnOEtZOWVGZGdJYS1zT2pnUExLY25PWE1wOE0yY1FnRHotejgxQXNycDA4REE4UU9DdWhFSk9yZGpVNURid1M2NjRuelFTM1ZNMktWT25SRkczTmlSX2s?oc=5",
+          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQUERmZWZFSERrVlNnSVAzNkZvREFTcUVMQ1ZzUUpRYnB3OGVfanpoM2NkUkdoWDNibm1wWkJ6NDF1RGdmM3h4N21mZGstNXZYTFZnbm8xdC16S0pPOU55ejlNU1V3TmJiVDhBU1VHQmROYi1fZjNBSHFQb3VXMy1XTkp0WnlVYXF3RTJNZmdNemZKWVVua213ak9qUGdVbFhfQ2xZOXZ6V0QzYlc3RFFzVUpaZERFU3E1dm9VMU5TUUNwajFJ?oc=5",
           "source": "Quotidiano Energia",
-          "publishedAt": "2026-11-25T11:26:16.000Z"
+          "publishedAt": "2026-11-25T11:43:56.000Z"
         },
         {
-          "title": "Saipem ottiene nuovi contratti offshore da Aramco per 650 milioni di dollari in Arabia Saudita",
-          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPU2Z2OVNRWE1YRkJDQ1BFVnl2SVFYT2FZRldpV1I4YmFKcnYtV2EtT3h3anF4Ym91cDBVTExCS0treGhIQVJ0Q2RHaS1nRDZIdVd6cjBIdFFUTXNlYkhPbHdsbDJ0bXk0VjJGMGtSMm5faTdVUFE3WktFV0x6Q2hDLUMxbTNtZFExdTlyRnZaVjRlNGFLVnc?oc=5",
-          "source": "Yahoo Finanza",
-          "publishedAt": "2026-11-25T09:34:23.000Z"
+          "title": "Saipem si aggiudica due contratti offshore con Aramco per circa 650 milioni di dollari",
+          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOZUtrWmJHRGc4VVF5OEdxUDh2OUNvUXFyMDdoNWJrbmVEeXZRX1RXOFFoWmRaRmUxaXlfeHlBQjExMUtoZlk3aDl3Q3FrTkVNUWI0VHlSa1MtbEFuN3hpemF5UEY2VmJ0TEdwdFlyRDFIck9GdXNoZE9haDFKWjhNNnduSGdsRDhTTHhsTUZFWmJIeGZ2ZHc?oc=5",
+          "source": "IndexBox",
+          "publishedAt": "2026-11-25T11:20:27.000Z"
         },
         {
           "title": "Azioni Saipem e nuovi contratti Aramco: quale reazione in borsa?",
           "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPS1hVTjlhOERlLU1aWGUtcVZSdHQ4UWlOZlFtdXhFTFJOd1VNS3dmYkk5M3VMMkdSOThZQWZ4VEFaaXhnaUx6X1M4VFVSVy1BRE1Ybk1QTFZOQ1RqTFBuUTFoOUhPak4zb2lBSl9MdWJGdlBYdVgwc2U0NkdUbU50M09PemxEUVhMbzlINGp6MUxwUk5zZ1Yw?oc=5",
           "source": "Meteofinanza.com",
           "publishedAt": "2026-11-25T09:24:47.000Z"
-        },
-        {
-          "title": "Saipem si aggiudica contratti offshore con Aramco in Arabia Saudita per 650 milioni $",
-          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNS0h5VXJ4ZXpobUdwSXhGZ29uamRfOGw0VGxmUXREbTA2dkQ3Q1dCME1CaUR3aElxTXhMQTJFX1laYXplUkY2WDB4dG40NC1pd1RXMlV1Ny00OGtqd0FGYlAzWll4aXU3SmxGcWdOdExIdUhEaWpGVldYSWlSQTlRaVMwNjZBOW1lb3ROMDJOVEhmbTc5ckxDbXEzTjdQNWxCYW5yaWVWMGh5QWphblNkekpzeEdoVUxsRmNYSUxxcS1fd9IBygFBVV95cUxNNkVDTmJBbWotb2VvNGd3bC1LSUJTd3NHT0Zmd2lsN2lXdnA5eXA2RFJNS1EwVU5iNFhuVmlLMkhBT2JxQjV4U0gtM0k2UUIxbzJvWDVyQVJGV2hGYVN6SVpESmZRTmV2d182NldTYjM1ZWY4Mm9DSWRPYzdWbmlqRmthNGM0ZHFHNUNtakVNdzBwUkZiRnRNckVfNW9jUWJRWmJDUWVRZVhhRVo4cE5kalNlN1o1MHNHTlRwd2pYOWFucl93RXVUdWhn?oc=5",
-          "source": "Shipping Italy",
-          "publishedAt": "2026-11-25T08:50:28.000Z"
-        },
-        {
-          "title": "Saipem - Nuovi contratti con Saudi Aramco per 650 milioni di dollari",
-          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVF9GNHZOa2o4RzVhaUpaRmR2anh1dlBuazFjaDFKai1FczlHb0ItMXRPdGhVd1NYWDNvdHZsT3BKWFRYam9ZZFV3cWphQWh3NjM5a1JsdHZfRzNwdDM0SXo5YXA2ckJXSjNmX29yVGV4bng4RnBOTnBnVG5UdWRMVUd2bVRTZVFOOVZWVHB0TFFjNU5xRVlieWxUTXh0d2wxWlViZloycFctZw?oc=5",
-          "source": "Websim",
-          "publishedAt": "2026-11-25T08:29:12.000Z"
         }
       ]
     },
@@ -229,16 +229,16 @@
           "publishedAt": "2026-11-25T15:45:20.000Z"
         },
         {
+          "title": "Risiko bancario 2026: Crédit Agricole propone la fusione a Banco BPM, OPAS Intesa su MPS dal 24 novembre",
+          "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5jd0R4ck5DMzNfc0JSTFgxazZRSG0zanhMeU92MGZhcGRRbFkyT2Mxell4OGhBSWZBNWlLcldrOW9KRTFuNGZWb29B?oc=5",
+          "source": "Rankia IT",
+          "publishedAt": "2026-11-24T08:00:00.000Z"
+        },
+        {
           "title": "Focus sulle banche tra Opas Intesa-Mps e stretta Unicredit-Commerz",
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPa295cloyV284cWRFM3IyX1hhZDJFZVVXT1VYRTNCYS1NQTJxUEpUc015U2tyNjhsR2VxNnkyTWV5TGd0QjV5T01aaGJJU2NZbktrbWp6Y1JHdDF0R3FGWnlnYllReHFMOFdKSDBKNHZ3SDBfeDRxckFmajBEcGxxRTZ1MndSTVNWS293R1VNdEZmNlVoR1dza3dLXzIyQQ?oc=5",
           "source": "Il Sole 24 ORE",
           "publishedAt": "2026-11-23T15:15:08.000Z"
-        },
-        {
-          "title": "Banche più sicure e solide 2027, i risultati dei test Bce su Banca Intesa, Unicredit, Credem, Mps e tutti gli altri istituti",
-          "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPWGYtOFVLMVI3aDM2Tk1vTzlYRGlDdkExRXdNR1VLYTIxODdaajBiRlVORnFXa29pZEY0cXJqTkFFeVFkVTZLdW51M1ZGRU9ZMEZRa0pIVUJieElaZnZYeEt4TElkYUNZZ3hLeGpXbS05LXpoTGR5MGo1MTNYVTRpYm1LVHhWay0yaDkyUHhCYVRJTk1rOEpBeUVpV2k5M2w4ZWViMGh6RlozZThrczkxaG5QLWY3am9yLUxsOE9TQjUtZlp5VENmTDdBeW0zLWhmbkFVMFNCbHdYLVFlbGoxVzVFcmVfZnJ2WnJuRGJ3bzJSMmg2QVQzUy13?oc=5",
-          "source": "Businessonline.it",
-          "publishedAt": "2026-11-23T14:30:00.000Z"
         },
         {
           "title": "Azioni, stacco cedole per nove titoli del FTSE MIB: UniCredit, Intesa, Eni e Poste (23 novembre 2026)",
@@ -247,28 +247,28 @@
           "publishedAt": "2026-11-23T13:53:38.000Z"
         },
         {
-          "title": "Da Intesa Sanpaolo a Bper ecco come cambia la mappa delle banche in Italia dopo il risiko",
-          "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxON25SN2lYZ2R3ZmhHbWlxS1dfWWZjemVlZlhjNUR0UVV0aF82S05ITWxWWGJtd0U2VzlKOUZtSW9EX0E0Q3kzV0M0cGRlaGVmWE1GQjlGcnVxSzdBdlozZjVYZTRNeWR0Q0xSVm1pV1ppd1RBLUFJencyX2hxWTcyN3hpTUs5NEtXalV6N0RwMTZEcWxhM3k4SzFmZXdxQ0xFeVV6Sk5EbUdxYjk2Q0xMWXFjWTBYVlM2LWhXeHJ4aUtzZ2VPeWhHQlhkNW1zNTdBNGpPZVJSVnRuUQ?oc=5",
-          "source": "Milano Finanza",
-          "publishedAt": "2026-11-23T10:48:00.000Z"
-        },
-        {
-          "title": "Risiko Bancario e Trimestrali: Intesa, UniCredit, MPS o Banco BPM?",
-          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdlVfa2ZNUzA5dU1vX2VmeEktNS1jLUdETmk1b1hHdTRpR3lUMG5CRGVxM1I5RkNrTElpU1NQQmlSeVFEcnVPWkdZTHN5LUdHRmd3RUJ5aTh1Y3pKamxzLVQ4a1pCM09ubmpzRnNTZFNmVlJGUDZqWWVEdGRoMjNBMnVqSk9PQkgtbzJhWmMxT2lDMERhbkpfUFhaSkpYVk1lYXd0Yk41V3BIdw?oc=5",
-          "source": "Investing.com - Quotazioni, Borsa, Economia e Finanza",
-          "publishedAt": "2026-10-09T07:00:00.000Z"
-        },
-        {
-          "title": "Mps, Intesa Sanpaolo vede il traguardo e la partita si sposta su Generali: come cambia adesso il risiko della finanza",
-          "link": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOV3JPd3BaQ2l4d2tTSW9NalZJOVFMNmpPVGxBNzd3M3J1QVZvUVk1OTZuZlp2Z3B0YmpQREE2b0J6RlkzdE5zOUthM2JOOHowS1R6SGRjMlNiVHVtal9xWUNVdWFLMXU5aEVvQ0xlQmhDOExrS3JyRGxuOHMzaWUwSjY0dXZnU1VNWEh6ZXVlenVvNmFQMXlBREdmN25xTFNld2RmMlpOaXd4SUM5RGZNTmlzU3Z3Nlk1VFZKbmZIa0hKV3ZzZm5WclVQb01XSG9wQl9Mak55S0xSXzhuQVF3a2JXTUh4cnhuYjE3QjhpR19RWll0eFpUVXBZN0s0a1NQT3lJRXVvRmxmdlpENFdmLXF5Y1BtQ0JScDdpTHMtbUxydWxYa2cyMmhtWjVKcW1Kdkc2clBIZUHSAb4CQVVfeXFMTUY5WlQzZ3dJcFVzQjBVOXRkLWVWdDZQMlMtMTNuVWxRWXVVSzhpU0pTUjgxay1XU0FiM0czMFlianlsUWRCaXJQcnpwZW1WQzFCZmRBN2NnZEtKQnYxVUEwU1ZXQzFZLXktbmhJZDdGMktlMDRzV2dtbGlhWEJKQUhwdjJpeTVuOG9QWTRvaGZIaFc0R3p0WGRTQmxTZmVndFNpQTNSVGY4LUtqeWNPc2FmTV94eHR2bWdnZVhfdmJpLXdwcnhSYV9Ca2pfOERtZmpBMlYyVFNIdm5xaUdHaWhScm5BYWVqN0VZS3B4R0haRm1KbHdpQWU1cFE5RlAxdUduUGFseHdCekdONzhvMWg5ekMzcDhQZXNiZVlwd19YVWFtVlhTY29jM0FRaE1mMlZBMGFqc0ZUWmY1eGVB?oc=5",
+          "title": "La tua banca è abbastanza «solida»? I risultati dei test Bce per il 2027: da Credem a Intesa, da UniCredit a Mps e Mediolanum, tutti i dati",
+          "link": "https://news.google.com/rss/articles/CBMivAJBVV95cUxQUEFoUWlCWVE0aEZiTk9OUTZkOU4wNzMyd0hGX1BDSGZHRzdtc2pocjZhSHdDRmxoa3dpUHU4WkxJa1l4VUxZMDFPMXVHY3RVeFRaQ2lTQ1JDM0hpMDFZeTRUczZvQVRqWmhOWWRxVUpSTy11aHRvNWhaVUVFbW82enc1d09WLWNQNEd0UmF0dm5xQ3RlNG13U2hfQXQyUDBRTWtVUkgyM2lnX2Ezc0VKSFZmQzR2M0lRTVlFUWJ1MWtaTmQxcmlxcGQ2N2FPS1BjZmszQ0o0R0pzTjBGWng4b2xyT3hieVcxVHN3M1VvOFVKUkJOTnlVSWhqQndQeE5XTGhCSG9La25UbUpRQ3dseFFQamdQSHE2cEp1UDF4V2NKaTBsTHhObXVjZENtdDNnR0JodEFLLWpNMjJD0gHCAkFVX3lxTE5rUFJzM0xXeW53ajRDdm5udjAtT3g3aVcyUWNmZnJUQXQwczJoS1FMWWVuc1o2ckVHLUE4S1NIRTBUVE5nRWp1bWp1aG80RHNsVmpoWE5CaHpsWE5oTkVKRnlGd3ViLWdjN3dGTkpTQUNXdzIxem42WGFyeFdpMzhqZy1RSEtnQ3VVOVg5YkZKWHNNcllUYlhYcW9Rdm1QWmVQTGF4cm5IbkF1eGdMU3JkNXp0cW0tLVZrX3Z5SlNTYVVtbUxpZzA0NVV5YXBub1hjdF9aVHFVNGsydzJBM2x6b3IyQzVpak9DeEJfUXgyTTFXX0k4RXdRUmh6LW5ZSG43RGo3alh2TlVGRHJUYjVKVGFQOVZvUUdjZ09EY0RzdG1pOXlFc1JJbXVWbjVCSjVabnZKR1FzTEZJZXVpd3llc3c?oc=5",
           "source": "Corriere della Sera",
-          "publishedAt": "2026-10-09T07:00:00.000Z"
+          "publishedAt": "2026-11-19T11:17:00.000Z"
         },
         {
-          "title": "Risiko: UniCredit sulle filiali dismesse da Intesa e Agricole, BPM si allinea ai francesi, MPS cerca voti",
-          "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPY0FqMlBTaWtPQ3NhVVZCQkJXLXkwUFhlMTVRcmJndGt3dVVpamM5NFdrSFNURFdrMWYzSllYVUNRazdsbmVtNElRYWxNbmx3TExZRjhiTHFOVnh5VGk1bFRUZ3dhbnpOT2lKRHNFZFJxUjhZUWxZNEVqTF9pNk9XTGNvVi1oVG9UdVpDYWJCYmw2M1VWSXVDWUJnTEVQVjNZNEpjS2dJeTVHZTRYVkh5aTBxS2xnWUJnUk5sdnozVnBEdWdZcTlsbjJpaW5VWmN5?oc=5",
-          "source": "PLTV.it",
-          "publishedAt": "2026-09-28T07:00:00.000Z"
+          "title": "UniCredit, Orcel spiega cosa vuole fare con Generali. L'appunto sul dossier Crédit Agricole-Banco Bpm",
+          "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxONnRKQzhHVWdWSHFBdXk0QTBVb2pjZi1QYjlaLW1nelZ0MjNPUnB0TDZCN3RPczBRanJnSHBPM2JRR3pDMXcwMlhudHdpUDhDMksyNnNHcWVrcEV4dlZhV3B4Z3pCMnNXdE41YXFKTUJoaG9lY3NXQW1MMlpmSzFYbGhxa25GVk0?oc=5",
+          "source": "Forbes Italia",
+          "publishedAt": "2026-11-18T09:13:21.000Z"
+        },
+        {
+          "title": "Parigi chiama Milano, l'operazione sul Banco Bpm del Crédit Agricole fa nascere il quarto polo",
+          "link": "https://news.google.com/rss/articles/CBMinAJBVV95cUxNaGJIbnhtUVg5SjBaR3NtckI2MlFXb0tzelFvU0JkRl91MkpCUGZubzBuSGdkc0E2MFU0Sko3d3YzWDk4eFR2VWFMalRnN2hDZ24xZF91VHA3X3NiN216NUVlSFFzQkVWeGdTQmRZZGxfU3VKUFVqLUZxQThYMS1Od2hfN2lFcHBMeFUtTFNFMlViX3VXN2dMV2dWVWpSM0FWeUZQVWYxQnQ4UzZSSk5ZZUFOM2M3ZVlscUJQOFhyenc0aTZ1YjRkT01uU1UyZHM0Q3AzYjJrc0l6YUdpZXhySTZpTThNbmNuTTBScldQcFVjanpJV3FmSHFaY2VjQ2ItdWNiYmhGcU85XzFoclpielJTbzFiei1WRXdrYdIBogJBVV95cUxQNmhEV0tLTkM4NkdZa1MwNFBCT0tkU2V1ZHF3U2dBcWFTelE3aVBmRjFoU3BfZkdGbmhETTl3UkxHbHQteGJ3aTZMYnBub0RUTlhGc3h6TGhrYUU4SFl4MjVZZlJUZ3AxUmpnc3pKNWlsdVhDelVZUlpKenl2YXNBV05IOVU5eEVqeVgzNmJQQXFYVE5wdU4wRk4zY0EwMkJYVW1kQlZ3TkZFN09kMWJBb3c4czRYOWdQWG9pWFZtNmh4RHItdExDVm5uRUFPNDl2ZE43S3pQcDVLZ2hBS0NMdVBVV2o5RVRaUW55cEhDTTMtSTRyQ1A1ZVZaX0pOYjhJaHM4dUQ0c3VVb0wtVllJYXQtMUJNMGJnZl85Y2oyTzdVQQ?oc=5",
+          "source": "Corriere della Sera",
+          "publishedAt": "2026-11-16T08:00:00.000Z"
+        },
+        {
+          "title": "Banche: risiko col paradosso dell’italianità",
+          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPbFF4NVJ3Q3ZHaXZ1OWN4ODhzUUFjMWIybktIeURsZzg0Q1BGSGdnNWtGcjNyUnZxR09YQVFMdWhYTmsyX2F5Z2xXRi1NT0pWbERaWjhOdFI3aG5pRm5Jb1FCQ0Y4endkcDBWaHAwX2d4b1gwLWlNSG1MdXM3Qm1PdnFlX0tGdGdwRUE?oc=5",
+          "source": "The Watcher Post",
+          "publishedAt": "2026-11-13T08:00:00.000Z"
         }
       ]
     },
@@ -277,52 +277,52 @@
       "label": "Geopolitica & Macro",
       "items": [
         {
-          "title": "Dove investire oggi: miglior investimento attuale | Novembre 2026",
-          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNSVY4UkxDajM5TFNBOFlFazJyVy1xM2l5M0NaZjRrS1FGRkZtZHJYWEpCc2JDcXlHZzVIbmVFNC1nN24zV3hFNWJMTHJsVU5tTTVlNWo5a1BlUkRqeEVESEpXTnFXN2hZeWE2YVpPd2hiRFI5ZC0xc0ZDQW1pN01qY1RkQ2ZhSmpRekFFM09rYnFCY2V5ZGlXLUdBdkNSV05LcWtZWEdERmt0QzA?oc=5",
-          "source": "Investing.com",
-          "publishedAt": "2026-11-13T08:00:00.000Z"
-        },
-        {
-          "title": "Previsioni borsa 2027: cosa aspettarsi nei prossimi mesi",
-          "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5OUWppWEMybHpac19sMDFqQk9jTzVPc3V6QnRja3p4U1dwT1luTkRZU1JuMnlvOGNMX2MtemZvU2diaXBXd3pjV0Q0anVWeVc2djdJWk5DOFJHdzl0SUszeXp3aUh1WEwyWVo3Uk50V1o?oc=5",
-          "source": "Investing.com - Quotazioni, Borsa, Economia e Finanza",
-          "publishedAt": "2026-10-23T07:00:00.000Z"
-        },
-        {
-          "title": "Come andrà lo spread e cosa succederà ai Btp",
-          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOUHYxZ1dzVmIyM3hwT3NLRmRzRjVWZjE1MVdZd1MzZHIxaTlHM3VkakVFT2MxSmNwS01fdEJpdFdEVC1acTRsc25GMUN2N0VZS0x6a2YxTXYxUWNrMGJCWDlsbEM3OGxuZHlRdkF4Sl80SkxfaTFPQnFmelFqSktBQ1B1M2k?oc=5",
-          "source": "Startmag",
-          "publishedAt": "2026-10-18T07:00:00.000Z"
-        },
-        {
-          "title": "Tensioni energetiche, attesa per i tassi Fed e spread in Europa: il punto sui mercati",
-          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV0JqRDc0SDBHNGR0THQ3alBNMnYyTzFWZk13a2RKWmYxZUFkVE5nY1FkRkJNUG8xeFZ4aGhJT2dIU3RJMEUyd3pkMkF2SEpqQXUyOHdocXFub29LcFB6cXptbUNmc2Z6MFF0XzBtZzByS1I4NU1TZG5NWDRoXzZtVEQtZzcweWM0X1FLSDQ2UlNjeDFMd2kyWUVFdVc1VDR0UTJ1RmpnM3E0Tnc?oc=5",
-          "source": "Websim",
-          "publishedAt": "2026-10-13T07:00:00.000Z"
-        },
-        {
-          "title": "C’è una manina che allarga gli spread per costringere la Bce a intervenire",
-          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAtNHhpOHNtSTBpTy1OdjhjTGh4bGg2VW5tTVU1cElXV3NOSmJON1ExcXF3TnlyalNwSHo4TXQ1NlVSUHltT3BaMThVT1M1NnRSaFE1XzZZMjNuWlVLTllyVzBxY3J0cmhid01HNA?oc=5",
-          "source": "La Verità",
-          "publishedAt": "2026-10-09T07:00:00.000Z"
-        },
-        {
-          "title": "Spread BTP-Bund oggi: BTP al 4,7%, cosa succede",
-          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBseS1DaTNSUWxTYmpnMFR0OENjN3hxaWtTendRcVdiRmNiQldwRXhKNFpDbkNvSFN2bi1RNDB4cXJNblNwTkdMdDQ4VmpLMEJk?oc=5",
-          "source": "Rankia IT",
-          "publishedAt": "2026-10-08T07:00:00.000Z"
-        },
-        {
-          "title": "Banche in Borsa: perché vendono nonostante i tassi più alti",
-          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNWllTV2U3alg4MU9UUEtZWjZva2dRc2dOcUlNOE9icS02YkFZS0ZxSmZrSzNlWm1OY2pnREFYb0JNZjJPbDlndmI0TWd6VTFKZlNVVDI1YnVwcXBQTUJMZXdYbjMwbHpFVXJ2M3JrUU5aY2UwVnFTa0tNOWMtTUxkTnRRVXBmOUFjaWVQOGJud29hc1ZRVFl4RDhHTQ?oc=5",
-          "source": "Dove Investire",
-          "publishedAt": "2026-10-08T06:33:39.000Z"
-        },
-        {
           "title": "Perché i titoli di Stato italiani sono ok",
           "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNMVRGMWlNMDd4TzlzYURKSTdrZHVoM0Fzc1NGazhybkp5cUlPSEtJRGozVGdhWnhJSDdyRU1Oc2NwbmFhV01kZWNzMlowZUl2bnc0czRGTmgyOTZkYmtmbi1IVm9lVGlUMW5tZUlVTDNaMWZKTzUxVkxEeDFuUlN1WQ?oc=5",
           "source": "Startmag",
           "publishedAt": "2026-10-03T07:00:00.000Z"
+        },
+        {
+          "title": "Btp, spread alle stelle. I gestori: premio eccessivo, ma occhio alla parte lunga della curva",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBJd0pLZVJTMk4tOWRHNVE1dENkN1gyTG1hTDZFOEhhM1JOSG5iRkZ5dGdjNTg4UVNLU3hJLW1IWmtUMV9pSTlnVVBYT056TDk1SzZnbUxTbmlfM0NPYm1STVMxbjU?oc=5",
+          "source": "FocusRisparmio",
+          "publishedAt": "2026-10-01T07:00:00.000Z"
+        },
+        {
+          "title": "Borse oggi in diretta | Il Ftse Mib chiude sotto la parità (-0,1%). Sprint di Lottomatica, male Moncler",
+          "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNQzJIU2liMm5EU3BoUzMzSmU1bUZieWs5cklYVW93VE1pRU9MamZLYnJpeUhPaklrcGYxYXFJaVBGSzRSRWg0NlVSbjJsRXRHQ0UyWUlhT1BSY1B6VmRYQ0tiX1d4SUhzbTJ4S1gzSEg5ZUMxeW5yMkdCOVZwOGtVemxDM2RwYUhjNkVLRW9PUHZfckJDcy1LdWpnV0Y0V1RnZnVhaE1ockNNMGJ3bW9UUElpeVNQS2pxeUVyRS1sWUNTRGpLNThSNjRmdER2WnFQbGFvQV9NdUFqMGc5N1JzN0FmWl9NUQ?oc=5",
+          "source": "Milano Finanza",
+          "publishedAt": "2026-09-10T07:00:00.000Z"
+        },
+        {
+          "title": "Bond sotto attacco, tremano anche i Btp. Due grandi paure inquietano gli investitori",
+          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNdGpaR1QwTFBVN3pzX0hNQ3dvU1lJbURQRXp2MXpBblVUQXVCWVpocDVYZ2hxUFpTR0xSd3FZVG5Uc2YyNkVoYXJyNm1MRUYxVVh2WURIMVJlRVNQdmtVTzZtRHBoRGNaUDUtSlZ0clBHa0lvUlZWX3BCeE1VYWdPVl9UQ2x4UnptUVpMN3p1YzFLcDBGaUl4WWI4YnlsS1NkX3pDTThMOUE3TGZybXlraFV5a2lUQ3FoUmUzSA?oc=5",
+          "source": "FinanzaOnline",
+          "publishedAt": "2026-08-19T07:00:00.000Z"
+        },
+        {
+          "title": "Prospettive per i titoli di Stato nel terzo trimestre: il peggio è ormai alle spalle?",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOb0xTdVJ4VG9UMXcxT1BsNTJnWkFwU1NVRnNxQ0JIcHVPZ3dEN2VRWkZycFM5bUk3dU41TXF0N2s0LVl4SnUzcU9QSnEzWXJNN2VfMnIwM3dyMHhoVGxleXRUOTdKcGxWWU1LcXRHdUEzc18wQVhROVJzbW9qeS1aT2psUEJndVdnb3BWYkdTa0xLQ040dnpmY3k1S250ZXJHRUN3QUl2MTdOMWFXUFdCbWpmQTZVMGEzT2M4ZTdMT3ByZDBnRkdn?oc=5",
+          "source": "Morningstar",
+          "publishedAt": "2026-06-29T07:00:00.000Z"
+        },
+        {
+          "title": "Mercati ostaggio della geopolitica: da Medio Oriente ai tassi, cresce premio per rischio globale",
+          "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE44R1hiR1lRTXVmRTVjYnotOGNReXpTQ0xYbUdRR2JfYkxvWjF3bFNBSEIzYzZjYkt5QU1weTBmcFA0cmMxZ3hnRGQ5TFR3ZHR6aE5WYTdRd0hvV05DTzJacVJPeVRKX0REYVNqN2ZrTWpsZmFWYjJ30gF8QVVfeXFMTXFrbGU3d1VydHRBOFNuUG9xRHVFTTByQkFhbUJlVXJyd3FoMVJ0eXctODdaRnIzRFo3YmhRMHhwcXlNa1A4OE53a080Y0FGa0twUU15U0liRzlxeEU2YkprQTBZcnduUEVWRlQxR3RJcTFlaGQxbmc1OTNNWQ?oc=5",
+          "source": "QuiFinanza",
+          "publishedAt": "2026-04-26T07:00:00.000Z"
+        },
+        {
+          "title": "Borse oggi in diretta | Il Ftse Mib chiude in ribasso dello 0,7%, vendite su Leonardo e Stm",
+          "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQN0pNeXBmYXVXQTU4MjRhQ2F1MVNTckVQSDE2TEQ1N3Nfc0J1Q2g5S3ZjVThhZGUteTQtcHloNEdSRllWQVhjcWtOem85dFJCMDIxSm9GWjN3QjFvanpub2FiSDBqVGdOSGRzRldlSkV6Q0Q1MTZ6MUx2NzNtS19RcDlweUV0dTkzaE5YdXphNjJVb0Q2c0hxa0YwbHpZUkk3VzBxS1hHSGduSlZRb0ZHYUFSbVVqVHRFYzd3S0RTTnZCaEVPMTBMVlBYOFZ2QmhhbG1TV0lVRzZJZ3hhdThDNnd0WW5EQkVjeTFN?oc=5",
+          "source": "Milano Finanza",
+          "publishedAt": "2026-03-27T07:00:00.000Z"
+        },
+        {
+          "title": "Lo spread torna sopra quota 100: i mercati temono uno shock sistemico",
+          "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOMVF6TzM5czhPV0JQT1R5THZJckhEMFRydklYamdPNmV6UWJpaWJBRHFIbkVLNy0zamp2VlhTSW5UOWx1X0hqdU9lRzd5QkRWWGoyQnNScEZ1dDBRTGxDMXZVUUZOX25oS0VyeHBFaU9oSXBSNGFjUjNOVkI4QlBsSWUzV3lLWWlYdVQ1SkdYYnJQMy1OQzhpQ21tS2dfY1FXZ011M0h0X3BLQVYzSWtoSTBhY0lxQVRRWTNYaVhXb3RDdVpjbGd2ZlFIS25rbXhEaENhS0NaYTBzY0YzRkR6QlFiVWHSAeoBQVVfeXFMT2ZFem1DOHNNYXc3NDRtUW1KbVlMVkhKU1Z1Q18tYzVHc2tQUG5hVzBOQ1pjOWNuUllCdWJLSmVGbThubnE5UVg1aWhUSTRvTERkTThJMzRDM3BrTDdCSHVOdGwxTWxQN2JkUlZGRDdyQ1poTWxvbENILXZxVEJlMHhER2pqLXc5a1FVZjQ5QzJwdlV2Z1BuclpJdnZNSExvNkNNbWNieEg4X3NOUE9BNjE0cmJZdmVQTmEzNWhvTW5aQ2QzRGpOd3plYXhsR0hSQmpGLUFIcmwtVTlXQnFGbXJ0ajR2bXdHS2NR?oc=5",
+          "source": "RaiNews",
+          "publishedAt": "2026-03-23T07:00:00.000Z"
         }
       ]
     }
